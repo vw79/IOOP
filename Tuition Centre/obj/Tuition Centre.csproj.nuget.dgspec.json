@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ben\\Source\\Repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj": {}
+    "C:\\Users\\ben\\source\\repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ben\\Source\\Repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj": {
+    "C:\\Users\\ben\\source\\repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ben\\Source\\Repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
+        "projectUniqueName": "C:\\Users\\ben\\source\\repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
         "projectName": "Tuition Centre",
-        "projectPath": "C:\\Users\\ben\\Source\\Repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
+        "projectPath": "C:\\Users\\ben\\source\\repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
         "packagesPath": "C:\\Users\\ben\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ben\\Source\\Repos\\IOOP\\Tuition Centre\\obj\\",
+        "outputPath": "C:\\Users\\ben\\source\\repos\\IOOP\\Tuition Centre\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

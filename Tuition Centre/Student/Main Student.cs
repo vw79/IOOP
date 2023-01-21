@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Cache;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +26,18 @@ namespace Tuition_Centre.Student
                 this.Close();
                 obj1.ShowDialog();
             }
+
+            if (cmbChangeSubject.Text == "View the process")
+            {
+                Process obj1 = new Process();
+                this.Close();
+                obj1.ShowDialog();
+            }
+        }
+
+        private void grpChangeSubject_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

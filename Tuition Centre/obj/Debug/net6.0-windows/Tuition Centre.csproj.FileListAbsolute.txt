@@ -97,7 +97,6 @@ C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_C
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.Form3.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.Form4.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.Form5.resources
-C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.CancelRequest.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.frmMainStudent.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.RequestSubject.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmMainTutor.resources
@@ -154,3 +153,6 @@ D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\refint\Tuition Centre.d
 D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.pdb
 D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.genruntimeconfig.cache
 D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\ref\Tuition Centre.dll
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.UnpendingRequest.resources
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ClassUpdate.resources
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Process.resources

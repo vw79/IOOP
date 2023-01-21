@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Student
 {
-    public partial class CancelRequest : Form
+    public partial class Process : Form
     {
-        public CancelRequest()
+        public Process()
         {
             InitializeComponent();
         }

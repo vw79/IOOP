@@ -134,7 +134,7 @@
             this.cmbChangeSubject.FormattingEnabled = true;
             this.cmbChangeSubject.Items.AddRange(new object[] {
             "Request to change the subject",
-            "Cancel the subject"});
+            "View the process"});
             this.cmbChangeSubject.Location = new System.Drawing.Point(16, 22);
             this.cmbChangeSubject.Name = "cmbChangeSubject";
             this.cmbChangeSubject.Size = new System.Drawing.Size(219, 29);
@@ -152,6 +152,7 @@
             this.grpChangeSubject.TabIndex = 7;
             this.grpChangeSubject.TabStop = false;
             this.grpChangeSubject.Text = "Change the Subject";
+            this.grpChangeSubject.Enter += new System.EventHandler(this.grpChangeSubject_Enter);
             // 
             // lblWelcome
             // 

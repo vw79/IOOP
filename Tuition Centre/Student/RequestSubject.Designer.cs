@@ -33,15 +33,15 @@
             this.grpCourse = new System.Windows.Forms.GroupBox();
             this.txtCourse = new System.Windows.Forms.TextBox();
             this.grpDate = new System.Windows.Forms.GroupBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
             this.grpOldSubject = new System.Windows.Forms.GroupBox();
-            this.txtOldSubject = new System.Windows.Forms.TextBox();
             this.grpNewSubject = new System.Windows.Forms.GroupBox();
-            this.txtNewSubject = new System.Windows.Forms.TextBox();
             this.grpReason = new System.Windows.Forms.GroupBox();
             this.txtReason = new System.Windows.Forms.TextBox();
             this.btnRequest = new System.Windows.Forms.Button();
             this.picChange = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmbOldSubject = new System.Windows.Forms.ComboBox();
+            this.cmbNewSubject = new System.Windows.Forms.ComboBox();
             this.grpCourse.SuspendLayout();
             this.grpDate.SuspendLayout();
             this.grpOldSubject.SuspendLayout();
@@ -89,7 +89,7 @@
             // 
             // grpDate
             // 
-            this.grpDate.Controls.Add(this.txtDate);
+            this.grpDate.Controls.Add(this.dateTimePicker1);
             this.grpDate.Location = new System.Drawing.Point(99, 197);
             this.grpDate.Name = "grpDate";
             this.grpDate.Size = new System.Drawing.Size(200, 61);
@@ -97,17 +97,9 @@
             this.grpDate.TabStop = false;
             this.grpDate.Text = "Date";
             // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(15, 25);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.PlaceholderText = "Date";
-            this.txtDate.Size = new System.Drawing.Size(179, 23);
-            this.txtDate.TabIndex = 0;
-            // 
             // grpOldSubject
             // 
-            this.grpOldSubject.Controls.Add(this.txtOldSubject);
+            this.grpOldSubject.Controls.Add(this.cmbOldSubject);
             this.grpOldSubject.Location = new System.Drawing.Point(99, 264);
             this.grpOldSubject.Name = "grpOldSubject";
             this.grpOldSubject.Size = new System.Drawing.Size(200, 61);
@@ -115,31 +107,15 @@
             this.grpOldSubject.TabStop = false;
             this.grpOldSubject.Text = "Old Subject";
             // 
-            // txtOldSubject
-            // 
-            this.txtOldSubject.Location = new System.Drawing.Point(15, 25);
-            this.txtOldSubject.Name = "txtOldSubject";
-            this.txtOldSubject.PlaceholderText = "Old Subject";
-            this.txtOldSubject.Size = new System.Drawing.Size(179, 23);
-            this.txtOldSubject.TabIndex = 0;
-            // 
             // grpNewSubject
             // 
-            this.grpNewSubject.Controls.Add(this.txtNewSubject);
+            this.grpNewSubject.Controls.Add(this.cmbNewSubject);
             this.grpNewSubject.Location = new System.Drawing.Point(451, 264);
             this.grpNewSubject.Name = "grpNewSubject";
             this.grpNewSubject.Size = new System.Drawing.Size(200, 61);
             this.grpNewSubject.TabIndex = 5;
             this.grpNewSubject.TabStop = false;
             this.grpNewSubject.Text = "New Subject";
-            // 
-            // txtNewSubject
-            // 
-            this.txtNewSubject.Location = new System.Drawing.Point(15, 25);
-            this.txtNewSubject.Name = "txtNewSubject";
-            this.txtNewSubject.PlaceholderText = "New Subject";
-            this.txtNewSubject.Size = new System.Drawing.Size(179, 23);
-            this.txtNewSubject.TabIndex = 0;
             // 
             // grpReason
             // 
@@ -182,6 +158,46 @@
             this.picChange.TabIndex = 7;
             this.picChange.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 24);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(180, 23);
+            this.dateTimePicker1.TabIndex = 0;
+            // 
+            // cmbOldSubject
+            // 
+            this.cmbOldSubject.FormattingEnabled = true;
+            this.cmbOldSubject.Items.AddRange(new object[] {
+            "Mathematics",
+            "Physical",
+            "History",
+            "Chemistry",
+            "Biology",
+            "English"});
+            this.cmbOldSubject.Location = new System.Drawing.Point(14, 22);
+            this.cmbOldSubject.Name = "cmbOldSubject";
+            this.cmbOldSubject.Size = new System.Drawing.Size(180, 23);
+            this.cmbOldSubject.TabIndex = 8;
+            this.cmbOldSubject.Text = "Old Subject";
+            // 
+            // cmbNewSubject
+            // 
+            this.cmbNewSubject.FormattingEnabled = true;
+            this.cmbNewSubject.Items.AddRange(new object[] {
+            "Mathematics",
+            "Physical",
+            "History",
+            "Chemistry",
+            "Biology",
+            "English"});
+            this.cmbNewSubject.Location = new System.Drawing.Point(15, 22);
+            this.cmbNewSubject.Name = "cmbNewSubject";
+            this.cmbNewSubject.Size = new System.Drawing.Size(180, 23);
+            this.cmbNewSubject.TabIndex = 9;
+            this.cmbNewSubject.Text = "New Subject";
+            // 
             // RequestSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -201,11 +217,8 @@
             this.grpCourse.ResumeLayout(false);
             this.grpCourse.PerformLayout();
             this.grpDate.ResumeLayout(false);
-            this.grpDate.PerformLayout();
             this.grpOldSubject.ResumeLayout(false);
-            this.grpOldSubject.PerformLayout();
             this.grpNewSubject.ResumeLayout(false);
-            this.grpNewSubject.PerformLayout();
             this.grpReason.ResumeLayout(false);
             this.grpReason.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).EndInit();
@@ -221,14 +234,14 @@
         private GroupBox grpCourse;
         private TextBox txtCourse;
         private GroupBox grpDate;
-        private TextBox txtDate;
         private GroupBox grpOldSubject;
-        private TextBox txtOldSubject;
         private GroupBox grpNewSubject;
-        private TextBox txtNewSubject;
         private GroupBox grpReason;
         private TextBox txtReason;
         private Button btnRequest;
         private PictureBox picChange;
+        private DateTimePicker dateTimePicker1;
+        private ComboBox cmbOldSubject;
+        private ComboBox cmbNewSubject;
     }
 }
