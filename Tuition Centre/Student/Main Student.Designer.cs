@@ -69,6 +69,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.lblStudentNum);
             this.groupBox1.Controls.Add(this.lblStudentCourse);
             this.groupBox1.Controls.Add(this.label2);
@@ -145,11 +146,12 @@
             // 
             // grpChangeSubject
             // 
+            this.grpChangeSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpChangeSubject.Controls.Add(this.cmbChangeSubject);
             this.grpChangeSubject.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.grpChangeSubject.Location = new System.Drawing.Point(553, 39);
+            this.grpChangeSubject.Location = new System.Drawing.Point(543, 39);
             this.grpChangeSubject.Name = "grpChangeSubject";
-            this.grpChangeSubject.Size = new System.Drawing.Size(235, 63);
+            this.grpChangeSubject.Size = new System.Drawing.Size(245, 63);
             this.grpChangeSubject.TabIndex = 7;
             this.grpChangeSubject.TabStop = false;
             this.grpChangeSubject.Text = "Change the Subject";

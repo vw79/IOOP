@@ -33,15 +33,15 @@
             this.grpCourse = new System.Windows.Forms.GroupBox();
             this.txtCourse = new System.Windows.Forms.TextBox();
             this.grpDate = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.grpOldSubject = new System.Windows.Forms.GroupBox();
+            this.cmbOldSubject = new System.Windows.Forms.ComboBox();
             this.grpNewSubject = new System.Windows.Forms.GroupBox();
+            this.cmbNewSubject = new System.Windows.Forms.ComboBox();
             this.grpReason = new System.Windows.Forms.GroupBox();
             this.txtReason = new System.Windows.Forms.TextBox();
             this.btnRequest = new System.Windows.Forms.Button();
             this.picChange = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbOldSubject = new System.Windows.Forms.ComboBox();
-            this.cmbNewSubject = new System.Windows.Forms.ComboBox();
             this.grpCourse.SuspendLayout();
             this.grpDate.SuspendLayout();
             this.grpOldSubject.SuspendLayout();
@@ -71,6 +71,7 @@
             // 
             // grpCourse
             // 
+            this.grpCourse.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpCourse.Controls.Add(this.txtCourse);
             this.grpCourse.Location = new System.Drawing.Point(99, 130);
             this.grpCourse.Name = "grpCourse";
@@ -89,6 +90,7 @@
             // 
             // grpDate
             // 
+            this.grpDate.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpDate.Controls.Add(this.dateTimePicker1);
             this.grpDate.Location = new System.Drawing.Point(99, 197);
             this.grpDate.Name = "grpDate";
@@ -97,8 +99,17 @@
             this.grpDate.TabStop = false;
             this.grpDate.Text = "Date";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 24);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(180, 23);
+            this.dateTimePicker1.TabIndex = 0;
+            // 
             // grpOldSubject
             // 
+            this.grpOldSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpOldSubject.Controls.Add(this.cmbOldSubject);
             this.grpOldSubject.Location = new System.Drawing.Point(99, 264);
             this.grpOldSubject.Name = "grpOldSubject";
@@ -107,8 +118,25 @@
             this.grpOldSubject.TabStop = false;
             this.grpOldSubject.Text = "Old Subject";
             // 
+            // cmbOldSubject
+            // 
+            this.cmbOldSubject.FormattingEnabled = true;
+            this.cmbOldSubject.Items.AddRange(new object[] {
+            "Mathematics",
+            "Physical",
+            "History",
+            "Chemistry",
+            "Biology",
+            "English"});
+            this.cmbOldSubject.Location = new System.Drawing.Point(14, 22);
+            this.cmbOldSubject.Name = "cmbOldSubject";
+            this.cmbOldSubject.Size = new System.Drawing.Size(180, 23);
+            this.cmbOldSubject.TabIndex = 8;
+            this.cmbOldSubject.Text = "Old Subject";
+            // 
             // grpNewSubject
             // 
+            this.grpNewSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpNewSubject.Controls.Add(this.cmbNewSubject);
             this.grpNewSubject.Location = new System.Drawing.Point(451, 264);
             this.grpNewSubject.Name = "grpNewSubject";
@@ -117,8 +145,25 @@
             this.grpNewSubject.TabStop = false;
             this.grpNewSubject.Text = "New Subject";
             // 
+            // cmbNewSubject
+            // 
+            this.cmbNewSubject.FormattingEnabled = true;
+            this.cmbNewSubject.Items.AddRange(new object[] {
+            "Mathematics",
+            "Physical",
+            "History",
+            "Chemistry",
+            "Biology",
+            "English"});
+            this.cmbNewSubject.Location = new System.Drawing.Point(15, 22);
+            this.cmbNewSubject.Name = "cmbNewSubject";
+            this.cmbNewSubject.Size = new System.Drawing.Size(180, 23);
+            this.cmbNewSubject.TabIndex = 9;
+            this.cmbNewSubject.Text = "New Subject";
+            // 
             // grpReason
             // 
+            this.grpReason.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpReason.Controls.Add(this.txtReason);
             this.grpReason.Location = new System.Drawing.Point(451, 130);
             this.grpReason.Name = "grpReason";
@@ -157,46 +202,6 @@
             this.picChange.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picChange.TabIndex = 7;
             this.picChange.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 23);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // cmbOldSubject
-            // 
-            this.cmbOldSubject.FormattingEnabled = true;
-            this.cmbOldSubject.Items.AddRange(new object[] {
-            "Mathematics",
-            "Physical",
-            "History",
-            "Chemistry",
-            "Biology",
-            "English"});
-            this.cmbOldSubject.Location = new System.Drawing.Point(14, 22);
-            this.cmbOldSubject.Name = "cmbOldSubject";
-            this.cmbOldSubject.Size = new System.Drawing.Size(180, 23);
-            this.cmbOldSubject.TabIndex = 8;
-            this.cmbOldSubject.Text = "Old Subject";
-            // 
-            // cmbNewSubject
-            // 
-            this.cmbNewSubject.FormattingEnabled = true;
-            this.cmbNewSubject.Items.AddRange(new object[] {
-            "Mathematics",
-            "Physical",
-            "History",
-            "Chemistry",
-            "Biology",
-            "English"});
-            this.cmbNewSubject.Location = new System.Drawing.Point(15, 22);
-            this.cmbNewSubject.Name = "cmbNewSubject";
-            this.cmbNewSubject.Size = new System.Drawing.Size(180, 23);
-            this.cmbNewSubject.TabIndex = 9;
-            this.cmbNewSubject.Text = "New Subject";
             // 
             // RequestSubject
             // 

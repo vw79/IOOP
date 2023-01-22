@@ -75,6 +75,7 @@
             // 
             // grpNewSubject
             // 
+            this.grpNewSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpNewSubject.Controls.Add(this.cmbNewSubject);
             this.grpNewSubject.Location = new System.Drawing.Point(473, 183);
             this.grpNewSubject.Name = "grpNewSubject";
@@ -101,6 +102,7 @@
             // 
             // grpOldSubject
             // 
+            this.grpOldSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpOldSubject.Controls.Add(this.cmbOldSubject);
             this.grpOldSubject.Location = new System.Drawing.Point(121, 183);
             this.grpOldSubject.Name = "grpOldSubject";
