@@ -39,5 +39,12 @@ namespace Tuition_Centre.Student
         {
 
         }
+
+        private void picEdit_Click(object sender, EventArgs e)
+        {
+            EditProfile obj1 = new EditProfile();
+            this.Close();
+            obj1.ShowDialog();
+        }
     }
 }
