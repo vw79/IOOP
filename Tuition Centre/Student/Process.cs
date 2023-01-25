@@ -17,16 +17,23 @@ namespace Tuition_Centre.Student
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void pictureHome_Click(object sender, EventArgs e)
         {
-            pendingRequest obj1 = new pendingRequest();
+            frmMainStudent obj1 = new frmMainStudent();
             this.Close();
             obj1.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             UnpendingRequest obj1 = new UnpendingRequest();
+            this.Close();
+            obj1.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pendingRequest obj1 = new pendingRequest();
             this.Close();
             obj1.ShowDialog();
         }

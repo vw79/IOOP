@@ -39,10 +39,12 @@
             this.cmbChangeSubject = new System.Windows.Forms.ComboBox();
             this.grpChangeSubject = new System.Windows.Forms.GroupBox();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.grpChangeSubject.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // picProfile
@@ -129,6 +131,7 @@
             this.btnSchedule.TabIndex = 5;
             this.btnSchedule.Text = "My Schedule";
             this.btnSchedule.UseVisualStyleBackColor = false;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
             // cmbChangeSubject
             // 
@@ -167,11 +170,23 @@
             this.lblWelcome.TabIndex = 8;
             this.lblWelcome.Text = "Welcome, Student";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tuition_Centre.Properties.Resources.logout;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmMainStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.grpChangeSubject);
             this.Controls.Add(this.btnSchedule);
@@ -186,6 +201,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grpChangeSubject.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +220,6 @@
         private ComboBox cmbChangeSubject;
         private GroupBox grpChangeSubject;
         private Label lblWelcome;
+        private PictureBox pictureBox1;
     }
 }

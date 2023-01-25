@@ -37,11 +37,13 @@
             this.cmbOldSubject = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblCondition = new System.Windows.Forms.Label();
+            this.pictureHome = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).BeginInit();
             this.grpNewSubject.SuspendLayout();
             this.grpOldSubject.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -147,33 +149,45 @@
             this.lblCondition.TabIndex = 12;
             this.lblCondition.Text = "Warning : You can cancel the request while the process is still pending only. ";
             // 
+            // pictureHome
+            // 
+            this.pictureHome.Image = global::Tuition_Centre.Properties.Resources.home;
+            this.pictureHome.Location = new System.Drawing.Point(737, 12);
+            this.pictureHome.Name = "pictureHome";
+            this.pictureHome.Size = new System.Drawing.Size(51, 43);
+            this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureHome.TabIndex = 18;
+            this.pictureHome.TabStop = false;
+            this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(517, 399);
+            this.button2.Location = new System.Drawing.Point(572, 415);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "test pending";
+            this.button2.Size = new System.Drawing.Size(112, 23);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "test unpending";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // button3
+            // button5
             // 
-            this.button3.Location = new System.Drawing.Point(654, 399);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "test unpending";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button5.Location = new System.Drawing.Point(613, 386);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(112, 23);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "test pending";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Process
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.lblCondition);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.picChange);
@@ -186,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).EndInit();
             this.grpNewSubject.ResumeLayout(false);
             this.grpOldSubject.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +217,8 @@
         private ComboBox cmbOldSubject;
         private Button button1;
         private Label lblCondition;
+        private PictureBox pictureHome;
         private Button button2;
-        private Button button3;
+        private Button button5;
     }
 }

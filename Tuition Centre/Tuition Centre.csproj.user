@@ -44,7 +44,7 @@
     <Compile Update="Student\EditProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Student\Main Student.cs">
+    <Compile Update="Student\Main_Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Student\pendingRequest.cs">
@@ -54,6 +54,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Student\RequestSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Student\Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Student\UnpendingRequest.cs">

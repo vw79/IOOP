@@ -46,5 +46,19 @@ namespace Tuition_Centre.Student
             this.Close();
             obj1.ShowDialog();
         }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            Schedule obj1 = new Schedule();
+            this.Close();
+            obj1.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Main obj1 = new Main();
+            this.Close();
+            obj1.ShowDialog();
+        }
     }
 }

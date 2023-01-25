@@ -44,10 +44,14 @@
             this.lblProcess = new System.Windows.Forms.Label();
             this.lblProcessRequest = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureHome = new System.Windows.Forms.PictureBox();
+            this.pictureBackward = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBackward)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -218,11 +222,35 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "** Request successfully cannot cancel **";
             // 
+            // pictureHome
+            // 
+            this.pictureHome.Image = global::Tuition_Centre.Properties.Resources.home;
+            this.pictureHome.Location = new System.Drawing.Point(737, 21);
+            this.pictureHome.Name = "pictureHome";
+            this.pictureHome.Size = new System.Drawing.Size(51, 43);
+            this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureHome.TabIndex = 17;
+            this.pictureHome.TabStop = false;
+            this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
+            // 
+            // pictureBackward
+            // 
+            this.pictureBackward.Image = global::Tuition_Centre.Properties.Resources.backward;
+            this.pictureBackward.Location = new System.Drawing.Point(683, 21);
+            this.pictureBackward.Name = "pictureBackward";
+            this.pictureBackward.Size = new System.Drawing.Size(57, 43);
+            this.pictureBackward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBackward.TabIndex = 18;
+            this.pictureBackward.TabStop = false;
+            this.pictureBackward.Click += new System.EventHandler(this.pictureBackward_Click);
+            // 
             // pendingRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBackward);
+            this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblProcessRequest);
             this.Controls.Add(this.groupBox1);
@@ -235,6 +263,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBackward)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +288,7 @@
         private Label label4;
         private Label lblProcessRequest;
         private Label label5;
+        private PictureBox pictureHome;
+        private PictureBox pictureBackward;
     }
 }

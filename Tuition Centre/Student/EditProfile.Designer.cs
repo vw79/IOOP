@@ -31,6 +31,8 @@
             this.picEdit = new System.Windows.Forms.PictureBox();
             this.picProfile = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpStudentNumber = new System.Windows.Forms.GroupBox();
+            this.lblStudentNumber = new System.Windows.Forms.Label();
             this.grpmemo = new System.Windows.Forms.GroupBox();
             this.txtmemo = new System.Windows.Forms.TextBox();
             this.grpEmail = new System.Windows.Forms.GroupBox();
@@ -44,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpStudyCourse = new System.Windows.Forms.GroupBox();
             this.lblStudyCourse = new System.Windows.Forms.Label();
-            this.lblStudentNumber = new System.Windows.Forms.Label();
             this.grpLastName = new System.Windows.Forms.GroupBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.grpFirstName = new System.Windows.Forms.GroupBox();
@@ -55,10 +56,11 @@
             this.lblStudentCourse = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.grpStudentNumber = new System.Windows.Forms.GroupBox();
+            this.pictureHome = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.grpStudentNumber.SuspendLayout();
             this.grpmemo.SuspendLayout();
             this.grpEmail.SuspendLayout();
             this.grpPhoneNumber.SuspendLayout();
@@ -68,7 +70,7 @@
             this.grpLastName.SuspendLayout();
             this.grpFirstName.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.grpStudentNumber.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
             this.SuspendLayout();
             // 
             // picEdit
@@ -105,11 +107,34 @@
             this.groupBox1.Controls.Add(this.grpLastName);
             this.groupBox1.Controls.Add(this.grpFirstName);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Location = new System.Drawing.Point(328, 27);
+            this.groupBox1.Location = new System.Drawing.Point(328, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(419, 357);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // grpStudentNumber
+            // 
+            this.grpStudentNumber.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.grpStudentNumber.Controls.Add(this.lblStudentNumber);
+            this.grpStudentNumber.Location = new System.Drawing.Point(24, 190);
+            this.grpStudentNumber.Name = "grpStudentNumber";
+            this.grpStudentNumber.Size = new System.Drawing.Size(179, 53);
+            this.grpStudentNumber.TabIndex = 15;
+            this.grpStudentNumber.TabStop = false;
+            this.grpStudentNumber.Text = "Student Number";
+            // 
+            // lblStudentNumber
+            // 
+            this.lblStudentNumber.AutoSize = true;
+            this.lblStudentNumber.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lblStudentNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblStudentNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblStudentNumber.Location = new System.Drawing.Point(13, 19);
+            this.lblStudentNumber.Name = "lblStudentNumber";
+            this.lblStudentNumber.Size = new System.Drawing.Size(151, 23);
+            this.lblStudentNumber.TabIndex = 7;
+            this.lblStudentNumber.Text = "   Student Number   ";
             // 
             // grpmemo
             // 
@@ -248,18 +273,6 @@
             this.lblStudyCourse.TabIndex = 8;
             this.lblStudyCourse.Text = "       Study Course       ";
             // 
-            // lblStudentNumber
-            // 
-            this.lblStudentNumber.AutoSize = true;
-            this.lblStudentNumber.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lblStudentNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblStudentNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentNumber.Location = new System.Drawing.Point(13, 19);
-            this.lblStudentNumber.Name = "lblStudentNumber";
-            this.lblStudentNumber.Size = new System.Drawing.Size(151, 23);
-            this.lblStudentNumber.TabIndex = 7;
-            this.lblStudentNumber.Text = "   Student Number   ";
-            // 
             // grpLastName
             // 
             this.grpLastName.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -363,29 +376,30 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(639, 390);
+            this.btnUpdate.Location = new System.Drawing.Point(328, 405);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(108, 33);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // grpStudentNumber
+            // pictureHome
             // 
-            this.grpStudentNumber.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpStudentNumber.Controls.Add(this.lblStudentNumber);
-            this.grpStudentNumber.Location = new System.Drawing.Point(24, 190);
-            this.grpStudentNumber.Name = "grpStudentNumber";
-            this.grpStudentNumber.Size = new System.Drawing.Size(179, 53);
-            this.grpStudentNumber.TabIndex = 15;
-            this.grpStudentNumber.TabStop = false;
-            this.grpStudentNumber.Text = "Student Number";
+            this.pictureHome.Image = global::Tuition_Centre.Properties.Resources.home;
+            this.pictureHome.Location = new System.Drawing.Point(737, 27);
+            this.pictureHome.Name = "pictureHome";
+            this.pictureHome.Size = new System.Drawing.Size(51, 43);
+            this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureHome.TabIndex = 16;
+            this.pictureHome.TabStop = false;
+            this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
             // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblStudentName);
             this.Controls.Add(this.groupBox2);
@@ -397,6 +411,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.grpStudentNumber.ResumeLayout(false);
+            this.grpStudentNumber.PerformLayout();
             this.grpmemo.ResumeLayout(false);
             this.grpmemo.PerformLayout();
             this.grpEmail.ResumeLayout(false);
@@ -414,8 +430,7 @@
             this.grpFirstName.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.grpStudentNumber.ResumeLayout(false);
-            this.grpStudentNumber.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,5 +466,6 @@
         private Label label2;
         private Button btnUpdate;
         private GroupBox grpStudentNumber;
+        private PictureBox pictureHome;
     }
 }

@@ -42,12 +42,14 @@
             this.txtReason = new System.Windows.Forms.TextBox();
             this.btnRequest = new System.Windows.Forms.Button();
             this.picChange = new System.Windows.Forms.PictureBox();
+            this.pictureHome = new System.Windows.Forms.PictureBox();
             this.grpCourse.SuspendLayout();
             this.grpDate.SuspendLayout();
             this.grpOldSubject.SuspendLayout();
             this.grpNewSubject.SuspendLayout();
             this.grpReason.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeading
@@ -203,11 +205,23 @@
             this.picChange.TabIndex = 7;
             this.picChange.TabStop = false;
             // 
+            // pictureHome
+            // 
+            this.pictureHome.Image = global::Tuition_Centre.Properties.Resources.home;
+            this.pictureHome.Location = new System.Drawing.Point(737, 12);
+            this.pictureHome.Name = "pictureHome";
+            this.pictureHome.Size = new System.Drawing.Size(51, 43);
+            this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureHome.TabIndex = 19;
+            this.pictureHome.TabStop = false;
+            this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
+            // 
             // RequestSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.picChange);
             this.Controls.Add(this.btnRequest);
             this.Controls.Add(this.grpReason);
@@ -227,6 +241,7 @@
             this.grpReason.ResumeLayout(false);
             this.grpReason.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +263,6 @@
         private DateTimePicker dateTimePicker1;
         private ComboBox cmbOldSubject;
         private ComboBox cmbNewSubject;
+        private PictureBox pictureHome;
     }
 }

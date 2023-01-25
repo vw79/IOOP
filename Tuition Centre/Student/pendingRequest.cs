@@ -31,5 +31,19 @@ namespace Tuition_Centre.Student
         {
 
         }
+
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            frmMainStudent obj1 = new frmMainStudent();
+            this.Close();
+            obj1.ShowDialog();
+        }
+
+        private void pictureBackward_Click(object sender, EventArgs e)
+        {
+            Process obj1 = new Process();
+            this.Close();
+            obj1.ShowDialog();
+        }
     }
 }

@@ -158,3 +158,4 @@ C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_C
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Process.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.pendingRequest.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.EditProfile.resources
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Schedule.resources
