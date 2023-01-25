@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Tutor
 {
-    public partial class frmTutor_ClassUpdate : Form
+    public partial class frmTutor_ClassAdd : Form
     {
-        public frmTutor_ClassUpdate()
+        public frmTutor_ClassAdd()
         {
             InitializeComponent();
         }
@@ -50,6 +50,39 @@ namespace Tuition_Centre.Tutor
             this.Hide();
             obj.ShowDialog();
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Main obj = new Main();
+            this.Hide();
+            obj.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents();
+            this.Hide();
+            obj1.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile();
+            this.Hide();
+            obj1.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Main obj = new Main();
+            this.Hide();
+            obj.ShowDialog();
         }
     }
 }

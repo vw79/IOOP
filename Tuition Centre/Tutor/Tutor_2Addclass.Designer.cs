@@ -1,6 +1,6 @@
 ﻿namespace Tuition_Centre.Tutor
 {
-    partial class frmTutor_ClassUpdate
+    partial class frmTutor_ClassAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,8 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -80,7 +79,6 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.button7);
             this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Panel2.Controls.Add(this.button5);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(609, 316);
             this.splitContainer1.SplitterDistance = 153;
@@ -109,6 +107,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Class Information";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -119,6 +118,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -129,6 +129,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "View Enrolled Students";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -139,10 +140,11 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Update Information";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(347, 287);
+            this.button7.Location = new System.Drawing.Point(240, 288);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 3;
@@ -152,23 +154,13 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(227, 287);
+            this.button6.Location = new System.Drawing.Point(125, 287);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 2;
             this.button6.Text = "Confirm";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(102, 287);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 23);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Delete Class";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
@@ -198,8 +190,8 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.label9);
-            this.splitContainer2.Panel2.Controls.Add(this.label8);
+            this.splitContainer2.Panel2.Controls.Add(this.comboBox5);
+            this.splitContainer2.Panel2.Controls.Add(this.comboBox4);
             this.splitContainer2.Panel2.Controls.Add(this.dateTimePicker1);
             this.splitContainer2.Panel2.Controls.Add(this.comboBox3);
             this.splitContainer2.Panel2.Controls.Add(this.comboBox2);
@@ -253,25 +245,21 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Class ID :";
             // 
-            // label9
+            // comboBox5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(3, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(311, 15);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "INTRODUCTION TO OBJECT ORIENTED PROGRAMMING";
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(3, 98);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(221, 25);
+            this.comboBox5.TabIndex = 6;
             // 
-            // label8
+            // comboBox4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(3, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 15);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "CT044-3-1-IOOP-L-5";
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(3, 69);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(221, 25);
+            this.comboBox4.TabIndex = 5;
             // 
             // dateTimePicker1
             // 
@@ -286,17 +274,21 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(3, 98);
+            this.comboBox3.Items.AddRange(new object[] {
+            "INTRODUCTION TO OBJECT ORIENTED PROGRAMMING"});
+            this.comboBox3.Location = new System.Drawing.Point(3, 41);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 25);
+            this.comboBox3.Size = new System.Drawing.Size(332, 25);
             this.comboBox3.TabIndex = 1;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 69);
+            this.comboBox2.Items.AddRange(new object[] {
+            "CT044-3-1-IOOP-L-5"});
+            this.comboBox2.Location = new System.Drawing.Point(3, 12);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 25);
+            this.comboBox2.Size = new System.Drawing.Size(221, 25);
             this.comboBox2.TabIndex = 0;
             // 
             // pictureBox1
@@ -339,7 +331,7 @@
             this.comboBox1.Size = new System.Drawing.Size(75, 23);
             this.comboBox1.TabIndex = 9;
             // 
-            // frmTutor_ClassUpdate
+            // frmTutor_ClassAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -349,7 +341,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Name = "frmTutor_ClassUpdate";
+            this.Name = "frmTutor_ClassAdd";
             this.Text = "Update or Delete Class";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -360,7 +352,6 @@
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -384,18 +375,17 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private Label label9;
-        private Label label8;
         private DateTimePicker dateTimePicker1;
         private ComboBox comboBox3;
         private ComboBox comboBox2;
         private Button button7;
         private Button button6;
-        private Button button5;
         private GroupBox groupBox2;
         private Button button1;
         private Button button4;
         private Button button2;
         private Button button3;
+        private ComboBox comboBox4;
+        private ComboBox comboBox5;
     }
 }
