@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Student
 {
-    public partial class CancelRequest : Form
+    public partial class EditProfile : Form
     {
-        public CancelRequest()
+        public EditProfile()
         {
             InitializeComponent();
+        }
+
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            frmMainStudent obj1 = new frmMainStudent();
+            this.Close();
+            obj1.ShowDialog();
         }
     }
 }

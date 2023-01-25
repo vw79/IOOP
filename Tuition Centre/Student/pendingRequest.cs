@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Student
 {
-    public partial class RequestSubject : Form
+    public partial class pendingRequest : Form
     {
-        public RequestSubject()
+        public pendingRequest()
         {
             InitializeComponent();
         }
 
-        private void StudentMainPage_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnRequest_Click(object sender, EventArgs e)
+        private void lblC_Click(object sender, EventArgs e)
         {
 
         }
@@ -35,6 +35,13 @@ namespace Tuition_Centre.Student
         private void pictureHome_Click(object sender, EventArgs e)
         {
             frmMainStudent obj1 = new frmMainStudent();
+            this.Close();
+            obj1.ShowDialog();
+        }
+
+        private void pictureBackward_Click(object sender, EventArgs e)
+        {
+            Process obj1 = new Process();
             this.Close();
             obj1.ShowDialog();
         }

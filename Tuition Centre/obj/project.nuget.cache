@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "W8cU47lTKXz5HDo7RmAtSClS6uQ/GfufTAgSLilgT9MWw7PKmqgOSVEkTI7tuTLHOpb+CYJjUvaazCHIRwZd/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\htank\\source\\repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
+=======
+  "dgSpecHash": "oIy1+rjkHU3VCyr5Qr0ZCyXrXRdbuqidKl+12RH7whY0C2rbW2TsfG/5oZB/ONf8+qzdc3CG5nXg78YAepQc4Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ben\\source\\repos\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
+>>>>>>> b2b97d181bda7e174db2e6e866bd9c908cb0e87b
   "expectedPackageFiles": [],
   "logs": []
 }

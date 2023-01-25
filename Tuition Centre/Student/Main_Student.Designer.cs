@@ -39,10 +39,12 @@
             this.cmbChangeSubject = new System.Windows.Forms.ComboBox();
             this.grpChangeSubject = new System.Windows.Forms.GroupBox();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.grpChangeSubject.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // picProfile
@@ -65,9 +67,11 @@
             this.picEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEdit.TabIndex = 1;
             this.picEdit.TabStop = false;
+            this.picEdit.Click += new System.EventHandler(this.picEdit_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.lblStudentNum);
             this.groupBox1.Controls.Add(this.lblStudentCourse);
             this.groupBox1.Controls.Add(this.label2);
@@ -127,6 +131,7 @@
             this.btnSchedule.TabIndex = 5;
             this.btnSchedule.Text = "My Schedule";
             this.btnSchedule.UseVisualStyleBackColor = false;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
             // cmbChangeSubject
             // 
@@ -134,7 +139,7 @@
             this.cmbChangeSubject.FormattingEnabled = true;
             this.cmbChangeSubject.Items.AddRange(new object[] {
             "Request to change the subject",
-            "Cancel the subject"});
+            "View the process"});
             this.cmbChangeSubject.Location = new System.Drawing.Point(16, 22);
             this.cmbChangeSubject.Name = "cmbChangeSubject";
             this.cmbChangeSubject.Size = new System.Drawing.Size(219, 29);
@@ -144,14 +149,16 @@
             // 
             // grpChangeSubject
             // 
+            this.grpChangeSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpChangeSubject.Controls.Add(this.cmbChangeSubject);
             this.grpChangeSubject.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.grpChangeSubject.Location = new System.Drawing.Point(553, 39);
+            this.grpChangeSubject.Location = new System.Drawing.Point(543, 39);
             this.grpChangeSubject.Name = "grpChangeSubject";
-            this.grpChangeSubject.Size = new System.Drawing.Size(235, 63);
+            this.grpChangeSubject.Size = new System.Drawing.Size(245, 63);
             this.grpChangeSubject.TabIndex = 7;
             this.grpChangeSubject.TabStop = false;
             this.grpChangeSubject.Text = "Change the Subject";
+            this.grpChangeSubject.Enter += new System.EventHandler(this.grpChangeSubject_Enter);
             // 
             // lblWelcome
             // 
@@ -163,11 +170,23 @@
             this.lblWelcome.TabIndex = 8;
             this.lblWelcome.Text = "Welcome, Student";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tuition_Centre.Properties.Resources.logout;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmMainStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.grpChangeSubject);
             this.Controls.Add(this.btnSchedule);
@@ -182,6 +201,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grpChangeSubject.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +220,6 @@
         private ComboBox cmbChangeSubject;
         private GroupBox grpChangeSubject;
         private Label lblWelcome;
+        private PictureBox pictureBox1;
     }
 }
