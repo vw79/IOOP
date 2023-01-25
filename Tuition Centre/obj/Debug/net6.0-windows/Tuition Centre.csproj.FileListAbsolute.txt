@@ -114,9 +114,7 @@ C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition C
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.genruntimeconfig.cache
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\ref\Tuition Centre.dll
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Properties.Resources.resources
-C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutorUpdate.resources
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ViewStudents.resources
-C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ClassUpdate.resources
 D:\Download\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.exe
 D:\Download\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.deps.json
 D:\Download\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.runtimeconfig.json
@@ -154,3 +152,7 @@ D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\refint\Tuition Centre.d
 D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.pdb
 D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.genruntimeconfig.cache
 D:\Download\IOOP\Tuition Centre\obj\Debug\net6.0-windows\ref\Tuition Centre.dll
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ClassAdd.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.Tutor_DelClass.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_UpdateProfile.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_StudentList.resources
