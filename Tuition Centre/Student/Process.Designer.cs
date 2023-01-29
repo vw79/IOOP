@@ -168,6 +168,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "test unpending";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button5
@@ -178,6 +179,7 @@
             this.button5.TabIndex = 22;
             this.button5.Text = "test pending";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Process
@@ -196,7 +198,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Process";
-            this.Text = "PendingRequest";
+            this.Text = "RequestProcess";
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).EndInit();
             this.grpNewSubject.ResumeLayout(false);
             this.grpOldSubject.ResumeLayout(false);
