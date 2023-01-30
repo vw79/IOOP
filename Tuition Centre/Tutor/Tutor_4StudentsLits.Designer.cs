@@ -35,12 +35,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -133,47 +133,7 @@
             this.groupBox1.Size = new System.Drawing.Size(446, 307);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Class A";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
-            this.listBox1.Items.AddRange(new object[] {
-            "    Kathy Sweeney",
-            "    Layne Mahoney",
-            "    Sabrina Klein",
-            "    Kirsten Conrad",
-            "    Madden Pacheco",
-            "    Mauricio Swanson",
-            "    Kaylynn Barnett",
-            "    Joe Hutchinson",
-            "    Jadon Forbes",
-            "    Averi Horn",
-            "    Sage Aguirre",
-            "    Autumn Burton",
-            "    Cara Cervantes",
-            "    Jared Gonzalez",
-            "    Bianca Lang",
-            "    Brynn Burnett",
-            "    John Montes",
-            "    Hayden Mcclure",
-            "    Terrell Tapia",
-            "    Cayden Malone",
-            "    Kale Glenn",
-            "    Gabriella Crane",
-            "    Urijah Molina",
-            "    Baron Dyer",
-            "    Delilah Arellano",
-            "    Declan Wiley",
-            "    Braedon Melton",
-            "    Damari Velez",
-            "    Alani Bullock",
-            "    Anastasia Castaneda"});
-            this.listBox1.Location = new System.Drawing.Point(6, 24);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(434, 276);
-            this.listBox1.TabIndex = 0;
+            this.groupBox1.Text = "Introduction to Objective Oriented Programming - CT044-3-1-IOOP-L-5";
             // 
             // pictureBox1
             // 
@@ -217,6 +177,46 @@
             this.comboBox1.Size = new System.Drawing.Size(75, 23);
             this.comboBox1.TabIndex = 14;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 17;
+            this.listBox1.Items.AddRange(new object[] {
+            "    Kathy Sweeney",
+            "    Layne Mahoney",
+            "    Sabrina Klein",
+            "    Kirsten Conrad",
+            "    Madden Pacheco",
+            "    Mauricio Swanson",
+            "    Kaylynn Barnett",
+            "    Joe Hutchinson",
+            "    Jadon Forbes",
+            "    Averi Horn",
+            "    Sage Aguirre",
+            "    Autumn Burton",
+            "    Cara Cervantes",
+            "    Jared Gonzalez",
+            "    Bianca Lang",
+            "    Brynn Burnett",
+            "    John Montes",
+            "    Hayden Mcclure",
+            "    Terrell Tapia",
+            "    Cayden Malone",
+            "    Kale Glenn",
+            "    Gabriella Crane",
+            "    Urijah Molina",
+            "    Baron Dyer",
+            "    Delilah Arellano",
+            "    Declan Wiley",
+            "    Braedon Melton",
+            "    Damari Velez",
+            "    Alani Bullock",
+            "    Anastasia Castaneda"});
+            this.listBox1.Location = new System.Drawing.Point(6, 26);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(434, 276);
+            this.listBox1.TabIndex = 0;
+            // 
             // frmTutor_StudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -250,11 +250,11 @@
         private Button button2;
         private Button button3;
         private GroupBox groupBox1;
-        private ListBox listBox1;
         private PictureBox pictureBox1;
         private Label label2;
         private Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ComboBox comboBox1;
+        private ListBox listBox1;
     }
 }

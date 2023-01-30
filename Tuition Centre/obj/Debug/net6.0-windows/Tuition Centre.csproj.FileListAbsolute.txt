@@ -164,3 +164,8 @@ C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_C
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.EditProfile.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Schedule.resources
 >>>>>>> b2b97d181bda7e174db2e6e866bd9c908cb0e87b
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.EditProfile.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.pendingRequest.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Process.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Schedule.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.UnpendingRequest.resources
