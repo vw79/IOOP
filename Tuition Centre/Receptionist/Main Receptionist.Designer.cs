@@ -43,6 +43,7 @@
             this.btnRegNewStu.TabIndex = 0;
             this.btnRegNewStu.Text = "Register New Student";
             this.btnRegNewStu.UseVisualStyleBackColor = true;
+            this.btnRegNewStu.Click += new System.EventHandler(this.btnRegNewStu_Click);
             // 
             // btnUpdateRcpInfo
             // 

@@ -23,5 +23,10 @@ namespace Tuition_Centre.Receptionist
             paymentPage1.Show();
             this.Hide();
         }
+
+        private void btnRegNewStu_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("HELLO WORLD");
+        }
     }
 }
