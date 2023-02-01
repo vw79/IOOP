@@ -164,3 +164,7 @@ C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_C
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.EditProfile.resources
 C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Schedule.resources
 >>>>>>> b2b97d181bda7e174db2e6e866bd9c908cb0e87b
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_UpdateProfile.resources
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ClassAdd.resources
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.Tutor_DelClass.resources
+C:\Users\ben\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_StudentList.resources

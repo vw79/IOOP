@@ -40,7 +40,7 @@ namespace Tuition_Centre.Student
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             frmMainStudent obj1 = new frmMainStudent();
-            this.Close();
+            this.Hide();
             obj1.ShowDialog();
         }
     }
