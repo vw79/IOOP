@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Tuition Centre",
+    "\\Tuition Centre\\Student",
     "\\Tuition Centre\\Tutor"
   ],
-  "SelectedNode": "\\Tuition Centre\\Tutor\\Tutor_3DeleteClass.cs",
+  "SelectedNode": "\\Tuition Centre\\Tutor\\Tutor_2Addclass.cs",
   "PreviewInSolutionExplorer": false
 }

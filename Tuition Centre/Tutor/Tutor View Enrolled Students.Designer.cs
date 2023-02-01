@@ -41,6 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -126,6 +128,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(3, 4);
@@ -133,7 +137,7 @@
             this.groupBox1.Size = new System.Drawing.Size(446, 307);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Choose Class to View Students";
+            this.groupBox1.Text = "Click Class to View Students";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label3
@@ -141,9 +145,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.Size = new System.Drawing.Size(428, 17);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Class A";
+            this.label3.Text = "Introduction to Objective Oriented Programming - CT044-3-1-IOOP-L-5";
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // pictureBox1
@@ -188,6 +192,24 @@
             this.comboBox1.Size = new System.Drawing.Size(75, 23);
             this.comboBox1.TabIndex = 9;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(429, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Introduction to Objective Oriented Programming - CT044-3-1-IOOP-L-6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(429, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Introduction to Objective Oriented Programming - CT044-3-1-IOOP-L-7";
+            // 
             // frmTutor_ViewStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -229,5 +251,7 @@
         private Button button2;
         private Button button3;
         private Label label3;
+        private Label label5;
+        private Label label4;
     }
 }

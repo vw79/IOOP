@@ -296,9 +296,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::Tuition_Centre.Properties.Resources._7akn42c5i5621;
             this.pictureBox1.Location = new System.Drawing.Point(9, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 109);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
