@@ -34,6 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -62,8 +63,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button6);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(609, 314);
+            this.splitContainer1.Size = new System.Drawing.Size(609, 322);
             this.splitContainer1.SplitterDistance = 151;
             this.splitContainer1.TabIndex = 6;
             // 
@@ -125,6 +127,15 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(247, 288);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 25);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Back";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button5);
@@ -132,18 +143,19 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 308);
+            this.groupBox1.Size = new System.Drawing.Size(446, 316);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Click Class ID to Delete Class";
+            this.groupBox1.Text = "Click Class ID and Delete Class";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(174, 283);
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(118, 285);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 25);
             this.button5.TabIndex = 3;
-            this.button5.Text = "Back";
+            this.button5.Text = "Delete";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -175,6 +187,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(440, 259);
             this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -259,5 +272,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ComboBox comboBox1;
         private Button button5;
+        private Button button6;
     }
 }

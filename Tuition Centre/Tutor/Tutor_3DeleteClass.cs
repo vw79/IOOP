@@ -56,5 +56,10 @@ namespace Tuition_Centre.Tutor
             this.Hide();
             obj1.ShowDialog();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
