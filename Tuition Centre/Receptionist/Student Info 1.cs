@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Receptionist
 {
-    public partial class frmUpdateStu : Form
+    public partial class frmUpdateStu1 : Form
     {
-        public frmUpdateStu()
+        public frmUpdateStu1()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
