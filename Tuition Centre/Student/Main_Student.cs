@@ -13,9 +13,13 @@ namespace Tuition_Centre.Student
 {
     public partial class frmMainStudent : Form
     {
-        public frmMainStudent()
+        public frmMainStudent(string un)
         {
             InitializeComponent();
+        }
+
+        public frmMainStudent()
+        {
         }
 
         private void cmbChangeSubject_SelectedIndexChanged(object sender, EventArgs e)
@@ -23,14 +27,14 @@ namespace Tuition_Centre.Student
             if (cmbChangeSubject.Text == "Request to change the subject")
             {
                 RequestSubject obj1 = new RequestSubject();
-                this.Close();
+                this.Hide();
                 obj1.ShowDialog();
             }
 
             if (cmbChangeSubject.Text == "View the process")
             {
                 Process obj1 = new Process();
-                this.Close();
+                this.Hide();
                 obj1.ShowDialog();
             }
         }
@@ -43,22 +47,27 @@ namespace Tuition_Centre.Student
         private void picEdit_Click(object sender, EventArgs e)
         {
             EditProfile obj1 = new EditProfile();
-            this.Close();
+            this.Hide();
             obj1.ShowDialog();
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
             Schedule obj1 = new Schedule();
-            this.Close();
+            this.Hide();
             obj1.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Main obj1 = new Main();
-            this.Close();
+            this.Hide();
             obj1.ShowDialog();
+        }
+
+        private void frmMainStudent_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

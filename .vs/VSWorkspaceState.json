@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Tuition Centre",
+    "\\Tuition Centre\\Resources",
     "\\Tuition Centre\\Student",
     "\\Tuition Centre\\Tutor"
   ],
-  "SelectedNode": "\\Tuition Centre\\Tutor\\Tutor Update.cs",
+  "SelectedNode": "\\Tuition Centre.sln",
   "PreviewInSolutionExplorer": false
 }

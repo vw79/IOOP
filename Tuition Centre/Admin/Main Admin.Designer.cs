@@ -81,6 +81,7 @@
             this.Controls.Add(this.btnTutorList);
             this.Name = "frmMainAdmin";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.frmMainAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -196,6 +196,7 @@
             this.Controls.Add(this.picProfile);
             this.Name = "frmMainStudent";
             this.Text = "Student";
+            this.Load += new System.EventHandler(this.frmMainStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).EndInit();
             this.groupBox1.ResumeLayout(false);

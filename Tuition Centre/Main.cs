@@ -39,5 +39,24 @@ namespace Tuition_Centre
             tutorForm.Show();
             this.Hide();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string start;
+            User obj1 = new User(txtUsername.Text, txtPassword.Text);
+            start = obj1.Main(txtUsername.Text);
+            if(start != null)
+            {
+                MessageBox.Show(start);
+            }
+            txtUsername.Text = String.Empty;
+            txtPassword.Text = String.Empty;
+
+        }
     }
 }

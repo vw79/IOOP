@@ -12,9 +12,13 @@ namespace Tuition_Centre.Tutor
 {
     public partial class frmMainTutor : Form
     {
-        public frmMainTutor()
+        public frmMainTutor(string un)
         {
             InitializeComponent();
+        }
+
+        public frmMainTutor()
+        {
         }
 
         private void button1_Click(object sender, EventArgs e)

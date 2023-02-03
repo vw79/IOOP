@@ -14,6 +14,10 @@ namespace Tuition_Centre.Receptionist
     {
         public frmMainReceptionist()
         {
+        }
+
+        public frmMainReceptionist(string un)
+        {
             InitializeComponent();
         }
 

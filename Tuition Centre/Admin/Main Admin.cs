@@ -12,9 +12,23 @@ namespace Tuition_Centre.Admin
 {
     public partial class frmMainAdmin : Form
     {
+        public static string name;
+
         public frmMainAdmin()
         {
-            InitializeComponent();
         }
+
+        public frmMainAdmin(string n)
+        {
+            InitializeComponent();
+            name = n;
+        }
+
+
+        private void frmMainAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
