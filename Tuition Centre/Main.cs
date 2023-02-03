@@ -14,7 +14,7 @@ namespace Tuition_Centre
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            frmMainAdmin adminForm = new frmMainAdmin();
+            FrmMainAdmin adminForm = new FrmMainAdmin();
             adminForm.Show();
             this.Hide();
         }

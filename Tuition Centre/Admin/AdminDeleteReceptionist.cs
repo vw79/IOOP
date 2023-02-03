@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Admin
 {
-    public partial class frmMainAdmin : Form
+    public partial class FrmAdminDeleteReceptionist : Form
     {
-        public frmMainAdmin()
+        public FrmAdminDeleteReceptionist()
         {
             InitializeComponent();
         }
