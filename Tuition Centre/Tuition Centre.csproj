@@ -28,4 +28,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Receptionist\Student Info\" />
+  </ItemGroup>
+
 </Project>

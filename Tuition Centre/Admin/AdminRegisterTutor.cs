@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tuition_Centre.Receptionist
+namespace Tuition_Centre.Admin
 {
-    public partial class frmUpdateStu1 : Form
+    public partial class FrmAdminRegisterTutor : Form
     {
-        public frmUpdateStu1()
+        public FrmAdminRegisterTutor()
         {
             InitializeComponent();
         }

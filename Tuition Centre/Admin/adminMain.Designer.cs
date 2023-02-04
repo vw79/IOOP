@@ -1,6 +1,6 @@
 ﻿namespace Tuition_Centre.Admin
 {
-    partial class frmMainAdmin
+    partial class FrmMainAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.btnRecepList = new System.Windows.Forms.Button();
             this.btnFinance = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTutorList
@@ -58,28 +59,39 @@
             this.btnFinance.Name = "btnFinance";
             this.btnFinance.Size = new System.Drawing.Size(131, 42);
             this.btnFinance.TabIndex = 2;
-            this.btnFinance.Text = "Financial Information";
+            this.btnFinance.Text = "Income Report";
             this.btnFinance.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 150);
+            this.label1.Location = new System.Drawing.Point(322, 142);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome back, administrator";
             // 
-            // frmMainAdmin
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(338, 339);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 42);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Update Profile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FrmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFinance);
             this.Controls.Add(this.btnRecepList);
             this.Controls.Add(this.btnTutorList);
-            this.Name = "frmMainAdmin";
+            this.Name = "FrmMainAdmin";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.frmMainAdmin_Load);
             this.ResumeLayout(false);
@@ -93,5 +105,6 @@
         private Button btnRecepList;
         private Button btnFinance;
         private Label label1;
+        private Button button1;
     }
 }

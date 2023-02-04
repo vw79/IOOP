@@ -32,5 +32,17 @@ namespace Tuition_Centre.Receptionist
         {
             MessageBox.Show("HELLO WORLD");
         }
+
+        private void btnUpdateRcpInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
+        {
+            frmUpdateStu studentInfoPage1= new frmUpdateStu();
+            studentInfoPage1.Show();
+            this.Hide();
+        }
     }
 }

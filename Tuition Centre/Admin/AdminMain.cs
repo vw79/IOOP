@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tuition_Centre.Receptionist
+namespace Tuition_Centre.Admin
 {
-    public partial class frmUpdateStu1 : Form
+    public partial class FrmMainAdmin : Form
     {
-        public frmUpdateStu1()
+        public FrmMainAdmin()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

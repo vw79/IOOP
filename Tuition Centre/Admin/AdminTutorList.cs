@@ -10,25 +10,11 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Admin
 {
-    public partial class frmMainAdmin : Form
+    public partial class FrmAdminTutorList : Form
     {
-        public static string name;
-
-        public frmMainAdmin()
-        {
-        }
-
-        public frmMainAdmin(string n)
+        public FrmAdminTutorList()
         {
             InitializeComponent();
-            name = n;
         }
-
-
-        private void frmMainAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

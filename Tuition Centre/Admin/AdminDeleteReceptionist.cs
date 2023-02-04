@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tuition_Centre.Receptionist
+namespace Tuition_Centre.Admin
 {
-    public partial class Form5 : Form
+    public partial class FrmAdminDeleteReceptionist : Form
     {
-        public Form5()
+        public FrmAdminDeleteReceptionist()
         {
             InitializeComponent();
         }

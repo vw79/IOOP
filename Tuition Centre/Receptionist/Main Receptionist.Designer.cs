@@ -53,6 +53,7 @@
             this.btnUpdateRcpInfo.TabIndex = 1;
             this.btnUpdateRcpInfo.Text = "Update Receptionist Info";
             this.btnUpdateRcpInfo.UseVisualStyleBackColor = true;
+            this.btnUpdateRcpInfo.Click += new System.EventHandler(this.btnUpdateRcpInfo_Click);
             // 
             // btnUpdateStudentInfo
             // 
@@ -62,6 +63,7 @@
             this.btnUpdateStudentInfo.TabIndex = 2;
             this.btnUpdateStudentInfo.Text = "Update Student Info";
             this.btnUpdateStudentInfo.UseVisualStyleBackColor = true;
+            this.btnUpdateStudentInfo.Click += new System.EventHandler(this.btnUpdateStudentInfo_Click);
             // 
             // btnPayment
             // 
