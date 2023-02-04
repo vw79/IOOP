@@ -1,6 +1,6 @@
 ﻿namespace Tuition_Centre.Student
 {
-    partial class frmMainStudent
+    partial class frmMain_Student
     {
         /// <summary>
         /// Required designer variable.

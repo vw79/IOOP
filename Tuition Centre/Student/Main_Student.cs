@@ -11,14 +11,15 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Student
 {
-    public partial class frmMainStudent : Form
+    public partial class frmMain_Student : Form
     {
-        public frmMainStudent(string un)
+        public frmMain_Student(string un)
         {
             InitializeComponent();
+            Name = un;
         }
 
-        public frmMainStudent()
+        public frmMain_Student()
         {
         }
 
@@ -67,7 +68,7 @@ namespace Tuition_Centre.Student
 
         private void frmMainStudent_Load(object sender, EventArgs e)
         {
-
+            lblWelcome.Text = "Welcome, " + Name;
         }
     }
 }

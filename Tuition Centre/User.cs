@@ -60,7 +60,7 @@ namespace Tuition_Centre
                 }
                 if (userRole == "student")
                 {
-                    frmMainStudent c = new frmMainStudent(un);
+                    frmMain_Student c = new frmMain_Student(un);
                     c.ShowDialog();
                     
                 }
@@ -72,7 +72,7 @@ namespace Tuition_Centre
                 }
             }
             else
-                status = " Sorry! Incorrect username or password Ple";
+                status = " Sorry! Incorrect username or password Please try again";
             con.Close();
 
             return status;

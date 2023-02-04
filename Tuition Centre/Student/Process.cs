@@ -19,7 +19,7 @@ namespace Tuition_Centre.Student
 
         private void pictureHome_Click(object sender, EventArgs e)
         {
-            frmMainStudent obj1 = new frmMainStudent();
+            frmMain_Student obj1 = new frmMain_Student();
             this.Hide();
             obj1.ShowDialog();
         }

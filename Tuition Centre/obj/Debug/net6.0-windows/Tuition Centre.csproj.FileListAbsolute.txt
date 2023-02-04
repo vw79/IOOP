@@ -181,3 +181,5 @@ C:\Users\htank\source\repos\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtime
 C:\Users\htank\source\repos\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\htank\source\repos\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.CopyComplete
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Main_Student.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.frmMain_Student.resources

@@ -39,9 +39,9 @@ namespace Tuition_Centre.Student
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmMainStudent obj1 = new frmMainStudent();
-            this.Hide();
+            frmMain_Student obj1 = new frmMain_Student();
             obj1.ShowDialog();
+            Hide();
         }
     }
 }

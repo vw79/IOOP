@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,14 +14,17 @@ namespace Tuition_Centre.Student
 {
     public partial class EditProfile : Form
     {
+
         public EditProfile()
         {
             InitializeComponent();
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+            con.Open();
         }
 
         private void pictureHome_Click(object sender, EventArgs e)
         {
-            frmMainStudent obj1 = new frmMainStudent();
+            frmMain_Student obj1 = new frmMain_Student();
             this.Hide();
             obj1.ShowDialog();
         }

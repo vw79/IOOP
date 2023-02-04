@@ -28,7 +28,7 @@ namespace Tuition_Centre
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            frmMainStudent studentForm = new frmMainStudent();
+            frmMain_Student studentForm = new frmMain_Student();
             studentForm.Show();
             this.Hide();
         }
