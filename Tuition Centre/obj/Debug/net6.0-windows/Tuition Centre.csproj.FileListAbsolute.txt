@@ -183,3 +183,17 @@ C:\Users\htank\source\repos\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtime
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.CopyComplete
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Main_Student.resources
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.frmMain_Student.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminDeleteReceptionist.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminDeleteTutor.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminFinance.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminReceptionistList.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterReceptionist.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterTutor.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminTutorList.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminUpdateProfile.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmRegister2.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmRegister1.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu1.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu2.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu3.resources
+C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu.resources

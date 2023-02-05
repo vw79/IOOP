@@ -46,25 +46,25 @@ namespace Tuition_Centre
                 cmd2.Parameters.AddWithValue("@b", password);
                 string userRole = cmd2.ExecuteScalar().ToString();
 
-                if (userRole == "admin")
+                if (userRole.Trim() == "admin")
                 {
-                    frmMainAdmin a = new frmMainAdmin(un);
+                    FrmMainAdmin a = new frmMainAdmin(un);
                     a.ShowDialog();
                     
                 }
-                if (userRole == "receptionist")
+                if (userRole.Trim() == "receptionist")
                 {
                     frmMainReceptionist b = new frmMainReceptionist(un);
                     b.ShowDialog();
                     
                 }
-                if (userRole == "student")
+                if (userRole.Trim() == "student")
                 {
                     frmMain_Student c = new frmMain_Student(un);
                     c.ShowDialog();
                     
                 }
-                else if (userRole == "tutor")
+                else if (userRole.Trim() == "tutor")
                 {
                     frmMainTutor d = new frmMainTutor(un);
                     d.ShowDialog();
@@ -81,6 +81,16 @@ namespace Tuition_Centre
         private void Close()
         {
             throw new NotImplementedException();
+        }
+    }
+
+    internal class frmMainAdmin : FrmMainAdmin
+    {
+        private string un;
+
+        public frmMainAdmin(string un)
+        {
+            this.un = un;
         }
     }
 }

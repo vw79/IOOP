@@ -28,5 +28,14 @@ namespace Tuition_Centre.Student
             this.Hide();
             obj1.ShowDialog();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            student obj1 = new student(Name);
+            MessageBox.Show(obj1.EditProfile(txtPassport.Text, dateBrithday.Text, txtPhoneNumber.Text, txtEmail.Text, txtmemo.Text));
+
+        }
+
+        
     }
 }

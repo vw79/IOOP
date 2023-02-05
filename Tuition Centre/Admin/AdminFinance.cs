@@ -12,17 +12,10 @@ namespace Tuition_Centre.Admin
 {
     public partial class FrmAdminFinance : Form
     {
-<<<<<<< HEAD:Tuition Centre/Admin/Main Admin.cs
         public static string name;
 
-        public frmMainAdmin()
-=======
-        public FrmAdminFinance()
->>>>>>> a8b091a322df53ca7a0210422cc9bb6d64362153:Tuition Centre/Admin/AdminFinance.cs
-        {
-        }
 
-        public frmMainAdmin(string n)
+        public FrmAdminFinance(string n)
         {
             InitializeComponent();
             name = n;

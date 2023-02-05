@@ -46,10 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpStudyCourse = new System.Windows.Forms.GroupBox();
             this.lblStudyCourse = new System.Windows.Forms.Label();
-            this.grpLastName = new System.Windows.Forms.GroupBox();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.grpFirstName = new System.Windows.Forms.GroupBox();
-            this.lblFirstName = new System.Windows.Forms.Label();
+            this.grpName = new System.Windows.Forms.GroupBox();
+            this.lblName = new System.Windows.Forms.Label();
             this.lblStudentName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblStudentNum = new System.Windows.Forms.Label();
@@ -67,8 +65,7 @@
             this.grpBirthday.SuspendLayout();
             this.grpPassport.SuspendLayout();
             this.grpStudyCourse.SuspendLayout();
-            this.grpLastName.SuspendLayout();
-            this.grpFirstName.SuspendLayout();
+            this.grpName.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
             this.SuspendLayout();
@@ -104,8 +101,7 @@
             this.groupBox1.Controls.Add(this.grpBirthday);
             this.groupBox1.Controls.Add(this.grpPassport);
             this.groupBox1.Controls.Add(this.grpStudyCourse);
-            this.groupBox1.Controls.Add(this.grpLastName);
-            this.groupBox1.Controls.Add(this.grpFirstName);
+            this.groupBox1.Controls.Add(this.grpName);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Location = new System.Drawing.Point(328, 42);
             this.groupBox1.Name = "groupBox1";
@@ -238,6 +234,7 @@
             this.txtPassport.PlaceholderText = "Passport Number / Mykad";
             this.txtPassport.Size = new System.Drawing.Size(160, 23);
             this.txtPassport.TabIndex = 1;
+            this.txtPassport.TextChanged += new System.EventHandler(this.txtPassport_TextChanged);
             // 
             // label1
             // 
@@ -273,51 +270,28 @@
             this.lblStudyCourse.TabIndex = 8;
             this.lblStudyCourse.Text = "       Study Course       ";
             // 
-            // grpLastName
+            // grpName
             // 
-            this.grpLastName.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpLastName.Controls.Add(this.lblLastName);
-            this.grpLastName.Location = new System.Drawing.Point(221, 22);
-            this.grpLastName.Name = "grpLastName";
-            this.grpLastName.Size = new System.Drawing.Size(179, 49);
-            this.grpLastName.TabIndex = 1;
-            this.grpLastName.TabStop = false;
-            this.grpLastName.Text = "Last Name                                  ";
+            this.grpName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.grpName.Controls.Add(this.lblName);
+            this.grpName.Location = new System.Drawing.Point(24, 22);
+            this.grpName.Name = "grpName";
+            this.grpName.Size = new System.Drawing.Size(376, 49);
+            this.grpName.TabIndex = 0;
+            this.grpName.TabStop = false;
+            this.grpName.Text = "Name                                  ";
             // 
-            // lblLastName
+            // lblName
             // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLastName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLastName.Location = new System.Drawing.Point(13, 19);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(158, 23);
-            this.lblLastName.TabIndex = 0;
-            this.lblLastName.Text = "Last Name                  ";
-            // 
-            // grpFirstName
-            // 
-            this.grpFirstName.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpFirstName.Controls.Add(this.lblFirstName);
-            this.grpFirstName.Location = new System.Drawing.Point(24, 22);
-            this.grpFirstName.Name = "grpFirstName";
-            this.grpFirstName.Size = new System.Drawing.Size(179, 49);
-            this.grpFirstName.TabIndex = 0;
-            this.grpFirstName.TabStop = false;
-            this.grpFirstName.Text = "First Name                                  ";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFirstName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFirstName.Location = new System.Drawing.Point(13, 19);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(160, 23);
-            this.lblFirstName.TabIndex = 0;
-            this.lblFirstName.Text = "First Name                  ";
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblName.Location = new System.Drawing.Point(13, 19);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(354, 23);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Name                                                                           ";
             // 
             // lblStudentName
             // 
@@ -382,6 +356,7 @@
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // pictureHome
             // 
@@ -424,16 +399,19 @@
             this.grpPassport.PerformLayout();
             this.grpStudyCourse.ResumeLayout(false);
             this.grpStudyCourse.PerformLayout();
-            this.grpLastName.ResumeLayout(false);
-            this.grpLastName.PerformLayout();
-            this.grpFirstName.ResumeLayout(false);
-            this.grpFirstName.PerformLayout();
+            this.grpName.ResumeLayout(false);
+            this.grpName.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void txtPassport_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -455,10 +433,8 @@
         private GroupBox grpStudyCourse;
         private Label lblStudyCourse;
         private Label lblStudentNumber;
-        private GroupBox grpLastName;
-        private Label lblLastName;
-        private GroupBox grpFirstName;
-        private Label lblFirstName;
+        private GroupBox grpName;
+        private Label lblName;
         private Label lblStudentName;
         private GroupBox groupBox2;
         private Label lblStudentNum;

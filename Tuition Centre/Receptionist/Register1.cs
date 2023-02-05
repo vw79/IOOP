@@ -12,9 +12,12 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmRegister1 : Form
     {
+        private object txtStuIC;
+
         public frmRegister1()
         {
             InitializeComponent();
         }
+       
     }
 }

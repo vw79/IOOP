@@ -2,6 +2,7 @@
 {
     partial class FrmMainAdmin
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -97,6 +98,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void frmMainAdmin_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
