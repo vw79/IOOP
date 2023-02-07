@@ -28,57 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblStuStatus = new System.Windows.Forms.Label();
+            this.lblStuStatusS = new System.Windows.Forms.Label();
+            this.lblDelete = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblStuStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Study Status: ";
+            this.lblStuStatus.AutoSize = true;
+            this.lblStuStatus.Location = new System.Drawing.Point(182, 88);
+            this.lblStuStatus.Name = "lblStuStatus";
+            this.lblStuStatus.Size = new System.Drawing.Size(78, 15);
+            this.lblStuStatus.TabIndex = 0;
+            this.lblStuStatus.Text = "Study Status: ";
             // 
-            // label2
+            // lblStuStatusS
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(300, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblStuStatusS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStuStatusS.Location = new System.Drawing.Point(276, 88);
+            this.lblStuStatusS.Name = "lblStuStatusS";
+            this.lblStuStatusS.Size = new System.Drawing.Size(100, 15);
+            this.lblStuStatusS.TabIndex = 1;
             // 
-            // label3
+            // lblDelete
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(177, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(209, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Click the button to delete this student.";
+            this.lblDelete.AutoSize = true;
+            this.lblDelete.Location = new System.Drawing.Point(177, 147);
+            this.lblDelete.Name = "lblDelete";
+            this.lblDelete.Size = new System.Drawing.Size(209, 15);
+            this.lblDelete.TabIndex = 2;
+            this.lblDelete.Text = "Click the button to delete this student.";
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.Location = new System.Drawing.Point(206, 192);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Delete Student";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(206, 192);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(150, 23);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete Student";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // frmUpdateStu3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 276);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.lblDelete);
+            this.Controls.Add(this.lblStuStatusS);
+            this.Controls.Add(this.lblStuStatus);
             this.Name = "frmUpdateStu3";
             this.Text = "Form4";
             this.ResumeLayout(false);
@@ -88,9 +87,9 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button button1;
+        private Label lblStuStatus;
+        private Label lblStuStatusS;
+        private Label lblDelete;
+        private Button btnDelete;
     }
 }

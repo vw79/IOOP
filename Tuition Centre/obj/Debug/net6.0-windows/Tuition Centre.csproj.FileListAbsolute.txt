@@ -197,3 +197,62 @@ C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu2.resources
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu3.resources
 C:\Users\htank\source\repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.exe
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.dll.config
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.deps.json
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.runtimeconfig.json
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.pdb
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.AssemblyReference.cache
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminDeleteReceptionist.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminDeleteTutor.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminFinance.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmMainAdmin.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminReceptionistList.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterReceptionist.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterTutor.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminTutorList.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminUpdateProfile.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Main.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Properties.Resources.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmMainReceptionist.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment1.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.Form7.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.Form8.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.Form6.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmRegister2.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmRegister1.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu1.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu2.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu3.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.EditProfile.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.frmMain_Student.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.pendingRequest.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Process.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.RequestSubject.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Schedule.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.UnpendingRequest.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmMainTutor.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_UpdateProfile.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ViewStudents.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ClassAdd.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.Tutor_DelClass.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_StudentList.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.GenerateResource.cache
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.GeneratedMSBuildEditorConfig.editorconfig
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.AssemblyInfoInputs.cache
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.AssemblyInfo.cs
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.CoreCompileInputs.cache
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.CopyComplete
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\refint\Tuition Centre.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.pdb
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.genruntimeconfig.cache
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\ref\Tuition Centre.dll

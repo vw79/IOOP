@@ -30,12 +30,16 @@ namespace Tuition_Centre.Receptionist
 
         private void btnRegNewStu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("HELLO WORLD");
+            frmRegister1 register1 = new frmRegister1();
+            register1.Show();
+            this.Hide();
         }
 
         private void btnUpdateRcpInfo_Click(object sender, EventArgs e)
         {
-
+            frmUpdateRcp updateRcp = new frmUpdateRcp();
+            updateRcp.Show();
+            this.Hide();
         }
 
         private void btnUpdateStudentInfo_Click(object sender, EventArgs e)

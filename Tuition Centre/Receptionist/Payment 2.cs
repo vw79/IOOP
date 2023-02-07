@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Receptionist
 {
-    public partial class Form7 : Form
+    public partial class frmPayment2 : Form
     {
-        public Form7()
+        public frmPayment2()
         {
             InitializeComponent();
         }

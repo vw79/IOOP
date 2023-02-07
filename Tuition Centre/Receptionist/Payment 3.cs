@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Tuition_Centre.Receptionist
 {
-    public partial class Form8 : Form
+    public partial class frmPayment3 : Form
     {
-        public Form8()
+        public frmPayment3()
         {
             InitializeComponent();
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            frmMainReceptionist rcpMain = new frmMainReceptionist();
+            rcpMain.Show();
+            this.Hide();
         }
     }
 }

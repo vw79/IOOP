@@ -28,89 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblStuStatus = new System.Windows.Forms.Label();
+            this.lblCurrentSub = new System.Windows.Forms.Label();
+            this.lblSubAfterUp = new System.Windows.Forms.Label();
+            this.cmbSubAfterUp = new System.Windows.Forms.ComboBox();
+            this.lblStuStatusS = new System.Windows.Forms.Label();
+            this.lblCurrentSubS = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblStuStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Study Status: ";
+            this.lblStuStatus.AutoSize = true;
+            this.lblStuStatus.Location = new System.Drawing.Point(28, 32);
+            this.lblStuStatus.Name = "lblStuStatus";
+            this.lblStuStatus.Size = new System.Drawing.Size(78, 15);
+            this.lblStuStatus.TabIndex = 0;
+            this.lblStuStatus.Text = "Study Status: ";
             // 
-            // label2
+            // lblCurrentSub
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Current Subjects: ";
+            this.lblCurrentSub.AutoSize = true;
+            this.lblCurrentSub.Location = new System.Drawing.Point(28, 76);
+            this.lblCurrentSub.Name = "lblCurrentSub";
+            this.lblCurrentSub.Size = new System.Drawing.Size(100, 15);
+            this.lblCurrentSub.TabIndex = 1;
+            this.lblCurrentSub.Text = "Current Subjects: ";
             // 
-            // label3
+            // lblSubAfterUp
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Subjects after update: ";
+            this.lblSubAfterUp.AutoSize = true;
+            this.lblSubAfterUp.Location = new System.Drawing.Point(28, 126);
+            this.lblSubAfterUp.Name = "lblSubAfterUp";
+            this.lblSubAfterUp.Size = new System.Drawing.Size(124, 15);
+            this.lblSubAfterUp.TabIndex = 2;
+            this.lblSubAfterUp.Text = "Subjects after update: ";
             // 
-            // comboBox1
+            // cmbSubAfterUp
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(179, 126);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 23);
-            this.comboBox1.TabIndex = 3;
+            this.cmbSubAfterUp.FormattingEnabled = true;
+            this.cmbSubAfterUp.Location = new System.Drawing.Point(179, 126);
+            this.cmbSubAfterUp.Name = "cmbSubAfterUp";
+            this.cmbSubAfterUp.Size = new System.Drawing.Size(200, 23);
+            this.cmbSubAfterUp.TabIndex = 3;
             // 
-            // label4
+            // lblStuStatusS
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(179, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.lblStuStatusS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStuStatusS.Location = new System.Drawing.Point(179, 31);
+            this.lblStuStatusS.Name = "lblStuStatusS";
+            this.lblStuStatusS.Size = new System.Drawing.Size(200, 23);
+            this.lblStuStatusS.TabIndex = 4;
             // 
-            // label5
+            // lblCurrentSubS
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(179, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 23);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
+            this.lblCurrentSubS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCurrentSubS.Location = new System.Drawing.Point(179, 75);
+            this.lblCurrentSubS.Name = "lblCurrentSubS";
+            this.lblCurrentSubS.Size = new System.Drawing.Size(200, 23);
+            this.lblCurrentSubS.TabIndex = 5;
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(441, 215);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(441, 215);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // frmUpdateStu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 276);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.lblCurrentSubS);
+            this.Controls.Add(this.lblStuStatusS);
+            this.Controls.Add(this.cmbSubAfterUp);
+            this.Controls.Add(this.lblSubAfterUp);
+            this.Controls.Add(this.lblCurrentSub);
+            this.Controls.Add(this.lblStuStatus);
             this.Name = "frmUpdateStu1";
             this.Text = "Student_Info_1";
             this.ResumeLayout(false);
@@ -120,12 +118,12 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private ComboBox comboBox1;
-        private Label label4;
-        private Label label5;
-        private Button button1;
+        private Label lblStuStatus;
+        private Label lblCurrentSub;
+        private Label lblSubAfterUp;
+        private ComboBox cmbSubAfterUp;
+        private Label lblStuStatusS;
+        private Label lblCurrentSubS;
+        private Button btnUpdate;
     }
 }

@@ -28,172 +28,200 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.lblStuName = new System.Windows.Forms.Label();
+            this.lblStuIC = new System.Windows.Forms.Label();
+            this.lblStuEmail = new System.Windows.Forms.Label();
+            this.lblStuNo = new System.Windows.Forms.Label();
+            this.lblStuAdress = new System.Windows.Forms.Label();
+            this.lblStuMthEnroll = new System.Windows.Forms.Label();
+            this.lblStuLv = new System.Windows.Forms.Label();
+            this.txtStuName = new System.Windows.Forms.TextBox();
+            this.txtStuIC = new System.Windows.Forms.TextBox();
+            this.txtStuEmail = new System.Windows.Forms.TextBox();
+            this.txtStuNo = new System.Windows.Forms.TextBox();
+            this.txtStuAdress = new System.Windows.Forms.TextBox();
+            this.cmbStuMthEnroll = new System.Windows.Forms.ComboBox();
+            this.cmbStuLv = new System.Windows.Forms.ComboBox();
+            this.cmbStuSub = new System.Windows.Forms.ComboBox();
+            this.btnNxt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblStuName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.lblStuName.AutoSize = true;
+            this.lblStuName.Location = new System.Drawing.Point(112, 44);
+            this.lblStuName.Name = "lblStuName";
+            this.lblStuName.Size = new System.Drawing.Size(39, 15);
+            this.lblStuName.TabIndex = 0;
+            this.lblStuName.Text = "Name";
             // 
-            // label2
+            // lblStuIC
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "IC/ Passport";
+            this.lblStuIC.AutoSize = true;
+            this.lblStuIC.Location = new System.Drawing.Point(112, 116);
+            this.lblStuIC.Name = "lblStuIC";
+            this.lblStuIC.Size = new System.Drawing.Size(71, 15);
+            this.lblStuIC.TabIndex = 1;
+            this.lblStuIC.Text = "IC/ Passport";
             // 
-            // label3
+            // lblStuEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 207);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Email";
+            this.lblStuEmail.AutoSize = true;
+            this.lblStuEmail.Location = new System.Drawing.Point(112, 188);
+            this.lblStuEmail.Name = "lblStuEmail";
+            this.lblStuEmail.Size = new System.Drawing.Size(36, 15);
+            this.lblStuEmail.TabIndex = 2;
+            this.lblStuEmail.Text = "Email";
             // 
-            // label4
+            // lblStuNo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 273);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Contact Number";
+            this.lblStuNo.AutoSize = true;
+            this.lblStuNo.Location = new System.Drawing.Point(112, 256);
+            this.lblStuNo.Name = "lblStuNo";
+            this.lblStuNo.Size = new System.Drawing.Size(96, 15);
+            this.lblStuNo.TabIndex = 3;
+            this.lblStuNo.Text = "Contact Number";
             // 
-            // label5
+            // lblStuAdress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(98, 335);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Address";
+            this.lblStuAdress.AutoSize = true;
+            this.lblStuAdress.Location = new System.Drawing.Point(112, 325);
+            this.lblStuAdress.Name = "lblStuAdress";
+            this.lblStuAdress.Size = new System.Drawing.Size(49, 15);
+            this.lblStuAdress.TabIndex = 4;
+            this.lblStuAdress.Text = "Address";
             // 
-            // textBox1
+            // lblStuMthEnroll
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Enter Student\'s Name";
-            this.textBox1.Size = new System.Drawing.Size(200, 23);
-            this.textBox1.TabIndex = 5;
+            this.lblStuMthEnroll.AutoSize = true;
+            this.lblStuMthEnroll.Location = new System.Drawing.Point(440, 94);
+            this.lblStuMthEnroll.Name = "lblStuMthEnroll";
+            this.lblStuMthEnroll.Size = new System.Drawing.Size(118, 15);
+            this.lblStuMthEnroll.TabIndex = 5;
+            this.lblStuMthEnroll.Text = "Month of Enrollment";
             // 
-            // textBox2
+            // lblStuLv
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Enter Student\'s IC/ Passport";
-            this.textBox2.Size = new System.Drawing.Size(200, 23);
-            this.textBox2.TabIndex = 6;
+            this.lblStuLv.AutoSize = true;
+            this.lblStuLv.Location = new System.Drawing.Point(440, 166);
+            this.lblStuLv.Name = "lblStuLv";
+            this.lblStuLv.Size = new System.Drawing.Size(34, 15);
+            this.lblStuLv.TabIndex = 6;
+            this.lblStuLv.Text = "Level";
             // 
-            // textBox3
+            // txtStuName
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 225);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Enter Student\'s Email";
-            this.textBox3.Size = new System.Drawing.Size(200, 23);
-            this.textBox3.TabIndex = 7;
+            this.txtStuName.Location = new System.Drawing.Point(112, 62);
+            this.txtStuName.Name = "txtStuName";
+            this.txtStuName.Size = new System.Drawing.Size(200, 23);
+            this.txtStuName.TabIndex = 7;
             // 
-            // textBox4
+            // txtStuIC
             // 
-            this.textBox4.Location = new System.Drawing.Point(98, 291);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Enter Student\'s Contact Number";
-            this.textBox4.Size = new System.Drawing.Size(200, 23);
-            this.textBox4.TabIndex = 8;
+            this.txtStuIC.Location = new System.Drawing.Point(112, 134);
+            this.txtStuIC.Name = "txtStuIC";
+            this.txtStuIC.Size = new System.Drawing.Size(200, 23);
+            this.txtStuIC.TabIndex = 8;
             // 
-            // textBox5
+            // txtStuEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(98, 353);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PlaceholderText = "Enter Student\'s Address";
-            this.textBox5.Size = new System.Drawing.Size(200, 23);
-            this.textBox5.TabIndex = 9;
+            this.txtStuEmail.Location = new System.Drawing.Point(112, 206);
+            this.txtStuEmail.Name = "txtStuEmail";
+            this.txtStuEmail.Size = new System.Drawing.Size(200, 23);
+            this.txtStuEmail.TabIndex = 9;
             // 
-            // label6
+            // txtStuNo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(431, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 15);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Month of Enrollment";
+            this.txtStuNo.Location = new System.Drawing.Point(112, 274);
+            this.txtStuNo.Name = "txtStuNo";
+            this.txtStuNo.Size = new System.Drawing.Size(200, 23);
+            this.txtStuNo.TabIndex = 10;
             // 
-            // label7
+            // txtStuAdress
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(431, 137);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 15);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "label7";
+            this.txtStuAdress.Location = new System.Drawing.Point(112, 343);
+            this.txtStuAdress.Name = "txtStuAdress";
+            this.txtStuAdress.Size = new System.Drawing.Size(200, 23);
+            this.txtStuAdress.TabIndex = 11;
             // 
-            // comboBox1
+            // cmbStuMthEnroll
             // 
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 0;
+            this.cmbStuMthEnroll.FormattingEnabled = true;
+            this.cmbStuMthEnroll.Location = new System.Drawing.Point(440, 112);
+            this.cmbStuMthEnroll.Name = "cmbStuMthEnroll";
+            this.cmbStuMthEnroll.Size = new System.Drawing.Size(200, 23);
+            this.cmbStuMthEnroll.TabIndex = 12;
             // 
-            // comboBox2
+            // cmbStuLv
             // 
-            this.comboBox2.Location = new System.Drawing.Point(0, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 0;
+            this.cmbStuLv.FormattingEnabled = true;
+            this.cmbStuLv.Location = new System.Drawing.Point(440, 184);
+            this.cmbStuLv.Name = "cmbStuLv";
+            this.cmbStuLv.Size = new System.Drawing.Size(200, 23);
+            this.cmbStuLv.TabIndex = 13;
             // 
-            // comboBox3
+            // cmbStuSub
             // 
-            this.comboBox3.Location = new System.Drawing.Point(0, 0);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 0;
+            this.cmbStuSub.FormattingEnabled = true;
+            this.cmbStuSub.Location = new System.Drawing.Point(440, 256);
+            this.cmbStuSub.Name = "cmbStuSub";
+            this.cmbStuSub.Size = new System.Drawing.Size(200, 23);
+            this.cmbStuSub.TabIndex = 14;
+            // 
+            // btnNxt
+            // 
+            this.btnNxt.Location = new System.Drawing.Point(503, 342);
+            this.btnNxt.Name = "btnNxt";
+            this.btnNxt.Size = new System.Drawing.Size(75, 23);
+            this.btnNxt.TabIndex = 15;
+            this.btnNxt.Text = "Next";
+            this.btnNxt.UseVisualStyleBackColor = true;
             // 
             // frmRegister1
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNxt);
+            this.Controls.Add(this.cmbStuSub);
+            this.Controls.Add(this.cmbStuLv);
+            this.Controls.Add(this.cmbStuMthEnroll);
+            this.Controls.Add(this.txtStuAdress);
+            this.Controls.Add(this.txtStuNo);
+            this.Controls.Add(this.txtStuEmail);
+            this.Controls.Add(this.txtStuIC);
+            this.Controls.Add(this.txtStuName);
+            this.Controls.Add(this.lblStuLv);
+            this.Controls.Add(this.lblStuMthEnroll);
+            this.Controls.Add(this.lblStuAdress);
+            this.Controls.Add(this.lblStuNo);
+            this.Controls.Add(this.lblStuEmail);
+            this.Controls.Add(this.lblStuIC);
+            this.Controls.Add(this.lblStuName);
             this.Name = "frmRegister1";
             this.Text = "Register";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private Label label6;
-        private Label label7;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private Label lblStuName;
+        private Label lblStuIC;
+        private Label lblStuEmail;
+        private Label lblStuNo;
+        private Label lblStuAdress;
+        private Label lblStuMthEnroll;
+        private Label lblStuLv;
+        private TextBox txtStuName;
+        private TextBox txtStuIC;
+        private TextBox txtStuEmail;
+        private TextBox txtStuNo;
+        private TextBox txtStuAdress;
+        private ComboBox cmbStuMthEnroll;
+        private ComboBox cmbStuLv;
+        private ComboBox cmbStuSub;
+        private Button btnNxt;
     }
 }
