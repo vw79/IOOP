@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tuition_Centre.Class;
 
 namespace Tuition_Centre.Student
 {

@@ -256,3 +256,6 @@ D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\refin
 D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.pdb
 D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.genruntimeconfig.cache
 D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\ref\Tuition Centre.dll
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment2.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment3.resources
+D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateRcp.resources

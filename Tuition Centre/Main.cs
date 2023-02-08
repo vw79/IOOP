@@ -1,4 +1,5 @@
 using Tuition_Centre.Admin;
+using Tuition_Centre.Class;
 using Tuition_Centre.Receptionist;
 using Tuition_Centre.Student;
 using Tuition_Centre.Tutor;
