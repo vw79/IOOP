@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnReceptionist = new System.Windows.Forms.Button();
-            this.btnStudent = new System.Windows.Forms.Button();
-            this.btnTutor = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -40,46 +36,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(43, 415);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(75, 23);
-            this.btnAdmin.TabIndex = 0;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
-            // btnReceptionist
-            // 
-            this.btnReceptionist.Location = new System.Drawing.Point(168, 415);
-            this.btnReceptionist.Name = "btnReceptionist";
-            this.btnReceptionist.Size = new System.Drawing.Size(90, 23);
-            this.btnReceptionist.TabIndex = 1;
-            this.btnReceptionist.Text = "Receptionist";
-            this.btnReceptionist.UseVisualStyleBackColor = true;
-            this.btnReceptionist.Click += new System.EventHandler(this.btnReceptionist_Click);
-            // 
-            // btnStudent
-            // 
-            this.btnStudent.Location = new System.Drawing.Point(325, 415);
-            this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Size = new System.Drawing.Size(75, 23);
-            this.btnStudent.TabIndex = 2;
-            this.btnStudent.Text = "Student";
-            this.btnStudent.UseVisualStyleBackColor = true;
-            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
-            // 
-            // btnTutor
-            // 
-            this.btnTutor.Location = new System.Drawing.Point(454, 415);
-            this.btnTutor.Name = "btnTutor";
-            this.btnTutor.Size = new System.Drawing.Size(75, 23);
-            this.btnTutor.TabIndex = 3;
-            this.btnTutor.Text = "Tutor";
-            this.btnTutor.UseVisualStyleBackColor = true;
-            this.btnTutor.Click += new System.EventHandler(this.btnTutor_Click);
             // 
             // button1
             // 
@@ -143,10 +99,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnTutor);
-            this.Controls.Add(this.btnStudent);
-            this.Controls.Add(this.btnReceptionist);
-            this.Controls.Add(this.btnAdmin);
             this.Name = "Main";
             this.Text = "   ";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -157,11 +109,6 @@
         }
 
         #endregion
-
-        private Button btnAdmin;
-        private Button btnReceptionist;
-        private Button btnStudent;
-        private Button btnTutor;
         private Button button1;
         private TextBox txtUsername;
         private TextBox txtPassword;

@@ -52,13 +52,13 @@ namespace Tuition_Centre.Class
                     a.ShowDialog();
 
                 }
-                if (userRole.Trim() == "receptionist")
+                else if (userRole.Trim() == "receptionist")
                 {
                     frmMainReceptionist b = new frmMainReceptionist(un);
                     b.ShowDialog();
 
                 }
-                if (userRole.Trim() == "student")
+                else if (userRole.Trim() == "student")
                 {
                     frmMain_Student c = new frmMain_Student(un);
                     c.ShowDialog();

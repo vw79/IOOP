@@ -13,34 +13,6 @@ namespace Tuition_Centre
             InitializeComponent();
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            FrmMainAdmin adminForm = new FrmMainAdmin();
-            adminForm.Show();
-            this.Hide();
-        }
-
-        private void btnReceptionist_Click(object sender, EventArgs e)
-        {
-            frmMainReceptionist receptionistForm = new frmMainReceptionist();
-            receptionistForm.Show();
-            this.Hide();
-        }
-
-        private void btnStudent_Click(object sender, EventArgs e)
-        {
-            frmMain_Student studentForm = new frmMain_Student();
-            studentForm.Show();
-            this.Hide();
-        }
-
-        private void btnTutor_Click(object sender, EventArgs e)
-        {
-            frmMainTutor tutorForm = new frmMainTutor();
-            tutorForm.Show();
-            this.Hide();
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
