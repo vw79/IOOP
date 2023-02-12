@@ -259,3 +259,6 @@ D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\ref\T
 D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment2.resources
 D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment3.resources
 D:\APU\Prt 1\Sem 2\IOOP\New folder\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateRcp.resources
+C:\Users\htank\Source\Repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment2.resources
+C:\Users\htank\Source\Repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment3.resources
+C:\Users\htank\Source\Repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateRcp.resources
