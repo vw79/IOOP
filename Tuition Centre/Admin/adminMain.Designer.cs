@@ -102,7 +102,7 @@
 
         private void frmMainAdmin_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException(); //
         }
 
         #endregion
