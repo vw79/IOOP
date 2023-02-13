@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yazid\\Desktop\\Clean Desktop\\School\\Y1S2\\IOOP\\Assignment\\Assignment Code\\IOOP\\Tuition Centre\\Tuition Centre.csproj": {}
+    "D:\\APU\\Prt 1\\Sem 2\\IOOP\\New folder\\Tuition Centre\\Tuition Centre.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yazid\\Desktop\\Clean Desktop\\School\\Y1S2\\IOOP\\Assignment\\Assignment Code\\IOOP\\Tuition Centre\\Tuition Centre.csproj": {
+    "D:\\APU\\Prt 1\\Sem 2\\IOOP\\New folder\\Tuition Centre\\Tuition Centre.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yazid\\Desktop\\Clean Desktop\\School\\Y1S2\\IOOP\\Assignment\\Assignment Code\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
+        "projectUniqueName": "D:\\APU\\Prt 1\\Sem 2\\IOOP\\New folder\\Tuition Centre\\Tuition Centre.csproj",
         "projectName": "Tuition Centre",
-        "projectPath": "C:\\Users\\yazid\\Desktop\\Clean Desktop\\School\\Y1S2\\IOOP\\Assignment\\Assignment Code\\IOOP\\Tuition Centre\\Tuition Centre.csproj",
-        "packagesPath": "C:\\Users\\yazid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yazid\\Desktop\\Clean Desktop\\School\\Y1S2\\IOOP\\Assignment\\Assignment Code\\IOOP\\Tuition Centre\\obj\\",
+        "projectPath": "D:\\APU\\Prt 1\\Sem 2\\IOOP\\New folder\\Tuition Centre\\Tuition Centre.csproj",
+        "packagesPath": "C:\\Users\\VINW\\.nuget\\packages\\",
+        "outputPath": "D:\\APU\\Prt 1\\Sem 2\\IOOP\\New folder\\Tuition Centre\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\yazid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VINW\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

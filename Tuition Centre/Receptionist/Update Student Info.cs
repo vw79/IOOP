@@ -38,16 +38,25 @@ namespace Tuition_Centre.Receptionist
         private void btnUpSub_Click(object sender, EventArgs e)
         {
             openChildForm(new frmUpdateStu1(),sender);
+            btnUpSub.Enabled = false;
+            btnUpPay.Enabled = true;
+            btnDeleteStu.Enabled = true;
         }
 
         private void btnUpPay_Click(object sender, EventArgs e)
         {
             openChildForm(new frmUpdateStu2(), sender);
+            btnUpSub.Enabled = true;
+            btnUpPay.Enabled = false;
+            btnDeleteStu.Enabled = true;
         }
 
         private void btnDeleteStu_Click(object sender, EventArgs e)
         {
             openChildForm(new frmUpdateStu3(), sender);
+            btnUpSub.Enabled = true;
+            btnUpPay.Enabled = true;
+            btnDeleteStu.Enabled = false;
         }
     }
 }
