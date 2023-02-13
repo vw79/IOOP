@@ -15,11 +15,21 @@ namespace Tuition_Centre.Admin
         public FrmMainAdmin()
         {
             InitializeComponent();
+            btnTutorList.Enabled = false;
+            btnRegisterReceptionist.Visible= false;
+            btnDeleteReceptionist.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnTutor_Click(object sender, EventArgs e)
         {
+            btnTutorList.Enabled = false;
+            btnReceptionist.Enabled = true;
+        }
 
+        private void btnReceptionist_Click(object sender, EventArgs e)
+        {
+            btnReceptionist.Enabled = false;
+            btnTutorList.Enabled = true;
         }
     }
 }

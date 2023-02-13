@@ -116,3 +116,62 @@ C:\Users\htank\Source\Repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\refint\
 C:\Users\htank\Source\Repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.pdb
 C:\Users\htank\Source\Repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.genruntimeconfig.cache
 C:\Users\htank\Source\Repos\IOOP\Tuition Centre\obj\Debug\net6.0-windows\ref\Tuition Centre.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.exe
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.dll.config
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.deps.json
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.runtimeconfig.json
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\Tuition Centre.pdb
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.AssemblyReference.cache
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminDeleteReceptionist.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminDeleteTutor.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminFinance.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmMainAdmin.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminReceptionistList.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterReceptionist.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterTutor.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminTutorList.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminUpdateProfile.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Main.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Properties.Resources.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmMainReceptionist.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment1.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment2.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmPayment3.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateRcp.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmRegister2.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmRegister1.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu1.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu2.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu3.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Receptionist.frmUpdateStu.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.EditProfile.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.frmMain_Student.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.pendingRequest.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Process.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.RequestSubject.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.Schedule.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Student.UnpendingRequest.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmMainTutor.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_UpdateProfile.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ViewStudents.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_ClassAdd.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.Tutor_DelClass.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Tutor.frmTutor_StudentList.resources
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.GenerateResource.cache
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.AssemblyInfoInputs.cache
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.AssemblyInfo.cs
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.CoreCompileInputs.cache
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.csproj.CopyComplete
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\refint\Tuition Centre.dll
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.pdb
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition Centre.genruntimeconfig.cache
+C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\ref\Tuition Centre.dll
