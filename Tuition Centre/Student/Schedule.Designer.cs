@@ -242,6 +242,7 @@
             this.Controls.Add(this.lblHeading);
             this.Name = "Schedule";
             this.Text = "Schedule";
+            this.Load += new System.EventHandler(this.Schedule_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

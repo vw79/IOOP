@@ -31,5 +31,10 @@ namespace Tuition_Centre
             txtPassword.Text = String.Empty;
 
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

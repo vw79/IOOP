@@ -85,21 +85,27 @@
             // 
             this.lblStudentNum.AutoSize = true;
             this.lblStudentNum.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentNum.Location = new System.Drawing.Point(41, 19);
+            this.lblStudentNum.Location = new System.Drawing.Point(63, 19);
             this.lblStudentNum.Name = "lblStudentNum";
-            this.lblStudentNum.Size = new System.Drawing.Size(129, 21);
+            this.lblStudentNum.Size = new System.Drawing.Size(81, 21);
             this.lblStudentNum.TabIndex = 4;
-            this.lblStudentNum.Text = "Student  Number";
+            this.lblStudentNum.Text = "TC000000";
+            this.lblStudentNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblStudentCourse
             // 
+            this.lblStudentCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStudentCourse.AutoSize = true;
             this.lblStudentCourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentCourse.Location = new System.Drawing.Point(53, 45);
+            this.lblStudentCourse.Location = new System.Drawing.Point(39, 46);
             this.lblStudentCourse.Name = "lblStudentCourse";
-            this.lblStudentCourse.Size = new System.Drawing.Size(102, 21);
+            this.lblStudentCourse.Size = new System.Drawing.Size(123, 21);
             this.lblStudentCourse.TabIndex = 2;
-            this.lblStudentCourse.Text = "Study Course";
+            this.lblStudentCourse.Text = "         Course       ";
+            this.lblStudentCourse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblStudentCourse.Click += new System.EventHandler(this.lblStudentCourse_Click);
             // 
             // label2
             // 
@@ -115,11 +121,12 @@
             this.lblStudentName.AutoSize = true;
             this.lblStudentName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lblStudentName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentName.Location = new System.Drawing.Point(150, 269);
+            this.lblStudentName.Location = new System.Drawing.Point(131, 269);
             this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(171, 32);
+            this.lblStudentName.Size = new System.Drawing.Size(199, 32);
             this.lblStudentName.TabIndex = 4;
-            this.lblStudentName.Text = "Student  Name";
+            this.lblStudentName.Text = "   Student  Name ";
+            this.lblStudentName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSchedule
             // 
@@ -181,7 +188,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // frmMainStudent
+            // frmMain_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,8 +201,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.picEdit);
             this.Controls.Add(this.picProfile);
-            this.Name = "frmMainStudent";
-            this.Text = "Student";
+            this.Name = "frmMain_Student";
+            this.Text = "  Student  ";
             this.Load += new System.EventHandler(this.frmMainStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).EndInit();

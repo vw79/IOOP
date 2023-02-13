@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,12 @@ namespace Tuition_Centre.Student
 {
     public partial class Schedule : Form
     {
-        public Schedule()
+        
+
+        public Schedule(string un)
         {
             InitializeComponent();
+            Name = un;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -39,9 +44,24 @@ namespace Tuition_Centre.Student
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmMain_Student obj1 = new frmMain_Student();
+            string un;
+            frmMain_Student obj1 = new frmMain_Student(Name);
             obj1.ShowDialog();
             Hide();
+        }
+
+        private void Schedule_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from studentinfo where username = @username", con);
+            cmd.Parameters.AddWithValue("@username", Name);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                lblStudentInfo.Text = rd.GetString(2) + " |  " + rd.GetString(7) + " |  " +  rd.GetString(8);
+            }
+            con.Close();
         }
     }
 }

@@ -26,17 +26,19 @@ namespace Tuition_Centre.Student
         {
         }
 
-        private void Main_Student_Load(object sender, EventArgs e) 
+        private void frmMainStudent_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from students where studentName = @a", con);
-            cmd.Parameters.AddWithValue("@a", Name);
+            SqlCommand cmd = new SqlCommand("select * from studentinfo where username = @username", con);
+            cmd.Parameters.AddWithValue("@username", Name);
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblStudentNum.Text = rd.GetString(6);
-                lblStudentCourse.Text = rd.GetString(7);
+                lblWelcome.Text = "Welcome, " + rd.GetString(2);
+                lblStudentName.Text= rd.GetString(2);
+                lblStudentNum.Text = rd.GetString(7);
+                lblStudentCourse.Text = rd.GetString(8);
             }
             con.Close();
 
@@ -73,7 +75,7 @@ namespace Tuition_Centre.Student
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            Schedule obj1 = new Schedule();
+            Schedule obj1 = new Schedule(Name);
             this.Hide();
             obj1.ShowDialog();
         }
@@ -85,9 +87,9 @@ namespace Tuition_Centre.Student
             obj1.ShowDialog();
         }
 
-        private void frmMainStudent_Load(object sender, EventArgs e)
+        private void lblStudentCourse_Click(object sender, EventArgs e)
         {
-            lblWelcome.Text = "Welcome, " + Name;
+
         }
     }
 }
