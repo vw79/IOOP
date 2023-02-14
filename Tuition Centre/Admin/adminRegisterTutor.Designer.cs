@@ -42,6 +42,8 @@
             this.cmbLevel = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtbEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtbName
@@ -166,11 +168,30 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.Location = new System.Drawing.Point(110, 232);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(48, 21);
+            this.lblEmail.TabIndex = 17;
+            this.lblEmail.Text = "Email";
+            // 
+            // txtbEmail
+            // 
+            this.txtbEmail.Location = new System.Drawing.Point(110, 256);
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Size = new System.Drawing.Size(172, 23);
+            this.txtbEmail.TabIndex = 18;
+            // 
             // FrmAdminRegisterTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtbEmail);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cmbLevel);
@@ -208,5 +229,7 @@
         private ComboBox cmbLevel;
         private Button btnRegister;
         private Button btnBack;
+        private Label lblEmail;
+        private TextBox txtbEmail;
     }
 }
