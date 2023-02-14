@@ -136,7 +136,6 @@ C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code
 C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminReceptionistList.resources
 C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterReceptionist.resources
 C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminRegisterTutor.resources
-C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminTutorList.resources
 C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Admin.FrmAdminUpdateProfile.resources
 C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Main.resources
 C:\Users\yazid\Desktop\Clean Desktop\School\Y1S2\IOOP\Assignment\Assignment Code\IOOP\Tuition Centre\obj\Debug\net6.0-windows\Tuition_Centre.Properties.Resources.resources

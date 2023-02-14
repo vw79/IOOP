@@ -157,6 +157,7 @@
             this.btnRegisterReceptionist.TabIndex = 3;
             this.btnRegisterReceptionist.Text = "Register";
             this.btnRegisterReceptionist.UseVisualStyleBackColor = true;
+            this.btnRegisterReceptionist.Click += new System.EventHandler(this.btnRegisterReceptionist_Click);
             // 
             // btnDeleteTutor
             // 
@@ -175,6 +176,7 @@
             this.btnRegisterTutor.TabIndex = 1;
             this.btnRegisterTutor.Text = "Register";
             this.btnRegisterTutor.UseVisualStyleBackColor = true;
+            this.btnRegisterTutor.Click += new System.EventHandler(this.btnRegisterTutor_Click);
             // 
             // lstbContent
             // 
