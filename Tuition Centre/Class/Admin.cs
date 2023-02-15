@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tuition_Centre.Admin;
 
 namespace Tuition_Centre.Class
 {
@@ -31,12 +32,6 @@ namespace Tuition_Centre.Class
             adminEmail = email;
             adminICorPass = icpass;
             adminAddress = address;
-        }
-
-        public static void DisplayNameAndIdentity()
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select * from admin where admin")
         }
     }
 }

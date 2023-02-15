@@ -20,7 +20,6 @@ namespace Tuition_Centre.Class
         private string password;
 
         public User(string u, string p)
-
         {
             username = u;
             password = p;
@@ -36,7 +35,6 @@ namespace Tuition_Centre.Class
             SqlCommand cmd = new SqlCommand("select count(*) from users where username=@a and password=@b", con);
             cmd.Parameters.AddWithValue("@a", username);
             cmd.Parameters.AddWithValue("@b", password);
-
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
 
             if (count > 0)
@@ -48,7 +46,7 @@ namespace Tuition_Centre.Class
 
                 if (userRole.Trim() == "admin")
                 {
-                    frmMainAdmin a = new frmMainAdmin(un);
+                    FrmMainAdmin a = new FrmMainAdmin(un);
                     a.ShowDialog();
 
                 }

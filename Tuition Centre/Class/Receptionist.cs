@@ -76,9 +76,9 @@ namespace Tuition_Centre.Class
         /*
         public static object Register(Receptionist)
         {
-            con.Open;
+            con.Open();
             SqlCommand cmd = new SqlCommand("select * from students where studentName = @a", con);
-            con.Close; 
+            con.Close()
         }
 
         public void UpdateStuSubject(Receptionist)

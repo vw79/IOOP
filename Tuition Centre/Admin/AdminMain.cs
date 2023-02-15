@@ -16,12 +16,12 @@ namespace Tuition_Centre.Admin
         public static string name;
         public static string identity;
 
-        public FrmMainAdmin(string n, string id)
+        public FrmMainAdmin(string id)
         {
             InitializeComponent();
             TutorOrReceptionistClicked(false, true);
-            name = n;
-            identity = id;
+            //name = n;
+            //identity = id;
         }
 
         private void btnTutor_Click(object sender, EventArgs e)
