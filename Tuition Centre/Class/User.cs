@@ -48,7 +48,7 @@ namespace Tuition_Centre.Class
 
                 if (userRole.Trim() == "admin")
                 {
-                    FrmMainAdmin a = new frmMainAdmin(un);
+                    frmMainAdmin a = new frmMainAdmin(un);
                     a.ShowDialog();
 
                 }
@@ -81,16 +81,6 @@ namespace Tuition_Centre.Class
         private void Close()
         {
             throw new NotImplementedException();
-        }
-    }
-
-    internal class frmMainAdmin : FrmMainAdmin
-    {
-        private string un;
-
-        public frmMainAdmin(string un)
-        {
-            this.un = un;
         }
     }
 }

@@ -68,7 +68,7 @@
             this.txtPassword.Size = new System.Drawing.Size(202, 39);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            //this.txtPassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);//
             // 
             // picLogo
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Main";
             this.Text = "   ";
-            this.Load += new System.EventHandler(this.Main_Load);
+            //this.Load += new System.EventHandler(this.Main_Load);//
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
