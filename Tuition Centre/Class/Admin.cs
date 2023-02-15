@@ -11,21 +11,32 @@ namespace Tuition_Centre.Class
     internal class Admin
     {
         //write method here//
-        private string name;
-        private string id;
-        private string phone;
-        private string email;
-        private string subject;
-        private string level;
+        private string adminName;
+        private string adminId;
+        private string adminPhone;
+        private string adminEmail;
+        private string adminICorPass;
+        private string adminAddress;
+        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
-        public Admin(string tutorName, string tutorId, string tutorPhone, string tutorEmail, string tutorSubject, string tutorLevel)
+        public string AdminPhone { get => adminPhone; set => adminPhone = value; }
+        public string AdminEmail { get => adminEmail; set => adminEmail = value; }
+        public string AdminAddress { get => adminAddress; set => adminAddress = value; }
+
+        public Admin(string name, string id, string phone, string email, string icpass, string address)
         {
-            name = tutorName;
-            id = tutorId;
-            phone = tutorPhone;
-            email = tutorEmail;
-            subject = tutorSubject;
-            level = tutorLevel;
+            adminName = name;
+            adminId = id;
+            adminPhone = phone;
+            adminEmail = email;
+            adminICorPass = icpass;
+            adminAddress = address;
+        }
+
+        public static void DisplayNameAndIdentity()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from admin where admin")
         }
     }
 }

@@ -209,7 +209,8 @@
 
         private void frmMainAdmin_Load(object sender, EventArgs e)
         {
-           // throw new NotImplementedException(); //
+            lblName.Text = $"Name : {name}";
+            lblIdentity.Text = $"ID : {identity}";
         }
 
         #endregion

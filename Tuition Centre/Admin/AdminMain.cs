@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,15 @@ namespace Tuition_Centre.Admin
 {
     public partial class FrmMainAdmin : Form
     {
-        public FrmMainAdmin()
+        public static string name;
+        public static string identity;
+
+        public FrmMainAdmin(string n, string id)
         {
             InitializeComponent();
             TutorOrReceptionistClicked(false, true);
+            name = n;
+            identity = id;
         }
 
         private void btnTutor_Click(object sender, EventArgs e)
@@ -40,6 +46,12 @@ namespace Tuition_Centre.Admin
             btnReceptionist.Enabled = b;
             btnRegisterReceptionist.Visible = a;
             btnDeleteReceptionist.Visible = a;
+        }
+
+        private void ListLoader()
+        {
+            ArrayList name = new ArrayList();
+
         }
 
         private void btnRegisterTutor_Click(object sender, EventArgs e)
