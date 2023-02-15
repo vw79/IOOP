@@ -13,11 +13,6 @@ namespace Tuition_Centre
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string start;
@@ -29,11 +24,6 @@ namespace Tuition_Centre
             }
             txtUsername.Text = String.Empty;
             txtPassword.Text = String.Empty;
-
-        }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
 
         }
     }
