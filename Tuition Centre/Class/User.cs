@@ -25,7 +25,7 @@ namespace Tuition_Centre.Class
             password = p;
         }
 
-        public string Main(string un)
+        public string start(string un)
         {
             string status = null;
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
@@ -47,24 +47,28 @@ namespace Tuition_Centre.Class
                 if (userRole.Trim() == "admin")
                 {
                     FrmMainAdmin a = new FrmMainAdmin(un);
+                    Main.ActiveForm.Hide();
                     a.ShowDialog();
 
                 }
                 else if (userRole.Trim() == "receptionist")
                 {
                     frmMainReceptionist b = new frmMainReceptionist(un);
+                    Main.ActiveForm.Hide();
                     b.ShowDialog();
 
                 }
                 else if (userRole.Trim() == "student")
                 {
                     frmMain_Student c = new frmMain_Student(un);
+                    Main.ActiveForm.Hide();
                     c.ShowDialog();
 
                 }
                 else if (userRole.Trim() == "tutor")
                 {
                     frmMainTutor d = new frmMainTutor(un);
+                    Main.ActiveForm.Hide();
                     d.ShowDialog();
 
                 }

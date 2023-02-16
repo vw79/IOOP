@@ -17,7 +17,7 @@ namespace Tuition_Centre
         {
             string start;
             User obj1 = new User(txtUsername.Text, txtPassword.Text);
-            start = obj1.Main(txtUsername.Text);
+            start = obj1.start(txtUsername.Text);
             if(start != null)
             {
                 MessageBox.Show(start);

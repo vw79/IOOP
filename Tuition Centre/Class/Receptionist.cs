@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Tuition_Centre.Class
 {
-    internal class Receptionist
+    internal class receptionist
     {
         private string stuName;
         private string stuIC;
@@ -33,20 +33,39 @@ namespace Tuition_Centre.Class
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
         public string StuName { get => stuName; set => stuName = value; }
+        public string StuIC { get => stuIC; set => stuIC = value; }
+        public string StuEmail { get => stuEmail; set => stuEmail = value; }
+        public string StuContact { get => stuContact; set => stuContact = value; }
+        public string StuAddress { get => stuAddress; set => stuAddress = value; }
+        public string StuMthEnroll { get => stuMthEnroll; set => stuMthEnroll = value; }
+        public string StuLv { get => stuLv; set => stuLv = value; }
+        public string StuPay { get => stuPay; set => stuPay = value; }
+        public string StuCardNo { get => stuCardNo; set => stuCardNo = value; }
+        public string StuCVV { get => stuCVV; set => stuCVV = value; }
+        public string StuCVV1 { get => stuCVV; set => stuCVV = value; }
+        public string StuStatus { get => stuStatus; set => stuStatus = value; }
+        public string StuCurrentSub { get => stuCurrentSub; set => stuCurrentSub = value; }
+        public string StuUpSub { get => stuUpSub; set => stuUpSub = value; }
+        public string StuPayAmount { get => stuPayAmount; set => stuPayAmount = value; }
+        public string RcpName { get => rcpName; set => rcpName = value; }
+        public string RcpIC { get => rcpIC; set => rcpIC = value; }
+        public string RcpContact { get => rcpContact; set => rcpContact = value; }
+        public string RcpEmail { get => rcpEmail; set => rcpEmail = value; }
+        public string RcpAddress { get => rcpAddress; set => rcpAddress = value; }
 
         //Constructor Overloading
-        public Receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV)
+        public receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV)
         {
-            stuName = sN;
-            stuIC = sIC;
-            stuEmail = sE;
-            stuContact = sC;
-            stuAddress = sA;
-            stuMthEnroll = sMOE;
-            stuLv = sLV;
+            StuName = sN;
+            StuIC = sIC;
+            StuEmail = sE;
+            StuContact = sC;
+            StuAddress = sA;
+            StuMthEnroll = sMOE;
+            StuLv = sLV;
         }
 
-        public Receptionist(string sP, string sCN, string sCVV)
+        public receptionist(string sP, string sCN, string sCVV)
         {
             stuPay = sP;
             stuCardNo = sCN;
@@ -60,12 +79,12 @@ namespace Tuition_Centre.Class
             stuUpSub = sUS;
         }*/
 
-        public Receptionist(string sS)
+        public receptionist(string sS)
         {
             stuStatus = sS;
         }
 
-        public Receptionist(string rN, string rIC, string rC, string rE, string rA)
+        public receptionist(string rN, string rIC, string rC, string rE, string rA)
         {
             rcpName = rN;
             rcpIC = rIC;
@@ -73,6 +92,35 @@ namespace Tuition_Centre.Class
             rcpEmail = rE;
             rcpAddress = rA;
         }
+
+        public void Register(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV)
+        {
+            con.Open();
+            string reg = "INSERT INTO studentinfo (studentName, studentIC/Pass, studentEmail, studentPhone, studentAddress, studentEnrollmentDate, levelId) VALUES (@studentName, @studentIC/Pass, @studentEmail, @studentPhone, @studentAddress, @studentEnrollmentDate, @levelId)";
+            SqlCommand cmd = new SqlCommand(reg, con);
+            cmd.Parameters.AddWithValue("@studentName", sN);
+            cmd.Parameters.AddWithValue("@studentIC/Pass", sIC);
+            cmd.Parameters.AddWithValue("@studentEmail", sE);
+            cmd.Parameters.AddWithValue("@studentPhone", sC);
+            cmd.Parameters.AddWithValue("@studentAddress", sA);
+            cmd.Parameters.AddWithValue("@studentEnrollmentDate", sMOE);
+            cmd.Parameters.AddWithValue("@levelId", sLV);
+            cmd.ExecuteNonQuery();
+
+            string getID = "SELECT studentDatabasedId('studentinfo')";
+            SqlCommand cmd2 = new SqlCommand(getID, con);
+            int studentDatabaseID = Convert.ToInt32(cmd2.ExecuteScalar());
+
+            int usersId = this.UsersId;
+            string stuUserId = "INSERT INTO studentinfo (studenDatabaseID, usersId) VALUES (@studenDatabaseID, @usersId)";
+            SqlCommand cmd3 = new SqlCommand(stuUserId, con);
+            cmd3.Parameters.AddWithValue("@studenDatabaseID", studentDatabaseID);
+            cmd3.Parameters.AddWithValue("@usersId", usersId);
+            cmd3.ExecuteNonQuery();
+
+            con.Close();
+        } 
+
         /*
         public static object Register(Receptionist)
         {
