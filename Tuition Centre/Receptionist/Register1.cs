@@ -131,8 +131,17 @@ namespace Tuition_Centre.Receptionist
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            receptionist reg = new receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV);
-            reg.Register();
+            string sN = txtStuName.Text;
+            string sIC = txtStuIC.Text;
+            string sE = txtStuEmail.Text;
+            string sC = txtStuNo.Text;
+            string sA = txtStuAdress.Text;
+            string sMOE = cmbStuMthEnroll.Text;
+            string sLV = cmbStuLv.Text;
+            string sSub = cmbStuSub1.Text + cmbStuSub2.Text + cmbStuSub3.Text;
+
+            Recep reg = new Recep(sN, sIC, sE, sC, sA, sMOE, sLV, sSub);
+            reg.Register(sN, sIC, sE, sC, sA, sMOE, sLV, sSub);
 
         }
     }

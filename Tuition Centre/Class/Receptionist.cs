@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Tuition_Centre.Class
 {
-    internal class receptionist
+    internal class Recep
     {
         private string stuName;
         private string stuIC;
@@ -17,6 +17,7 @@ namespace Tuition_Centre.Class
         private string stuAddress;
         private string stuMthEnroll;
         private string stuLv;
+        private string stuSub;
         private string stuPay;
         private string stuCardNo;
         private string stuCVV;
@@ -52,9 +53,10 @@ namespace Tuition_Centre.Class
         public string RcpContact { get => rcpContact; set => rcpContact = value; }
         public string RcpEmail { get => rcpEmail; set => rcpEmail = value; }
         public string RcpAddress { get => rcpAddress; set => rcpAddress = value; }
+        public string StuSub { get => stuSub; set => stuSub = value; }
 
         //Constructor Overloading
-        public receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV)
+        public Recep(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV, string sSub)
         {
             StuName = sN;
             StuIC = sIC;
@@ -63,9 +65,10 @@ namespace Tuition_Centre.Class
             StuAddress = sA;
             StuMthEnroll = sMOE;
             StuLv = sLV;
+            StuSub = sSub;
         }
 
-        public receptionist(string sP, string sCN, string sCVV)
+        public Recep(string sP, string sCN, string sCVV)
         {
             stuPay = sP;
             stuCardNo = sCN;
@@ -79,12 +82,12 @@ namespace Tuition_Centre.Class
             stuUpSub = sUS;
         }*/
 
-        public receptionist(string sS)
+        public Recep(string sS)
         {
             stuStatus = sS;
         }
 
-        public receptionist(string rN, string rIC, string rC, string rE, string rA)
+        public Recep(string rN, string rIC, string rC, string rE, string rA)
         {
             rcpName = rN;
             rcpIC = rIC;
@@ -93,10 +96,10 @@ namespace Tuition_Centre.Class
             rcpAddress = rA;
         }
 
-        public void Register(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV)
+        public void Register(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV, string sSub)
         {
             con.Open();
-            string reg = "INSERT INTO studentinfo (studentName, studentIC/Pass, studentEmail, studentPhone, studentAddress, studentEnrollmentDate, levelId) VALUES (@studentName, @studentIC/Pass, @studentEmail, @studentPhone, @studentAddress, @studentEnrollmentDate, @levelId)";
+            string reg = "INSERT INTO studentinfo (studentName, studentIC/Pass, studentEmail, studentPhone, studentAddress, studentEnrollmentDate, levelId) VALUES (@studentName, @studentIC/Pass, @studentEmail, @studentPhone, @studentAddress, @studentEnrollMth, @levelId)";
             SqlCommand cmd = new SqlCommand(reg, con);
             cmd.Parameters.AddWithValue("@studentName", sN);
             cmd.Parameters.AddWithValue("@studentIC/Pass", sIC);
@@ -105,17 +108,18 @@ namespace Tuition_Centre.Class
             cmd.Parameters.AddWithValue("@studentAddress", sA);
             cmd.Parameters.AddWithValue("@studentEnrollmentDate", sMOE);
             cmd.Parameters.AddWithValue("@levelId", sLV);
+            cmd.Parameters.AddWithValue("@levelId", sLV);
             cmd.ExecuteNonQuery();
 
             string getID = "SELECT studentDatabasedId('studentinfo')";
             SqlCommand cmd2 = new SqlCommand(getID, con);
             int studentDatabaseID = Convert.ToInt32(cmd2.ExecuteScalar());
 
-            int usersId = this.UsersId;
+           // int usersId = this.UsersId;
             string stuUserId = "INSERT INTO studentinfo (studenDatabaseID, usersId) VALUES (@studenDatabaseID, @usersId)";
             SqlCommand cmd3 = new SqlCommand(stuUserId, con);
             cmd3.Parameters.AddWithValue("@studenDatabaseID", studentDatabaseID);
-            cmd3.Parameters.AddWithValue("@usersId", usersId);
+           // cmd3.Parameters.AddWithValue("@usersId", usersId);
             cmd3.ExecuteNonQuery();
 
             con.Close();
