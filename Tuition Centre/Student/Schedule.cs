@@ -59,7 +59,7 @@ namespace Tuition_Centre.Student
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblStudentInfo.Text = rd.GetString(2) + " |  " + rd.GetString(7) + " |  " +  rd.GetString(8);
+                lblStudentInfo.Text = rd.GetString(5) + " |  " + rd.GetString(4) + " |  " +  rd.GetString(12);
             }
             con.Close();
         }

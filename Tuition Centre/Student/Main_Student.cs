@@ -30,15 +30,15 @@ namespace Tuition_Centre.Student
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from studentinfo where studentName = @username", con);
+            SqlCommand cmd = new SqlCommand("select * from studentinfo where username = @username", con);
             cmd.Parameters.AddWithValue("@username", Name);
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblWelcome.Text = "Welcome, " + rd.GetString(2);
-                lblStudentName.Text= rd.GetString(2);
-                lblStudentNum.Text = rd.GetString(7);
-                lblStudentCourse.Text = rd.GetString(8);
+                lblWelcome.Text = "Welcome, " + rd.GetString(5);
+                lblStudentName.Text= rd.GetString(5);
+                lblStudentNum.Text = rd.GetString(4);
+                lblStudentCourse.Text = rd.GetString(12);
             }
             con.Close();
 

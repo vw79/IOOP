@@ -21,6 +21,7 @@ namespace Tuition_Centre.Receptionist
         }
 
         List<string> selectedItems = new List<string>();
+        private string sN;
 
         private void cmbStuSub1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -131,8 +132,8 @@ namespace Tuition_Centre.Receptionist
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            receptionist reg = new receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV);
-            reg.Register();
+            //receptionist reg = new receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV);
+            //reg.Register();
 
         }
     }
