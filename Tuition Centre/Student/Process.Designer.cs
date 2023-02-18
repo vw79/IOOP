@@ -91,11 +91,12 @@
             this.cmbNewSubject.FormattingEnabled = true;
             this.cmbNewSubject.Items.AddRange(new object[] {
             "Mathematics",
+            "Science",
             "Physical",
             "History",
-            "Chemistry",
-            "Biology",
-            "English"});
+            "Bahasa",
+            "English",
+            "Geography"});
             this.cmbNewSubject.Location = new System.Drawing.Point(15, 22);
             this.cmbNewSubject.Name = "cmbNewSubject";
             this.cmbNewSubject.Size = new System.Drawing.Size(180, 23);
@@ -118,11 +119,12 @@
             this.cmbOldSubject.FormattingEnabled = true;
             this.cmbOldSubject.Items.AddRange(new object[] {
             "Mathematics",
+            "Science",
             "Physical",
             "History",
-            "Chemistry",
-            "Biology",
-            "English"});
+            "Bahasa",
+            "English",
+            "Geography"});
             this.cmbOldSubject.Location = new System.Drawing.Point(14, 22);
             this.cmbOldSubject.Name = "cmbOldSubject";
             this.cmbOldSubject.Size = new System.Drawing.Size(180, 23);

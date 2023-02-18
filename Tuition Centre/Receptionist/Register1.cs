@@ -132,10 +132,10 @@ namespace Tuition_Centre.Receptionist
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+//<<<<<<< HEAD
             //receptionist reg = new receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV);
             //reg.Register();
-=======
+//=======
             string sN = txtStuName.Text;
             string sIC = txtStuIC.Text;
             string sE = txtStuEmail.Text;
@@ -147,7 +147,7 @@ namespace Tuition_Centre.Receptionist
 
             Recep reg = new Recep(sN, sIC, sE, sC, sA, sMOE, sLV, sSub);
             reg.Register(sN, sIC, sE, sC, sA, sMOE, sLV, sSub);
->>>>>>> b210ce48ed86a5556db0a399a06686b3eeedd36e
+//>>>>>>> b210ce48ed86a5556db0a399a06686b3eeedd36e
 
         }
     }

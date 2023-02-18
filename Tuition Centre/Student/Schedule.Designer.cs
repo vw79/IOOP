@@ -37,10 +37,25 @@
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblTeacher = new System.Windows.Forms.Label();
+            this.date1 = new System.Windows.Forms.Label();
+            this.subject1 = new System.Windows.Forms.Label();
+            this.location1 = new System.Windows.Forms.Label();
+            this.time1 = new System.Windows.Forms.Label();
+            this.teacher1 = new System.Windows.Forms.Label();
             this.lblStudentInfo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureHome = new System.Windows.Forms.PictureBox();
+            this.date2 = new System.Windows.Forms.Label();
+            this.subject2 = new System.Windows.Forms.Label();
+            this.location2 = new System.Windows.Forms.Label();
+            this.time2 = new System.Windows.Forms.Label();
+            this.teacher2 = new System.Windows.Forms.Label();
+            this.teacher3 = new System.Windows.Forms.Label();
+            this.time3 = new System.Windows.Forms.Label();
+            this.location3 = new System.Windows.Forms.Label();
+            this.subject3 = new System.Windows.Forms.Label();
+            this.date3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
@@ -93,6 +108,21 @@
             this.tableLayoutPanel1.Controls.Add(this.lblLocation, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblTime, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblTeacher, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.date1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.subject1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.location1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.time1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.teacher1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.date2, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.subject2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.location2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.time2, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.teacher2, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.teacher3, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.time3, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.location3, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.subject3, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.date3, 3, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -177,6 +207,76 @@
             this.lblTeacher.Text = "Teacher";
             this.lblTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // date1
+            // 
+            this.date1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.date1.AutoSize = true;
+            this.date1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.date1.Location = new System.Drawing.Point(97, 2);
+            this.date1.Name = "date1";
+            this.date1.Size = new System.Drawing.Size(176, 32);
+            this.date1.TabIndex = 5;
+            this.date1.Text = "date1";
+            this.date1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // subject1
+            // 
+            this.subject1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.subject1.AutoSize = true;
+            this.subject1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.subject1.Location = new System.Drawing.Point(97, 36);
+            this.subject1.Name = "subject1";
+            this.subject1.Size = new System.Drawing.Size(176, 53);
+            this.subject1.TabIndex = 6;
+            this.subject1.Text = "subject1";
+            this.subject1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // location1
+            // 
+            this.location1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.location1.AutoSize = true;
+            this.location1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.location1.Location = new System.Drawing.Point(97, 91);
+            this.location1.Name = "location1";
+            this.location1.Size = new System.Drawing.Size(176, 55);
+            this.location1.TabIndex = 7;
+            this.location1.Text = "location1";
+            this.location1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // time1
+            // 
+            this.time1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.time1.AutoSize = true;
+            this.time1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.time1.Location = new System.Drawing.Point(97, 148);
+            this.time1.Name = "time1";
+            this.time1.Size = new System.Drawing.Size(176, 54);
+            this.time1.TabIndex = 8;
+            this.time1.Text = "time1";
+            this.time1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // teacher1
+            // 
+            this.teacher1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teacher1.AutoSize = true;
+            this.teacher1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.teacher1.Location = new System.Drawing.Point(97, 204);
+            this.teacher1.Name = "teacher1";
+            this.teacher1.Size = new System.Drawing.Size(176, 50);
+            this.teacher1.TabIndex = 9;
+            this.teacher1.Text = "teacher1";
+            this.teacher1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblStudentInfo
             // 
             this.lblStudentInfo.AutoSize = true;
@@ -229,6 +329,146 @@
             this.pictureHome.TabStop = false;
             this.pictureHome.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // date2
+            // 
+            this.date2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.date2.AutoSize = true;
+            this.date2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.date2.Location = new System.Drawing.Point(281, 2);
+            this.date2.Name = "date2";
+            this.date2.Size = new System.Drawing.Size(186, 32);
+            this.date2.TabIndex = 10;
+            this.date2.Text = "date2";
+            this.date2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // subject2
+            // 
+            this.subject2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.subject2.AutoSize = true;
+            this.subject2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.subject2.Location = new System.Drawing.Point(281, 36);
+            this.subject2.Name = "subject2";
+            this.subject2.Size = new System.Drawing.Size(186, 53);
+            this.subject2.TabIndex = 11;
+            this.subject2.Text = "subject2";
+            this.subject2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // location2
+            // 
+            this.location2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.location2.AutoSize = true;
+            this.location2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.location2.Location = new System.Drawing.Point(281, 91);
+            this.location2.Name = "location2";
+            this.location2.Size = new System.Drawing.Size(186, 55);
+            this.location2.TabIndex = 12;
+            this.location2.Text = "location2";
+            this.location2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // time2
+            // 
+            this.time2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.time2.AutoSize = true;
+            this.time2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.time2.Location = new System.Drawing.Point(281, 148);
+            this.time2.Name = "time2";
+            this.time2.Size = new System.Drawing.Size(186, 54);
+            this.time2.TabIndex = 13;
+            this.time2.Text = "time2";
+            this.time2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // teacher2
+            // 
+            this.teacher2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teacher2.AutoSize = true;
+            this.teacher2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.teacher2.Location = new System.Drawing.Point(281, 204);
+            this.teacher2.Name = "teacher2";
+            this.teacher2.Size = new System.Drawing.Size(186, 50);
+            this.teacher2.TabIndex = 14;
+            this.teacher2.Text = "teacher2";
+            this.teacher2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // teacher3
+            // 
+            this.teacher3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teacher3.AutoSize = true;
+            this.teacher3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.teacher3.Location = new System.Drawing.Point(475, 204);
+            this.teacher3.Name = "teacher3";
+            this.teacher3.Size = new System.Drawing.Size(195, 50);
+            this.teacher3.TabIndex = 15;
+            this.teacher3.Text = "teacher3";
+            this.teacher3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // time3
+            // 
+            this.time3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.time3.AutoSize = true;
+            this.time3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.time3.Location = new System.Drawing.Point(475, 148);
+            this.time3.Name = "time3";
+            this.time3.Size = new System.Drawing.Size(195, 54);
+            this.time3.TabIndex = 16;
+            this.time3.Text = "time3";
+            this.time3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // location3
+            // 
+            this.location3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.location3.AutoSize = true;
+            this.location3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.location3.Location = new System.Drawing.Point(475, 91);
+            this.location3.Name = "location3";
+            this.location3.Size = new System.Drawing.Size(195, 55);
+            this.location3.TabIndex = 17;
+            this.location3.Text = "location3";
+            this.location3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // subject3
+            // 
+            this.subject3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.subject3.AutoSize = true;
+            this.subject3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.subject3.Location = new System.Drawing.Point(475, 36);
+            this.subject3.Name = "subject3";
+            this.subject3.Size = new System.Drawing.Size(195, 53);
+            this.subject3.TabIndex = 18;
+            this.subject3.Text = "subject3";
+            this.subject3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // date3
+            // 
+            this.date3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.date3.AutoSize = true;
+            this.date3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.date3.Location = new System.Drawing.Point(475, 2);
+            this.date3.Name = "date3";
+            this.date3.Size = new System.Drawing.Size(195, 32);
+            this.date3.TabIndex = 19;
+            this.date3.Text = "date3";
+            this.date3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -266,5 +506,20 @@
         private Label lblTime;
         private Label lblTeacher;
         private PictureBox pictureHome;
+        private Label date1;
+        private Label subject1;
+        private Label location1;
+        private Label time1;
+        private Label teacher1;
+        private Label date2;
+        private Label subject2;
+        private Label location2;
+        private Label time2;
+        private Label teacher2;
+        private Label teacher3;
+        private Label time3;
+        private Label location3;
+        private Label subject3;
+        private Label date3;
     }
 }

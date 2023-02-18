@@ -40,7 +40,6 @@
             this.grpPhoneNumber = new System.Windows.Forms.GroupBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.grpBirthday = new System.Windows.Forms.GroupBox();
-            this.dateBrithday = new System.Windows.Forms.DateTimePicker();
             this.grpPassport = new System.Windows.Forms.GroupBox();
             this.txtPassport = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.pictureHome = new System.Windows.Forms.PictureBox();
+            this.birthday = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -196,23 +196,13 @@
             // grpBirthday
             // 
             this.grpBirthday.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpBirthday.Controls.Add(this.dateBrithday);
+            this.grpBirthday.Controls.Add(this.birthday);
             this.grpBirthday.Location = new System.Drawing.Point(221, 80);
             this.grpBirthday.Name = "grpBirthday";
             this.grpBirthday.Size = new System.Drawing.Size(179, 49);
             this.grpBirthday.TabIndex = 1;
             this.grpBirthday.TabStop = false;
             this.grpBirthday.Text = "Birthday                                 ";
-            // 
-            // dateBrithday
-            // 
-            this.dateBrithday.CalendarForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dateBrithday.CalendarMonthBackground = System.Drawing.SystemColors.ControlLight;
-            this.dateBrithday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateBrithday.Location = new System.Drawing.Point(13, 16);
-            this.dateBrithday.Name = "dateBrithday";
-            this.dateBrithday.Size = new System.Drawing.Size(158, 23);
-            this.dateBrithday.TabIndex = 0;
             // 
             // grpPassport
             // 
@@ -369,6 +359,14 @@
             this.pictureHome.TabStop = false;
             this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
             // 
+            // birthday
+            // 
+            this.birthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.birthday.Location = new System.Drawing.Point(11, 19);
+            this.birthday.Name = "birthday";
+            this.birthday.Size = new System.Drawing.Size(161, 23);
+            this.birthday.TabIndex = 0;
+            // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -383,6 +381,7 @@
             this.Controls.Add(this.picProfile);
             this.Name = "EditProfile";
             this.Text = "EditProfile";
+            this.Load += new System.EventHandler(this.EditProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -411,7 +410,7 @@
 
         private void txtPassport_TextChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           
         }
 
         #endregion
@@ -426,7 +425,6 @@
         private GroupBox grpPhoneNumber;
         private TextBox txtPhoneNumber;
         private GroupBox grpBirthday;
-        private DateTimePicker dateBrithday;
         private GroupBox grpPassport;
         private TextBox txtPassport;
         private Label label1;
@@ -443,5 +441,6 @@
         private Button btnUpdate;
         private GroupBox grpStudentNumber;
         private PictureBox pictureHome;
+        private DateTimePicker birthday;
     }
 }

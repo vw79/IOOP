@@ -48,7 +48,7 @@ namespace Tuition_Centre.Student
         {
             if (cmbChangeSubject.Text == "Request to change the subject")
             {
-                RequestSubject obj1 = new RequestSubject();
+                RequestSubject obj1 = new RequestSubject(Name);
                 this.Hide();
                 obj1.ShowDialog();
             }
@@ -68,7 +68,7 @@ namespace Tuition_Centre.Student
 
         private void picEdit_Click(object sender, EventArgs e)
         {
-            EditProfile obj1 = new EditProfile();
+            EditProfile obj1 = new EditProfile(Name);
             this.Hide();
             obj1.ShowDialog();
         }

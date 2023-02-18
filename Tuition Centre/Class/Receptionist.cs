@@ -115,11 +115,11 @@ namespace Tuition_Centre.Class
             SqlCommand cmd2 = new SqlCommand(getID, con);
             int studentDatabaseID = Convert.ToInt32(cmd2.ExecuteScalar());
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             //int usersId = this.UsersId;
-=======
+//=======
            // int usersId = this.UsersId;
->>>>>>> b210ce48ed86a5556db0a399a06686b3eeedd36e
+//>>>>>>> b210ce48ed86a5556db0a399a06686b3eeedd36e
             string stuUserId = "INSERT INTO studentinfo (studenDatabaseID, usersId) VALUES (@studenDatabaseID, @usersId)";
             SqlCommand cmd3 = new SqlCommand(stuUserId, con);
             cmd3.Parameters.AddWithValue("@studenDatabaseID", studentDatabaseID);
