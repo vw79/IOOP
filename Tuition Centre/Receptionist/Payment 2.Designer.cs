@@ -29,25 +29,45 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblStuIDS = new System.Windows.Forms.Label();
+            this.lblStuNameS = new System.Windows.Forms.Label();
             this.lblStuID = new System.Windows.Forms.Label();
             this.lblStuName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnReceipt = new System.Windows.Forms.Button();
+            this.cmbPay = new System.Windows.Forms.ComboBox();
             this.lblAmount = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.TextBox();
-            this.cmbPay = new System.Windows.Forms.ComboBox();
-            this.btnReceipt = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblStuIDS);
+            this.panel2.Controls.Add(this.lblStuNameS);
             this.panel2.Controls.Add(this.lblStuID);
             this.panel2.Controls.Add(this.lblStuName);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 105);
             this.panel2.TabIndex = 4;
+            // 
+            // lblStuIDS
+            // 
+            this.lblStuIDS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStuIDS.Location = new System.Drawing.Point(132, 55);
+            this.lblStuIDS.Name = "lblStuIDS";
+            this.lblStuIDS.Size = new System.Drawing.Size(200, 17);
+            this.lblStuIDS.TabIndex = 4;
+            // 
+            // lblStuNameS
+            // 
+            this.lblStuNameS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblStuNameS.Location = new System.Drawing.Point(132, 22);
+            this.lblStuNameS.Name = "lblStuNameS";
+            this.lblStuNameS.Size = new System.Drawing.Size(200, 17);
+            this.lblStuNameS.TabIndex = 3;
             // 
             // lblStuID
             // 
@@ -78,6 +98,24 @@
             this.panel3.Size = new System.Drawing.Size(776, 315);
             this.panel3.TabIndex = 5;
             // 
+            // btnReceipt
+            // 
+            this.btnReceipt.Location = new System.Drawing.Point(513, 228);
+            this.btnReceipt.Name = "btnReceipt";
+            this.btnReceipt.Size = new System.Drawing.Size(150, 23);
+            this.btnReceipt.TabIndex = 3;
+            this.btnReceipt.Text = "Generate Receipt";
+            this.btnReceipt.UseVisualStyleBackColor = true;
+            // 
+            // cmbPay
+            // 
+            this.cmbPay.FormattingEnabled = true;
+            this.cmbPay.Location = new System.Drawing.Point(124, 163);
+            this.cmbPay.Name = "cmbPay";
+            this.cmbPay.Size = new System.Drawing.Size(200, 23);
+            this.cmbPay.TabIndex = 2;
+            this.cmbPay.Text = "Payment Method";
+            // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
@@ -94,24 +132,6 @@
             this.txtAmount.PlaceholderText = "Enter Amount";
             this.txtAmount.Size = new System.Drawing.Size(200, 23);
             this.txtAmount.TabIndex = 0;
-            // 
-            // cmbPay
-            // 
-            this.cmbPay.FormattingEnabled = true;
-            this.cmbPay.Location = new System.Drawing.Point(124, 163);
-            this.cmbPay.Name = "cmbPay";
-            this.cmbPay.Size = new System.Drawing.Size(200, 23);
-            this.cmbPay.TabIndex = 2;
-            this.cmbPay.Text = "Payment Method";
-            // 
-            // btnReceipt
-            // 
-            this.btnReceipt.Location = new System.Drawing.Point(513, 228);
-            this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Size = new System.Drawing.Size(150, 23);
-            this.btnReceipt.TabIndex = 3;
-            this.btnReceipt.Text = "Generate Receipt";
-            this.btnReceipt.UseVisualStyleBackColor = true;
             // 
             // frmPayment2
             // 
@@ -140,5 +160,7 @@
         private TextBox txtAmount;
         private Button btnReceipt;
         private ComboBox cmbPay;
+        private Label lblStuIDS;
+        private Label lblStuNameS;
     }
 }

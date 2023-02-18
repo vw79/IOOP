@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.Linq;
 
 namespace Tuition_Centre.Receptionist
 {
@@ -16,5 +18,14 @@ namespace Tuition_Centre.Receptionist
         {
             InitializeComponent();
         }
+
+        public frmPayment2(string name, string id)
+        {
+            InitializeComponent();
+            lblStuNameS.Text = name;
+            lblStuIDS.Text = id;
+        }
+
+
     }
 }
