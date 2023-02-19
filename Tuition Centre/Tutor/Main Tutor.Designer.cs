@@ -55,16 +55,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tuition_Centre.Properties.Resources._7akn42c5i5621;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(114, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 124);
+            this.splitContainer1.Location = new System.Drawing.Point(14, 165);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -75,8 +77,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(609, 314);
-            this.splitContainer1.SplitterDistance = 151;
+            this.splitContainer1.Size = new System.Drawing.Size(696, 419);
+            this.splitContainer1.SplitterDistance = 172;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
@@ -87,9 +90,11 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Location = new System.Drawing.Point(3, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(144, 152);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(165, 203);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menu";
@@ -98,9 +103,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(0, 22);
+            this.button1.Location = new System.Drawing.Point(0, 29);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 23);
+            this.button1.Size = new System.Drawing.Size(160, 31);
             this.button1.TabIndex = 2;
             this.button1.Text = "Class Information";
             this.button1.UseVisualStyleBackColor = true;
@@ -109,9 +115,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(1, 109);
+            this.button4.Location = new System.Drawing.Point(1, 145);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 23);
+            this.button4.Size = new System.Drawing.Size(160, 31);
             this.button4.TabIndex = 5;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = true;
@@ -120,9 +127,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(2, 51);
+            this.button2.Location = new System.Drawing.Point(2, 68);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 23);
+            this.button2.Size = new System.Drawing.Size(158, 31);
             this.button2.TabIndex = 3;
             this.button2.Text = "View Enrolled Students";
             this.button2.UseVisualStyleBackColor = true;
@@ -131,9 +139,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(1, 80);
+            this.button3.Location = new System.Drawing.Point(1, 107);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 23);
+            this.button3.Size = new System.Drawing.Size(160, 31);
             this.button3.TabIndex = 4;
             this.button3.Text = "Update Information";
             this.button3.UseVisualStyleBackColor = true;
@@ -145,9 +154,11 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 308);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(510, 411);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Class Information";
@@ -155,7 +166,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
+            this.listBox1.ItemHeight = 21;
             this.listBox1.Items.AddRange(new object[] {
             "CT044-3-1-IOOP-L-5 (Hybrid)",
             "INTRODUCTION TO OBJECT ORIENTED PROGRAMMING",
@@ -176,16 +187,18 @@
             "INTRODUCTION TO OBJECT ORIENTED PROGRAMMING",
             "10:45 AM (GMT+8) - 12:45 PM (GMT+8)",
             " Auditorium 5 @ Level 3 | APU CAMPU"});
-            this.listBox1.Location = new System.Drawing.Point(6, 60);
+            this.listBox1.Location = new System.Drawing.Point(7, 80);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(440, 242);
+            this.listBox1.Size = new System.Drawing.Size(502, 319);
             this.listBox1.TabIndex = 2;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(125, 24);
+            this.button6.Location = new System.Drawing.Point(143, 32);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 30);
+            this.button6.Size = new System.Drawing.Size(121, 40);
             this.button6.TabIndex = 1;
             this.button6.Text = "Delete Class";
             this.button6.UseVisualStyleBackColor = true;
@@ -193,9 +206,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(6, 24);
+            this.button5.Location = new System.Drawing.Point(7, 32);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 30);
+            this.button5.Size = new System.Drawing.Size(129, 40);
             this.button5.TabIndex = 0;
             this.button5.Text = "Add New Class";
             this.button5.UseVisualStyleBackColor = true;
@@ -205,9 +219,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(118, 10);
+            this.label1.Location = new System.Drawing.Point(135, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 27);
+            this.label1.Size = new System.Drawing.Size(135, 33);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tutor Name: ";
             this.label1.UseCompatibleTextRendering = true;
@@ -217,9 +231,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(118, 37);
+            this.label2.Location = new System.Drawing.Point(135, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tutor ID: ";
             // 
@@ -229,21 +243,23 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Light",
             "Dark"});
-            this.comboBox1.Location = new System.Drawing.Point(548, 12);
+            this.comboBox1.Location = new System.Drawing.Point(626, 16);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(75, 23);
+            this.comboBox1.Size = new System.Drawing.Size(85, 28);
             this.comboBox1.TabIndex = 4;
             // 
             // frmMainTutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 450);
+            this.ClientSize = new System.Drawing.Size(726, 600);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMainTutor";
             this.Text = "Tutor Main Page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
