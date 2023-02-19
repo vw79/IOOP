@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Tuition Centre",
+    "\\Tuition Centre\\Tutor"
   ],
-  "SelectedNode": "\\Tuition Centre.sln",
+  "SelectedNode": "\\Tuition Centre\\Tutor\\Main Tutor.cs",
   "PreviewInSolutionExplorer": false
 }

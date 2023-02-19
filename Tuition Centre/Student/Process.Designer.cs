@@ -32,14 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.picChange = new System.Windows.Forms.PictureBox();
             this.grpNewSubject = new System.Windows.Forms.GroupBox();
-            this.cmbNewSubject = new System.Windows.Forms.ComboBox();
+            this.lblNewSubject = new System.Windows.Forms.Label();
             this.grpOldSubject = new System.Windows.Forms.GroupBox();
-            this.cmbOldSubject = new System.Windows.Forms.ComboBox();
+            this.lblOldSubject = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblCondition = new System.Windows.Forms.Label();
             this.pictureHome = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.lblhistory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).BeginInit();
             this.grpNewSubject.SuspendLayout();
             this.grpOldSubject.SuspendLayout();
@@ -78,7 +77,7 @@
             // grpNewSubject
             // 
             this.grpNewSubject.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpNewSubject.Controls.Add(this.cmbNewSubject);
+            this.grpNewSubject.Controls.Add(this.lblNewSubject);
             this.grpNewSubject.Location = new System.Drawing.Point(473, 183);
             this.grpNewSubject.Name = "grpNewSubject";
             this.grpNewSubject.Size = new System.Drawing.Size(200, 61);
@@ -86,27 +85,22 @@
             this.grpNewSubject.TabStop = false;
             this.grpNewSubject.Text = "New Subject";
             // 
-            // cmbNewSubject
+            // lblNewSubject
             // 
-            this.cmbNewSubject.FormattingEnabled = true;
-            this.cmbNewSubject.Items.AddRange(new object[] {
-            "Mathematics",
-            "Science",
-            "Physical",
-            "History",
-            "Bahasa",
-            "English",
-            "Geography"});
-            this.cmbNewSubject.Location = new System.Drawing.Point(15, 22);
-            this.cmbNewSubject.Name = "cmbNewSubject";
-            this.cmbNewSubject.Size = new System.Drawing.Size(180, 23);
-            this.cmbNewSubject.TabIndex = 9;
-            this.cmbNewSubject.Text = "New Subject";
+            this.lblNewSubject.AutoSize = true;
+            this.lblNewSubject.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNewSubject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblNewSubject.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNewSubject.Location = new System.Drawing.Point(17, 29);
+            this.lblNewSubject.Name = "lblNewSubject";
+            this.lblNewSubject.Size = new System.Drawing.Size(92, 20);
+            this.lblNewSubject.TabIndex = 1;
+            this.lblNewSubject.Text = "New Subject";
             // 
             // grpOldSubject
             // 
             this.grpOldSubject.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpOldSubject.Controls.Add(this.cmbOldSubject);
+            this.grpOldSubject.Controls.Add(this.lblOldSubject);
             this.grpOldSubject.Location = new System.Drawing.Point(121, 183);
             this.grpOldSubject.Name = "grpOldSubject";
             this.grpOldSubject.Size = new System.Drawing.Size(200, 61);
@@ -114,22 +108,18 @@
             this.grpOldSubject.TabStop = false;
             this.grpOldSubject.Text = "Old Subject";
             // 
-            // cmbOldSubject
+            // lblOldSubject
             // 
-            this.cmbOldSubject.FormattingEnabled = true;
-            this.cmbOldSubject.Items.AddRange(new object[] {
-            "Mathematics",
-            "Science",
-            "Physical",
-            "History",
-            "Bahasa",
-            "English",
-            "Geography"});
-            this.cmbOldSubject.Location = new System.Drawing.Point(14, 22);
-            this.cmbOldSubject.Name = "cmbOldSubject";
-            this.cmbOldSubject.Size = new System.Drawing.Size(180, 23);
-            this.cmbOldSubject.TabIndex = 8;
-            this.cmbOldSubject.Text = "Old Subject";
+            this.lblOldSubject.AutoSize = true;
+            this.lblOldSubject.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblOldSubject.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblOldSubject.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblOldSubject.Location = new System.Drawing.Point(13, 29);
+            this.lblOldSubject.Name = "lblOldSubject";
+            this.lblOldSubject.Size = new System.Drawing.Size(86, 20);
+            this.lblOldSubject.TabIndex = 0;
+            this.lblOldSubject.Text = "Old Subject";
+            this.lblOldSubject.Click += new System.EventHandler(this.lblOldSubject_Click);
             // 
             // button1
             // 
@@ -141,10 +131,12 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "View Process";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblCondition
             // 
             this.lblCondition.AutoSize = true;
+            this.lblCondition.ForeColor = System.Drawing.Color.Firebrick;
             this.lblCondition.Location = new System.Drawing.Point(211, 334);
             this.lblCondition.Name = "lblCondition";
             this.lblCondition.Size = new System.Drawing.Size(407, 15);
@@ -162,35 +154,23 @@
             this.pictureHome.TabStop = false;
             this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
             // 
-            // button2
+            // lblhistory
             // 
-            this.button2.Location = new System.Drawing.Point(572, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "test unpending";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(613, 386);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 23);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "test pending";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.lblhistory.AutoSize = true;
+            this.lblhistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblhistory.ForeColor = System.Drawing.Color.Crimson;
+            this.lblhistory.Location = new System.Drawing.Point(125, 152);
+            this.lblhistory.Name = "lblhistory";
+            this.lblhistory.Size = new System.Drawing.Size(95, 17);
+            this.lblhistory.TabIndex = 24;
+            this.lblhistory.Text = "History request :";
             // 
             // Process
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblhistory);
             this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.lblCondition);
             this.Controls.Add(this.button1);
@@ -201,9 +181,12 @@
             this.Controls.Add(this.label1);
             this.Name = "Process";
             this.Text = "RequestProcess";
+            this.Load += new System.EventHandler(this.Process_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picChange)).EndInit();
             this.grpNewSubject.ResumeLayout(false);
+            this.grpNewSubject.PerformLayout();
             this.grpOldSubject.ResumeLayout(false);
+            this.grpOldSubject.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,13 +199,12 @@
         private Label label1;
         private PictureBox picChange;
         private GroupBox grpNewSubject;
-        private ComboBox cmbNewSubject;
         private GroupBox grpOldSubject;
-        private ComboBox cmbOldSubject;
         private Button button1;
         private Label lblCondition;
         private PictureBox pictureHome;
-        private Button button2;
-        private Button button5;
+        private Label lblNewSubject;
+        private Label lblOldSubject;
+        private Label lblhistory;
     }
 }

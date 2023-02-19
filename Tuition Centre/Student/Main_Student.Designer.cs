@@ -127,6 +127,7 @@
             this.lblStudentName.TabIndex = 4;
             this.lblStudentName.Text = "   Student  Name ";
             this.lblStudentName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStudentName.Click += new System.EventHandler(this.lblStudentName_Click);
             // 
             // btnSchedule
             // 

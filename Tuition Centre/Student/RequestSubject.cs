@@ -34,7 +34,7 @@ namespace Tuition_Centre.Student
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into changeSubject (ssid, acceptanceStatus, courseIntake, date, oldSubject, newSubject, reasons) values(@s,@a,@course,@date,@old,@new,@reasons)", con);
+            SqlCommand cmd = new SqlCommand("insert into changeSubject (ssid, acceptanceStatus, courseIntake, date, oldSubject, newSubject, reasons, username) values(@s,@a,@course,@date,@old,@new,@reasons,@username)", con);
             cmd.Parameters.AddWithValue("@course", txtCourse.Text);
             cmd.Parameters.AddWithValue("@date", dateTimePicker1.Text);
             cmd.Parameters.AddWithValue("@old", cmbOldSubject.Text);
@@ -42,6 +42,7 @@ namespace Tuition_Centre.Student
             cmd.Parameters.AddWithValue("@reasons", txtReason.Text);
             cmd.Parameters.AddWithValue("@s", " ");
             cmd.Parameters.AddWithValue("@a", " ");
+            cmd.Parameters.AddWithValue("@username",Name);
             cmd.ExecuteNonQuery();
 
             con.Close();

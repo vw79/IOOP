@@ -55,8 +55,8 @@ namespace Tuition_Centre.Student
 
             if (cmbChangeSubject.Text == "View the process")
             {
-                Process obj1 = new Process();
-                this.Hide();
+                Process obj1 = new Process(Name);
+                this.Hide(); 
                 obj1.ShowDialog();
             }
         }
@@ -88,6 +88,11 @@ namespace Tuition_Centre.Student
         }
 
         private void lblStudentCourse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStudentName_Click(object sender, EventArgs e)
         {
 
         }
