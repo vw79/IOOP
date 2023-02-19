@@ -55,8 +55,8 @@ namespace Tuition_Centre.Student
 
             if (cmbChangeSubject.Text == "View the process")
             {
-                Process obj1 = new Process(Name);
-                this.Hide(); 
+                ViewProcess obj1 = new ViewProcess(Name);
+                this.Hide();
                 obj1.ShowDialog();
             }
         }

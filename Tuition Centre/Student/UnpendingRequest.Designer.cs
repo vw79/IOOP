@@ -44,13 +44,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureHome = new System.Windows.Forms.PictureBox();
-            this.pictureBackward = new System.Windows.Forms.PictureBox();
             this.grpProcess.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBackward)).BeginInit();
             this.SuspendLayout();
             // 
             // grpProcess
@@ -210,11 +208,12 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureHome
             // 
             this.pictureHome.Image = global::Tuition_Centre.Properties.Resources.home;
-            this.pictureHome.Location = new System.Drawing.Point(737, 12);
+            this.pictureHome.Location = new System.Drawing.Point(724, 21);
             this.pictureHome.Name = "pictureHome";
             this.pictureHome.Size = new System.Drawing.Size(51, 43);
             this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,23 +221,11 @@
             this.pictureHome.TabStop = false;
             this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
             // 
-            // pictureBackward
-            // 
-            this.pictureBackward.Image = global::Tuition_Centre.Properties.Resources.backward;
-            this.pictureBackward.Location = new System.Drawing.Point(685, 12);
-            this.pictureBackward.Name = "pictureBackward";
-            this.pictureBackward.Size = new System.Drawing.Size(57, 43);
-            this.pictureBackward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBackward.TabIndex = 20;
-            this.pictureBackward.TabStop = false;
-            this.pictureBackward.Click += new System.EventHandler(this.pictureBackward_Click);
-            // 
             // UnpendingRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBackward);
             this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grpProcess);
@@ -252,7 +239,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBackward)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,6 +262,5 @@
         private Label label1;
         private Button button1;
         private PictureBox pictureHome;
-        private PictureBox pictureBackward;
     }
 }

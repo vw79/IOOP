@@ -41,7 +41,7 @@ namespace Tuition_Centre.Student
             cmd.Parameters.AddWithValue("@new", cmbNewSubject.Text);
             cmd.Parameters.AddWithValue("@reasons", txtReason.Text);
             cmd.Parameters.AddWithValue("@s", " ");
-            cmd.Parameters.AddWithValue("@a", " ");
+            cmd.Parameters.AddWithValue("@a", "Pending");
             cmd.Parameters.AddWithValue("@username",Name);
             cmd.ExecuteNonQuery();
 

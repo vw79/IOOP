@@ -12,9 +12,10 @@ namespace Tuition_Centre.Student
 {
     public partial class pendingRequest : Form
     {
-        public pendingRequest()
+        public pendingRequest(string un)
         {
             InitializeComponent();
+            Name= un;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -34,16 +35,14 @@ namespace Tuition_Centre.Student
 
         private void pictureHome_Click(object sender, EventArgs e)
         {
-            frmMain_Student obj1 = new frmMain_Student();
+            frmMain_Student obj1 = new frmMain_Student(Name);
             this.Close();
             obj1.ShowDialog();
         }
 
         private void pictureBackward_Click(object sender, EventArgs e)
         {
-            Process obj1 = new Process();
-            this.Close();
-            obj1.ShowDialog();
+            
         }
     }
 }

@@ -45,19 +45,17 @@
             this.lblProcessRequest = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureHome = new System.Windows.Forms.PictureBox();
-            this.pictureBackward = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBackward)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(107, 135);
+            this.label2.Location = new System.Drawing.Point(116, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(287, 15);
             this.label2.TabIndex = 5;
@@ -67,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(107, 98);
+            this.label1.Location = new System.Drawing.Point(116, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 37);
             this.label1.TabIndex = 4;
@@ -125,7 +123,7 @@
             this.groupBox1.Controls.Add(this.lblRequest);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(120, 189);
+            this.groupBox1.Location = new System.Drawing.Point(129, 179);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(539, 100);
             this.groupBox1.TabIndex = 10;
@@ -206,7 +204,7 @@
             // 
             this.lblProcessRequest.AutoSize = true;
             this.lblProcessRequest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProcessRequest.Location = new System.Drawing.Point(286, 322);
+            this.lblProcessRequest.Location = new System.Drawing.Point(295, 312);
             this.lblProcessRequest.Name = "lblProcessRequest";
             this.lblProcessRequest.Size = new System.Drawing.Size(252, 21);
             this.lblProcessRequest.TabIndex = 11;
@@ -216,7 +214,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.IndianRed;
-            this.label5.Location = new System.Drawing.Point(303, 343);
+            this.label5.Location = new System.Drawing.Point(312, 333);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(218, 15);
             this.label5.TabIndex = 12;
@@ -233,23 +231,11 @@
             this.pictureHome.TabStop = false;
             this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
             // 
-            // pictureBackward
-            // 
-            this.pictureBackward.Image = global::Tuition_Centre.Properties.Resources.backward;
-            this.pictureBackward.Location = new System.Drawing.Point(683, 21);
-            this.pictureBackward.Name = "pictureBackward";
-            this.pictureBackward.Size = new System.Drawing.Size(57, 43);
-            this.pictureBackward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBackward.TabIndex = 18;
-            this.pictureBackward.TabStop = false;
-            this.pictureBackward.Click += new System.EventHandler(this.pictureBackward_Click);
-            // 
             // pendingRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBackward);
             this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblProcessRequest);
@@ -264,7 +250,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBackward)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,6 +274,5 @@
         private Label lblProcessRequest;
         private Label label5;
         private PictureBox pictureHome;
-        private PictureBox pictureBackward;
     }
 }
