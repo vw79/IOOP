@@ -209,8 +209,6 @@
 
         private void frmMainAdmin_Load(object sender, EventArgs e)
         {
-            lblName.Text = $"Name : {name}";
-            lblIdentity.Text = $"ID : {identity}";
         }
 
         #endregion
