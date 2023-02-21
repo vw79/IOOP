@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tuition_Centre.Class;
 
 namespace Tuition_Centre.Receptionist
 {
@@ -19,6 +20,8 @@ namespace Tuition_Centre.Receptionist
         public frmMainReceptionist(string un)
         {
             InitializeComponent();
+            Recep rcp = new Recep();
+            lblWlcRcp.Text = "Welcome Back, " + rcp.welcomeRecep(un);
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
