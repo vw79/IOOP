@@ -1,15 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tuition_Centre.Class;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tuition_Centre.Receptionist
 {
@@ -18,102 +21,6 @@ namespace Tuition_Centre.Receptionist
         public frmRegister1()
         {
             InitializeComponent();
-        }
-
-        List<string> selectedItems = new List<string>();
-        private string sN;
-
-        private void cmbStuSub1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Get the selected item
-            string selectedItem = cmbStuSub1.SelectedItem.ToString();
-
-            // Check if the item has already been selected
-            if (selectedItems.Contains(selectedItem))
-            {
-                MessageBox.Show("You have already selected this item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cmbStuSub1.SelectedIndex = -1;
-                return;
-            }
-
-            // Add the item to the selected items list
-            selectedItems.Add(selectedItem);
-
-            // Update the other ComboBox controls
-            UpdateComboBoxes();
-        }
-
-        // Handle the SelectedIndexChanged event of the second ComboBox control
-        private void cmbStuSub2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Get the selected item
-            string selectedItem = cmbStuSub2.SelectedItem.ToString();
-
-            // Check if the item has already been selected
-            if (selectedItems.Contains(selectedItem))
-            {
-                MessageBox.Show("You have already selected this item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cmbStuSub2.SelectedIndex = -1;
-                return;
-            }
-
-            // Add the item to the selected items list
-            selectedItems.Add(selectedItem);
-
-            // Update the other ComboBox controls
-            UpdateComboBoxes();
-        }
-
-        // Handle the SelectedIndexChanged event of the third ComboBox control
-        private void cmbStuSub3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Get the selected item
-            string selectedItem = cmbStuSub3.SelectedItem.ToString();
-
-            // Check if the item has already been selected
-            if (selectedItems.Contains(selectedItem))
-            {
-                MessageBox.Show("You have already selected this item.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cmbStuSub3.SelectedIndex = -1;
-                return;
-            }
-
-            // Add the item to the selected items list
-            selectedItems.Add(selectedItem);
-
-            // Update the other ComboBox controls
-            UpdateComboBoxes();
-        }
-
-        // Update the ComboBox controls
-        private void UpdateComboBoxes()
-        {
-            // Create a list of available items
-            List<string> availableItems = new List<string>();
-            availableItems.Add("IOOP");
-            availableItems.Add("CGDD");
-            availableItems.Add("IS3DA");
-            availableItems.Add("FIS");
-            availableItems.Add("MCFC");
-            availableItems.Add("SAAD");
-
-            // Remove the selected items from the available items list
-            foreach (string item in selectedItems)
-            {
-                availableItems.Remove(item);
-            }
-
-            // Update the Items collection of each ComboBox control
-            cmbStuSub1.Items.Clear();
-            cmbStuSub2.Items.Clear();
-            cmbStuSub3.Items.Clear();
-
-            foreach (string item in availableItems)
-            {
-                cmbStuSub1.Items.Add(item);
-                cmbStuSub2.Items.Add(item);
-                cmbStuSub3.Items.Add(item);
-            }
         }
 
         private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,25 +37,65 @@ namespace Tuition_Centre.Receptionist
             }
         }
 
+        private void ClearAllFields()
+        {
+            // Clear all text boxes
+            txtUsername.Text = "";
+            txtPw.Text = "";
+            txtStuId.Text = "";
+            txtStuName.Text = "";
+            txtStuIC.Text = "";
+            txtStuEmail.Text = "";
+            txtStuNo.Text = "";
+            txtStuAddress.Text = "";
+            dtpBirthday.Text = "";
+            txtCourse.Text = "";
+            txtMemo.Text = "";
+
+            // Clear all combo boxes
+            cmbStuLv.SelectedIndex = -1;
+            cmbPayment.SelectedIndex = -1;
+            cmbStuSub1.SelectedIndex = -1;
+            cmbStuSub2.SelectedIndex = -1;
+            cmbStuSub3.SelectedIndex = -1;
+
+            // Set focus to the first text box
+            txtUsername.Focus();
+        }
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
-//<<<<<<< HEAD
-            //receptionist reg = new receptionist(string sN, string sIC, string sE, string sC, string sA, string sMOE, string sLV);
-            //reg.Register();
-//=======
-            string sN = txtStuName.Text;
-            string sIC = txtStuIC.Text;
-            string sE = txtStuEmail.Text;
-            string sC = txtStuNo.Text;
-            string sA = txtStuAdress.Text;
-            string sMOE = cmbStuMthEnroll.Text;
-            string sLV = cmbStuLv.Text;
-            string sSub = cmbStuSub1.Text + cmbStuSub2.Text + cmbStuSub3.Text;
+            string role = "Student";
+  
+            int levelId = cmbStuLv.SelectedIndex;
+            if (cmbStuLv.SelectedIndex == 1) 
+            {
+                levelId = 1;
+            }
+            else if (cmbStuLv.SelectedIndex == 2)
+            { 
+                levelId = 2; 
+            }
+            else if (cmbStuLv.SelectedIndex == 3)
+            {
+                levelId = 3;
+            }
+            else if (cmbStuLv.SelectedIndex == 4)
+            {
+                levelId = 4;
+            }
+            else if (cmbStuLv.SelectedIndex == 5)
+            {
+                levelId = 5;
+            }
 
-            Recep reg = new Recep(sN, sIC, sE, sC, sA, sMOE, sLV, sSub);
-            reg.Register(sN, sIC, sE, sC, sA, sMOE, sLV, sSub);
-//>>>>>>> b210ce48ed86a5556db0a399a06686b3eeedd36e
+            string subName1 = cmbStuSub1.Text;
+            string subName2 = cmbStuSub2.Text;
+            string subName3 = cmbStuSub3.Text;
 
+            Recep rcp = new Recep(txtUsername.Text, txtPw.Text, role, levelId, txtStuId.Text, txtStuName.Text, txtStuIC.Text, txtStuEmail.Text,txtStuNo.Text, txtStuAddress.Text, dtpEnrollDate.Text, dtpBirthday.Text, txtCourse.Text, txtMemo.Text, subName1, subName2, subName3);
+            ClearAllFields();
+            MessageBox.Show(rcp.addStudent());
         }
     }
 }

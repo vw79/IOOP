@@ -39,8 +39,7 @@
             this.txtStuIC = new System.Windows.Forms.TextBox();
             this.txtStuEmail = new System.Windows.Forms.TextBox();
             this.txtStuNo = new System.Windows.Forms.TextBox();
-            this.txtStuAdress = new System.Windows.Forms.TextBox();
-            this.cmbStuMthEnroll = new System.Windows.Forms.ComboBox();
+            this.txtStuAddress = new System.Windows.Forms.TextBox();
             this.cmbStuLv = new System.Windows.Forms.ComboBox();
             this.cmbStuSub1 = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
@@ -54,13 +53,20 @@
             this.cmbStuSub2 = new System.Windows.Forms.ComboBox();
             this.cmbStuSub3 = new System.Windows.Forms.ComboBox();
             this.grpBox1 = new System.Windows.Forms.GroupBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPw = new System.Windows.Forms.TextBox();
+            this.txtStuId = new System.Windows.Forms.TextBox();
+            this.dtpEnrollDate = new System.Windows.Forms.DateTimePicker();
+            this.txtCourse = new System.Windows.Forms.TextBox();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtMemo = new System.Windows.Forms.TextBox();
             this.grpBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStuName
             // 
             this.lblStuName.AutoSize = true;
-            this.lblStuName.Location = new System.Drawing.Point(35, 54);
+            this.lblStuName.Location = new System.Drawing.Point(27, 195);
             this.lblStuName.Name = "lblStuName";
             this.lblStuName.Size = new System.Drawing.Size(39, 15);
             this.lblStuName.TabIndex = 0;
@@ -69,7 +75,7 @@
             // lblStuIC
             // 
             this.lblStuIC.AutoSize = true;
-            this.lblStuIC.Location = new System.Drawing.Point(35, 126);
+            this.lblStuIC.Location = new System.Drawing.Point(27, 267);
             this.lblStuIC.Name = "lblStuIC";
             this.lblStuIC.Size = new System.Drawing.Size(71, 15);
             this.lblStuIC.TabIndex = 1;
@@ -78,7 +84,7 @@
             // lblStuEmail
             // 
             this.lblStuEmail.AutoSize = true;
-            this.lblStuEmail.Location = new System.Drawing.Point(35, 198);
+            this.lblStuEmail.Location = new System.Drawing.Point(27, 339);
             this.lblStuEmail.Name = "lblStuEmail";
             this.lblStuEmail.Size = new System.Drawing.Size(36, 15);
             this.lblStuEmail.TabIndex = 2;
@@ -87,7 +93,7 @@
             // lblStuNo
             // 
             this.lblStuNo.AutoSize = true;
-            this.lblStuNo.Location = new System.Drawing.Point(35, 266);
+            this.lblStuNo.Location = new System.Drawing.Point(27, 390);
             this.lblStuNo.Name = "lblStuNo";
             this.lblStuNo.Size = new System.Drawing.Size(96, 15);
             this.lblStuNo.TabIndex = 3;
@@ -96,7 +102,7 @@
             // lblStuAdress
             // 
             this.lblStuAdress.AutoSize = true;
-            this.lblStuAdress.Location = new System.Drawing.Point(35, 335);
+            this.lblStuAdress.Location = new System.Drawing.Point(276, 20);
             this.lblStuAdress.Name = "lblStuAdress";
             this.lblStuAdress.Size = new System.Drawing.Size(49, 15);
             this.lblStuAdress.TabIndex = 4;
@@ -105,7 +111,7 @@
             // lblStuMthEnroll
             // 
             this.lblStuMthEnroll.AutoSize = true;
-            this.lblStuMthEnroll.Location = new System.Drawing.Point(288, 54);
+            this.lblStuMthEnroll.Location = new System.Drawing.Point(276, 77);
             this.lblStuMthEnroll.Name = "lblStuMthEnroll";
             this.lblStuMthEnroll.Size = new System.Drawing.Size(118, 15);
             this.lblStuMthEnroll.TabIndex = 5;
@@ -114,7 +120,7 @@
             // lblStuLv
             // 
             this.lblStuLv.AutoSize = true;
-            this.lblStuLv.Location = new System.Drawing.Point(288, 126);
+            this.lblStuLv.Location = new System.Drawing.Point(276, 149);
             this.lblStuLv.Name = "lblStuLv";
             this.lblStuLv.Size = new System.Drawing.Size(34, 15);
             this.lblStuLv.TabIndex = 6;
@@ -122,59 +128,38 @@
             // 
             // txtStuName
             // 
-            this.txtStuName.Location = new System.Drawing.Point(35, 72);
+            this.txtStuName.Location = new System.Drawing.Point(27, 213);
             this.txtStuName.Name = "txtStuName";
             this.txtStuName.Size = new System.Drawing.Size(200, 23);
             this.txtStuName.TabIndex = 7;
             // 
             // txtStuIC
             // 
-            this.txtStuIC.Location = new System.Drawing.Point(35, 144);
+            this.txtStuIC.Location = new System.Drawing.Point(27, 285);
             this.txtStuIC.Name = "txtStuIC";
             this.txtStuIC.Size = new System.Drawing.Size(200, 23);
             this.txtStuIC.TabIndex = 8;
             // 
             // txtStuEmail
             // 
-            this.txtStuEmail.Location = new System.Drawing.Point(35, 216);
+            this.txtStuEmail.Location = new System.Drawing.Point(27, 357);
             this.txtStuEmail.Name = "txtStuEmail";
             this.txtStuEmail.Size = new System.Drawing.Size(200, 23);
             this.txtStuEmail.TabIndex = 9;
             // 
             // txtStuNo
             // 
-            this.txtStuNo.Location = new System.Drawing.Point(35, 284);
+            this.txtStuNo.Location = new System.Drawing.Point(27, 408);
             this.txtStuNo.Name = "txtStuNo";
             this.txtStuNo.Size = new System.Drawing.Size(200, 23);
             this.txtStuNo.TabIndex = 10;
             // 
-            // txtStuAdress
+            // txtStuAddress
             // 
-            this.txtStuAdress.Location = new System.Drawing.Point(35, 353);
-            this.txtStuAdress.Name = "txtStuAdress";
-            this.txtStuAdress.Size = new System.Drawing.Size(200, 23);
-            this.txtStuAdress.TabIndex = 11;
-            // 
-            // cmbStuMthEnroll
-            // 
-            this.cmbStuMthEnroll.FormattingEnabled = true;
-            this.cmbStuMthEnroll.Items.AddRange(new object[] {
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"});
-            this.cmbStuMthEnroll.Location = new System.Drawing.Point(288, 72);
-            this.cmbStuMthEnroll.Name = "cmbStuMthEnroll";
-            this.cmbStuMthEnroll.Size = new System.Drawing.Size(200, 23);
-            this.cmbStuMthEnroll.TabIndex = 12;
+            this.txtStuAddress.Location = new System.Drawing.Point(276, 38);
+            this.txtStuAddress.Name = "txtStuAddress";
+            this.txtStuAddress.Size = new System.Drawing.Size(200, 23);
+            this.txtStuAddress.TabIndex = 11;
             // 
             // cmbStuLv
             // 
@@ -183,7 +168,7 @@
             "Level 1",
             "Level 2",
             "Level 3"});
-            this.cmbStuLv.Location = new System.Drawing.Point(288, 144);
+            this.cmbStuLv.Location = new System.Drawing.Point(276, 167);
             this.cmbStuLv.Name = "cmbStuLv";
             this.cmbStuLv.Size = new System.Drawing.Size(200, 23);
             this.cmbStuLv.TabIndex = 13;
@@ -192,20 +177,22 @@
             // 
             this.cmbStuSub1.FormattingEnabled = true;
             this.cmbStuSub1.Items.AddRange(new object[] {
-            "CGDD",
-            "IOOP",
-            "FIS",
-            "IS3DA",
-            "MCFC",
-            "SAAD"});
-            this.cmbStuSub1.Location = new System.Drawing.Point(288, 245);
+            "Mathematics",
+            "Science",
+            "History",
+            "Bahasa",
+            "English",
+            "Physics",
+            "Geography",
+            "Biology"});
+            this.cmbStuSub1.Location = new System.Drawing.Point(276, 272);
             this.cmbStuSub1.Name = "cmbStuSub1";
             this.cmbStuSub1.Size = new System.Drawing.Size(200, 23);
             this.cmbStuSub1.TabIndex = 14;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(649, 381);
+            this.btnRegister.Location = new System.Drawing.Point(692, 407);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 15;
@@ -220,7 +207,7 @@
             "Cash",
             "Credit Card",
             "Online Payment"});
-            this.cmbPayment.Location = new System.Drawing.Point(550, 72);
+            this.cmbPayment.Location = new System.Drawing.Point(557, 213);
             this.cmbPayment.Name = "cmbPayment";
             this.cmbPayment.Size = new System.Drawing.Size(200, 23);
             this.cmbPayment.TabIndex = 16;
@@ -261,7 +248,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 227);
+            this.label3.Location = new System.Drawing.Point(276, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 21;
@@ -270,7 +257,7 @@
             // lblPayment
             // 
             this.lblPayment.AutoSize = true;
-            this.lblPayment.Location = new System.Drawing.Point(550, 54);
+            this.lblPayment.Location = new System.Drawing.Point(557, 195);
             this.lblPayment.Name = "lblPayment";
             this.lblPayment.Size = new System.Drawing.Size(99, 15);
             this.lblPayment.TabIndex = 22;
@@ -280,13 +267,15 @@
             // 
             this.cmbStuSub2.FormattingEnabled = true;
             this.cmbStuSub2.Items.AddRange(new object[] {
-            "CGDD",
-            "IOOP",
-            "FIS",
-            "IS3DA",
-            "MCFC",
-            "SAAD"});
-            this.cmbStuSub2.Location = new System.Drawing.Point(288, 295);
+            "Mathematics",
+            "Science",
+            "History",
+            "Bahasa",
+            "English",
+            "Physics",
+            "Geography",
+            "Biology"});
+            this.cmbStuSub2.Location = new System.Drawing.Point(276, 322);
             this.cmbStuSub2.Name = "cmbStuSub2";
             this.cmbStuSub2.Size = new System.Drawing.Size(200, 23);
             this.cmbStuSub2.TabIndex = 24;
@@ -295,13 +284,15 @@
             // 
             this.cmbStuSub3.FormattingEnabled = true;
             this.cmbStuSub3.Items.AddRange(new object[] {
-            "CGDD",
-            "IOOP",
-            "FIS",
-            "IS3DA",
-            "MCFC",
-            "SAAD"});
-            this.cmbStuSub3.Location = new System.Drawing.Point(288, 347);
+            "Mathematics",
+            "Science",
+            "History",
+            "Bahasa",
+            "English",
+            "Physics",
+            "Geography",
+            "Biology"});
+            this.cmbStuSub3.Location = new System.Drawing.Point(276, 374);
             this.cmbStuSub3.Name = "cmbStuSub3";
             this.cmbStuSub3.Size = new System.Drawing.Size(200, 23);
             this.cmbStuSub3.TabIndex = 25;
@@ -312,18 +303,74 @@
             this.grpBox1.Controls.Add(this.txtCardNo);
             this.grpBox1.Controls.Add(this.lblCardNo);
             this.grpBox1.Controls.Add(this.lblCVV);
-            this.grpBox1.Location = new System.Drawing.Point(531, 115);
+            this.grpBox1.Location = new System.Drawing.Point(538, 256);
             this.grpBox1.Name = "grpBox1";
             this.grpBox1.Size = new System.Drawing.Size(232, 141);
             this.grpBox1.TabIndex = 26;
             this.grpBox1.TabStop = false;
             this.grpBox1.Visible = false;
             // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(27, 34);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(100, 23);
+            this.txtUsername.TabIndex = 27;
+            // 
+            // txtPw
+            // 
+            this.txtPw.Location = new System.Drawing.Point(27, 94);
+            this.txtPw.Name = "txtPw";
+            this.txtPw.Size = new System.Drawing.Size(100, 23);
+            this.txtPw.TabIndex = 28;
+            // 
+            // txtStuId
+            // 
+            this.txtStuId.Location = new System.Drawing.Point(27, 150);
+            this.txtStuId.Name = "txtStuId";
+            this.txtStuId.Size = new System.Drawing.Size(100, 23);
+            this.txtStuId.TabIndex = 29;
+            // 
+            // dtpEnrollDate
+            // 
+            this.dtpEnrollDate.Location = new System.Drawing.Point(276, 104);
+            this.dtpEnrollDate.Name = "dtpEnrollDate";
+            this.dtpEnrollDate.Size = new System.Drawing.Size(200, 23);
+            this.dtpEnrollDate.TabIndex = 30;
+            // 
+            // txtCourse
+            // 
+            this.txtCourse.Location = new System.Drawing.Point(592, 94);
+            this.txtCourse.Name = "txtCourse";
+            this.txtCourse.Size = new System.Drawing.Size(100, 23);
+            this.txtCourse.TabIndex = 32;
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.Location = new System.Drawing.Point(570, 47);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(200, 23);
+            this.dtpBirthday.TabIndex = 33;
+            // 
+            // txtMemo
+            // 
+            this.txtMemo.Location = new System.Drawing.Point(592, 144);
+            this.txtMemo.Name = "txtMemo";
+            this.txtMemo.Size = new System.Drawing.Size(100, 23);
+            this.txtMemo.TabIndex = 34;
+            // 
             // frmRegister1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtMemo);
+            this.Controls.Add(this.dtpBirthday);
+            this.Controls.Add(this.txtCourse);
+            this.Controls.Add(this.dtpEnrollDate);
+            this.Controls.Add(this.txtStuId);
+            this.Controls.Add(this.txtPw);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.cmbStuSub3);
             this.Controls.Add(this.cmbStuSub2);
             this.Controls.Add(this.lblPayment);
@@ -332,8 +379,7 @@
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.cmbStuSub1);
             this.Controls.Add(this.cmbStuLv);
-            this.Controls.Add(this.cmbStuMthEnroll);
-            this.Controls.Add(this.txtStuAdress);
+            this.Controls.Add(this.txtStuAddress);
             this.Controls.Add(this.txtStuNo);
             this.Controls.Add(this.txtStuEmail);
             this.Controls.Add(this.txtStuIC);
@@ -368,8 +414,7 @@
         private TextBox txtStuIC;
         private TextBox txtStuEmail;
         private TextBox txtStuNo;
-        private TextBox txtStuAdress;
-        private ComboBox cmbStuMthEnroll;
+        private TextBox txtStuAddress;
         private ComboBox cmbStuLv;
         private ComboBox cmbStuSub1;
         private Button btnRegister;
@@ -383,5 +428,12 @@
         private ComboBox cmbStuSub2;
         private ComboBox cmbStuSub3;
         private GroupBox grpBox1;
+        private TextBox txtUsername;
+        private TextBox txtPw;
+        private TextBox txtStuId;
+        private DateTimePicker dtpEnrollDate;
+        private TextBox txtCourse;
+        private DateTimePicker dtpBirthday;
+        private TextBox txtMemo;
     }
 }
