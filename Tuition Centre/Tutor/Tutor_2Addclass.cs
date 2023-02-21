@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,10 @@ namespace Tuition_Centre.Tutor
 {
     public partial class frmTutor_ClassAdd : Form
     {
-        public frmTutor_ClassAdd()
+        public frmTutor_ClassAdd(string un)
         {
             InitializeComponent();
+            Name = un;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -32,15 +35,28 @@ namespace Tuition_Centre.Tutor
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e) // New Class Adding Button
         {
-            string text = "Are you Sure About that? -_-";
-            MessageBox.Show(text);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into class (subjectName, timestart, timeend, date, location, teacher, subjectid, charges) values(@name,@start,@end,@date,@loc,@teacher,@id,@char)", con);
+            cmd.Parameters.AddWithValue("@id", cmbSubIDAdd.Text);
+            cmd.Parameters.AddWithValue("@name", cmbSubNameAdd.Text);
+            cmd.Parameters.AddWithValue("@date", dtpClassDate.Text);
+            cmd.Parameters.AddWithValue("@loc", cmbLocation.Text);
+            cmd.Parameters.AddWithValue("@start", txbStartTime.Text);
+            cmd.Parameters.AddWithValue("@end", txbEndTime.Text);
+            cmd.Parameters.AddWithValue("@teacher", lblTutorName.Text);
+            cmd.Parameters.AddWithValue("@char", txbCharges.Text);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("Successfully Add New Class.");
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) // Clear Add New Class Form Button
         {
-            string text = "Oops, You confirmed!";
+            string text = "Oops, You not confirmed!";
             MessageBox.Show(text);
         }
 
@@ -66,14 +82,14 @@ namespace Tuition_Centre.Tutor
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents();
+            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
             this.Hide();
             obj1.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile();
+            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile(Name);
             this.Hide();
             obj1.ShowDialog();
         }
@@ -86,6 +102,32 @@ namespace Tuition_Centre.Tutor
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmTutor_ClassAdd_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from tutor where tutorName = @username", con);
+            cmd.Parameters.AddWithValue("@username", Name);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                lblTutorName.Text = rd.GetString(6);
+                lblTutorID.Text = rd.GetString(1);
+            }
+            con.Close();
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

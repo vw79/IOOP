@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Tuition_Centre.Tutor
 {
@@ -15,6 +18,7 @@ namespace Tuition_Centre.Tutor
         public frmMainTutor(string un)
         {
             InitializeComponent();
+            Name = un;
         }
 
         public frmMainTutor()
@@ -23,14 +27,12 @@ namespace Tuition_Centre.Tutor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMainTutor obj1 = new frmMainTutor();
-            this.Hide();
-            obj1.ShowDialog();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile();
+            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile(Name);
             this.Hide();
             obj1.ShowDialog();
         }
@@ -44,7 +46,7 @@ namespace Tuition_Centre.Tutor
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents();
+            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
             this.Hide();
             obj1.ShowDialog();
         }
@@ -81,7 +83,7 @@ namespace Tuition_Centre.Tutor
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmTutor_ClassAdd obj1 = new frmTutor_ClassAdd();
+            frmTutor_ClassAdd obj1 = new frmTutor_ClassAdd(Name);
             this.Hide();
             obj1.ShowDialog();
         }
@@ -92,5 +94,44 @@ namespace Tuition_Centre.Tutor
             this.Hide();
             obj1.ShowDialog();
         }
+
+
+
+        private void frmMainTutor_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from tutor where tutorName = @username", con);
+            cmd.Parameters.AddWithValue("@username", Name);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                lblTutorName.Text = rd.GetString(6);
+                lblTutorID.Text = rd.GetString(1);
+            }
+            con.Close();
+
+
+            SqlConnection con1 = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+            con1.Open();
+            SqlCommand cmd1 = new SqlCommand("select * from class where teacher = @tutorFullName", con1);
+            cmd1.Parameters.AddWithValue("@tutorFullName", lblTutorName.Text);
+            SqlDataReader r1 = cmd1.ExecuteReader();
+            while (r1.Read())
+            {
+                lblTutorClassInfo.Text = r1.GetString(1) + "\n" + r1.GetString(6);
+
+            }
+
+            con.Close();
+
+
+
+        }
+
+
+        
+
+        
     }
 }

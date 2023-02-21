@@ -26,14 +26,14 @@ namespace Tuition_Centre.Tutor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile();
+            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile(Name);
             this.Hide();
             obj1.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents();
+            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
             this.Hide();
             obj1.ShowDialog();
         }

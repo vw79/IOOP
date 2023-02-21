@@ -35,27 +35,28 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txbCharges = new System.Windows.Forms.TextBox();
+            this.txbEndTime = new System.Windows.Forms.TextBox();
+            this.txbStartTime = new System.Windows.Forms.TextBox();
+            this.cmbLocation = new System.Windows.Forms.ComboBox();
+            this.dtpClassDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbSubNameAdd = new System.Windows.Forms.ComboBox();
+            this.cmbSubIDAdd = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTutorID = new System.Windows.Forms.Label();
+            this.lblTutorName = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,10 +83,10 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.button7);
-            this.splitContainer1.Panel2.Controls.Add(this.button6);
+            this.splitContainer1.Panel2.Controls.Add(this.confirm);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(696, 421);
-            this.splitContainer1.SplitterDistance = 174;
+            this.splitContainer1.SplitterDistance = 173;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 6;
             // 
@@ -155,25 +156,25 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(274, 384);
+            this.button7.Location = new System.Drawing.Point(159, 383);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(86, 31);
+            this.button7.Size = new System.Drawing.Size(121, 31);
             this.button7.TabIndex = 3;
-            this.button7.Text = "Back";
+            this.button7.Text = "Clear";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // confirm
             // 
-            this.button6.Location = new System.Drawing.Point(143, 383);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 31);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Confirm";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.confirm.Location = new System.Drawing.Point(297, 383);
+            this.confirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(117, 31);
+            this.confirm.TabIndex = 2;
+            this.confirm.Text = "Confirm";
+            this.confirm.UseVisualStyleBackColor = true;
+            this.confirm.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox1
             // 
@@ -208,41 +209,51 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.dateTimePicker2);
-            this.splitContainer2.Panel2.Controls.Add(this.comboBox5);
-            this.splitContainer2.Panel2.Controls.Add(this.comboBox4);
-            this.splitContainer2.Panel2.Controls.Add(this.dateTimePicker1);
-            this.splitContainer2.Panel2.Controls.Add(this.comboBox3);
-            this.splitContainer2.Panel2.Controls.Add(this.comboBox2);
+            this.splitContainer2.Panel2.Controls.Add(this.txbCharges);
+            this.splitContainer2.Panel2.Controls.Add(this.txbEndTime);
+            this.splitContainer2.Panel2.Controls.Add(this.txbStartTime);
+            this.splitContainer2.Panel2.Controls.Add(this.cmbLocation);
+            this.splitContainer2.Panel2.Controls.Add(this.dtpClassDate);
+            this.splitContainer2.Panel2.Controls.Add(this.cmbSubNameAdd);
+            this.splitContainer2.Panel2.Controls.Add(this.cmbSubIDAdd);
             this.splitContainer2.Size = new System.Drawing.Size(504, 345);
-            this.splitContainer2.SplitterDistance = 112;
+            this.splitContainer2.SplitterDistance = 146;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer2_SplitterMoved);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 260);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 23);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Charges :";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 218);
+            this.label8.Location = new System.Drawing.Point(11, 223);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 23);
+            this.label8.Size = new System.Drawing.Size(91, 23);
             this.label8.TabIndex = 5;
-            this.label8.Text = "End Date :";
+            this.label8.Text = "End Time :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 177);
+            this.label7.Location = new System.Drawing.Point(11, 180);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 23);
+            this.label7.Size = new System.Drawing.Size(94, 23);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Start Date :";
+            this.label7.Text = "Start Time:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 135);
+            this.label6.Location = new System.Drawing.Point(11, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 23);
             this.label6.TabIndex = 3;
@@ -251,90 +262,143 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 96);
+            this.label5.Location = new System.Drawing.Point(11, 96);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 23);
+            this.label5.Size = new System.Drawing.Size(56, 23);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Time :";
+            this.label5.Text = "Date :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 59);
+            this.label4.Location = new System.Drawing.Point(11, 56);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 23);
+            this.label4.Size = new System.Drawing.Size(127, 23);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Class Name :";
+            this.label4.Text = "Subject Name :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 20);
+            this.label3.Location = new System.Drawing.Point(11, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 23);
+            this.label3.Size = new System.Drawing.Size(97, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Class ID :";
+            this.label3.Text = "Subject ID :";
             // 
-            // dateTimePicker2
+            // txbCharges
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 218);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(252, 27);
-            this.dateTimePicker2.TabIndex = 7;
+            this.txbCharges.Location = new System.Drawing.Point(57, 260);
+            this.txbCharges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbCharges.Name = "txbCharges";
+            this.txbCharges.PlaceholderText = "RM";
+            this.txbCharges.Size = new System.Drawing.Size(114, 29);
+            this.txbCharges.TabIndex = 11;
             // 
-            // comboBox5
+            // txbEndTime
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(3, 131);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(252, 29);
-            this.comboBox5.TabIndex = 6;
+            this.txbEndTime.Location = new System.Drawing.Point(57, 217);
+            this.txbEndTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbEndTime.Name = "txbEndTime";
+            this.txbEndTime.PlaceholderText = "00:00 AM/PM";
+            this.txbEndTime.Size = new System.Drawing.Size(114, 29);
+            this.txbEndTime.TabIndex = 10;
             // 
-            // comboBox4
+            // txbStartTime
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(3, 92);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(252, 29);
-            this.comboBox4.TabIndex = 5;
+            this.txbStartTime.Location = new System.Drawing.Point(57, 177);
+            this.txbStartTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txbStartTime.Name = "txbStartTime";
+            this.txbStartTime.PlaceholderText = "00:00 AM/PM";
+            this.txbStartTime.Size = new System.Drawing.Size(114, 29);
+            this.txbStartTime.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // cmbLocation
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 173);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(252, 27);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.cmbLocation.FormattingEnabled = true;
+            this.cmbLocation.Items.AddRange(new object[] {
+            "A-1-1",
+            "A-1-2",
+            "A-1-3",
+            "A-2-1",
+            "A-2-2",
+            "A-2-3",
+            "A-3-1",
+            "A-3-2",
+            "A-3-3",
+            "B-1-1",
+            "B-1-2",
+            "B-1-3",
+            "B-2-1",
+            "B-2-2",
+            "B-2-3",
+            "B-3-1",
+            "B-3-2",
+            "B-3-3",
+            "C-1-1",
+            "C-1-2",
+            "C-1-3",
+            "C-2-1",
+            "C-2-2",
+            "C-2-3",
+            "C-3-1",
+            "C-3-2",
+            "C-3-3"});
+            this.cmbLocation.Location = new System.Drawing.Point(57, 131);
+            this.cmbLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbLocation.Name = "cmbLocation";
+            this.cmbLocation.Size = new System.Drawing.Size(186, 29);
+            this.cmbLocation.TabIndex = 6;
             // 
-            // comboBox3
+            // dtpClassDate
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "INTRODUCTION TO OBJECT ORIENTED PROGRAMMING"});
-            this.comboBox3.Location = new System.Drawing.Point(3, 55);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(379, 29);
-            this.comboBox3.TabIndex = 1;
+            this.dtpClassDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpClassDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpClassDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpClassDate.Location = new System.Drawing.Point(57, 96);
+            this.dtpClassDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpClassDate.Name = "dtpClassDate";
+            this.dtpClassDate.Size = new System.Drawing.Size(186, 27);
+            this.dtpClassDate.TabIndex = 2;
+            this.dtpClassDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // comboBox2
+            // cmbSubNameAdd
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "CT044-3-1-IOOP-L-5"});
-            this.comboBox2.Location = new System.Drawing.Point(3, 16);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(252, 29);
-            this.comboBox2.TabIndex = 0;
+            this.cmbSubNameAdd.FormattingEnabled = true;
+            this.cmbSubNameAdd.Items.AddRange(new object[] {
+            "Mathematics",
+            "Science",
+            "History",
+            "English"});
+            this.cmbSubNameAdd.Location = new System.Drawing.Point(57, 56);
+            this.cmbSubNameAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbSubNameAdd.Name = "cmbSubNameAdd";
+            this.cmbSubNameAdd.Size = new System.Drawing.Size(186, 29);
+            this.cmbSubNameAdd.TabIndex = 1;
+            // 
+            // cmbSubIDAdd
+            // 
+            this.cmbSubIDAdd.FormattingEnabled = true;
+            this.cmbSubIDAdd.Items.AddRange(new object[] {
+            "math001",
+            "math002",
+            "math003",
+            "sci001",
+            "sci002",
+            "sci003",
+            "his001",
+            "his002",
+            "his003",
+            "eng001",
+            "eng002",
+            "eng003"});
+            this.cmbSubIDAdd.Location = new System.Drawing.Point(57, 17);
+            this.cmbSubIDAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbSubIDAdd.Name = "cmbSubIDAdd";
+            this.cmbSubIDAdd.Size = new System.Drawing.Size(186, 29);
+            this.cmbSubIDAdd.TabIndex = 0;
+            this.cmbSubIDAdd.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -347,26 +411,26 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblTutorID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(135, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Tutor ID: ";
+            this.lblTutorID.AutoSize = true;
+            this.lblTutorID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblTutorID.Location = new System.Drawing.Point(135, 53);
+            this.lblTutorID.Name = "lblTutorID";
+            this.lblTutorID.Size = new System.Drawing.Size(69, 20);
+            this.lblTutorID.TabIndex = 8;
+            this.lblTutorID.Text = "Tutor ID: ";
             // 
-            // label1
+            // lblTutorName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(135, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 33);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Tutor Name: ";
-            this.label1.UseCompatibleTextRendering = true;
+            this.lblTutorName.AutoSize = true;
+            this.lblTutorName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTutorName.Location = new System.Drawing.Point(135, 17);
+            this.lblTutorName.Name = "lblTutorName";
+            this.lblTutorName.Size = new System.Drawing.Size(135, 33);
+            this.lblTutorName.TabIndex = 7;
+            this.lblTutorName.Text = "Tutor Name: ";
+            this.lblTutorName.UseCompatibleTextRendering = true;
             // 
             // comboBox1
             // 
@@ -380,15 +444,6 @@
             this.comboBox1.Size = new System.Drawing.Size(85, 28);
             this.comboBox1.TabIndex = 9;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 259);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 23);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Charges :";
-            // 
             // frmTutor_ClassAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -396,12 +451,13 @@
             this.ClientSize = new System.Drawing.Size(727, 600);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTutorID);
+            this.Controls.Add(this.lblTutorName);
             this.Controls.Add(this.comboBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTutor_ClassAdd";
             this.Text = "Update or Delete Class";
+            this.Load += new System.EventHandler(this.frmTutor_ClassAdd_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -411,6 +467,7 @@
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -424,8 +481,8 @@
         private SplitContainer splitContainer1;
         private GroupBox groupBox1;
         private PictureBox pictureBox1;
-        private Label label2;
-        private Label label1;
+        private Label lblTutorID;
+        private Label lblTutorName;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ComboBox comboBox1;
         private SplitContainer splitContainer2;
@@ -434,20 +491,21 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
+        private DateTimePicker dtpClassDate;
+        private ComboBox cmbSubNameAdd;
+        private ComboBox cmbSubIDAdd;
         private Button button7;
-        private Button button6;
+        private Button confirm;
         private GroupBox groupBox2;
         private Button button1;
         private Button button4;
         private Button button2;
         private Button button3;
-        private ComboBox comboBox4;
-        private ComboBox comboBox5;
+        private ComboBox cmbLocation;
         private Label label8;
-        private DateTimePicker dateTimePicker2;
         private Label label9;
+        private TextBox txbStartTime;
+        private TextBox txbCharges;
+        private TextBox txbEndTime;
     }
 }

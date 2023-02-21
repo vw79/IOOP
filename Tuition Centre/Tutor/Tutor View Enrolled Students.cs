@@ -12,9 +12,10 @@ namespace Tuition_Centre.Tutor
 {
     public partial class frmTutor_ViewStudents : Form
     {
-        public frmTutor_ViewStudents()
+        public frmTutor_ViewStudents(string un)
         {
             InitializeComponent();
+            Name = un;
         }
 
         private void View_Enrolled_Students_Load(object sender, EventArgs e)
@@ -91,7 +92,7 @@ namespace Tuition_Centre.Tutor
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile();
+            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile(Name);
             this.Hide();
             obj1.ShowDialog();
         }
@@ -122,7 +123,7 @@ namespace Tuition_Centre.Tutor
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents();
+            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
             this.Hide();
             obj1.ShowDialog();
         }

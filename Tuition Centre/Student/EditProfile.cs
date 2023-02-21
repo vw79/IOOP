@@ -34,7 +34,8 @@ namespace Tuition_Centre.Student
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
-            SqlCommand cmd = new SqlCommand("Update studentinfo set studentPass=@studentPass, birthday=@birthday, studentPhone=@studentPhone, studentEmail=@studentEmail, memo=@memo", con);
+            SqlCommand cmd = new SqlCommand("Update studentinfo set studentPass=@studentPass, birthday=@birthday, studentPhone=@studentPhone, studentEmail=@studentEmail, memo=@memo where username=@username", con);
+            cmd.Parameters.AddWithValue("@username", Name);
             cmd.Parameters.AddWithValue("@studentPass", txtPassport.Text);
             cmd.Parameters.AddWithValue("@birthday", birthday.Text);
             cmd.Parameters.AddWithValue("@studentPhone", txtPhoneNumber.Text);

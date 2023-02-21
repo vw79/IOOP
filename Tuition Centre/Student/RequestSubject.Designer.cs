@@ -56,18 +56,18 @@
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.lblHeading.Location = new System.Drawing.Point(90, 64);
+            this.lblHeading.Location = new System.Drawing.Point(103, 85);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(197, 37);
+            this.lblHeading.Size = new System.Drawing.Size(247, 46);
             this.lblHeading.TabIndex = 0;
             this.lblHeading.Text = "Change Subject";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 101);
+            this.label2.Location = new System.Drawing.Point(110, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 15);
+            this.label2.Size = new System.Drawing.Size(279, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "_____________________________________________";
             // 
@@ -75,28 +75,33 @@
             // 
             this.grpCourse.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpCourse.Controls.Add(this.txtCourse);
-            this.grpCourse.Location = new System.Drawing.Point(99, 130);
+            this.grpCourse.Location = new System.Drawing.Point(113, 173);
+            this.grpCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpCourse.Name = "grpCourse";
-            this.grpCourse.Size = new System.Drawing.Size(200, 61);
+            this.grpCourse.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpCourse.Size = new System.Drawing.Size(229, 81);
             this.grpCourse.TabIndex = 2;
             this.grpCourse.TabStop = false;
             this.grpCourse.Text = "Course Intake";
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(15, 25);
+            this.txtCourse.Location = new System.Drawing.Point(17, 33);
+            this.txtCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.PlaceholderText = "Course Intake";
-            this.txtCourse.Size = new System.Drawing.Size(179, 23);
+            this.txtCourse.Size = new System.Drawing.Size(204, 27);
             this.txtCourse.TabIndex = 0;
             // 
             // grpDate
             // 
             this.grpDate.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpDate.Controls.Add(this.dateTimePicker1);
-            this.grpDate.Location = new System.Drawing.Point(99, 197);
+            this.grpDate.Location = new System.Drawing.Point(113, 263);
+            this.grpDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpDate.Name = "grpDate";
-            this.grpDate.Size = new System.Drawing.Size(200, 61);
+            this.grpDate.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpDate.Size = new System.Drawing.Size(229, 81);
             this.grpDate.TabIndex = 3;
             this.grpDate.TabStop = false;
             this.grpDate.Text = "Date";
@@ -104,18 +109,21 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 24);
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 35);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(180, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(205, 27);
             this.dateTimePicker1.TabIndex = 0;
             // 
             // grpOldSubject
             // 
             this.grpOldSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpOldSubject.Controls.Add(this.cmbOldSubject);
-            this.grpOldSubject.Location = new System.Drawing.Point(99, 264);
+            this.grpOldSubject.Location = new System.Drawing.Point(113, 352);
+            this.grpOldSubject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpOldSubject.Name = "grpOldSubject";
-            this.grpOldSubject.Size = new System.Drawing.Size(200, 61);
+            this.grpOldSubject.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpOldSubject.Size = new System.Drawing.Size(229, 81);
             this.grpOldSubject.TabIndex = 4;
             this.grpOldSubject.TabStop = false;
             this.grpOldSubject.Text = "Old Subject";
@@ -131,9 +139,10 @@
             "Bahasa",
             "English",
             "Geography"});
-            this.cmbOldSubject.Location = new System.Drawing.Point(14, 22);
+            this.cmbOldSubject.Location = new System.Drawing.Point(16, 29);
+            this.cmbOldSubject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbOldSubject.Name = "cmbOldSubject";
-            this.cmbOldSubject.Size = new System.Drawing.Size(180, 23);
+            this.cmbOldSubject.Size = new System.Drawing.Size(205, 28);
             this.cmbOldSubject.TabIndex = 8;
             this.cmbOldSubject.Text = "Old Subject";
             // 
@@ -141,9 +150,11 @@
             // 
             this.grpNewSubject.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpNewSubject.Controls.Add(this.cmbNewSubject);
-            this.grpNewSubject.Location = new System.Drawing.Point(451, 264);
+            this.grpNewSubject.Location = new System.Drawing.Point(515, 352);
+            this.grpNewSubject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpNewSubject.Name = "grpNewSubject";
-            this.grpNewSubject.Size = new System.Drawing.Size(200, 61);
+            this.grpNewSubject.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpNewSubject.Size = new System.Drawing.Size(229, 81);
             this.grpNewSubject.TabIndex = 5;
             this.grpNewSubject.TabStop = false;
             this.grpNewSubject.Text = "New Subject";
@@ -159,9 +170,10 @@
             "Bahasa",
             "English",
             "Geography"});
-            this.cmbNewSubject.Location = new System.Drawing.Point(15, 22);
+            this.cmbNewSubject.Location = new System.Drawing.Point(17, 29);
+            this.cmbNewSubject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbNewSubject.Name = "cmbNewSubject";
-            this.cmbNewSubject.Size = new System.Drawing.Size(180, 23);
+            this.cmbNewSubject.Size = new System.Drawing.Size(205, 28);
             this.cmbNewSubject.TabIndex = 9;
             this.cmbNewSubject.Text = "New Subject";
             // 
@@ -169,29 +181,33 @@
             // 
             this.grpReason.BackColor = System.Drawing.SystemColors.ControlLight;
             this.grpReason.Controls.Add(this.txtReason);
-            this.grpReason.Location = new System.Drawing.Point(451, 130);
+            this.grpReason.Location = new System.Drawing.Point(515, 173);
+            this.grpReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpReason.Name = "grpReason";
-            this.grpReason.Size = new System.Drawing.Size(238, 128);
+            this.grpReason.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpReason.Size = new System.Drawing.Size(272, 171);
             this.grpReason.TabIndex = 3;
             this.grpReason.TabStop = false;
             this.grpReason.Text = "Reasons";
             // 
             // txtReason
             // 
-            this.txtReason.Location = new System.Drawing.Point(15, 25);
+            this.txtReason.Location = new System.Drawing.Point(17, 33);
+            this.txtReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReason.Multiline = true;
             this.txtReason.Name = "txtReason";
             this.txtReason.PlaceholderText = "Type Somthing here......";
-            this.txtReason.Size = new System.Drawing.Size(208, 90);
+            this.txtReason.Size = new System.Drawing.Size(237, 119);
             this.txtReason.TabIndex = 0;
             // 
             // btnRequest
             // 
             this.btnRequest.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnRequest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnRequest.Location = new System.Drawing.Point(455, 356);
+            this.btnRequest.Location = new System.Drawing.Point(520, 475);
+            this.btnRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(108, 46);
+            this.btnRequest.Size = new System.Drawing.Size(123, 61);
             this.btnRequest.TabIndex = 6;
             this.btnRequest.Text = "Request";
             this.btnRequest.UseVisualStyleBackColor = false;
@@ -200,9 +216,10 @@
             // picChange
             // 
             this.picChange.Image = global::Tuition_Centre.Properties.Resources.change;
-            this.picChange.Location = new System.Drawing.Point(324, 275);
+            this.picChange.Location = new System.Drawing.Point(370, 367);
+            this.picChange.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picChange.Name = "picChange";
-            this.picChange.Size = new System.Drawing.Size(100, 50);
+            this.picChange.Size = new System.Drawing.Size(114, 67);
             this.picChange.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picChange.TabIndex = 7;
             this.picChange.TabStop = false;
@@ -210,9 +227,10 @@
             // pictureHome
             // 
             this.pictureHome.Image = global::Tuition_Centre.Properties.Resources.home;
-            this.pictureHome.Location = new System.Drawing.Point(737, 12);
+            this.pictureHome.Location = new System.Drawing.Point(842, 16);
+            this.pictureHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureHome.Name = "pictureHome";
-            this.pictureHome.Size = new System.Drawing.Size(51, 43);
+            this.pictureHome.Size = new System.Drawing.Size(58, 57);
             this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureHome.TabIndex = 19;
             this.pictureHome.TabStop = false;
@@ -220,9 +238,9 @@
             // 
             // RequestSubject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.pictureHome);
             this.Controls.Add(this.picChange);
             this.Controls.Add(this.btnRequest);
@@ -233,6 +251,7 @@
             this.Controls.Add(this.grpCourse);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblHeading);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RequestSubject";
             this.Text = "RequestSubject";
             this.Load += new System.EventHandler(this.RequestSubject_Load);
