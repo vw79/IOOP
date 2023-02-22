@@ -79,10 +79,5 @@ namespace Tuition_Centre.Class
 
             return status;
         }
-
-        private void Close()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

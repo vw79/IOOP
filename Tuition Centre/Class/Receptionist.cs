@@ -14,6 +14,8 @@ namespace Tuition_Centre.Class
 {
     internal class Recep
     {
+        private string un;
+
         private string stuUsername;
         private string stuPw;
         private string role;
@@ -65,7 +67,20 @@ namespace Tuition_Centre.Class
             this.subName3 = subName3;
         }
 
-        
+
+        // Method getting receptionist name from database and return as string
+        public string welcomeRecep(string un)
+        {
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT r.receptionistName FROM receptionist r INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
+            cmd.Parameters.AddWithValue("@un", un);
+            string rcpName = cmd.ExecuteScalar().ToString();
+
+            con.Close();
+            return rcpName;
+        }
+
         // Method to Register into users, studentInfo, studentSubject database 
         public string addStudent()
         {
