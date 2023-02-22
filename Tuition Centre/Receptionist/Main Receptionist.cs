@@ -21,7 +21,8 @@ namespace Tuition_Centre.Receptionist
         {
             InitializeComponent();
             Recep rcp = new Recep();
-            lblWlcRcp.Text = "Welcome Back, " + rcp.welcomeRecep(un);
+            string rcpName = rcp.welcomeRecep(un); // call the method and store the returned value in a variable
+            lblWlcRcp.Text = "Welcome Back, " + rcpName; // set the label text using the returned value
         }
 
         private void btnPayment_Click(object sender, EventArgs e)

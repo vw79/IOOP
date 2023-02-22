@@ -69,17 +69,28 @@ namespace Tuition_Centre.Class
 
 
         // Method getting receptionist name from database and return as string
+
+
         public string welcomeRecep(string un)
         {
             con.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT r.receptionistName FROM receptionist r INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
             cmd.Parameters.AddWithValue("@un", un);
-            string rcpName = cmd.ExecuteScalar().ToString();
+            SqlDataReader reader = cmd.ExecuteReader();
+            string rcpName = "";
+
+            if (reader.Read())
+            {
+                // In the query (0) is the receptionistName
+                rcpName = reader.GetString(0);
+            }
 
             con.Close();
             return rcpName;
         }
+
+
 
         // Method to Register into users, studentInfo, studentSubject database 
         public string addStudent()
