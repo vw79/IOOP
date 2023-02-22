@@ -80,7 +80,7 @@ namespace Tuition_Centre.Class
         { 
             ArrayList tutorinfo = new ArrayList();
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT tutor.tutorFullName, tutor.tutorICorPass, tutor.tutorEmail, tutor.tutorPhone, tutor.tutorDOB, tutor.tutorAddress, tutor.subject, level.level FROM tutor INNER JOIN level ON level.levelid = tutor.levelid", con);
+            SqlCommand cmd = new SqlCommand("SELECT tutorFullName, tutorICorPass, tutorEmail, tutorPhone, tutorDOB, tutorAddress, subject, level FROM tutor", con);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
