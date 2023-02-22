@@ -74,11 +74,11 @@ namespace Tuition_Centre.Class
         {
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT r.recepId, r.receptName, r.recepIcP FROM receptionist r INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
+            SqlCommand cmd = new SqlCommand("SELECT r.recepId, r.recepName, r.recepIcP FROM receptionist r INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
             cmd.Parameters.AddWithValue("@un", un);
             SqlDataReader reader = cmd.ExecuteReader();
 
-            string[] recepData = new string[2];
+            string[] recepData = new string[3];
 
             reader.Read();
             recepData[0] = reader.GetString(0);
@@ -86,7 +86,7 @@ namespace Tuition_Centre.Class
             recepData[2] = reader.GetString(2);
 
             con.Close();
-
+            //love wei hong
             return recepData;
 
         }

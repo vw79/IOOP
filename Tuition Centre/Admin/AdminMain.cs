@@ -28,7 +28,7 @@ namespace Tuition_Centre.Admin
             foreach (var item in tutorinfo)
             {
                 int count = 0;
-                if count 
+                //if count 
                 MessageBox.Show(item.ToString());
             }
         }
