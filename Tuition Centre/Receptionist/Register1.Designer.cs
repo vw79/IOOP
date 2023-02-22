@@ -28,391 +28,406 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblStuName = new System.Windows.Forms.Label();
-            this.lblStuIcP = new System.Windows.Forms.Label();
-            this.lblStuEmail = new System.Windows.Forms.Label();
-            this.lblStuPhone = new System.Windows.Forms.Label();
-            this.lblStuAdress = new System.Windows.Forms.Label();
-            this.txtStuName = new System.Windows.Forms.TextBox();
-            this.txtStuIcP = new System.Windows.Forms.TextBox();
-            this.txtStuEmail = new System.Windows.Forms.TextBox();
-            this.txtStuPhone = new System.Windows.Forms.TextBox();
-            this.txtStuAddress = new System.Windows.Forms.TextBox();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPw = new System.Windows.Forms.TextBox();
-            this.txtStuId = new System.Windows.Forms.TextBox();
-            this.txtCourse = new System.Windows.Forms.TextBox();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.txtMemo = new System.Windows.Forms.TextBox();
-            this.grpPhone = new System.Windows.Forms.GroupBox();
-            this.grpEmail = new System.Windows.Forms.GroupBox();
-            this.grpName = new System.Windows.Forms.GroupBox();
-            this.grpAddress = new System.Windows.Forms.GroupBox();
-            this.grpStuId = new System.Windows.Forms.GroupBox();
-            this.lblStuId = new System.Windows.Forms.Label();
-            this.grpUsername = new System.Windows.Forms.GroupBox();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.grpIcP = new System.Windows.Forms.GroupBox();
-            this.grpPw = new System.Windows.Forms.GroupBox();
-            this.lblPw = new System.Windows.Forms.Label();
-            this.grpCourse = new System.Windows.Forms.GroupBox();
-            this.lblCourse = new System.Windows.Forms.Label();
-            this.grpMemo = new System.Windows.Forms.GroupBox();
-            this.lblMemo = new System.Windows.Forms.Label();
-            this.grpBirthday = new System.Windows.Forms.GroupBox();
-            this.lblBirthday = new System.Windows.Forms.Label();
-            this.grpPhone.SuspendLayout();
-            this.grpEmail.SuspendLayout();
-            this.grpName.SuspendLayout();
-            this.grpAddress.SuspendLayout();
-            this.grpStuId.SuspendLayout();
-            this.grpUsername.SuspendLayout();
-            this.grpIcP.SuspendLayout();
-            this.grpPw.SuspendLayout();
-            this.grpCourse.SuspendLayout();
-            this.grpMemo.SuspendLayout();
-            this.grpBirthday.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister1));
+            lblStuName = new Label();
+            lblStuIcP = new Label();
+            lblStuEmail = new Label();
+            lblStuPhone = new Label();
+            lblStuAdress = new Label();
+            txtStuName = new TextBox();
+            txtStuIcP = new TextBox();
+            txtStuEmail = new TextBox();
+            txtStuPhone = new TextBox();
+            txtStuAddress = new TextBox();
+            btnNext = new Button();
+            txtUsername = new TextBox();
+            txtPw = new TextBox();
+            txtStuId = new TextBox();
+            txtCourse = new TextBox();
+            dtpBirthday = new DateTimePicker();
+            txtMemo = new TextBox();
+            grpPhone = new GroupBox();
+            grpEmail = new GroupBox();
+            grpName = new GroupBox();
+            grpAddress = new GroupBox();
+            grpStuId = new GroupBox();
+            lblStuId = new Label();
+            grpUsername = new GroupBox();
+            lblUsername = new Label();
+            grpIcP = new GroupBox();
+            grpPw = new GroupBox();
+            lblPw = new Label();
+            grpCourse = new GroupBox();
+            lblCourse = new Label();
+            grpMemo = new GroupBox();
+            lblMemo = new Label();
+            grpBirthday = new GroupBox();
+            lblBirthday = new Label();
+            pictureHome = new PictureBox();
+            grpPhone.SuspendLayout();
+            grpEmail.SuspendLayout();
+            grpName.SuspendLayout();
+            grpAddress.SuspendLayout();
+            grpStuId.SuspendLayout();
+            grpUsername.SuspendLayout();
+            grpIcP.SuspendLayout();
+            grpPw.SuspendLayout();
+            grpCourse.SuspendLayout();
+            grpMemo.SuspendLayout();
+            grpBirthday.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
+            SuspendLayout();
             // 
             // lblStuName
             // 
-            this.lblStuName.AutoSize = true;
-            this.lblStuName.Location = new System.Drawing.Point(6, 19);
-            this.lblStuName.Name = "lblStuName";
-            this.lblStuName.Size = new System.Drawing.Size(39, 15);
-            this.lblStuName.TabIndex = 0;
-            this.lblStuName.Text = "Name";
+            lblStuName.AutoSize = true;
+            lblStuName.Location = new Point(6, 19);
+            lblStuName.Name = "lblStuName";
+            lblStuName.Size = new Size(39, 15);
+            lblStuName.TabIndex = 0;
+            lblStuName.Text = "Name";
             // 
             // lblStuIcP
             // 
-            this.lblStuIcP.AutoSize = true;
-            this.lblStuIcP.Location = new System.Drawing.Point(6, 19);
-            this.lblStuIcP.Name = "lblStuIcP";
-            this.lblStuIcP.Size = new System.Drawing.Size(71, 15);
-            this.lblStuIcP.TabIndex = 1;
-            this.lblStuIcP.Text = "IC/ Passport";
+            lblStuIcP.AutoSize = true;
+            lblStuIcP.Location = new Point(6, 19);
+            lblStuIcP.Name = "lblStuIcP";
+            lblStuIcP.Size = new Size(71, 15);
+            lblStuIcP.TabIndex = 1;
+            lblStuIcP.Text = "IC/ Passport";
             // 
             // lblStuEmail
             // 
-            this.lblStuEmail.AutoSize = true;
-            this.lblStuEmail.Location = new System.Drawing.Point(6, 16);
-            this.lblStuEmail.Name = "lblStuEmail";
-            this.lblStuEmail.Size = new System.Drawing.Size(36, 15);
-            this.lblStuEmail.TabIndex = 2;
-            this.lblStuEmail.Text = "Email";
+            lblStuEmail.AutoSize = true;
+            lblStuEmail.Location = new Point(6, 16);
+            lblStuEmail.Name = "lblStuEmail";
+            lblStuEmail.Size = new Size(36, 15);
+            lblStuEmail.TabIndex = 2;
+            lblStuEmail.Text = "Email";
             // 
             // lblStuPhone
             // 
-            this.lblStuPhone.AutoSize = true;
-            this.lblStuPhone.Location = new System.Drawing.Point(6, 19);
-            this.lblStuPhone.Name = "lblStuPhone";
-            this.lblStuPhone.Size = new System.Drawing.Size(96, 15);
-            this.lblStuPhone.TabIndex = 3;
-            this.lblStuPhone.Text = "Contact Number";
+            lblStuPhone.AutoSize = true;
+            lblStuPhone.Location = new Point(6, 19);
+            lblStuPhone.Name = "lblStuPhone";
+            lblStuPhone.Size = new Size(96, 15);
+            lblStuPhone.TabIndex = 3;
+            lblStuPhone.Text = "Contact Number";
             // 
             // lblStuAdress
             // 
-            this.lblStuAdress.AutoSize = true;
-            this.lblStuAdress.Location = new System.Drawing.Point(6, 19);
-            this.lblStuAdress.Name = "lblStuAdress";
-            this.lblStuAdress.Size = new System.Drawing.Size(49, 15);
-            this.lblStuAdress.TabIndex = 4;
-            this.lblStuAdress.Text = "Address";
+            lblStuAdress.AutoSize = true;
+            lblStuAdress.Location = new Point(6, 19);
+            lblStuAdress.Name = "lblStuAdress";
+            lblStuAdress.Size = new Size(49, 15);
+            lblStuAdress.TabIndex = 4;
+            lblStuAdress.Text = "Address";
             // 
             // txtStuName
             // 
-            this.txtStuName.Location = new System.Drawing.Point(6, 37);
-            this.txtStuName.Name = "txtStuName";
-            this.txtStuName.Size = new System.Drawing.Size(200, 23);
-            this.txtStuName.TabIndex = 7;
+            txtStuName.Location = new Point(6, 37);
+            txtStuName.Name = "txtStuName";
+            txtStuName.Size = new Size(200, 23);
+            txtStuName.TabIndex = 7;
             // 
             // txtStuIcP
             // 
-            this.txtStuIcP.Location = new System.Drawing.Point(6, 37);
-            this.txtStuIcP.Name = "txtStuIcP";
-            this.txtStuIcP.Size = new System.Drawing.Size(200, 23);
-            this.txtStuIcP.TabIndex = 8;
+            txtStuIcP.Location = new Point(6, 37);
+            txtStuIcP.Name = "txtStuIcP";
+            txtStuIcP.Size = new Size(200, 23);
+            txtStuIcP.TabIndex = 8;
             // 
             // txtStuEmail
             // 
-            this.txtStuEmail.Location = new System.Drawing.Point(6, 37);
-            this.txtStuEmail.Name = "txtStuEmail";
-            this.txtStuEmail.Size = new System.Drawing.Size(200, 23);
-            this.txtStuEmail.TabIndex = 9;
+            txtStuEmail.Location = new Point(6, 37);
+            txtStuEmail.Name = "txtStuEmail";
+            txtStuEmail.Size = new Size(200, 23);
+            txtStuEmail.TabIndex = 9;
             // 
             // txtStuPhone
             // 
-            this.txtStuPhone.Location = new System.Drawing.Point(6, 37);
-            this.txtStuPhone.Name = "txtStuPhone";
-            this.txtStuPhone.Size = new System.Drawing.Size(200, 23);
-            this.txtStuPhone.TabIndex = 10;
+            txtStuPhone.Location = new Point(6, 37);
+            txtStuPhone.Name = "txtStuPhone";
+            txtStuPhone.Size = new Size(200, 23);
+            txtStuPhone.TabIndex = 10;
             // 
             // txtStuAddress
             // 
-            this.txtStuAddress.Location = new System.Drawing.Point(6, 37);
-            this.txtStuAddress.Name = "txtStuAddress";
-            this.txtStuAddress.Size = new System.Drawing.Size(200, 23);
-            this.txtStuAddress.TabIndex = 11;
+            txtStuAddress.Location = new Point(6, 37);
+            txtStuAddress.Name = "txtStuAddress";
+            txtStuAddress.Size = new Size(200, 23);
+            txtStuAddress.TabIndex = 11;
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(611, 391);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 15;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
+            btnNext.Location = new Point(602, 372);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(97, 40);
+            btnNext.TabIndex = 15;
+            btnNext.Text = "Next";
+            btnNext.UseVisualStyleBackColor = true;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(6, 37);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 23);
-            this.txtUsername.TabIndex = 27;
+            txtUsername.Location = new Point(6, 37);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(200, 23);
+            txtUsername.TabIndex = 27;
             // 
             // txtPw
             // 
-            this.txtPw.Location = new System.Drawing.Point(6, 34);
-            this.txtPw.Name = "txtPw";
-            this.txtPw.Size = new System.Drawing.Size(200, 23);
-            this.txtPw.TabIndex = 28;
+            txtPw.Location = new Point(6, 34);
+            txtPw.Name = "txtPw";
+            txtPw.Size = new Size(200, 23);
+            txtPw.TabIndex = 28;
             // 
             // txtStuId
             // 
-            this.txtStuId.Location = new System.Drawing.Point(6, 34);
-            this.txtStuId.Name = "txtStuId";
-            this.txtStuId.Size = new System.Drawing.Size(200, 23);
-            this.txtStuId.TabIndex = 29;
+            txtStuId.Location = new Point(6, 34);
+            txtStuId.Name = "txtStuId";
+            txtStuId.Size = new Size(200, 23);
+            txtStuId.TabIndex = 29;
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(6, 34);
-            this.txtCourse.Name = "txtCourse";
-            this.txtCourse.Size = new System.Drawing.Size(200, 23);
-            this.txtCourse.TabIndex = 32;
+            txtCourse.Location = new Point(6, 34);
+            txtCourse.Name = "txtCourse";
+            txtCourse.Size = new Size(200, 23);
+            txtCourse.TabIndex = 32;
             // 
             // dtpBirthday
             // 
-            this.dtpBirthday.Location = new System.Drawing.Point(6, 34);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(200, 23);
-            this.dtpBirthday.TabIndex = 33;
+            dtpBirthday.Location = new Point(6, 34);
+            dtpBirthday.Name = "dtpBirthday";
+            dtpBirthday.Size = new Size(200, 23);
+            dtpBirthday.TabIndex = 33;
             // 
             // txtMemo
             // 
-            this.txtMemo.Location = new System.Drawing.Point(6, 34);
-            this.txtMemo.Name = "txtMemo";
-            this.txtMemo.Size = new System.Drawing.Size(200, 23);
-            this.txtMemo.TabIndex = 34;
+            txtMemo.Location = new Point(6, 34);
+            txtMemo.Name = "txtMemo";
+            txtMemo.Size = new Size(200, 23);
+            txtMemo.TabIndex = 34;
             // 
             // grpPhone
             // 
-            this.grpPhone.Controls.Add(this.lblStuPhone);
-            this.grpPhone.Controls.Add(this.txtStuPhone);
-            this.grpPhone.Location = new System.Drawing.Point(283, 115);
-            this.grpPhone.Name = "grpPhone";
-            this.grpPhone.Size = new System.Drawing.Size(221, 74);
-            this.grpPhone.TabIndex = 35;
-            this.grpPhone.TabStop = false;
+            grpPhone.Controls.Add(lblStuPhone);
+            grpPhone.Controls.Add(txtStuPhone);
+            grpPhone.Location = new Point(283, 115);
+            grpPhone.Name = "grpPhone";
+            grpPhone.Size = new Size(221, 74);
+            grpPhone.TabIndex = 35;
+            grpPhone.TabStop = false;
             // 
             // grpEmail
             // 
-            this.grpEmail.Controls.Add(this.txtStuEmail);
-            this.grpEmail.Controls.Add(this.lblStuEmail);
-            this.grpEmail.Location = new System.Drawing.Point(283, 35);
-            this.grpEmail.Name = "grpEmail";
-            this.grpEmail.Size = new System.Drawing.Size(221, 74);
-            this.grpEmail.TabIndex = 36;
-            this.grpEmail.TabStop = false;
+            grpEmail.Controls.Add(txtStuEmail);
+            grpEmail.Controls.Add(lblStuEmail);
+            grpEmail.Location = new Point(283, 35);
+            grpEmail.Name = "grpEmail";
+            grpEmail.Size = new Size(221, 74);
+            grpEmail.TabIndex = 36;
+            grpEmail.TabStop = false;
             // 
             // grpName
             // 
-            this.grpName.Controls.Add(this.txtStuName);
-            this.grpName.Controls.Add(this.lblStuName);
-            this.grpName.Location = new System.Drawing.Point(27, 275);
-            this.grpName.Name = "grpName";
-            this.grpName.Size = new System.Drawing.Size(221, 74);
-            this.grpName.TabIndex = 37;
-            this.grpName.TabStop = false;
+            grpName.Controls.Add(txtStuName);
+            grpName.Controls.Add(lblStuName);
+            grpName.Location = new Point(23, 275);
+            grpName.Name = "grpName";
+            grpName.Size = new Size(221, 74);
+            grpName.TabIndex = 37;
+            grpName.TabStop = false;
             // 
             // grpAddress
             // 
-            this.grpAddress.Controls.Add(this.lblStuAdress);
-            this.grpAddress.Controls.Add(this.txtStuAddress);
-            this.grpAddress.Location = new System.Drawing.Point(283, 195);
-            this.grpAddress.Name = "grpAddress";
-            this.grpAddress.Size = new System.Drawing.Size(221, 74);
-            this.grpAddress.TabIndex = 38;
-            this.grpAddress.TabStop = false;
+            grpAddress.Controls.Add(lblStuAdress);
+            grpAddress.Controls.Add(txtStuAddress);
+            grpAddress.Location = new Point(283, 195);
+            grpAddress.Name = "grpAddress";
+            grpAddress.Size = new Size(221, 74);
+            grpAddress.TabIndex = 38;
+            grpAddress.TabStop = false;
             // 
             // grpStuId
             // 
-            this.grpStuId.Controls.Add(this.txtStuId);
-            this.grpStuId.Controls.Add(this.lblStuId);
-            this.grpStuId.Location = new System.Drawing.Point(27, 35);
-            this.grpStuId.Name = "grpStuId";
-            this.grpStuId.Size = new System.Drawing.Size(220, 74);
-            this.grpStuId.TabIndex = 39;
-            this.grpStuId.TabStop = false;
+            grpStuId.Controls.Add(txtStuId);
+            grpStuId.Controls.Add(lblStuId);
+            grpStuId.Location = new Point(23, 35);
+            grpStuId.Name = "grpStuId";
+            grpStuId.Size = new Size(220, 74);
+            grpStuId.TabIndex = 39;
+            grpStuId.TabStop = false;
             // 
             // lblStuId
             // 
-            this.lblStuId.AutoSize = true;
-            this.lblStuId.Location = new System.Drawing.Point(6, 16);
-            this.lblStuId.Name = "lblStuId";
-            this.lblStuId.Size = new System.Drawing.Size(62, 15);
-            this.lblStuId.TabIndex = 47;
-            this.lblStuId.Text = "Student ID";
+            lblStuId.AutoSize = true;
+            lblStuId.Location = new Point(6, 16);
+            lblStuId.Name = "lblStuId";
+            lblStuId.Size = new Size(62, 15);
+            lblStuId.TabIndex = 47;
+            lblStuId.Text = "Student ID";
             // 
             // grpUsername
             // 
-            this.grpUsername.Controls.Add(this.txtUsername);
-            this.grpUsername.Controls.Add(this.lblUsername);
-            this.grpUsername.Location = new System.Drawing.Point(27, 115);
-            this.grpUsername.Name = "grpUsername";
-            this.grpUsername.Size = new System.Drawing.Size(220, 74);
-            this.grpUsername.TabIndex = 40;
-            this.grpUsername.TabStop = false;
+            grpUsername.Controls.Add(txtUsername);
+            grpUsername.Controls.Add(lblUsername);
+            grpUsername.Location = new Point(23, 115);
+            grpUsername.Name = "grpUsername";
+            grpUsername.Size = new Size(220, 74);
+            grpUsername.TabIndex = 40;
+            grpUsername.TabStop = false;
             // 
             // lblUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(6, 19);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(60, 15);
-            this.lblUsername.TabIndex = 46;
-            this.lblUsername.Text = "Username";
+            lblUsername.AutoSize = true;
+            lblUsername.Location = new Point(6, 19);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(60, 15);
+            lblUsername.TabIndex = 46;
+            lblUsername.Text = "Username";
             // 
             // grpIcP
             // 
-            this.grpIcP.Controls.Add(this.lblStuIcP);
-            this.grpIcP.Controls.Add(this.txtStuIcP);
-            this.grpIcP.Location = new System.Drawing.Point(27, 355);
-            this.grpIcP.Name = "grpIcP";
-            this.grpIcP.Size = new System.Drawing.Size(221, 74);
-            this.grpIcP.TabIndex = 41;
-            this.grpIcP.TabStop = false;
+            grpIcP.Controls.Add(lblStuIcP);
+            grpIcP.Controls.Add(txtStuIcP);
+            grpIcP.Location = new Point(23, 355);
+            grpIcP.Name = "grpIcP";
+            grpIcP.Size = new Size(221, 74);
+            grpIcP.TabIndex = 41;
+            grpIcP.TabStop = false;
             // 
             // grpPw
             // 
-            this.grpPw.Controls.Add(this.lblPw);
-            this.grpPw.Controls.Add(this.txtPw);
-            this.grpPw.Location = new System.Drawing.Point(27, 195);
-            this.grpPw.Name = "grpPw";
-            this.grpPw.Size = new System.Drawing.Size(221, 74);
-            this.grpPw.TabIndex = 42;
-            this.grpPw.TabStop = false;
+            grpPw.Controls.Add(lblPw);
+            grpPw.Controls.Add(txtPw);
+            grpPw.Location = new Point(23, 195);
+            grpPw.Name = "grpPw";
+            grpPw.Size = new Size(221, 74);
+            grpPw.TabIndex = 42;
+            grpPw.TabStop = false;
             // 
             // lblPw
             // 
-            this.lblPw.AutoSize = true;
-            this.lblPw.Location = new System.Drawing.Point(6, 19);
-            this.lblPw.Name = "lblPw";
-            this.lblPw.Size = new System.Drawing.Size(57, 15);
-            this.lblPw.TabIndex = 50;
-            this.lblPw.Text = "Password";
+            lblPw.AutoSize = true;
+            lblPw.Location = new Point(6, 19);
+            lblPw.Name = "lblPw";
+            lblPw.Size = new Size(57, 15);
+            lblPw.TabIndex = 50;
+            lblPw.Text = "Password";
             // 
             // grpCourse
             // 
-            this.grpCourse.Controls.Add(this.txtCourse);
-            this.grpCourse.Controls.Add(this.lblCourse);
-            this.grpCourse.Location = new System.Drawing.Point(283, 275);
-            this.grpCourse.Name = "grpCourse";
-            this.grpCourse.Size = new System.Drawing.Size(220, 74);
-            this.grpCourse.TabIndex = 43;
-            this.grpCourse.TabStop = false;
+            grpCourse.Controls.Add(txtCourse);
+            grpCourse.Controls.Add(lblCourse);
+            grpCourse.Location = new Point(283, 275);
+            grpCourse.Name = "grpCourse";
+            grpCourse.Size = new Size(220, 74);
+            grpCourse.TabIndex = 43;
+            grpCourse.TabStop = false;
             // 
             // lblCourse
             // 
-            this.lblCourse.AutoSize = true;
-            this.lblCourse.Location = new System.Drawing.Point(6, 19);
-            this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(77, 15);
-            this.lblCourse.TabIndex = 49;
-            this.lblCourse.Text = "Study Course";
+            lblCourse.AutoSize = true;
+            lblCourse.Location = new Point(6, 19);
+            lblCourse.Name = "lblCourse";
+            lblCourse.Size = new Size(77, 15);
+            lblCourse.TabIndex = 49;
+            lblCourse.Text = "Study Course";
             // 
             // grpMemo
             // 
-            this.grpMemo.Controls.Add(this.lblMemo);
-            this.grpMemo.Controls.Add(this.txtMemo);
-            this.grpMemo.Location = new System.Drawing.Point(541, 195);
-            this.grpMemo.Name = "grpMemo";
-            this.grpMemo.Size = new System.Drawing.Size(221, 140);
-            this.grpMemo.TabIndex = 44;
-            this.grpMemo.TabStop = false;
+            grpMemo.Controls.Add(lblMemo);
+            grpMemo.Controls.Add(txtMemo);
+            grpMemo.Location = new Point(283, 355);
+            grpMemo.Name = "grpMemo";
+            grpMemo.Size = new Size(221, 74);
+            grpMemo.TabIndex = 44;
+            grpMemo.TabStop = false;
             // 
             // lblMemo
             // 
-            this.lblMemo.AutoSize = true;
-            this.lblMemo.Location = new System.Drawing.Point(6, 19);
-            this.lblMemo.Name = "lblMemo";
-            this.lblMemo.Size = new System.Drawing.Size(42, 15);
-            this.lblMemo.TabIndex = 48;
-            this.lblMemo.Text = "Memo";
+            lblMemo.AutoSize = true;
+            lblMemo.Location = new Point(6, 19);
+            lblMemo.Name = "lblMemo";
+            lblMemo.Size = new Size(42, 15);
+            lblMemo.TabIndex = 48;
+            lblMemo.Text = "Memo";
             // 
             // grpBirthday
             // 
-            this.grpBirthday.Controls.Add(this.lblBirthday);
-            this.grpBirthday.Controls.Add(this.dtpBirthday);
-            this.grpBirthday.Location = new System.Drawing.Point(541, 35);
-            this.grpBirthday.Name = "grpBirthday";
-            this.grpBirthday.Size = new System.Drawing.Size(221, 140);
-            this.grpBirthday.TabIndex = 45;
-            this.grpBirthday.TabStop = false;
+            grpBirthday.Controls.Add(lblBirthday);
+            grpBirthday.Controls.Add(dtpBirthday);
+            grpBirthday.Location = new Point(545, 115);
+            grpBirthday.Name = "grpBirthday";
+            grpBirthday.Size = new Size(221, 140);
+            grpBirthday.TabIndex = 45;
+            grpBirthday.TabStop = false;
             // 
             // lblBirthday
             // 
-            this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Location = new System.Drawing.Point(6, 16);
-            this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(51, 15);
-            this.lblBirthday.TabIndex = 46;
-            this.lblBirthday.Text = "Birthday";
+            lblBirthday.AutoSize = true;
+            lblBirthday.Location = new Point(6, 16);
+            lblBirthday.Name = "lblBirthday";
+            lblBirthday.Size = new Size(51, 15);
+            lblBirthday.TabIndex = 46;
+            lblBirthday.Text = "Birthday";
+            // 
+            // pictureHome
+            // 
+            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
+            pictureHome.Location = new Point(737, 12);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(51, 43);
+            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureHome.TabIndex = 46;
+            pictureHome.TabStop = false;
+            pictureHome.Click += pictureHome_Click;
             // 
             // frmRegister1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.grpBirthday);
-            this.Controls.Add(this.grpMemo);
-            this.Controls.Add(this.grpCourse);
-            this.Controls.Add(this.grpPw);
-            this.Controls.Add(this.grpIcP);
-            this.Controls.Add(this.grpUsername);
-            this.Controls.Add(this.grpStuId);
-            this.Controls.Add(this.grpAddress);
-            this.Controls.Add(this.grpName);
-            this.Controls.Add(this.grpEmail);
-            this.Controls.Add(this.grpPhone);
-            this.Controls.Add(this.btnNext);
-            this.Name = "frmRegister1";
-            this.Text = "Register";
-            this.grpPhone.ResumeLayout(false);
-            this.grpPhone.PerformLayout();
-            this.grpEmail.ResumeLayout(false);
-            this.grpEmail.PerformLayout();
-            this.grpName.ResumeLayout(false);
-            this.grpName.PerformLayout();
-            this.grpAddress.ResumeLayout(false);
-            this.grpAddress.PerformLayout();
-            this.grpStuId.ResumeLayout(false);
-            this.grpStuId.PerformLayout();
-            this.grpUsername.ResumeLayout(false);
-            this.grpUsername.PerformLayout();
-            this.grpIcP.ResumeLayout(false);
-            this.grpIcP.PerformLayout();
-            this.grpPw.ResumeLayout(false);
-            this.grpPw.PerformLayout();
-            this.grpCourse.ResumeLayout(false);
-            this.grpCourse.PerformLayout();
-            this.grpMemo.ResumeLayout(false);
-            this.grpMemo.PerformLayout();
-            this.grpBirthday.ResumeLayout(false);
-            this.grpBirthday.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(pictureHome);
+            Controls.Add(grpBirthday);
+            Controls.Add(grpMemo);
+            Controls.Add(grpCourse);
+            Controls.Add(grpPw);
+            Controls.Add(grpIcP);
+            Controls.Add(grpUsername);
+            Controls.Add(grpStuId);
+            Controls.Add(grpAddress);
+            Controls.Add(grpName);
+            Controls.Add(grpEmail);
+            Controls.Add(grpPhone);
+            Controls.Add(btnNext);
+            Name = "frmRegister1";
+            Text = "Register";
+            grpPhone.ResumeLayout(false);
+            grpPhone.PerformLayout();
+            grpEmail.ResumeLayout(false);
+            grpEmail.PerformLayout();
+            grpName.ResumeLayout(false);
+            grpName.PerformLayout();
+            grpAddress.ResumeLayout(false);
+            grpAddress.PerformLayout();
+            grpStuId.ResumeLayout(false);
+            grpStuId.PerformLayout();
+            grpUsername.ResumeLayout(false);
+            grpUsername.PerformLayout();
+            grpIcP.ResumeLayout(false);
+            grpIcP.PerformLayout();
+            grpPw.ResumeLayout(false);
+            grpPw.PerformLayout();
+            grpCourse.ResumeLayout(false);
+            grpCourse.PerformLayout();
+            grpMemo.ResumeLayout(false);
+            grpMemo.PerformLayout();
+            grpBirthday.ResumeLayout(false);
+            grpBirthday.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -451,5 +466,6 @@
         private Label lblCourse;
         private Label lblPw;
         private Label lblBirthday;
+        private PictureBox pictureHome;
     }
 }

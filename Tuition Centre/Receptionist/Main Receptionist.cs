@@ -26,20 +26,20 @@ namespace Tuition_Centre.Receptionist
             this.un = un;
             Recep rcp = new Recep();
             string[] recepData = rcp.getRecepData(un); // call the method and store the returned value in a variable
-            
+
             lblWlcRcp.Text = "Welcome Back, " + recepData[1].ToString(); // set the label text using the returned value
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            frmPayment1 paymentPage1= new frmPayment1();
+            frmPayment1 paymentPage1 = new frmPayment1();
             paymentPage1.Show();
             this.Hide();
         }
 
         private void btnRegNewStu_Click(object sender, EventArgs e)
         {
-            frmRegister1 register1 = new frmRegister1();
+            frmRegister1 register1 = new frmRegister1(un);
             register1.Show();
             this.Hide();
         }
@@ -53,9 +53,17 @@ namespace Tuition_Centre.Receptionist
 
         private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
         {
-            frmUpdateStu studentInfoPage1= new frmUpdateStu();
+            frmUpdateStu studentInfoPage1 = new frmUpdateStu();
             studentInfoPage1.Show();
             this.Hide();
+        }
+
+        private void picLogout_Click(object sender, EventArgs e)
+        {
+            Main logOut = new Main();
+            logOut.Show();
+            this.Hide();
+            MessageBox.Show("Logout");
         }
     }
 }

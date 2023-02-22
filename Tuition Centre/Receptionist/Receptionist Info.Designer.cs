@@ -28,175 +28,190 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblRcpICS = new System.Windows.Forms.Label();
-            this.lblRcpNameS = new System.Windows.Forms.Label();
-            this.lblRcpIDS = new System.Windows.Forms.Label();
-            this.lblRcpIC = new System.Windows.Forms.Label();
-            this.lblRcpName = new System.Windows.Forms.Label();
-            this.lblRcpID = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtAdress = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtContact = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.lblAdress = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblContact = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateRcp));
+            panel2 = new Panel();
+            lblRcpICS = new Label();
+            lblRcpNameS = new Label();
+            lblRcpIDS = new Label();
+            lblRcpIC = new Label();
+            lblRcpName = new Label();
+            lblRcpID = new Label();
+            panel3 = new Panel();
+            txtAdress = new TextBox();
+            txtEmail = new TextBox();
+            txtContact = new TextBox();
+            btnUpdate = new Button();
+            lblAdress = new Label();
+            lblEmail = new Label();
+            lblContact = new Label();
+            pictureHome = new PictureBox();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblRcpICS);
-            this.panel2.Controls.Add(this.lblRcpNameS);
-            this.panel2.Controls.Add(this.lblRcpIDS);
-            this.panel2.Controls.Add(this.lblRcpIC);
-            this.panel2.Controls.Add(this.lblRcpName);
-            this.panel2.Controls.Add(this.lblRcpID);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 113);
-            this.panel2.TabIndex = 4;
+            panel2.Controls.Add(pictureHome);
+            panel2.Controls.Add(lblRcpICS);
+            panel2.Controls.Add(lblRcpNameS);
+            panel2.Controls.Add(lblRcpIDS);
+            panel2.Controls.Add(lblRcpIC);
+            panel2.Controls.Add(lblRcpName);
+            panel2.Controls.Add(lblRcpID);
+            panel2.Location = new Point(12, 12);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(776, 113);
+            panel2.TabIndex = 4;
             // 
             // lblRcpICS
             // 
-            this.lblRcpICS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRcpICS.Location = new System.Drawing.Point(146, 72);
-            this.lblRcpICS.Name = "lblRcpICS";
-            this.lblRcpICS.Size = new System.Drawing.Size(200, 15);
-            this.lblRcpICS.TabIndex = 6;
+            lblRcpICS.BorderStyle = BorderStyle.Fixed3D;
+            lblRcpICS.Location = new Point(146, 72);
+            lblRcpICS.Name = "lblRcpICS";
+            lblRcpICS.Size = new Size(200, 15);
+            lblRcpICS.TabIndex = 6;
             // 
             // lblRcpNameS
             // 
-            this.lblRcpNameS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRcpNameS.Location = new System.Drawing.Point(146, 46);
-            this.lblRcpNameS.Name = "lblRcpNameS";
-            this.lblRcpNameS.Size = new System.Drawing.Size(200, 15);
-            this.lblRcpNameS.TabIndex = 5;
+            lblRcpNameS.BorderStyle = BorderStyle.Fixed3D;
+            lblRcpNameS.Location = new Point(146, 46);
+            lblRcpNameS.Name = "lblRcpNameS";
+            lblRcpNameS.Size = new Size(200, 15);
+            lblRcpNameS.TabIndex = 5;
             // 
             // lblRcpIDS
             // 
-            this.lblRcpIDS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRcpIDS.Location = new System.Drawing.Point(146, 18);
-            this.lblRcpIDS.Name = "lblRcpIDS";
-            this.lblRcpIDS.Size = new System.Drawing.Size(200, 23);
-            this.lblRcpIDS.TabIndex = 4;
+            lblRcpIDS.BorderStyle = BorderStyle.Fixed3D;
+            lblRcpIDS.Location = new Point(146, 18);
+            lblRcpIDS.Name = "lblRcpIDS";
+            lblRcpIDS.Size = new Size(200, 23);
+            lblRcpIDS.TabIndex = 4;
             // 
             // lblRcpIC
             // 
-            this.lblRcpIC.AutoSize = true;
-            this.lblRcpIC.Location = new System.Drawing.Point(18, 72);
-            this.lblRcpIC.Name = "lblRcpIC";
-            this.lblRcpIC.Size = new System.Drawing.Size(77, 15);
-            this.lblRcpIC.TabIndex = 3;
-            this.lblRcpIC.Text = "IC/ Passport :";
+            lblRcpIC.AutoSize = true;
+            lblRcpIC.Location = new Point(18, 72);
+            lblRcpIC.Name = "lblRcpIC";
+            lblRcpIC.Size = new Size(77, 15);
+            lblRcpIC.TabIndex = 3;
+            lblRcpIC.Text = "IC/ Passport :";
             // 
             // lblRcpName
             // 
-            this.lblRcpName.AutoSize = true;
-            this.lblRcpName.Location = new System.Drawing.Point(18, 46);
-            this.lblRcpName.Name = "lblRcpName";
-            this.lblRcpName.Size = new System.Drawing.Size(45, 15);
-            this.lblRcpName.TabIndex = 2;
-            this.lblRcpName.Text = "Name :";
+            lblRcpName.AutoSize = true;
+            lblRcpName.Location = new Point(18, 46);
+            lblRcpName.Name = "lblRcpName";
+            lblRcpName.Size = new Size(45, 15);
+            lblRcpName.TabIndex = 2;
+            lblRcpName.Text = "Name :";
             // 
             // lblRcpID
             // 
-            this.lblRcpID.AutoSize = true;
-            this.lblRcpID.Location = new System.Drawing.Point(18, 22);
-            this.lblRcpID.Name = "lblRcpID";
-            this.lblRcpID.Size = new System.Drawing.Size(24, 15);
-            this.lblRcpID.TabIndex = 1;
-            this.lblRcpID.Text = "ID :";
+            lblRcpID.AutoSize = true;
+            lblRcpID.Location = new Point(18, 22);
+            lblRcpID.Name = "lblRcpID";
+            lblRcpID.Size = new Size(24, 15);
+            lblRcpID.TabIndex = 1;
+            lblRcpID.Text = "ID :";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtAdress);
-            this.panel3.Controls.Add(this.txtEmail);
-            this.panel3.Controls.Add(this.txtContact);
-            this.panel3.Controls.Add(this.btnUpdate);
-            this.panel3.Controls.Add(this.lblAdress);
-            this.panel3.Controls.Add(this.lblEmail);
-            this.panel3.Controls.Add(this.lblContact);
-            this.panel3.Location = new System.Drawing.Point(12, 131);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(776, 307);
-            this.panel3.TabIndex = 5;
+            panel3.Controls.Add(txtAdress);
+            panel3.Controls.Add(txtEmail);
+            panel3.Controls.Add(txtContact);
+            panel3.Controls.Add(btnUpdate);
+            panel3.Controls.Add(lblAdress);
+            panel3.Controls.Add(lblEmail);
+            panel3.Controls.Add(lblContact);
+            panel3.Location = new Point(12, 131);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(776, 307);
+            panel3.TabIndex = 5;
             // 
             // txtAdress
             // 
-            this.txtAdress.Location = new System.Drawing.Point(426, 113);
-            this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(200, 23);
-            this.txtAdress.TabIndex = 6;
+            txtAdress.Location = new Point(426, 113);
+            txtAdress.Name = "txtAdress";
+            txtAdress.Size = new Size(200, 23);
+            txtAdress.TabIndex = 6;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(123, 194);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 23);
-            this.txtEmail.TabIndex = 5;
+            txtEmail.Location = new Point(123, 194);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(200, 23);
+            txtEmail.TabIndex = 5;
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(123, 113);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(200, 23);
-            this.txtContact.TabIndex = 4;
+            txtContact.Location = new Point(123, 113);
+            txtContact.Name = "txtContact";
+            txtContact.Size = new Size(200, 23);
+            txtContact.TabIndex = 4;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(491, 194);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Location = new Point(491, 194);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(75, 23);
+            btnUpdate.TabIndex = 3;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // lblAdress
             // 
-            this.lblAdress.AutoSize = true;
-            this.lblAdress.Location = new System.Drawing.Point(426, 95);
-            this.lblAdress.Name = "lblAdress";
-            this.lblAdress.Size = new System.Drawing.Size(49, 15);
-            this.lblAdress.TabIndex = 2;
-            this.lblAdress.Text = "Address";
+            lblAdress.AutoSize = true;
+            lblAdress.Location = new Point(426, 95);
+            lblAdress.Name = "lblAdress";
+            lblAdress.Size = new Size(49, 15);
+            lblAdress.TabIndex = 2;
+            lblAdress.Text = "Address";
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(123, 176);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(36, 15);
-            this.lblEmail.TabIndex = 1;
-            this.lblEmail.Text = "Email";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(123, 176);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(36, 15);
+            lblEmail.TabIndex = 1;
+            lblEmail.Text = "Email";
             // 
             // lblContact
             // 
-            this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(123, 95);
-            this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(96, 15);
-            this.lblContact.TabIndex = 0;
-            this.lblContact.Text = "Contact Number";
+            lblContact.AutoSize = true;
+            lblContact.Location = new Point(123, 95);
+            lblContact.Name = "lblContact";
+            lblContact.Size = new Size(96, 15);
+            lblContact.TabIndex = 0;
+            lblContact.Text = "Contact Number";
+            // 
+            // pictureHome
+            // 
+            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
+            pictureHome.Location = new Point(725, 0);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(51, 43);
+            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureHome.TabIndex = 47;
+            pictureHome.TabStop = false;
+            pictureHome.Click += pictureHome_Click;
             // 
             // frmUpdateRcp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Name = "frmUpdateRcp";
-            this.Text = "Form6";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Name = "frmUpdateRcp";
+            Text = "Form6";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -216,5 +231,6 @@
         private Label lblAdress;
         private Label lblEmail;
         private Label lblContact;
+        private PictureBox pictureHome;
     }
 }

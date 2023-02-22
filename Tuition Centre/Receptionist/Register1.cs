@@ -18,9 +18,22 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmRegister1 : Form
     {
+        private string un;
         public frmRegister1()
         {
             InitializeComponent();
+        }
+        public frmRegister1(string un)
+        {
+            InitializeComponent();
+            this.un = un;
+        }
+
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            frmMainReceptionist back = new frmMainReceptionist(un);
+            back.Show();
+            this.Hide();
         }
         /*
 private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
