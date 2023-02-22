@@ -75,40 +75,31 @@ cmbStuSub3.SelectedIndex = -1;
 // Set focus to the first text box
 txtUsername.Focus();
 }
+*/
 
-private void btnRegister_Click(object sender, EventArgs e)
-{
-string role = "Student";
 
-int levelId = cmbStuLv.SelectedIndex;
-if (cmbStuLv.SelectedIndex == 1) 
-{
-levelId = 1;
-}
-else if (cmbStuLv.SelectedIndex == 2)
-{ 
-levelId = 2; 
-}
-else if (cmbStuLv.SelectedIndex == 3)
-{
-levelId = 3;
-}
-else if (cmbStuLv.SelectedIndex == 4)
-{
-levelId = 4;
-}
-else if (cmbStuLv.SelectedIndex == 5)
-{
-levelId = 5;
-}
 
-string subName1 = cmbStuSub1.Text;
-string subName2 = cmbStuSub2.Text;
-string subName3 = cmbStuSub3.Text;
 
-Recep rcp = new Recep(txtUsername.Text, txtPw.Text, role, levelId, txtStuId.Text, txtStuName.Text, txtStuIC.Text, txtStuEmail.Text,txtStuNo.Text, txtStuAddress.Text, dtpEnrollDate.Text, dtpBirthday.Text, txtCourse.Text, txtMemo.Text, subName1, subName2, subName3);
-ClearAllFields();
-MessageBox.Show(rcp.addStudent());
-}*/
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+            string stuLv = "lv";
+            string role = "student";
+            string stuEnrollDate = "today";
+
+            Recep rcp = new Recep(stuLv, txtUsername.Text, txtPw.Text, role, txtStuId.Text, txtStuName.Text, txtStuIcP.Text, txtStuEmail.Text, txtStuPhone.Text, txtStuAddress.Text, stuEnrollDate, dtpBirthday.Text, txtCourse.Text, txtMemo.Text);
+
+            rcp.addStudent();
+                
+                
+            frmRegister2 regNext = new frmRegister2();
+            regNext.Show();
+            this.Hide();  
+
+            // ClearAllFields();
+            // MessageBox.Show(rcp.addStudent());
+        }
+
+
     }
 }

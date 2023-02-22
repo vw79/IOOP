@@ -9,18 +9,17 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Tuition_Centre.Class
 {
     internal class Recep
     {
-        private string un;
-
         private string stuUsername;
         private string stuPw;
         private string role;
 
-        private int levelId;
+        private string stuLv;
         private string stuId;
         private string stuName;
         private string stuIcP;
@@ -46,12 +45,12 @@ namespace Tuition_Centre.Class
 
         }
 
-        public Recep(string stuUsername, string stuPw, string role, int levelId, string stuId, string stuName, string stuIcP, string stuEmail, string stuPhone, string stuAddress, string stuEnrollDate, string birthday, string studyCourse, string memo, string subName1, string subName2, string subName3)
+        public Recep(string stuLv, string stuUsername, string stuPw, string role, string stuId, string stuName, string stuIcP, string stuEmail, string stuPhone, string stuAddress, string stuEnrollDate, string birthday, string studyCourse, string memo)
         {
+            this.stuLv = stuLv;
             this.stuUsername = stuUsername;
             this.stuPw = stuPw;
             this.role = role;
-            this.levelId = levelId;
             this.stuId = stuId;
             this.stuName = stuName;
             this.stuIcP = stuIcP;
@@ -62,9 +61,6 @@ namespace Tuition_Centre.Class
             this.birthday = birthday;
             this.studyCourse = studyCourse;
             this.memo = memo;
-            this.subName1 = subName1;
-            this.subName2 = subName2;
-            this.subName3 = subName3;
         }
 
 
@@ -92,25 +88,23 @@ namespace Tuition_Centre.Class
         }
 
         // Method to Register into users, studentInfo, studentSubject database 
-        public string addStudent()
+        public void addStudent()
         {
-            string status;
-
             // Create a new SqlConnection object with the connection string and return the status as result
             con.Open();
 
             // Insert the value of username, password, role to the users database
-            SqlCommand cmdUsers = new SqlCommand("INSERT INTO users (username, password, role) VALUES (@username, @password, @role); SELECT SCOPE_IDENTITY();", con);
+            SqlCommand cmdUsers = new SqlCommand("INSERT INTO users (username, password, role) VALUES (@username, @password, @role)", con);
             cmdUsers.Parameters.AddWithValue("@username", stuUsername);
             cmdUsers.Parameters.AddWithValue("@password", stuPw);
             cmdUsers.Parameters.AddWithValue("@role", role);
-            int usersId = Convert.ToInt32(cmdUsers.ExecuteScalar());
+            cmdUsers.ExecuteNonQuery();
 
             // Insert student's information to the studentInfo database
-            SqlCommand cmdStuInfo = new SqlCommand("INSERT INTO studentInfo (usersId, levelId, studentId, studentName, studentIcP, studentEmail, studentPhone, studentAddress, studentEnrollDate, birthday, studyCourse, memo) " +
-                                                 "VALUES (@usersId, @levelId, @stuId, @stuName, @stuIcP, @stuEmail, @stuPhone, @stuAddress, @stuEnrollDate, @birthday, @studyCourse, @memo); SELECT SCOPE_IDENTITY();", con);
-            cmdStuInfo.Parameters.AddWithValue("@usersId", usersId);
-            cmdStuInfo.Parameters.AddWithValue("@levelId", levelId);
+            SqlCommand cmdStuInfo = new SqlCommand("INSERT INTO studentInfo (level, username, studentId, studentName, studentPass, studentEmail, studentPhone, studentAddress, studentEnrollmentDate, birthday, studyCourse, memo) " +
+                                                 "VALUES (@stuLv, @stuUsername, @stuId, @stuName, @stuIcP, @stuEmail, @stuPhone, @stuAddress, @stuEnrollDate, @birthday, @studyCourse, @memo)", con);
+            cmdStuInfo.Parameters.AddWithValue("@stuLv", stuLv);
+            cmdStuInfo.Parameters.AddWithValue("@stuUsername", stuUsername);
             cmdStuInfo.Parameters.AddWithValue("@stuId", stuId);
             cmdStuInfo.Parameters.AddWithValue("@stuName", stuName);
             cmdStuInfo.Parameters.AddWithValue("@stuIcP", stuIcP);
@@ -118,12 +112,15 @@ namespace Tuition_Centre.Class
             cmdStuInfo.Parameters.AddWithValue("@stuPhone", stuPhone);
             cmdStuInfo.Parameters.AddWithValue("@stuAddress", stuAddress);
             cmdStuInfo.Parameters.AddWithValue("@stuEnrollDate", stuEnrollDate);
-            cmdStuInfo.Parameters.AddWithValue("@birthday", birthday);
             cmdStuInfo.Parameters.AddWithValue("@studyCourse", studyCourse);
             cmdStuInfo.Parameters.AddWithValue("@memo", memo);
-            int studentDatabaseId = Convert.ToInt32(cmdStuInfo.ExecuteScalar());
+            cmdStuInfo.Parameters.AddWithValue("@birthday", birthday);
+            cmdStuInfo.ExecuteNonQuery();
 
-            // Insert the subjectId(s) into the studentSubject database
+            con.Close();
+        }
+
+            /* Insert the subjectId(s) into the studentSubject database
             if (!string.IsNullOrEmpty(subName1))
             {
                 // Get the subjectId according to the subjectName the user choose (subject 1)
@@ -190,10 +187,7 @@ namespace Tuition_Centre.Class
                 cmdStuSub3.ExecuteNonQuery();
             }
             con.Close();
-
-            status = "Registration Successful.";
-            return status;
-        }
+        }*/
 
 
         // Method to search for a student in the database and return the results as a DataTable

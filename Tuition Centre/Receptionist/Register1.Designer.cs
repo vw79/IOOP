@@ -166,6 +166,7 @@
             btnNext.TabIndex = 15;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // txtUsername
             // 
@@ -197,6 +198,7 @@
             // 
             // dtpBirthday
             // 
+            dtpBirthday.Format = DateTimePickerFormat.Custom;
             dtpBirthday.Location = new Point(6, 34);
             dtpBirthday.Name = "dtpBirthday";
             dtpBirthday.Size = new Size(200, 23);

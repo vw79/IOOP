@@ -14,6 +14,7 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmUpdateRcp : Form
     {
+        private string un;
        
         public frmUpdateRcp()
         {
@@ -22,8 +23,9 @@ namespace Tuition_Centre.Receptionist
        
         public frmUpdateRcp(string un)
         {
-    
+
             InitializeComponent();
+            this.un = un;
             Recep rcp = new Recep();
             string[] recepData = rcp.getRecepData(un); // call the method and store the returned value in a variable
 
@@ -34,7 +36,7 @@ namespace Tuition_Centre.Receptionist
 
         private void pictureHome_Click(object sender, EventArgs e)
         {
-            frmMainReceptionist back = new frmMainReceptionist();
+            frmMainReceptionist back = new frmMainReceptionist(un);
             back.Show();
             this.Hide();
         }
