@@ -86,7 +86,7 @@ namespace Tuition_Centre.Class
             recepData[2] = reader.GetString(2);
 
             con.Close();
-            //love wei hong
+            
             return recepData;
 
         }

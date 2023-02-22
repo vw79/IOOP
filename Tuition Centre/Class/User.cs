@@ -31,15 +31,15 @@ namespace Tuition_Centre.Class
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
 
-            //Sqlcommand objectName = new Constructor(sqlQuery, connectionString);
-            SqlCommand cmd = new SqlCommand("select count(*) from users where username=@a and password=@b", con);
+            //COLLATE Latin1_General_CS_AS rule is used to validate case-sensitive and accent-sensitive
+            SqlCommand cmd = new SqlCommand("select count(*) from users where username=@a COLLATE Latin1_General_CS_AS and password=@b COLLATE Latin1_General_CS_AS", con);
             cmd.Parameters.AddWithValue("@a", username);
             cmd.Parameters.AddWithValue("@b", password);
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
 
             if (count > 0)
             {
-                SqlCommand cmd2 = new SqlCommand("select role from users where username=@a and password=@b", con);
+                SqlCommand cmd2 = new SqlCommand("select role from users where username=@a COLLATE Latin1_General_CS_AS and password=@b COLLATE Latin1_General_CS_AS", con);
                 cmd2.Parameters.AddWithValue("@a", username);
                 cmd2.Parameters.AddWithValue("@b", password);
                 string userRole = cmd2.ExecuteScalar().ToString();

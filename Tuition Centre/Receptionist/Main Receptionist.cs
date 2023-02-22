@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmMainReceptionist : Form
     {
+        string un;
+
         public frmMainReceptionist()
         {
         }
@@ -20,10 +23,11 @@ namespace Tuition_Centre.Receptionist
         public frmMainReceptionist(string un)
         {
             InitializeComponent();
+            this.un = un;
             Recep rcp = new Recep();
             string[] recepData = rcp.getRecepData(un); // call the method and store the returned value in a variable
             
-            lblWlcRcp.Text = "Welcome Back, " + recepData[2].ToString(); // set the label text using the returned value
+            lblWlcRcp.Text = "Welcome Back, " + recepData[1].ToString(); // set the label text using the returned value
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -42,7 +46,7 @@ namespace Tuition_Centre.Receptionist
 
         private void btnUpdateRcpInfo_Click(object sender, EventArgs e)
         {
-            frmUpdateRcp updateRcp = new frmUpdateRcp();
+            frmUpdateRcp updateRcp = new frmUpdateRcp(un);
             updateRcp.Show();
             this.Hide();
         }
