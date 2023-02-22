@@ -47,6 +47,9 @@
     <Compile Update="Receptionist\Register1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Receptionist\Register2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Receptionist\Student Info 1.cs">
       <SubType>Form</SubType>
     </Compile>
