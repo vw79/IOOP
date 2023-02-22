@@ -8,20 +8,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tuition_Centre.Class;
 
 namespace Tuition_Centre.Admin
 {
     public partial class FrmMainAdmin : Form
     {
-        public static string name;
-        public static string identity;
-
-        public FrmMainAdmin(string id)
+        public FrmMainAdmin(string un)
         {
             InitializeComponent();
             TutorOrReceptionistClicked(false, true);
-            //name = n;
-            //identity = id;
+            AdminClass loader = new AdminClass();
+            string name = loader.NameDisplay(un);
+            string identity = loader.IdentityDisplay(un);
+            lblName.Text = "Name: " + name;
+            lblIdentity.Text = "ID: " + identity;
+            ArrayList tutorinfo = new ArrayList();
+            tutorinfo = loader.ViewTutorList();
+            foreach (var item in tutorinfo)
+            {
+                int count = 0;
+                if count 
+                MessageBox.Show(item.ToString());
+            }
         }
 
         private void btnTutor_Click(object sender, EventArgs e)
