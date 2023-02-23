@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -76,21 +77,26 @@ namespace Tuition_Centre.Class
             return adminId;
         }
 
-        public ArrayList ViewTutorList()
+        public DataTable ViewTutorList()
         { 
-            ArrayList tutorinfo = new ArrayList();
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT tutorFullName, tutorICorPass, tutorEmail, tutorPhone, tutorDOB, tutorAddress, subject, level FROM tutor", con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                for (int i = 0; i < 8; i++)
-                {
-                    tutorinfo.Add(reader.GetString(i));
-                }
-            }
+            SqlCommand cmd = new SqlCommand("SELECT tutorFullName, tutorId, tutorICorPass, tutorEmail, tutorPhone, tutorDOB, tutorAddress, subject, level FROM tutor", con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
             con.Close();
-            return tutorinfo;
+            return dataTable;
+        }
+
+        public DataTable ViewReceptionistList()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT recepId, recepName, recepIcP, recepEmail, recepPhone, recepAddress FROM receptionist", con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            con.Close();
+            return dataTable;
         }
     }
 }

@@ -26,6 +26,9 @@
     <Compile Update="Admin\AdminUpdateProfile.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin\AdminConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>

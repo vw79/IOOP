@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tuition_Centre.Class;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Tuition_Centre.Admin
 {
@@ -23,30 +24,76 @@ namespace Tuition_Centre.Admin
             string identity = loader.IdentityDisplay(un);
             lblName.Text = "Name: " + name;
             lblIdentity.Text = "ID: " + identity;
-            ArrayList tutorinfo = new ArrayList();
-            tutorinfo = loader.ViewTutorList();
-            foreach (var item in tutorinfo)
+            DataTable dataTable = loader.ViewTutorList();
+            DataTable filteredTable = new DataTable();
+            filteredTable.Columns.Add("Name");
+            filteredTable.Columns.Add("ID");
+            filteredTable.Columns.Add("IC/Passport");
+            filteredTable.Columns.Add("Email");
+            filteredTable.Columns.Add("Phone Number");
+            filteredTable.Columns.Add("Address");
+            filteredTable.Columns.Add("Date of Birth");
+            filteredTable.Columns.Add("Subject");
+            filteredTable.Columns.Add("Level");
+
+            foreach (DataRow row in dataTable.Rows)
             {
-                int count = 0;
-                //if count 
-                MessageBox.Show(item.ToString());
+                filteredTable.Rows.Add(row["tutorFullName"], row["tutorId"], row["tutorICorPass"], row["tutorEmail"], row["tutorPhone"], row["tutorAddress"], row["tutorDOB"], row["subject"], row["level"]);
             }
+            dgvContent.DataSource = filteredTable;
         }
 
         private void btnTutor_Click(object sender, EventArgs e)
         {
-            TutorOrReceptionistClicked(false, true); 
+            TutorOrReceptionistClicked(false, true);
+            dgvContent.Columns.Clear();
+            AdminClass loader = new AdminClass();
+            DataTable dataTable = loader.ViewTutorList();
+            DataTable filteredTable = new DataTable();
+            filteredTable.Columns.Add("Name");
+            filteredTable.Columns.Add("ID");
+            filteredTable.Columns.Add("IC/Passport");
+            filteredTable.Columns.Add("Email");
+            filteredTable.Columns.Add("Phone Number");
+            filteredTable.Columns.Add("Address");
+            filteredTable.Columns.Add("Date of Birth");
+            filteredTable.Columns.Add("Subject");
+            filteredTable.Columns.Add("Level");
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                filteredTable.Rows.Add(row["tutorFullName"], row["tutorId"], row["tutorICorPass"], row["tutorEmail"], row["tutorPhone"], row["tutorAddress"], row["tutorDOB"], row["subject"], row["level"]);
+            }
+            dgvContent.DataSource = filteredTable;
+
         }
 
         private void btnReceptionist_Click(object sender, EventArgs e)
         {
             TutorOrReceptionistClicked(true, false);
+            dgvContent.Columns.Clear();
+            AdminClass loader = new AdminClass();
+            DataTable dataTable = loader.ViewReceptionistList();
+            DataTable filteredTable = new DataTable();
+            filteredTable.Columns.Add("Name");
+            filteredTable.Columns.Add("ID");
+            filteredTable.Columns.Add("IC/Passport");
+            filteredTable.Columns.Add("Email");
+            filteredTable.Columns.Add("Phone Number");
+            filteredTable.Columns.Add("Address");
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                filteredTable.Rows.Add(row["recepName"], row["recepId"], row["recepIcP"], row["recepEmail"], row["recepPhone"], row["recepAddress"]);
+            }
+            dgvContent.DataSource = filteredTable;
         }
 
         private void btnRegisterReceptionist_Click(object sender, EventArgs e)
         {
 
         }
+
         private void TutorOrReceptionistClicked(bool a, bool b)
         {
             btnTutorList.Enabled = a;
@@ -56,17 +103,35 @@ namespace Tuition_Centre.Admin
             btnRegisterReceptionist.Visible = a;
             btnDeleteReceptionist.Visible = a;
         }
-
-        private void ListLoader()
+        
+        private void DeleteAndConfirmation()
         {
-            ArrayList name = new ArrayList();
-
+            if (dgvContent.SelectedRows.Count > 0)
+            {
+                FrmConfirm confrmobj = new FrmConfirm();
+                confrmobj.ShowDialog();
+                bool confirmation = confrmobj.confirmation;
+                if (confirmation)
+                {
+                    dgvContent.Rows.Remove(dgvContent.SelectedRows[0]);
+                }
+            }
         }
 
         private void btnRegisterTutor_Click(object sender, EventArgs e)
         {
             FrmAdminRegisterTutor adminTutorFrm = new FrmAdminRegisterTutor();
             adminTutorFrm.ShowDialog();
+        }
+
+        private void btnDeleteReceptionist_Click(object sender, EventArgs e)
+        {
+            DeleteAndConfirmation();
+        }
+
+        private void btnDeleteTutor_Click(object sender, EventArgs e)
+        {
+            DeleteAndConfirmation();
         }
     }
 }
