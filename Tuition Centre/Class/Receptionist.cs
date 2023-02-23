@@ -31,10 +31,13 @@ namespace Tuition_Centre.Class
         private string studyCourse;
         private string memo;
 
-        private string subName1;
-        private string subName2;
-        private string subName3;
+        private string subId1;
+        private string subId2;
+        private string subId3;
 
+        private string payMethod;
+        private string cardNumber;
+        private string CVV;
 
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
@@ -61,6 +64,16 @@ namespace Tuition_Centre.Class
             this.birthday = birthday;
             this.studyCourse = studyCourse;
             this.memo = memo;
+        }
+
+        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate)
+        {
+            this.stuUsername = username;
+            this.subId1 = subId1;
+            this.subId2 = subId2;
+            this.subId3 = subId3;
+            this.stuLv = stuLv;
+            this.stuEnrollDate = stuEnrollDate;
         }
 
 
@@ -120,75 +133,28 @@ namespace Tuition_Centre.Class
             con.Close();
         }
 
-            /* Insert the subjectId(s) into the studentSubject database
-            if (!string.IsNullOrEmpty(subName1))
-            {
-                // Get the subjectId according to the subjectName the user choose (subject 1)
-                SqlCommand cmdSub1 = new SqlCommand("SELECT subjectId FROM subject WHERE subjectName = @subName", con);
-                cmdSub1.Parameters.AddWithValue("@subName", subName1);
-                int subId1 = -1;
+        public void addSubjectPay()
+        {
+            // Create a new SqlConnection object with the connection string and return the status as result
+            con.Open();
 
-                using (SqlDataReader reader = cmdSub1.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        subId1 = Convert.ToInt32(reader["subjectId"]);
-                    }
-                }
+            // Insert the value of username, password, role to the users database
+            SqlCommand stuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectid1, subjectid2, subjectid3) VALUES (@username, @subId1, @subId2, @subId3)", con);
+            stuSub.Parameters.AddWithValue("@username", stuUsername);
+            stuSub.Parameters.AddWithValue("@subId1", subId1);
+            stuSub.Parameters.AddWithValue("@subId2", subId2);
+            stuSub.Parameters.AddWithValue("@subId3", subId3);
+            stuSub.ExecuteNonQuery();
 
-                // Insert the subjectId into the studentSubject database (subject 1)
-                SqlCommand cmdStuSub1 = new SqlCommand("INSERT INTO studentSubject (studentDatabaseId, subjectId) VALUES (@stuDbId, @subId)", con);
-                cmdStuSub1.Parameters.AddWithValue("@stuDbId", studentDatabaseId);
-                cmdStuSub1.Parameters.AddWithValue("@subId", subId1);
-                cmdStuSub1.ExecuteNonQuery();
-            }
+            // Insert student's information to the studentInfo database
+            SqlCommand studentInfo = new SqlCommand("UPDATE studentInfo SET level=@stulv, studentEnrollmentDate=@stuEnrollDate WHERE username=@un", con);
+            studentInfo.Parameters.AddWithValue("@stuLv", stuLv);
+            studentInfo.Parameters.AddWithValue("@stuEnrollDate", stuEnrollDate);
+            studentInfo.Parameters.AddWithValue("@un", stuUsername);
+            studentInfo.ExecuteNonQuery();
 
-            if (!string.IsNullOrEmpty(subName2))
-            {
-                // Get the subjectId according to the subjectName the user choose (subject 2)
-                SqlCommand cmdSub2 = new SqlCommand("SELECT subjectId FROM subject WHERE subjectName = @subName", con);
-                cmdSub2.Parameters.AddWithValue("@subName", subName2);
-                int subId2 = -1;
-
-                using (SqlDataReader reader = cmdSub2.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        subId2 = Convert.ToInt32(reader["subjectId"]);
-                    }
-                }
-
-                // Insert the subjectId into the studentSubject database (subject 2)
-                SqlCommand cmdStuSub2 = new SqlCommand("INSERT INTO studentSubject (studentDatabaseId, subjectId) VALUES (@stuDbId, @subId)", con);
-                cmdStuSub2.Parameters.AddWithValue("@stuDbId", studentDatabaseId);
-                cmdStuSub2.Parameters.AddWithValue("@subId", subId2);
-                cmdStuSub2.ExecuteNonQuery();
-            }
-
-            if (!string.IsNullOrEmpty(subName3))
-            {
-                // Get the subjectId according to the subjectName the user choose (subject 3)
-                SqlCommand cmdSub3 = new SqlCommand("SELECT subjectId FROM subject WHERE subjectName = @subName", con);
-                cmdSub3.Parameters.AddWithValue("@subName", subName3);
-                int subId3 = -1;
-
-                using (SqlDataReader reader = cmdSub3.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        subId3 = Convert.ToInt32(reader["subjectId"]);
-                    }
-                }
-
-                // Insert the subjectId into the studentSubject database (subject 3)
-                SqlCommand cmdStuSub3 = new SqlCommand("INSERT INTO studentSubject (studentDatabaseId, subjectId) VALUES (@stuDbId, @subId)", con);
-                cmdStuSub3.Parameters.AddWithValue("@stuDbId", studentDatabaseId);
-                cmdStuSub3.Parameters.AddWithValue("@subId", subId3);
-                cmdStuSub3.ExecuteNonQuery();
-            }
             con.Close();
-        }*/
-
+        }
 
         // Method to search for a student in the database and return the results as a DataTable
         public DataTable SearchStu(string searchName)

@@ -1,3 +1,5 @@
+using Tuition_Centre.Receptionist;
+
 namespace Tuition_Centre
 {
     internal static class Program
