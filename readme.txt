@@ -1,8 +1,13 @@
-1) To resolve the database directory error.
+1) Delete the connection string in reaad me before you push.
+	
+	i) Open the app.config file and delete the ??? 
+		eg. add name ="myCS" connectionString='???'	
+
+2) To connect database.
 
 	i) Go to the database folder, click MyDB.mdf.
 	ii) Copy the full path of the connection string.
-	iii) Open the app.config file and replace the ??? with the path you just copied.
+	iii) Open the app.config file and paste in the ??? with the path you just copied.
 		eg. add name ="myCS" connectionString='???'
 
 2) If there are Error MSB3541	
