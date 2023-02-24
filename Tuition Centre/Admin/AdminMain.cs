@@ -51,6 +51,7 @@ namespace Tuition_Centre.Admin
             AdminClass loader = new AdminClass();
             DataTable dataTable = loader.ViewTutorList();
             DataTable filteredTable = new DataTable();
+            filteredTable.Columns.Add("userId");
             filteredTable.Columns.Add("Name");
             filteredTable.Columns.Add("ID");
             filteredTable.Columns.Add("IC/Passport");
@@ -60,10 +61,9 @@ namespace Tuition_Centre.Admin
             filteredTable.Columns.Add("Date of Birth");
             filteredTable.Columns.Add("Subject");
             filteredTable.Columns.Add("Level");
-
             foreach (DataRow row in dataTable.Rows)
             {
-                filteredTable.Rows.Add(row["tutorFullName"], row["tutorId"], row["tutorICorPass"], row["tutorEmail"], row["tutorPhone"], row["tutorAddress"], row["tutorDOB"], row["subject"], row["level"]);
+                filteredTable.Rows.Add(row["userId"], row["tutorFullName"], row["tutorId"], row["tutorICorPass"], row["tutorEmail"], row["tutorPhone"], row["tutorAddress"], row["tutorDOB"], row["subject"], row["level"]);
             }
             dgvContent.DataSource = filteredTable;
 
@@ -76,6 +76,7 @@ namespace Tuition_Centre.Admin
             AdminClass loader = new AdminClass();
             DataTable dataTable = loader.ViewReceptionistList();
             DataTable filteredTable = new DataTable();
+            filteredTable.Columns.Add("usersId");
             filteredTable.Columns.Add("Name");
             filteredTable.Columns.Add("ID");
             filteredTable.Columns.Add("IC/Passport");
@@ -85,14 +86,15 @@ namespace Tuition_Centre.Admin
 
             foreach (DataRow row in dataTable.Rows)
             {
-                filteredTable.Rows.Add(row["recepName"], row["recepId"], row["recepIcP"], row["recepEmail"], row["recepPhone"], row["recepAddress"]);
+                filteredTable.Rows.Add(row["usersId"], row["recepName"], row["recepId"], row["recepIcP"], row["recepEmail"], row["recepPhone"], row["recepAddress"]);
             }
             dgvContent.DataSource = filteredTable;
         }
 
         private void btnRegisterReceptionist_Click(object sender, EventArgs e)
         {
-
+            FrmAdminRegisterReceptionist obj1 = new FrmAdminRegisterReceptionist();
+            obj1.ShowDialog();
         }
 
         private void TutorOrReceptionistClicked(bool a, bool b)
@@ -104,7 +106,7 @@ namespace Tuition_Centre.Admin
             btnRegisterReceptionist.Visible = a;
             btnDeleteReceptionist.Visible = a;
         }
-        
+
         /*private void DeleteAndConfirmationTutor()
         {
             if (dgvContent.SelectedRows.Count > 0)
@@ -133,11 +135,10 @@ namespace Tuition_Centre.Admin
                 if (confirmation)
                 {
                     DataGridViewRow selectedRow = dgvContent.SelectedRows[0];
-                    string identity = dgvContent.SelectedRows[0].Cells[1].Value.ToString();
+                    string identity = dgvContent.SelectedRows[0].Cells[0].Value.ToString();
                     dgvContent.Rows.Remove(dgvContent.SelectedRows[0]);
                     AdminClass delete = new AdminClass();
                     delete.DeleteUser(identity, table, idType);
-                    MessageBox.Show(identity);
                 }
             }
         }
@@ -160,6 +161,12 @@ namespace Tuition_Centre.Admin
             string table = "tutor";
             string idType = "tutorId";
             DeleteAndConfirmation(table, idType);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FrmAdminUpdateProfile adminFrm = new FrmAdminUpdateProfile();
+            adminFrm.ShowDialog();
         }
     }
 }

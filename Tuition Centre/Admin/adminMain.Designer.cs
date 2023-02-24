@@ -111,6 +111,7 @@
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "Update Profile";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnFinance
             // 

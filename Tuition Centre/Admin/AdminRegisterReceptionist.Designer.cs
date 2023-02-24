@@ -39,6 +39,10 @@
             lbIcP = new Label();
             lblEmail = new Label();
             btnRegister = new Button();
+            lblUsername = new Label();
+            txtbUsername = new TextBox();
+            lblPassword = new Label();
+            txtbPassword = new TextBox();
             SuspendLayout();
             // 
             // lblName
@@ -128,7 +132,7 @@
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(403, 242);
+            btnRegister.Location = new Point(403, 310);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(100, 50);
             btnRegister.TabIndex = 13;
@@ -136,11 +140,50 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Location = new Point(89, 200);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(81, 21);
+            lblUsername.TabIndex = 14;
+            lblUsername.Text = "Username";
+            // 
+            // txtbUsername
+            // 
+            txtbUsername.Location = new Point(89, 224);
+            txtbUsername.Name = "txtbUsername";
+            txtbUsername.Size = new Size(172, 23);
+            txtbUsername.TabIndex = 15;
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPassword.Location = new Point(331, 200);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(76, 21);
+            lblPassword.TabIndex = 16;
+            lblPassword.Text = "Password";
+            // 
+            // txtbPassword
+            // 
+            txtbPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtbPassword.Location = new Point(331, 224);
+            txtbPassword.Name = "txtbPassword";
+            txtbPassword.Size = new Size(172, 23);
+            txtbPassword.TabIndex = 17;
+            // 
             // FrmAdminRegisterReceptionist
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(573, 372);
+            Controls.Add(txtbPassword);
+            Controls.Add(lblPassword);
+            Controls.Add(txtbUsername);
+            Controls.Add(lblUsername);
             Controls.Add(btnRegister);
             Controls.Add(lblEmail);
             Controls.Add(lbIcP);
@@ -170,5 +213,9 @@
         private Label lbIcP;
         private Label lblEmail;
         private Button btnRegister;
+        private Label lblUsername;
+        private TextBox txtbUsername;
+        private Label lblPassword;
+        private TextBox txtbPassword;
     }
 }

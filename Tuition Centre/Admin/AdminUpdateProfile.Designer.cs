@@ -28,65 +28,147 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtbName = new System.Windows.Forms.TextBox();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            lblEmail = new Label();
+            txbEmail = new TextBox();
+            lblPhone = new Label();
+            txtbPhone = new TextBox();
+            lblAddress = new Label();
+            txtbAddress = new TextBox();
+            lblUsername = new Label();
+            txtbUsername = new TextBox();
+            lblPassword = new Label();
+            textBox1 = new TextBox();
+            btnUpdate = new Button();
+            SuspendLayout();
             // 
-            // lblName
+            // lblEmail
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(12, 9);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 15);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEmail.Location = new Point(96, 109);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(48, 21);
+            lblEmail.TabIndex = 0;
+            lblEmail.Text = "Email";
             // 
-            // txtbName
+            // txbEmail
             // 
-            this.txtbName.Location = new System.Drawing.Point(12, 27);
-            this.txtbName.Name = "txtbName";
-            this.txtbName.Size = new System.Drawing.Size(100, 23);
-            this.txtbName.TabIndex = 1;
+            txbEmail.Location = new Point(96, 133);
+            txbEmail.Name = "txbEmail";
+            txbEmail.Size = new Size(138, 23);
+            txbEmail.TabIndex = 1;
             // 
             // lblPhone
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(12, 53);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(96, 15);
-            this.lblPhone.TabIndex = 2;
-            this.lblPhone.Text = "Contact Number";
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPhone.Location = new Point(263, 9);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(54, 21);
+            lblPhone.TabIndex = 2;
+            lblPhone.Text = "Phone";
+            // 
+            // txtbPhone
+            // 
+            txtbPhone.Location = new Point(263, 33);
+            txtbPhone.Name = "txtbPhone";
+            txtbPhone.Size = new Size(138, 23);
+            txtbPhone.TabIndex = 3;
+            // 
+            // lblAddress
+            // 
+            lblAddress.AutoSize = true;
+            lblAddress.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAddress.Location = new Point(263, 59);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(66, 21);
+            lblAddress.TabIndex = 4;
+            lblAddress.Text = "Address";
+            // 
+            // txtbAddress
+            // 
+            txtbAddress.Location = new Point(263, 83);
+            txtbAddress.Name = "txtbAddress";
+            txtbAddress.Size = new Size(138, 23);
+            txtbAddress.TabIndex = 5;
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Location = new Point(96, 9);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(81, 21);
+            lblUsername.TabIndex = 6;
+            lblUsername.Text = "Username";
+            // 
+            // txtbUsername
+            // 
+            txtbUsername.Location = new Point(96, 33);
+            txtbUsername.Name = "txtbUsername";
+            txtbUsername.Size = new Size(138, 23);
+            txtbUsername.TabIndex = 7;
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPassword.Location = new Point(96, 59);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(76, 21);
+            lblPassword.TabIndex = 8;
+            lblPassword.Text = "Password";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 3;
+            textBox1.Location = new Point(96, 83);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(138, 23);
+            textBox1.TabIndex = 9;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(301, 177);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(100, 50);
+            btnUpdate.TabIndex = 10;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
             // 
             // FrmAdminUpdateProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.txtbName);
-            this.Controls.Add(this.lblName);
-            this.Name = "FrmAdminUpdateProfile";
-            this.Text = "Update Profile";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(510, 289);
+            Controls.Add(btnUpdate);
+            Controls.Add(textBox1);
+            Controls.Add(lblPassword);
+            Controls.Add(txtbUsername);
+            Controls.Add(lblUsername);
+            Controls.Add(txtbAddress);
+            Controls.Add(lblAddress);
+            Controls.Add(txtbPhone);
+            Controls.Add(lblPhone);
+            Controls.Add(txbEmail);
+            Controls.Add(lblEmail);
+            Name = "FrmAdminUpdateProfile";
+            Text = "Update Profile";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Label lblName;
-        private TextBox txtbName;
+        private Label lblEmail;
+        private TextBox txbEmail;
         private Label lblPhone;
+        private TextBox txtbPhone;
+        private Label lblAddress;
+        private TextBox txtbAddress;
+        private Label lblUsername;
+        private TextBox txtbUsername;
+        private Label lblPassword;
         private TextBox textBox1;
+        private Button btnUpdate;
     }
 }
