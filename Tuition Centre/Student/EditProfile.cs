@@ -58,21 +58,26 @@ namespace Tuition_Centre.Student
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblStudentName.Text = rd.GetString(5);
-                lblStudentNum.Text = rd.GetString(6);
-                lblStudentCourse.Text = rd.GetString(12);
-                lblStudentNumber.Text = rd.GetString(6);
-                lblStudyCourse.Text = rd.GetString(12);
-                lblName.Text = rd.GetString(5);
+                lblStudentName.Text = rd.GetString(4);
+                lblStudentNum.Text = rd.GetString(4);
+                lblStudentCourse.Text = rd.GetString(11);
+                lblStudentNumber.Text = rd.GetString(3);
+                lblStudyCourse.Text = rd.GetString(11);
+                lblName.Text = rd.GetString(4);
 
-                txtPassport.Text = rd.GetString(6);
-                birthday.Text = rd.GetString(11);
-                txtPhoneNumber.Text = rd.GetString(8);
-                txtEmail.Text = rd.GetString(7);
-                txtmemo.Text = rd.GetString(13);
+                txtPassport.Text = rd.GetString(5);
+                birthday.Text = rd.GetString(10);
+                txtPhoneNumber.Text = rd.GetString(7);
+                txtEmail.Text = rd.GetString(6);
+                txtmemo.Text = rd.GetString(12);
 
             }
             con.Close();
+        }
+
+        private void lblStudentName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

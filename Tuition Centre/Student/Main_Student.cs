@@ -35,10 +35,10 @@ namespace Tuition_Centre.Student
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblWelcome.Text = "Welcome, " + rd.GetString(5);
-                lblStudentName.Text= rd.GetString(5);
-                lblStudentNum.Text = rd.GetString(4);
-                lblStudentCourse.Text = rd.GetString(12);
+                lblWelcome.Text = "Welcome, " + rd.GetString(4);
+                lblStudentName.Text= rd.GetString(4);
+                lblStudentNum.Text = rd.GetString(3);
+                lblStudentCourse.Text = rd.GetString(11);
             }
             con.Close();
 

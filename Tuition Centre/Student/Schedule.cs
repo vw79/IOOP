@@ -60,7 +60,7 @@ namespace Tuition_Centre.Student
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblStudentInfo.Text = rd.GetString(5) + " |  " + rd.GetString(4) + " |  " +  rd.GetString(12);
+                lblStudentInfo.Text = rd.GetString(4) + " |  " + rd.GetString(3) + " |  " +  rd.GetString(11);
             }
 
             con.Close();
@@ -72,9 +72,9 @@ namespace Tuition_Centre.Student
             SqlDataReader read = cmd2.ExecuteReader();
             while (read.Read())
             {
-                code1.Text = read.GetString(3);
-                code2.Text = read.GetString(4);
-                code3.Text = read.GetString(5);
+                code1.Text = read.GetString(2);
+                code2.Text = read.GetString(3);
+                code3.Text = read.GetString(4);
 
 
             }
@@ -91,8 +91,8 @@ namespace Tuition_Centre.Student
             {
                 lblsubject1.Text = r.GetString(1);
                 location1.Text = r.GetString(5);
-                date1.Text = r.GetString(4);
-                time1.Text = r.GetString(2) + " - " + r.GetString(3);
+                date1.Text = r.GetString(3);
+                time1.Text = r.GetString(2) + " - " + r.GetString(4);
                 teacher1.Text= r.GetString(6);
             }
             con3.Close();
@@ -107,8 +107,8 @@ namespace Tuition_Centre.Student
             {
                 lblsubject2.Text= r2.GetString(1);
                 location2.Text = r2.GetString(5);
-                date2.Text = r2.GetString(4);
-                time2.Text = r2.GetString(2) + " - " + r2.GetString(3);
+                date2.Text = r2.GetString(3);
+                time2.Text = r2.GetString(2) + " - " + r2.GetString(4);
                 teacher2.Text = r2.GetString(6);
             }
             con4.Close();
@@ -123,8 +123,8 @@ namespace Tuition_Centre.Student
             {
                 lblsubject3.Text = r3.GetString(1);
                 location3.Text = r3.GetString(5);
-                date3.Text = r3.GetString(4);
-                time3.Text = r3.GetString(2) + " - " + r3.GetString(3);
+                date3.Text = r3.GetString(3);
+                time3.Text = r3.GetString(2) + " - " + r3.GetString(4);
                 teacher3.Text = r3.GetString(6);
             }
             con5.Close();
