@@ -180,10 +180,10 @@ namespace Tuition_Centre.Class
 
             // Insert the value of studentDatabaseId, paymentMethod, cardNumber,CVV to the paymentInfo database
             SqlCommand cmdStuPay = new SqlCommand("INSERT INTO paymentInfo (studentDatabaseId, paymentMethod, cardNumber, CVV) " +
-                                               "SELECT s.studentDatabaseld, @payMethod, @cardNum, @cvv " +
-                                               "FROM studentInfo s " +
-                                               "LEFT JOIN paymentInfo p ON s.studentDatabaseld = p.studentDatabaseId " +
-                                               "WHERE s.username = @un", con);
+                                                  "SELECT s.studentDatabaseld, @payMethod, @cardNum, @cvv " +
+                                                  "FROM studentInfo s " +
+                                                  "LEFT JOIN paymentInfo p ON s.studentDatabaseld = p.studentDatabaseId " +
+                                                  "WHERE s.username = @un", con);
 
             cmdStuPay.Parameters.AddWithValue("@payMethod", payMethod);
             cmdStuPay.Parameters.AddWithValue("@cardNum", cardNumber);
@@ -270,19 +270,19 @@ namespace Tuition_Centre.Class
 
             
         
-            public void UpdateRecepInfo(string un)
-            {
-                con.Open() ;
+        public void UpdateRecepInfo(string un)
+        {
+            con.Open();
 
-                SqlCommand cmdRecepInfo = new SqlCommand("UPDATE receptionist r LEFT JOIN users u ON r.usersId = u.usersId SET r.recepPhone = @rcpPhone, r.recepAddress = @rcpAddress, r.recepEmail = @rcpEmail WHERE u.username=@un", con);
-                cmdRecepInfo.Parameters.AddWithValue("@rcpPhone", rcpPhone);
-                cmdRecepInfo.Parameters.AddWithValue("@rcpAddress", rcpAddress);
-                cmdRecepInfo.Parameters.AddWithValue("@rcpEmail", rcpEmail);
-                cmdRecepInfo.Parameters.AddWithValue("@un", un);
-                cmdRecepInfo.ExecuteNonQuery();
+            SqlCommand cmdRecepInfo = new SqlCommand("UPDATE receptionist r INNER JOIN users u ON r.usersId = u.usersId SET r.recepPhone = @rcpPhone, r.recepAddress = @rcpAddress, r.recepEmail = @rcpEmail WHERE u.username=@un", con);
+            cmdRecepInfo.Parameters.AddWithValue("@rcpPhone", rcpPhone);
+            cmdRecepInfo.Parameters.AddWithValue("@rcpAddress", rcpAddress);
+            cmdRecepInfo.Parameters.AddWithValue("@rcpEmail", rcpEmail);
+            cmdRecepInfo.Parameters.AddWithValue("@un", un);
+            cmdRecepInfo.ExecuteNonQuery();
 
-                con.Close();
-            }
+            con.Close();
+        }
         /*
             public void GenerateReceipt(Receptionist)
             {

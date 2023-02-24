@@ -15,6 +15,7 @@ namespace Tuition_Centre.Receptionist
     public partial class frmMainReceptionist : Form
     {
         private string un;
+        private string stuName;
 
         public frmMainReceptionist()
         {
@@ -46,7 +47,7 @@ namespace Tuition_Centre.Receptionist
 
         private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
         {
-            frmUpdateStu studentInfoPage1 = new frmUpdateStu(un);
+            frmUpdateStu studentInfoPage1 = new frmUpdateStu(un, stuName);
             studentInfoPage1.Show();
             this.Hide();
         }

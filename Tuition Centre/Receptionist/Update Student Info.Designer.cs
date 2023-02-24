@@ -62,7 +62,7 @@
             btnDeleteStu.TabIndex = 2;
             btnDeleteStu.Text = "Delete Student";
             btnDeleteStu.UseVisualStyleBackColor = true;
-            btnDeleteStu.Click += btnDeleteStu_Click;
+            //btnDeleteStu.Click += btnDeleteStu_Click;
             // 
             // btnUpPay
             // 
@@ -72,7 +72,7 @@
             btnUpPay.TabIndex = 1;
             btnUpPay.Text = "Update Payment";
             btnUpPay.UseVisualStyleBackColor = true;
-            btnUpPay.Click += btnUpPay_Click;
+//            btnUpPay.Click += btnUpPay_Click;
             // 
             // btnUpSub
             // 
@@ -82,7 +82,7 @@
             btnUpSub.TabIndex = 0;
             btnUpSub.Text = "Update Subject";
             btnUpSub.UseVisualStyleBackColor = true;
-            btnUpSub.Click += btnUpSub_Click;
+   //         btnUpSub.Click += btnUpSub_Click;
             // 
             // lblStuName
             // 
