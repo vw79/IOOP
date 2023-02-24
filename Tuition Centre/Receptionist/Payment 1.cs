@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,14 @@ namespace Tuition_Centre.Receptionist
     public partial class frmPayment1 : Form
     {
         // Create a new Receptionist object
-        private Recep rcp= new Recep();
+        private Recep rcp = new Recep();
 
         public frmPayment1()
+        {
+            InitializeComponent();
+        }
+
+        public frmPayment1(string un)
         {
             InitializeComponent();
             // Attach the event handler to the DataGridView's SelectionChanged event
@@ -27,26 +33,33 @@ namespace Tuition_Centre.Receptionist
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // Get the search term from txtSearch
-            string searchName = txtSearch.Text;
+            rcp.SearchName= txtSearch.Text;
 
             // Call the SearchStu method of the Receptionist object and pass in the search term
-            DataTable dt = rcp.SearchStu(searchName);
+            DataTable dt = rcp.SearchStu();
 
-            // Create a new DataTable with only the desired columns
-            DataTable filteredTable = new DataTable();
-            filteredTable.Columns.Add("ID");
-            filteredTable.Columns.Add("Name"); 
-            filteredTable.Columns.Add("Enrollment Date");
-            filteredTable.Columns.Add("Study Course");
-
-            // Add the rows from the dt to the filteredTable
-            foreach (DataRow row in dt.Rows)
-            { 
-                filteredTable.Rows.Add(row["studentId"], row["studentName"], row["studentEnrollmentDate"], row["studyCourse"]);
+            if (dt == null)
+            {
+                MessageBox.Show("Student Name Not Found");
             }
+            else
+            {
+                // Create a new DataTable with only the desired columns
+                DataTable filteredTable = new DataTable();
+                filteredTable.Columns.Add("ID");
+                filteredTable.Columns.Add("Name");
+                filteredTable.Columns.Add("Enrollment Date");
+                filteredTable.Columns.Add("Study Course");
 
-            // Set the DataSource property of the dgvStuInfo to the filteredTable containing only the desired columns
-            dgvStuInfo.DataSource = filteredTable;
+                // Add the rows from the dt to the filteredTable
+                foreach (DataRow row in dt.Rows)
+                {
+                    filteredTable.Rows.Add(row["studentId"], row["studentName"], row["studentEnrollmentDate"], row["studyCourse"]);
+                }
+
+                // Set the DataSource property of the dgvStuInfo to the filteredTable containing only the desired columns
+                dgvStuInfo.DataSource = filteredTable;
+            }
         }
 
         private void dgvStuInfo_SelectionChanged(object sender, EventArgs e)

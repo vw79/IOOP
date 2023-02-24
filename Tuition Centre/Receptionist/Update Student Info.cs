@@ -20,6 +20,11 @@ namespace Tuition_Centre.Receptionist
             InitializeComponent();
         }
 
+        public frmUpdateStu(string un)
+        {
+            InitializeComponent();
+        }
+
         private void openChildForm (Form childForm, object btnSender)
         {
             if (activeForm != null)

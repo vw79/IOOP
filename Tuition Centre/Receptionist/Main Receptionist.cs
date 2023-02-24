@@ -32,7 +32,7 @@ namespace Tuition_Centre.Receptionist
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            frmPayment1 paymentPage1 = new frmPayment1();
+            frmPayment1 paymentPage1 = new frmPayment1(un);
             paymentPage1.Show();
             this.Hide();
         }
@@ -53,7 +53,7 @@ namespace Tuition_Centre.Receptionist
 
         private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
         {
-            frmUpdateStu studentInfoPage1 = new frmUpdateStu();
+            frmUpdateStu studentInfoPage1 = new frmUpdateStu(un);
             studentInfoPage1.Show();
             this.Hide();
         }

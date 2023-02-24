@@ -45,8 +45,6 @@ namespace Tuition_Centre.Receptionist
             }
         }
 
-
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (cmbPayment.SelectedIndex == 0)
@@ -58,11 +56,10 @@ namespace Tuition_Centre.Receptionist
             Recep rcp = new Recep(stuUsername, cmbSubject1.Text, cmbSubject2.Text, cmbSubject3.Text, cmbLevel.Text, dtpEnrollDate.Text, cmbPayment.Text, txtCardNum.Text, txtCVV.Text);
             rcp.addSubjectPay();
 
-            MessageBox.Show("haha");
+            MessageBox.Show("Register Complete");
+            frmMainReceptionist main = new frmMainReceptionist();
+            main.Show();
+            this.Hide();
         }
-
-
-
-
     }
 }

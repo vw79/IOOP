@@ -39,9 +39,9 @@
             // 
             // btnRegNewStu
             // 
-            btnRegNewStu.Location = new Point(173, 186);
+            btnRegNewStu.Location = new Point(160, 178);
             btnRegNewStu.Name = "btnRegNewStu";
-            btnRegNewStu.Size = new Size(160, 23);
+            btnRegNewStu.Size = new Size(176, 49);
             btnRegNewStu.TabIndex = 0;
             btnRegNewStu.Text = "Register New Student";
             btnRegNewStu.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // 
             // btnUpdateRcpInfo
             // 
-            btnUpdateRcpInfo.Location = new Point(443, 186);
+            btnUpdateRcpInfo.Location = new Point(430, 178);
             btnUpdateRcpInfo.Name = "btnUpdateRcpInfo";
-            btnUpdateRcpInfo.Size = new Size(160, 23);
+            btnUpdateRcpInfo.Size = new Size(176, 49);
             btnUpdateRcpInfo.TabIndex = 1;
             btnUpdateRcpInfo.Text = "Update Receptionist Info";
             btnUpdateRcpInfo.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // 
             // btnUpdateStudentInfo
             // 
-            btnUpdateStudentInfo.Location = new Point(173, 289);
+            btnUpdateStudentInfo.Location = new Point(160, 281);
             btnUpdateStudentInfo.Name = "btnUpdateStudentInfo";
-            btnUpdateStudentInfo.Size = new Size(160, 23);
+            btnUpdateStudentInfo.Size = new Size(176, 49);
             btnUpdateStudentInfo.TabIndex = 2;
             btnUpdateStudentInfo.Text = "Update Student Info";
             btnUpdateStudentInfo.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             // btnPayment
             // 
-            btnPayment.Location = new Point(443, 289);
+            btnPayment.Location = new Point(430, 281);
             btnPayment.Name = "btnPayment";
-            btnPayment.Size = new Size(160, 23);
+            btnPayment.Size = new Size(176, 49);
             btnPayment.TabIndex = 3;
             btnPayment.Text = "Payment";
             btnPayment.UseVisualStyleBackColor = true;

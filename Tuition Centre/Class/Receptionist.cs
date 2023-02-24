@@ -39,6 +39,11 @@ namespace Tuition_Centre.Class
         private string cardNumber;
         private string CVV;
 
+        private string searchName;
+
+
+        public string SearchName { get => searchName; set => searchName = value; }
+        
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
@@ -177,7 +182,7 @@ namespace Tuition_Centre.Class
         }
 
         // Method to search for a student in the database and return the results as a DataTable
-        public DataTable SearchStu(string searchName)
+        public DataTable SearchStu()
         {
             // Create a new SqlConnection object with the connection string
             con.Open();
@@ -196,6 +201,13 @@ namespace Tuition_Centre.Class
             // Fill the DataTable with the search results using the SqlDataAdapter
             adp.Fill(dt);
 
+            if (dt.Rows.Count == 0)
+            {
+                con.Close();
+                return null;
+            }
+
+            con.Close() ;
             // Return the DataTable
             return dt;
         }
