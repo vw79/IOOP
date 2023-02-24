@@ -36,7 +36,7 @@ namespace Tuition_Centre.Receptionist
 
             con.Open();
 
-            SqlCommand rdChangeSub = new SqlCommand("SELECT c.date, s.studentName, c.oldSubject, c.newSubject, c.reasons, c.acceptanceStatus " +
+            SqlCommand rdChangeSub = new SqlCommand("SELECT s.studentId, c.date, s.studentName, c.oldSubject, c.newSubject, c.reasons, c.acceptanceStatus " +
                                                     "FROM changeSubject c " +
                                                     "INNER JOIN studentInfo s ON s.studentDatabaseld = c.studentDatabaseId ", con);
 
@@ -64,7 +64,9 @@ namespace Tuition_Centre.Receptionist
             // Set the DataSource property of the dgvStuInfo to the filteredTable containing only the desired columns
             dgvChangeSubject.DataSource = filteredTable;
             dgvChangeSubject.ReadOnly = true;
+            dgvChangeSubject.SelectionChanged += dgvChangeSubject_SelectionChanged;
         }
+    
 
         private void dgvChangeSubject_SelectionChanged(object sender, EventArgs e)
         {
@@ -72,6 +74,7 @@ namespace Tuition_Centre.Receptionist
             DataGridViewRow selectedRow = dgvChangeSubject.CurrentRow;
 
             // Extract the data for each column from the selected row
+            string id = selectedRow.Cells
             string date = selectedRow.Cells["Date"].Value.ToString();
             string studentName = selectedRow.Cells["Student Name"].Value.ToString();
             string oldSubject = selectedRow.Cells["Old Subject"].Value.ToString();
@@ -79,12 +82,16 @@ namespace Tuition_Centre.Receptionist
             string reason = selectedRow.Cells["Reason"].Value.ToString();
             string status = selectedRow.Cells["Status"].Value.ToString();
 
+            lblStuName.Text = studentName;
+
             // Create a new instance of the frmUpdateSubject form and pass in the extracted data as parameters
             frmUpdateStu1 updateStuSub = new frmUpdateStu1(date, studentName, oldSubject, newSubject, reason, status);
 
-            // Show the updateSubjectForm to allow the user to update the subject data
-            updateStuSub.Show();
-
+            // Add the frmUpdateSubject form to the panel3 control
+            panel3.Controls.Clear();
+            panel3.Controls.Add(updateStuSub);
+            updateStuSub.Dock = DockStyle.Fill;
+            updateStuSub.BringToFront();
         }
 
         /*

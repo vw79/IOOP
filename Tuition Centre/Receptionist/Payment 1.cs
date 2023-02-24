@@ -61,6 +61,7 @@ namespace Tuition_Centre.Receptionist
 
                 // Set the DataSource property of the dgvStuInfo to the filteredTable containing only the desired columns
                 dgvStuInfo.DataSource = filteredTable;
+                dgvStuInfo.ReadOnly = true;
             }
         }
 
