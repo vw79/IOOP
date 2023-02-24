@@ -42,7 +42,6 @@
             btnNext = new Button();
             txtUsername = new TextBox();
             txtPw = new TextBox();
-            txtStuId = new TextBox();
             txtCourse = new TextBox();
             dtpBirthday = new DateTimePicker();
             txtMemo = new TextBox();
@@ -64,6 +63,7 @@
             grpBirthday = new GroupBox();
             lblBirthday = new Label();
             pictureHome = new PictureBox();
+            lblNewStuId = new Label();
             grpPhone.SuspendLayout();
             grpEmail.SuspendLayout();
             grpName.SuspendLayout();
@@ -182,13 +182,6 @@
             txtPw.Size = new Size(200, 23);
             txtPw.TabIndex = 28;
             // 
-            // txtStuId
-            // 
-            txtStuId.Location = new Point(6, 34);
-            txtStuId.Name = "txtStuId";
-            txtStuId.Size = new Size(200, 23);
-            txtStuId.TabIndex = 29;
-            // 
             // txtCourse
             // 
             txtCourse.Location = new Point(6, 34);
@@ -253,7 +246,7 @@
             // 
             // grpStuId
             // 
-            grpStuId.Controls.Add(txtStuId);
+            grpStuId.Controls.Add(lblNewStuId);
             grpStuId.Controls.Add(lblStuId);
             grpStuId.Location = new Point(23, 35);
             grpStuId.Name = "grpStuId";
@@ -386,6 +379,14 @@
             pictureHome.TabStop = false;
             pictureHome.Click += pictureHome_Click;
             // 
+            // lblNewStuId
+            // 
+            lblNewStuId.BorderStyle = BorderStyle.Fixed3D;
+            lblNewStuId.Location = new Point(6, 37);
+            lblNewStuId.Name = "lblNewStuId";
+            lblNewStuId.Size = new Size(200, 23);
+            lblNewStuId.TabIndex = 48;
+            // 
             // frmRegister1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -447,7 +448,6 @@
         private Button btnNext;
         private TextBox txtUsername;
         private TextBox txtPw;
-        private TextBox txtStuId;
         private TextBox txtCourse;
         private DateTimePicker dtpBirthday;
         private TextBox txtMemo;
@@ -469,5 +469,6 @@
         private Label lblPw;
         private Label lblBirthday;
         private PictureBox pictureHome;
+        private Label lblNewStuId;
     }
 }

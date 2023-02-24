@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography.Pkcs;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -15,6 +16,7 @@ namespace Tuition_Centre.Class
 {
     internal class Recep
     {
+        private string un;
         private string stuUsername;
         private string stuPw;
         private string role;
@@ -43,7 +45,7 @@ namespace Tuition_Centre.Class
 
 
         public string SearchName { get => searchName; set => searchName = value; }
-        
+
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
@@ -112,7 +114,6 @@ namespace Tuition_Centre.Class
         // Method to Register into users, studentInfo database 
         public void addStudent()
         {
-            // Create a new SqlConnection object with the connection string and return the status as result
             con.Open();
 
             // Insert the value of username, password, role to the users database

@@ -14,7 +14,7 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmMainReceptionist : Form
     {
-        string un;
+        private string un;
 
         public frmMainReceptionist()
         {

@@ -15,16 +15,18 @@ namespace Tuition_Centre.Receptionist
     public partial class frmRegister2 : Form
     {
         private string stuUsername;
+        private string un;
 
         public frmRegister2()
         {
             InitializeComponent();
         }
 
-        public frmRegister2(string stuUsername)
+        public frmRegister2(string un, string stuUsername)
         {
             InitializeComponent();
             this.stuUsername = stuUsername;
+            this.un = un;
             grpCardInfo.Visible = false;
             // Attach the cmbPayment_SelectedIndexChanged method to the SelectedIndexChanged event of the cmbPayment ComboBox
             cmbPayment.SelectedIndexChanged += cmbPayment_SelectedIndexChanged;
@@ -57,8 +59,8 @@ namespace Tuition_Centre.Receptionist
             rcp.addSubjectPay();
 
             MessageBox.Show("Register Complete");
-            frmMainReceptionist main = new frmMainReceptionist();
-            main.Show();
+            frmMainReceptionist mainRcp = new frmMainReceptionist(un);
+            mainRcp.Show();
             this.Hide();
         }
     }
