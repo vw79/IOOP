@@ -28,208 +28,265 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtbName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.txtbID = new System.Windows.Forms.TextBox();
-            this.lblSubject = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.txtbPhone = new System.Windows.Forms.TextBox();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.txtbAddress = new System.Windows.Forms.TextBox();
-            this.cmbSubject = new System.Windows.Forms.ComboBox();
-            this.lblLevel = new System.Windows.Forms.Label();
-            this.cmbLevel = new System.Windows.Forms.ComboBox();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtbEmail = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            txtbUsername = new TextBox();
+            lblUsername = new Label();
+            lblSubject = new Label();
+            lblPhone = new Label();
+            txtbPhone = new TextBox();
+            lblAddress = new Label();
+            txtbAddress = new TextBox();
+            lblLevel = new Label();
+            cmbLevel = new ComboBox();
+            btnRegister = new Button();
+            lblEmail = new Label();
+            txtbEmail = new TextBox();
+            lblFullName = new Label();
+            txtbFullName = new TextBox();
+            lblIcP = new Label();
+            txtbIcP = new TextBox();
+            dtpDOB = new DateTimePicker();
+            lblDOB = new Label();
+            txtbSubject = new TextBox();
+            lblPassword = new Label();
+            txtbPassword = new TextBox();
+            SuspendLayout();
             // 
-            // txtbName
+            // txtbUsername
             // 
-            this.txtbName.Location = new System.Drawing.Point(110, 56);
-            this.txtbName.Name = "txtbName";
-            this.txtbName.Size = new System.Drawing.Size(172, 23);
-            this.txtbName.TabIndex = 0;
+            txtbUsername.Location = new Point(268, 213);
+            txtbUsername.Name = "txtbUsername";
+            txtbUsername.Size = new Size(200, 23);
+            txtbUsername.TabIndex = 0;
             // 
-            // lblName
+            // lblUsername
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(110, 32);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(52, 21);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Name";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(110, 82);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(25, 21);
-            this.lblID.TabIndex = 2;
-            this.lblID.Text = "ID";
-            // 
-            // txtbID
-            // 
-            this.txtbID.Location = new System.Drawing.Point(110, 106);
-            this.txtbID.Name = "txtbID";
-            this.txtbID.Size = new System.Drawing.Size(172, 23);
-            this.txtbID.TabIndex = 3;
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.Location = new Point(268, 189);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(81, 21);
+            lblUsername.TabIndex = 1;
+            lblUsername.Text = "Username";
             // 
             // lblSubject
             // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSubject.Location = new System.Drawing.Point(334, 32);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(61, 21);
-            this.lblSubject.TabIndex = 4;
-            this.lblSubject.Text = "Subject";
+            lblSubject.AutoSize = true;
+            lblSubject.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSubject.Location = new Point(268, 32);
+            lblSubject.Name = "lblSubject";
+            lblSubject.Size = new Size(61, 21);
+            lblSubject.TabIndex = 4;
+            lblSubject.Text = "Subject";
             // 
             // lblPhone
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPhone.Location = new System.Drawing.Point(110, 132);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(125, 21);
-            this.lblPhone.TabIndex = 6;
-            this.lblPhone.Text = "Contact Number";
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPhone.Location = new Point(48, 89);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(125, 21);
+            lblPhone.TabIndex = 6;
+            lblPhone.Text = "Contact Number";
             // 
             // txtbPhone
             // 
-            this.txtbPhone.Location = new System.Drawing.Point(110, 156);
-            this.txtbPhone.Name = "txtbPhone";
-            this.txtbPhone.Size = new System.Drawing.Size(172, 23);
-            this.txtbPhone.TabIndex = 7;
+            txtbPhone.Location = new Point(48, 113);
+            txtbPhone.Name = "txtbPhone";
+            txtbPhone.Size = new Size(172, 23);
+            txtbPhone.TabIndex = 7;
             // 
             // lblAddress
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAddress.Location = new System.Drawing.Point(110, 182);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(66, 21);
-            this.lblAddress.TabIndex = 8;
-            this.lblAddress.Text = "Address";
+            lblAddress.AutoSize = true;
+            lblAddress.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAddress.Location = new Point(48, 189);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(66, 21);
+            lblAddress.TabIndex = 8;
+            lblAddress.Text = "Address";
             // 
             // txtbAddress
             // 
-            this.txtbAddress.Location = new System.Drawing.Point(110, 206);
-            this.txtbAddress.Name = "txtbAddress";
-            this.txtbAddress.Size = new System.Drawing.Size(172, 23);
-            this.txtbAddress.TabIndex = 9;
-            // 
-            // cmbSubject
-            // 
-            this.cmbSubject.FormattingEnabled = true;
-            this.cmbSubject.Location = new System.Drawing.Point(334, 56);
-            this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(193, 23);
-            this.cmbSubject.TabIndex = 12;
+            txtbAddress.Location = new Point(48, 213);
+            txtbAddress.Name = "txtbAddress";
+            txtbAddress.Size = new Size(172, 23);
+            txtbAddress.TabIndex = 9;
             // 
             // lblLevel
             // 
-            this.lblLevel.AutoSize = true;
-            this.lblLevel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLevel.Location = new System.Drawing.Point(334, 82);
-            this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(46, 21);
-            this.lblLevel.TabIndex = 13;
-            this.lblLevel.Text = "Level";
+            lblLevel.AutoSize = true;
+            lblLevel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLevel.Location = new Point(268, 82);
+            lblLevel.Name = "lblLevel";
+            lblLevel.Size = new Size(46, 21);
+            lblLevel.TabIndex = 13;
+            lblLevel.Text = "Level";
             // 
             // cmbLevel
             // 
-            this.cmbLevel.FormattingEnabled = true;
-            this.cmbLevel.Location = new System.Drawing.Point(334, 106);
-            this.cmbLevel.Name = "cmbLevel";
-            this.cmbLevel.Size = new System.Drawing.Size(193, 23);
-            this.cmbLevel.TabIndex = 14;
+            cmbLevel.FormattingEnabled = true;
+            cmbLevel.Items.AddRange(new object[] { "level 1", "level 2", "level 3", "level 4", "level 5" });
+            cmbLevel.Location = new Point(268, 106);
+            cmbLevel.Name = "cmbLevel";
+            cmbLevel.Size = new Size(200, 23);
+            cmbLevel.TabIndex = 14;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(688, 388);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(100, 50);
-            this.btnRegister.TabIndex = 15;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(12, 388);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 50);
-            this.btnBack.TabIndex = 16;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            btnRegister.Location = new Point(368, 324);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(100, 50);
+            btnRegister.TabIndex = 15;
+            btnRegister.Text = "Register";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.Location = new System.Drawing.Point(110, 232);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 21);
-            this.lblEmail.TabIndex = 17;
-            this.lblEmail.Text = "Email";
+            lblEmail.AutoSize = true;
+            lblEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEmail.Location = new Point(48, 239);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(48, 21);
+            lblEmail.TabIndex = 17;
+            lblEmail.Text = "Email";
             // 
             // txtbEmail
             // 
-            this.txtbEmail.Location = new System.Drawing.Point(110, 256);
-            this.txtbEmail.Name = "txtbEmail";
-            this.txtbEmail.Size = new System.Drawing.Size(172, 23);
-            this.txtbEmail.TabIndex = 18;
+            txtbEmail.Location = new Point(48, 263);
+            txtbEmail.Name = "txtbEmail";
+            txtbEmail.Size = new Size(172, 23);
+            txtbEmail.TabIndex = 18;
+            // 
+            // lblFullName
+            // 
+            lblFullName.AutoSize = true;
+            lblFullName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFullName.Location = new Point(48, 32);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(81, 21);
+            lblFullName.TabIndex = 19;
+            lblFullName.Text = "Full Name";
+            // 
+            // txtbFullName
+            // 
+            txtbFullName.Location = new Point(48, 56);
+            txtbFullName.Name = "txtbFullName";
+            txtbFullName.Size = new Size(172, 23);
+            txtbFullName.TabIndex = 20;
+            // 
+            // lblIcP
+            // 
+            lblIcP.AutoSize = true;
+            lblIcP.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblIcP.Location = new Point(48, 139);
+            lblIcP.Name = "lblIcP";
+            lblIcP.Size = new Size(89, 21);
+            lblIcP.TabIndex = 21;
+            lblIcP.Text = "IC/Passport";
+            // 
+            // txtbIcP
+            // 
+            txtbIcP.Location = new Point(48, 163);
+            txtbIcP.Name = "txtbIcP";
+            txtbIcP.Size = new Size(172, 23);
+            txtbIcP.TabIndex = 22;
+            // 
+            // dtpDOB
+            // 
+            dtpDOB.Location = new Point(268, 163);
+            dtpDOB.Name = "dtpDOB";
+            dtpDOB.Size = new Size(200, 23);
+            dtpDOB.TabIndex = 23;
+            // 
+            // lblDOB
+            // 
+            lblDOB.AutoSize = true;
+            lblDOB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDOB.Location = new Point(268, 139);
+            lblDOB.Name = "lblDOB";
+            lblDOB.Size = new Size(97, 21);
+            lblDOB.TabIndex = 24;
+            lblDOB.Text = "Date of Birth";
+            // 
+            // txtbSubject
+            // 
+            txtbSubject.Location = new Point(268, 56);
+            txtbSubject.Name = "txtbSubject";
+            txtbSubject.Size = new Size(200, 23);
+            txtbSubject.TabIndex = 25;
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPassword.Location = new Point(268, 239);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(76, 21);
+            lblPassword.TabIndex = 26;
+            lblPassword.Text = "Password";
+            // 
+            // txtbPassword
+            // 
+            txtbPassword.Location = new Point(268, 263);
+            txtbPassword.Name = "txtbPassword";
+            txtbPassword.Size = new Size(200, 23);
+            txtbPassword.TabIndex = 27;
             // 
             // FrmAdminRegisterTutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtbEmail);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.cmbLevel);
-            this.Controls.Add(this.lblLevel);
-            this.Controls.Add(this.cmbSubject);
-            this.Controls.Add(this.txtbAddress);
-            this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.txtbPhone);
-            this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblSubject);
-            this.Controls.Add(this.txtbID);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.txtbName);
-            this.Name = "FrmAdminRegisterTutor";
-            this.Text = "Register Tutor";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(512, 412);
+            Controls.Add(txtbPassword);
+            Controls.Add(lblPassword);
+            Controls.Add(txtbSubject);
+            Controls.Add(lblDOB);
+            Controls.Add(dtpDOB);
+            Controls.Add(txtbIcP);
+            Controls.Add(lblIcP);
+            Controls.Add(txtbFullName);
+            Controls.Add(lblFullName);
+            Controls.Add(txtbEmail);
+            Controls.Add(lblEmail);
+            Controls.Add(btnRegister);
+            Controls.Add(cmbLevel);
+            Controls.Add(lblLevel);
+            Controls.Add(txtbAddress);
+            Controls.Add(lblAddress);
+            Controls.Add(txtbPhone);
+            Controls.Add(lblPhone);
+            Controls.Add(lblSubject);
+            Controls.Add(lblUsername);
+            Controls.Add(txtbUsername);
+            Name = "FrmAdminRegisterTutor";
+            Text = "Register Tutor";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private TextBox txtbName;
-        private Label lblName;
-        private Label lblID;
-        private TextBox txtbID;
+        private TextBox txtbUsername;
+        private Label lblUsername;
         private Label lblSubject;
         private Label lblPhone;
         private TextBox txtbPhone;
         private Label lblAddress;
         private TextBox txtbAddress;
-        private ComboBox cmbSubject;
         private Label lblLevel;
         private ComboBox cmbLevel;
         private Button btnRegister;
-        private Button btnBack;
         private Label lblEmail;
         private TextBox txtbEmail;
+        private Label lblFullName;
+        private TextBox txtbFullName;
+        private Label lblIcP;
+        private TextBox txtbIcP;
+        private DateTimePicker dtpDOB;
+        private Label lblDOB;
+        private TextBox txtbSubject;
+        private Label lblPassword;
+        private TextBox txtbPassword;
     }
 }

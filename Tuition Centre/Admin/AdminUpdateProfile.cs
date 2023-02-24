@@ -16,5 +16,6 @@ namespace Tuition_Centre.Admin
         {
             InitializeComponent();
         }
+
     }
 }
