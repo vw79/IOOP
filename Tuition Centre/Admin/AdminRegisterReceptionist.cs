@@ -21,17 +21,27 @@ namespace Tuition_Centre.Admin
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string name = txtbName.Text;
-            string icP = txtbIcP.Text;
-            string phone = txtbPhone.Text;
-            string email = txtbEmail.Text;
-            string address = txtbAddress.Text;
-            string username = txtbUsername.Text;
-            string password = txtbPassword.Text;
+            if (!string.IsNullOrEmpty(txtbName.Text) || !string.IsNullOrEmpty(txtbIcP.Text) || !string.IsNullOrEmpty(txtbPhone.Text) || 
+                !string.IsNullOrEmpty(txtbEmail.Text) || !string.IsNullOrEmpty(txtbAddress.Text) || !string.IsNullOrEmpty(txtbUsername.Text) ||
+                !string.IsNullOrEmpty(txtbPassword.Text))
+            {
+                MessageBox.Show("Please make sure all fields are filled");
+            }
+            else
+            {
+                string name = txtbName.Text;
+                string icP = txtbIcP.Text;
+                string phone = txtbPhone.Text;
+                string email = txtbEmail.Text;
+                string address = txtbAddress.Text;
+                string username = txtbUsername.Text;
+                string password = txtbPassword.Text;
 
-            AdminClass register = new AdminClass(name, icP, email, phone, address, username, password);
-            register.RegisterReceptionist();
-            this.Close();
+                AdminClass register = new AdminClass(name, icP, email, phone, address, username, password);
+                register.RegisterReceptionist();
+                this.Close();
+                
+            }
         }
     }
 }

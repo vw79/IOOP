@@ -155,5 +155,12 @@ namespace Tuition_Centre.Admin
             FrmAdminUpdateProfile adminFrm = new FrmAdminUpdateProfile(username);
             adminFrm.ShowDialog();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Close();
+        }
     }
 }

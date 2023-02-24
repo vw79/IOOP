@@ -20,19 +20,29 @@ namespace Tuition_Centre.Admin
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string fullName = txtbFullName.Text;
-            string phone    = txtbPhone.Text;
-            string icP      = txtbIcP.Text;
-            string address  = txtbAddress.Text;
-            string email    = txtbEmail.Text;
-            string subject  = txtbSubject.Text;
-            string level    = cmbLevel.Text;
-            string dob      = dtpDOB.Text;
-            string username = txtbUsername.Text;
-            string password = txtbPassword.Text;
-            AdminClass register = new AdminClass(fullName, username, password, phone, email, dob, address, subject, level, icP);
-            register.RegisterTutor();
-            this.Close();
+            if (!string.IsNullOrEmpty(txtbFullName.Text) || !string.IsNullOrEmpty(txtbPhone.Text) || !string.IsNullOrEmpty(txtbIcP.Text) || 
+                !string.IsNullOrEmpty(txtbAddress.Text) || !string.IsNullOrEmpty(txtbEmail.Text) || !string.IsNullOrEmpty(txtbSubject.Text) ||
+                !string.IsNullOrEmpty(cmbLevel.Text) || !string.IsNullOrEmpty(dtpDOB.Text) || !string.IsNullOrEmpty(txtbUsername.Text) ||
+                !string.IsNullOrEmpty(txtbPassword.Text))
+            {
+                MessageBox.Show("Please make sure all fields are filled");
+            }
+            else
+            {
+                string fullName = txtbFullName.Text;
+                string phone = txtbPhone.Text;
+                string icP = txtbIcP.Text;
+                string address = txtbAddress.Text;
+                string email = txtbEmail.Text;
+                string subject = txtbSubject.Text;
+                string level = cmbLevel.Text;
+                string dob = dtpDOB.Text;
+                string username = txtbUsername.Text;
+                string password = txtbPassword.Text;
+                AdminClass register = new AdminClass(fullName, username, password, phone, email, dob, address, subject, level, icP);
+                register.RegisterTutor();
+                this.Close();    
+            }
         }
     }
 }

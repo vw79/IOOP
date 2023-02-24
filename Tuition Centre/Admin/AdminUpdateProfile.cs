@@ -42,14 +42,22 @@ namespace Tuition_Centre.Admin
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string username = txtbUsername.Text;
-            string password = txtbPassword.Text;
-            string email    = txtbEmail.Text;
-            string phone    = txtbPhone.Text;
-            string address  = txtbAddress.Text;
-            AdminClass update = new AdminClass(username, password, email, phone, address, userId);
-            update.UpdateAdmin();
-            this.Close();
+            if (!string.IsNullOrEmpty(txtbUsername.Text) || !string.IsNullOrEmpty(txtbPassword.Text) || !string.IsNullOrEmpty(txtbEmail.Text) ||
+                !string.IsNullOrEmpty(txtbPhone.Text) || !string.IsNullOrEmpty(txtbAddress.Text))
+            {
+                MessageBox.Show("Information cannot be empty");
+            }
+            else
+            {
+                string username = txtbUsername.Text;
+                string password = txtbPassword.Text;
+                string email = txtbEmail.Text;
+                string phone = txtbPhone.Text;
+                string address = txtbAddress.Text;
+                AdminClass update = new AdminClass(username, password, email, phone, address, userId);
+                update.UpdateAdmin();
+                this.Close();
+            }
         }
     }
 }
