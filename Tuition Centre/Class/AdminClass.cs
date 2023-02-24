@@ -14,6 +14,7 @@ namespace Tuition_Centre.Class
     internal class AdminClass
     {
         //write method here//
+        private string tutorId;
         private string adminName;
         private string adminId;
         private string adminPhone;
@@ -41,10 +42,9 @@ namespace Tuition_Centre.Class
             adminAddress = address;
         }
 
-        public AdminClass(string name, string id)
+        public AdminClass( string id)
         {
-            adminName = name;
-            adminId = id;
+            tutorId = id;
         }
 
         public string NameDisplay(string un)
@@ -98,5 +98,24 @@ namespace Tuition_Centre.Class
             con.Close();
             return dataTable;
         }
+
+        public void DeleteUser(string identity, string table , string idType)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand($"DELETE FROM {table} WHERE {idType} = @identity", con);
+            cmd.Parameters.AddWithValue("@identity", identity);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        /*public void DeleteReceptionist(identity)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM receptionist WHERE recepId = @identity", con);
+            cmd.Parameters.AddWithValue("@identity", identity);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("this ran");
+            con.Close();
+        }*/
     }
 }

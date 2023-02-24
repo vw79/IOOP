@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -104,7 +105,7 @@ namespace Tuition_Centre.Admin
             btnDeleteReceptionist.Visible = a;
         }
         
-        private void DeleteAndConfirmation()
+        /*private void DeleteAndConfirmationTutor()
         {
             if (dgvContent.SelectedRows.Count > 0)
             {
@@ -113,7 +114,30 @@ namespace Tuition_Centre.Admin
                 bool confirmation = confrmobj.confirmation;
                 if (confirmation)
                 {
+                    DataGridViewRow selectedRow = dgvContent.SelectedRows[0];
+                    DataGridViewCell identity = selectedRow.Cells[1];
                     dgvContent.Rows.Remove(dgvContent.SelectedRows[0]);
+                    AdminClass delete = new AdminClass();
+                    delete.DeleteTutor(identity);
+                }
+            }
+        }*/
+
+        private void DeleteAndConfirmation(string table, string idType)
+        {
+            if (dgvContent.SelectedRows.Count > 0)
+            {
+                FrmConfirm confrmobj = new FrmConfirm();
+                confrmobj.ShowDialog();
+                bool confirmation = confrmobj.confirmation;
+                if (confirmation)
+                {
+                    DataGridViewRow selectedRow = dgvContent.SelectedRows[0];
+                    string identity = dgvContent.SelectedRows[0].Cells[1].Value.ToString();
+                    dgvContent.Rows.Remove(dgvContent.SelectedRows[0]);
+                    AdminClass delete = new AdminClass();
+                    delete.DeleteUser(identity, table, idType);
+                    MessageBox.Show(identity);
                 }
             }
         }
@@ -126,12 +150,16 @@ namespace Tuition_Centre.Admin
 
         private void btnDeleteReceptionist_Click(object sender, EventArgs e)
         {
-            DeleteAndConfirmation();
+            string table = "receptionist";
+            string idType = "recepId";
+            DeleteAndConfirmation(table, idType);
         }
 
         private void btnDeleteTutor_Click(object sender, EventArgs e)
         {
-            DeleteAndConfirmation();
+            string table = "tutor";
+            string idType = "tutorId";
+            DeleteAndConfirmation(table, idType);
         }
     }
 }

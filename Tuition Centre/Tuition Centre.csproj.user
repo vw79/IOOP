@@ -8,16 +8,7 @@
     <Compile Update="Admin\AdminRegisterTutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Admin\AdminDeleteTutor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Admin\AdminReceptionistList.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Admin\AdminRegisterReceptionist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Admin\AdminDeleteReceptionist.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Admin\AdminFinance.cs">
