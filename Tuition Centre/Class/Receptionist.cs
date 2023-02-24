@@ -93,6 +93,8 @@ namespace Tuition_Centre.Class
         {
             con.Open();
 
+
+
             SqlCommand cmd = new SqlCommand("SELECT r.recepId, r.recepName, r.recepIcP FROM receptionist r " +
                                             "INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
             cmd.Parameters.AddWithValue("@un", un);

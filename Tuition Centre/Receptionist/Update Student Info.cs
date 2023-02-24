@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,8 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmUpdateStu : Form
     {
+        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString()); 
+
         private string searchName;
         private string stuId;
         private string stuName;
@@ -28,6 +32,11 @@ namespace Tuition_Centre.Receptionist
         public frmUpdateStu(string un)
         {
             InitializeComponent();
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT username, r.recepName, r.recepIcP FROM changeSubject WHERE username = @un", con);
+            cmd.Parameters.AddWithValue("@un", un);
+            SqlDataReader reader = cmd.ExecuteReader();
 
             // Create a new DataTable with only the desired columns
             DataTable filteredTable = new DataTable();
