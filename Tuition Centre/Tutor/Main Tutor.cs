@@ -15,6 +15,10 @@ namespace Tuition_Centre.Tutor
 {
     public partial class frmMainTutor : Form
     {
+        private const string V = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\htank\source\repos\IOOP\Tuition Centre\Database\MyDB.mdf"";Integrated Security=True";
+        private readonly string connectionString = V;
+        private object vendorsDataGridView;
+
         public frmMainTutor(string un)
         {
             InitializeComponent();
@@ -106,32 +110,43 @@ namespace Tuition_Centre.Tutor
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblTutorName.Text = rd.GetString(6);
+                lblTutorName.Text = rd.GetString(5);
                 lblTutorID.Text = rd.GetString(1);
             }
             con.Close();
 
 
-            SqlConnection con1 = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-            con1.Open();
-            SqlCommand cmd1 = new SqlCommand("select * from class where teacher = @tutorFullName", con1);
-            cmd1.Parameters.AddWithValue("@tutorFullName", lblTutorName.Text);
-            SqlDataReader r1 = cmd1.ExecuteReader();
-            while (r1.Read())
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
-                lblTutorClassInfo.Text = r1.GetString(1) + "\n" + r1.GetString(6);
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * from class", sqlCon);
+                DataTable dtbl = new DataTable();   
+                sqlDa.Fill(dtbl);
 
+                dgv1.DataSource = dtbl;
+                /*
+                foreach (DataGridViewRow row in vendorsDataGridView.Rows)
+                {
+                    if ()
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Blue;
+                    }
+                }
+                */
+                 
             }
-
-            con.Close();
-
 
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-        
+        }
 
-        
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

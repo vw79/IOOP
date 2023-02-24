@@ -61,5 +61,10 @@ namespace Tuition_Centre.Tutor
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

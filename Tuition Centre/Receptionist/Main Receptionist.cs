@@ -65,5 +65,10 @@ namespace Tuition_Centre.Receptionist
             this.Hide();
             MessageBox.Show("Logout");
         }
+
+        private void frmMainReceptionist_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -49,22 +49,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbUpdatePh = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTutorID = new System.Windows.Forms.Label();
             this.lblTutorName = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(10, 168);
+            this.splitContainer1.Location = new System.Drawing.Point(10, 90);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -78,7 +78,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.button6);
             this.splitContainer1.Panel2.Controls.Add(this.button5);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(754, 419);
+            this.splitContainer1.Size = new System.Drawing.Size(754, 354);
             this.splitContainer1.SplitterDistance = 188;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 6;
@@ -94,7 +94,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(165, 203);
+            this.groupBox2.Size = new System.Drawing.Size(165, 189);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menu";
@@ -149,7 +149,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(287, 385);
+            this.button6.Location = new System.Drawing.Point(314, 305);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(86, 31);
@@ -160,7 +160,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(134, 385);
+            this.button5.Location = new System.Drawing.Point(162, 305);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(86, 31);
@@ -188,7 +188,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(554, 369);
+            this.groupBox1.Size = new System.Drawing.Size(554, 280);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Profile";
@@ -304,22 +304,11 @@
             this.txbUpdatePh.Size = new System.Drawing.Size(238, 29);
             this.txbUpdatePh.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Tuition_Centre.Properties.Resources._7akn42c5i5621;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblTutorID
             // 
             this.lblTutorID.AutoSize = true;
             this.lblTutorID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.lblTutorID.Location = new System.Drawing.Point(131, 52);
+            this.lblTutorID.Location = new System.Drawing.Point(6, 45);
             this.lblTutorID.Name = "lblTutorID";
             this.lblTutorID.Size = new System.Drawing.Size(69, 20);
             this.lblTutorID.TabIndex = 8;
@@ -329,22 +318,30 @@
             // 
             this.lblTutorName.AutoSize = true;
             this.lblTutorName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTutorName.Location = new System.Drawing.Point(131, 16);
+            this.lblTutorName.Location = new System.Drawing.Point(6, 12);
             this.lblTutorName.Name = "lblTutorName";
             this.lblTutorName.Size = new System.Drawing.Size(135, 33);
             this.lblTutorName.TabIndex = 7;
             this.lblTutorName.Text = "Tutor Name: ";
             this.lblTutorName.UseCompatibleTextRendering = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblTutorName);
+            this.groupBox3.Controls.Add(this.lblTutorID);
+            this.groupBox3.Location = new System.Drawing.Point(10, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(754, 83);
+            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabStop = false;
+            // 
             // frmTutor_UpdateProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 600);
+            this.ClientSize = new System.Drawing.Size(778, 456);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblTutorID);
-            this.Controls.Add(this.lblTutorName);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTutor_UpdateProfile";
             this.Text = "Tutor Update Profile";
@@ -356,16 +353,15 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private SplitContainer splitContainer1;
-        private PictureBox pictureBox1;
         private Label lblTutorID;
         private Label lblTutorName;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -389,5 +385,6 @@
         private TextBox txbUpdatePh;
         private ComboBox cmbUpdateSub;
         private TextBox txbUpdateAddress;
+        private GroupBox groupBox3;
     }
 }
