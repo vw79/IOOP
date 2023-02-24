@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateRcp));
             panel2 = new Panel();
+            pictureHome = new PictureBox();
             lblRcpICS = new Label();
             lblRcpNameS = new Label();
             lblRcpIDS = new Label();
@@ -44,10 +45,9 @@
             lblAdress = new Label();
             lblEmail = new Label();
             lblContact = new Label();
-            pictureHome = new PictureBox();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -63,6 +63,17 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(776, 113);
             panel2.TabIndex = 4;
+            // 
+            // pictureHome
+            // 
+            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
+            pictureHome.Location = new Point(725, 0);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(51, 43);
+            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureHome.TabIndex = 47;
+            pictureHome.TabStop = false;
+            pictureHome.Click += pictureHome_Click;
             // 
             // lblRcpICS
             // 
@@ -158,6 +169,7 @@
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // lblAdress
             // 
@@ -186,17 +198,6 @@
             lblContact.TabIndex = 0;
             lblContact.Text = "Contact Number";
             // 
-            // pictureHome
-            // 
-            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
-            pictureHome.Location = new Point(725, 0);
-            pictureHome.Name = "pictureHome";
-            pictureHome.Size = new Size(51, 43);
-            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureHome.TabIndex = 47;
-            pictureHome.TabStop = false;
-            pictureHome.Click += pictureHome_Click;
-            // 
             // frmUpdateRcp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -208,9 +209,9 @@
             Text = "Form6";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             ResumeLayout(false);
         }
 

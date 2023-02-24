@@ -43,6 +43,10 @@ namespace Tuition_Centre.Class
 
         private string searchName;
 
+        private string rcpPhone;
+        private string rcpAddress;
+        private string rcpEmail;
+
 
         public string SearchName { get => searchName; set => searchName = value; }
 
@@ -86,6 +90,12 @@ namespace Tuition_Centre.Class
             this.CVV = cvv;
         }
 
+        public Recep(string rcpPhone, string rcpAddress, string rcpEmail)
+        {
+            this.rcpPhone = rcpPhone;
+            this.rcpAddress = rcpAddress;
+            this.rcpEmail = rcpEmail;
+        }
 
         // Method getting receptionist name from database and return as string
 
@@ -152,34 +162,34 @@ namespace Tuition_Centre.Class
             con.Open();
 
             // Insert the value of username, subject1, subject2,subject3 to the studentSSubject database
-            SqlCommand stuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectid1, subjectid2, subjectid3) " +
+            SqlCommand cmdstuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectid1, subjectid2, subjectid3) " +
                                                "VALUES (@username, @subId1, @subId2, @subId3)", con);
-            stuSub.Parameters.AddWithValue("@username", stuUsername);
-            stuSub.Parameters.AddWithValue("@subId1", subId1);
-            stuSub.Parameters.AddWithValue("@subId2", subId2);
-            stuSub.Parameters.AddWithValue("@subId3", subId3);
-            stuSub.ExecuteNonQuery();
+            cmdstuSub.Parameters.AddWithValue("@username", stuUsername);
+            cmdstuSub.Parameters.AddWithValue("@subId1", subId1);
+            cmdstuSub.Parameters.AddWithValue("@subId2", subId2);
+            cmdstuSub.Parameters.AddWithValue("@subId3", subId3);
+            cmdstuSub.ExecuteNonQuery();
 
             // Update the value of level, studentEnrollmentDate in the studentInfo database
-            SqlCommand studentInfo = new SqlCommand("UPDATE studentInfo SET level=@stulv, studentEnrollmentDate=@stuEnrollDate " +
+            SqlCommand cmdStuInfo = new SqlCommand("UPDATE studentInfo SET level=@stulv, studentEnrollmentDate=@stuEnrollDate " +
                                                     "WHERE username=@un", con);
-            studentInfo.Parameters.AddWithValue("@stuLv", stuLv);
-            studentInfo.Parameters.AddWithValue("@stuEnrollDate", stuEnrollDate);
-            studentInfo.Parameters.AddWithValue("@un", stuUsername);
-            studentInfo.ExecuteNonQuery();
+            cmdStuInfo.Parameters.AddWithValue("@stuLv", stuLv);
+            cmdStuInfo.Parameters.AddWithValue("@stuEnrollDate", stuEnrollDate);
+            cmdStuInfo.Parameters.AddWithValue("@un", stuUsername);
+            cmdStuInfo.ExecuteNonQuery();
 
             // Insert the value of studentDatabaseId, paymentMethod, cardNumber,CVV to the paymentInfo database
-            SqlCommand stuPay = new SqlCommand("INSERT INTO paymentInfo (studentDatabaseId, paymentMethod, cardNumber, CVV) " +
+            SqlCommand cmdStuPay = new SqlCommand("INSERT INTO paymentInfo (studentDatabaseId, paymentMethod, cardNumber, CVV) " +
                                                "SELECT s.studentDatabaseld, @payMethod, @cardNum, @cvv " +
                                                "FROM studentInfo s " +
                                                "LEFT JOIN paymentInfo p ON s.studentDatabaseld = p.studentDatabaseId " +
                                                "WHERE s.username = @un", con);
 
-            stuPay.Parameters.AddWithValue("@payMethod", payMethod);
-            stuPay.Parameters.AddWithValue("@cardNum", cardNumber);
-            stuPay.Parameters.AddWithValue("@cvv", CVV);
-            stuPay.Parameters.AddWithValue("@un", stuUsername);
-            stuPay.ExecuteNonQuery();
+            cmdStuPay.Parameters.AddWithValue("@payMethod", payMethod);
+            cmdStuPay.Parameters.AddWithValue("@cardNum", cardNumber);
+            cmdStuPay.Parameters.AddWithValue("@cvv", CVV);
+            cmdStuPay.Parameters.AddWithValue("@un", stuUsername);
+            cmdStuPay.ExecuteNonQuery();
 
             con.Close();
         }
@@ -259,12 +269,21 @@ namespace Tuition_Centre.Class
         }
 
             
-        /*
-            public void UpdateRecepInfo(Receptionist)
+        
+            public void UpdateRecepInfo(string un)
             {
+                con.Open() ;
 
+                SqlCommand cmdRecepInfo = new SqlCommand("UPDATE receptionist r LEFT JOIN users u ON r.usersId = u.usersId SET r.recepPhone = @rcpPhone, r.recepAddress = @rcpAddress, r.recepEmail = @rcpEmail WHERE u.username=@un", con);
+                cmdRecepInfo.Parameters.AddWithValue("@rcpPhone", rcpPhone);
+                cmdRecepInfo.Parameters.AddWithValue("@rcpAddress", rcpAddress);
+                cmdRecepInfo.Parameters.AddWithValue("@rcpEmail", rcpEmail);
+                cmdRecepInfo.Parameters.AddWithValue("@un", un);
+                cmdRecepInfo.ExecuteNonQuery();
+
+                con.Close();
             }
-
+        /*
             public void GenerateReceipt(Receptionist)
             {
 

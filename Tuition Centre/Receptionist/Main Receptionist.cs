@@ -30,13 +30,6 @@ namespace Tuition_Centre.Receptionist
             lblWlcRcp.Text = "Welcome Back, " + recepData[1].ToString(); // set the label text using the returned value
         }
 
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-            frmPayment1 paymentPage1 = new frmPayment1(un);
-            paymentPage1.Show();
-            this.Hide();
-        }
-
         private void btnRegNewStu_Click(object sender, EventArgs e)
         {
             frmRegister1 register1 = new frmRegister1(un);
@@ -58,17 +51,19 @@ namespace Tuition_Centre.Receptionist
             this.Hide();
         }
 
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            frmPayment1 paymentPage1 = new frmPayment1(un);
+            paymentPage1.Show();
+            this.Hide();
+        }
+
         private void picLogout_Click(object sender, EventArgs e)
         {
             Main logOut = new Main();
             logOut.Show();
             this.Hide();
             MessageBox.Show("Logout");
-        }
-
-        private void frmMainReceptionist_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

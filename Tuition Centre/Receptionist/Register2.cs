@@ -50,6 +50,12 @@ namespace Tuition_Centre.Receptionist
         private void btnRegister_Click(object sender, EventArgs e)
         {
             // Validate input data
+            if (string.IsNullOrEmpty(cmbSubject1.Text) && string.IsNullOrEmpty(cmbSubject2.Text) && string.IsNullOrEmpty(cmbSubject3.Text))
+            {
+                MessageBox.Show("Choose at least one subject.");
+                return;
+            }
+
             if (string.IsNullOrEmpty(cmbSubject1.Text) || string.IsNullOrEmpty(cmbLevel.Text) ||
                 string.IsNullOrEmpty(dtpEnrollDate.Text) || string.IsNullOrEmpty(cmbPayment.Text))
             {
@@ -57,11 +63,6 @@ namespace Tuition_Centre.Receptionist
                 return;
             }
 
-            if (string.IsNullOrEmpty(cmbSubject1.Text) && string.IsNullOrEmpty(cmbSubject2.Text) && string.IsNullOrEmpty(cmbSubject3.Text))
-            {
-                MessageBox.Show("Choose at least one subject.");
-                return;
-            }
 
             if (cmbPayment.SelectedIndex == 0)
             {
