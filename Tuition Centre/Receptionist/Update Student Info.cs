@@ -16,8 +16,9 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmUpdateStu : Form
     {
-        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString()); 
+        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
+        private string un;
         private string searchName;
         private string stuId;
         private string stuName;
@@ -33,7 +34,7 @@ namespace Tuition_Centre.Receptionist
         public frmUpdateStu(string un, string stuName)
         {
             InitializeComponent();
-
+            this.un = un;
             con.Open();
 
             SqlCommand rdChangeSub = new SqlCommand("SELECT s.studentId, c.date, s.studentName, c.oldSubject, c.newSubject, c.reasons, c.acceptanceStatus " +
@@ -41,8 +42,8 @@ namespace Tuition_Centre.Receptionist
                                                     "INNER JOIN studentInfo s ON s.studentDatabaseld = c.studentDatabaseId ", con);
 
             SqlDataReader rd = rdChangeSub.ExecuteReader();
-      
-                                  
+
+
             // Create a new DataTable with only the desired columns
             DataTable filteredTable = new DataTable();
             filteredTable.Columns.Add("Date");
@@ -64,10 +65,10 @@ namespace Tuition_Centre.Receptionist
             // Set the DataSource property of the dgvStuInfo to the filteredTable containing only the desired columns
             dgvChangeSubject.DataSource = filteredTable;
             dgvChangeSubject.ReadOnly = true;
-            dgvChangeSubject.SelectionChanged += dgvChangeSubject_SelectionChanged;
+           // dgvChangeSubject.SelectionChanged += dgvChangeSubject_SelectionChanged;
         }
-    
 
+        /*
         private void dgvChangeSubject_SelectionChanged(object sender, EventArgs e)
         {
             // Get the currently selected row in the DataGridView
@@ -92,6 +93,13 @@ namespace Tuition_Centre.Receptionist
             panel3.Controls.Add(updateStuSub);
             updateStuSub.Dock = DockStyle.Fill;
             updateStuSub.BringToFront();
+        }*/
+
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            frmMainReceptionist back = new frmMainReceptionist(un);
+            back.Show();
+            this.Hide();
         }
 
         /*

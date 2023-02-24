@@ -12,9 +12,10 @@ using Tuition_Centre.Class;
 
 namespace Tuition_Centre.Receptionist
 {
-   
+
     public partial class frmPayment1 : Form
     {
+        private string un;
         private string searchName;
 
         // Create a new Receptionist object
@@ -28,6 +29,7 @@ namespace Tuition_Centre.Receptionist
         public frmPayment1(string un)
         {
             InitializeComponent();
+            this.un = un;
             // Attach the event handler to the DataGridView's SelectionChanged event
             dgvStuInfo.SelectionChanged += dgvStuInfo_SelectionChanged;
         }
@@ -35,7 +37,7 @@ namespace Tuition_Centre.Receptionist
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // Get the search term from txtSearch
-            rcp.SearchName= txtSearch.Text;
+            rcp.SearchName = txtSearch.Text;
 
             // Call the SearchStu method of the Receptionist object and pass in the search term
             DataTable dt = rcp.SearchStu(searchName);
@@ -85,5 +87,11 @@ namespace Tuition_Centre.Receptionist
             }
         }
 
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            frmMainReceptionist back = new frmMainReceptionist(un);
+            back.Show();
+            this.Hide();
+        }
     }
 }

@@ -28,126 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblStuIDS = new System.Windows.Forms.Label();
-            this.lblStuNameS = new System.Windows.Forms.Label();
-            this.lblStuID = new System.Windows.Forms.Label();
-            this.lblStuName = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnReceipt = new System.Windows.Forms.Button();
-            this.cmbPay = new System.Windows.Forms.ComboBox();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayment2));
+            panel2 = new Panel();
+            lblStuIDS = new Label();
+            lblStuNameS = new Label();
+            lblStuID = new Label();
+            lblStuName = new Label();
+            panel3 = new Panel();
+            btnReceipt = new Button();
+            cmbPay = new ComboBox();
+            lblAmount = new Label();
+            txtAmount = new TextBox();
+            pictureHome = new PictureBox();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
+            SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblStuIDS);
-            this.panel2.Controls.Add(this.lblStuNameS);
-            this.panel2.Controls.Add(this.lblStuID);
-            this.panel2.Controls.Add(this.lblStuName);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 105);
-            this.panel2.TabIndex = 4;
+            panel2.Controls.Add(pictureHome);
+            panel2.Controls.Add(lblStuIDS);
+            panel2.Controls.Add(lblStuNameS);
+            panel2.Controls.Add(lblStuID);
+            panel2.Controls.Add(lblStuName);
+            panel2.Location = new Point(12, 12);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(776, 105);
+            panel2.TabIndex = 4;
             // 
             // lblStuIDS
             // 
-            this.lblStuIDS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStuIDS.Location = new System.Drawing.Point(132, 55);
-            this.lblStuIDS.Name = "lblStuIDS";
-            this.lblStuIDS.Size = new System.Drawing.Size(200, 17);
-            this.lblStuIDS.TabIndex = 4;
+            lblStuIDS.BorderStyle = BorderStyle.Fixed3D;
+            lblStuIDS.Location = new Point(132, 55);
+            lblStuIDS.Name = "lblStuIDS";
+            lblStuIDS.Size = new Size(200, 17);
+            lblStuIDS.TabIndex = 4;
             // 
             // lblStuNameS
             // 
-            this.lblStuNameS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStuNameS.Location = new System.Drawing.Point(132, 22);
-            this.lblStuNameS.Name = "lblStuNameS";
-            this.lblStuNameS.Size = new System.Drawing.Size(200, 17);
-            this.lblStuNameS.TabIndex = 3;
+            lblStuNameS.BorderStyle = BorderStyle.Fixed3D;
+            lblStuNameS.Location = new Point(132, 22);
+            lblStuNameS.Name = "lblStuNameS";
+            lblStuNameS.Size = new Size(200, 17);
+            lblStuNameS.TabIndex = 3;
             // 
             // lblStuID
             // 
-            this.lblStuID.AutoSize = true;
-            this.lblStuID.Location = new System.Drawing.Point(18, 55);
-            this.lblStuID.Name = "lblStuID";
-            this.lblStuID.Size = new System.Drawing.Size(68, 15);
-            this.lblStuID.TabIndex = 2;
-            this.lblStuID.Text = "Student ID: ";
+            lblStuID.AutoSize = true;
+            lblStuID.Location = new Point(18, 55);
+            lblStuID.Name = "lblStuID";
+            lblStuID.Size = new Size(68, 15);
+            lblStuID.TabIndex = 2;
+            lblStuID.Text = "Student ID: ";
             // 
             // lblStuName
             // 
-            this.lblStuName.AutoSize = true;
-            this.lblStuName.Location = new System.Drawing.Point(18, 22);
-            this.lblStuName.Name = "lblStuName";
-            this.lblStuName.Size = new System.Drawing.Size(45, 15);
-            this.lblStuName.TabIndex = 1;
-            this.lblStuName.Text = "Name: ";
+            lblStuName.AutoSize = true;
+            lblStuName.Location = new Point(18, 22);
+            lblStuName.Name = "lblStuName";
+            lblStuName.Size = new Size(45, 15);
+            lblStuName.TabIndex = 1;
+            lblStuName.Text = "Name: ";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnReceipt);
-            this.panel3.Controls.Add(this.cmbPay);
-            this.panel3.Controls.Add(this.lblAmount);
-            this.panel3.Controls.Add(this.txtAmount);
-            this.panel3.Location = new System.Drawing.Point(12, 123);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(776, 315);
-            this.panel3.TabIndex = 5;
+            panel3.Controls.Add(btnReceipt);
+            panel3.Controls.Add(cmbPay);
+            panel3.Controls.Add(lblAmount);
+            panel3.Controls.Add(txtAmount);
+            panel3.Location = new Point(12, 123);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(776, 315);
+            panel3.TabIndex = 5;
             // 
             // btnReceipt
             // 
-            this.btnReceipt.Location = new System.Drawing.Point(513, 228);
-            this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Size = new System.Drawing.Size(150, 23);
-            this.btnReceipt.TabIndex = 3;
-            this.btnReceipt.Text = "Generate Receipt";
-            this.btnReceipt.UseVisualStyleBackColor = true;
+            btnReceipt.Location = new Point(513, 228);
+            btnReceipt.Name = "btnReceipt";
+            btnReceipt.Size = new Size(150, 23);
+            btnReceipt.TabIndex = 3;
+            btnReceipt.Text = "Generate Receipt";
+            btnReceipt.UseVisualStyleBackColor = true;
             // 
             // cmbPay
             // 
-            this.cmbPay.FormattingEnabled = true;
-            this.cmbPay.Location = new System.Drawing.Point(124, 163);
-            this.cmbPay.Name = "cmbPay";
-            this.cmbPay.Size = new System.Drawing.Size(200, 23);
-            this.cmbPay.TabIndex = 2;
-            this.cmbPay.Text = "Payment Method";
+            cmbPay.FormattingEnabled = true;
+            cmbPay.Location = new Point(124, 163);
+            cmbPay.Name = "cmbPay";
+            cmbPay.Size = new Size(200, 23);
+            cmbPay.TabIndex = 2;
+            cmbPay.Text = "Payment Method";
             // 
             // lblAmount
             // 
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.Location = new System.Drawing.Point(124, 68);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(51, 15);
-            this.lblAmount.TabIndex = 1;
-            this.lblAmount.Text = "Amount";
+            lblAmount.AutoSize = true;
+            lblAmount.Location = new Point(124, 68);
+            lblAmount.Name = "lblAmount";
+            lblAmount.Size = new Size(51, 15);
+            lblAmount.TabIndex = 1;
+            lblAmount.Text = "Amount";
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(124, 86);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.PlaceholderText = "Enter Amount";
-            this.txtAmount.Size = new System.Drawing.Size(200, 23);
-            this.txtAmount.TabIndex = 0;
+            txtAmount.Location = new Point(124, 86);
+            txtAmount.Name = "txtAmount";
+            txtAmount.PlaceholderText = "Enter Amount";
+            txtAmount.Size = new Size(200, 23);
+            txtAmount.TabIndex = 0;
+            // 
+            // pictureHome
+            // 
+            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
+            pictureHome.Location = new Point(725, 0);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(51, 43);
+            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureHome.TabIndex = 48;
+            pictureHome.TabStop = false;
+            pictureHome.Click += pictureHome_Click;
             // 
             // frmPayment2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Name = "frmPayment2";
-            this.Text = "Payment";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Name = "frmPayment2";
+            Text = "Payment";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -162,5 +177,6 @@
         private ComboBox cmbPay;
         private Label lblStuIDS;
         private Label lblStuNameS;
+        private PictureBox pictureHome;
     }
 }
