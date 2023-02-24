@@ -94,7 +94,7 @@
             // 
             cmbSubject3.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSubject3.FormattingEnabled = true;
-            cmbSubject3.Items.AddRange(new object[] { "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
+            cmbSubject3.Items.AddRange(new object[] { "", "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
             cmbSubject3.Location = new Point(6, 180);
             cmbSubject3.Name = "cmbSubject3";
             cmbSubject3.Size = new Size(200, 23);
@@ -104,7 +104,7 @@
             // 
             cmbSubject2.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSubject2.FormattingEnabled = true;
-            cmbSubject2.Items.AddRange(new object[] { "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
+            cmbSubject2.Items.AddRange(new object[] { "", "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
             cmbSubject2.Location = new Point(6, 108);
             cmbSubject2.Name = "cmbSubject2";
             cmbSubject2.Size = new Size(200, 23);
@@ -114,7 +114,7 @@
             // 
             cmbSubject1.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSubject1.FormattingEnabled = true;
-            cmbSubject1.Items.AddRange(new object[] { "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
+            cmbSubject1.Items.AddRange(new object[] { "", "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
             cmbSubject1.Location = new Point(6, 37);
             cmbSubject1.Name = "cmbSubject1";
             cmbSubject1.Size = new Size(200, 23);

@@ -62,6 +62,15 @@ namespace Tuition_Centre.Receptionist
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            // Validate input data
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPw.Text) || string.IsNullOrEmpty(txtStuName.Text) ||
+                string.IsNullOrEmpty(txtStuIcP.Text) || string.IsNullOrEmpty(txtStuEmail.Text) || string.IsNullOrEmpty(txtStuPhone.Text) ||
+                string.IsNullOrEmpty(txtStuAddress.Text) || string.IsNullOrEmpty(txtCourse.Text) || string.IsNullOrEmpty(dtpBirthday.Text) ||
+                string.IsNullOrEmpty(txtMemo.Text))
+            {
+                MessageBox.Show("Data cannot be empty.");
+                return;
+            }
 
             string stuLv = "lv";
             string role = "student";

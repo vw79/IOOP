@@ -12,9 +12,11 @@ using Tuition_Centre.Class;
 
 namespace Tuition_Centre.Receptionist
 {
-    
+   
     public partial class frmPayment1 : Form
     {
+        private string searchName;
+
         // Create a new Receptionist object
         private Recep rcp = new Recep();
 
@@ -36,7 +38,7 @@ namespace Tuition_Centre.Receptionist
             rcp.SearchName= txtSearch.Text;
 
             // Call the SearchStu method of the Receptionist object and pass in the search term
-            DataTable dt = rcp.SearchStu();
+            DataTable dt = rcp.SearchStu(searchName);
 
             if (dt == null)
             {

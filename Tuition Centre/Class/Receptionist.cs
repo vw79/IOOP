@@ -183,7 +183,7 @@ namespace Tuition_Centre.Class
         }
 
         // Method to search for a student in the database and return the results as a DataTable
-        public DataTable SearchStu()
+        public DataTable SearchStu(string searchName)
         {
             // Create a new SqlConnection object with the connection string
             con.Open();
