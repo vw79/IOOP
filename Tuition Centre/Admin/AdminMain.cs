@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +18,12 @@ namespace Tuition_Centre.Admin
 {
     public partial class FrmMainAdmin : Form
     {
+        private string username;
+
         public FrmMainAdmin(string un)
         {
             InitializeComponent();
+            username = un;
             TutorOrReceptionistClicked(false, true);
             AdminClass loader = new AdminClass();
             string name = loader.NameDisplay(un);
@@ -107,24 +112,6 @@ namespace Tuition_Centre.Admin
             btnDeleteReceptionist.Visible = a;
         }
 
-        /*private void DeleteAndConfirmationTutor()
-        {
-            if (dgvContent.SelectedRows.Count > 0)
-            {
-                FrmConfirm confrmobj = new FrmConfirm();
-                confrmobj.ShowDialog();
-                bool confirmation = confrmobj.confirmation;
-                if (confirmation)
-                {
-                    DataGridViewRow selectedRow = dgvContent.SelectedRows[0];
-                    DataGridViewCell identity = selectedRow.Cells[1];
-                    dgvContent.Rows.Remove(dgvContent.SelectedRows[0]);
-                    AdminClass delete = new AdminClass();
-                    delete.DeleteTutor(identity);
-                }
-            }
-        }*/
-
         private void DeleteAndConfirmation(string table, string idType)
         {
             if (dgvContent.SelectedRows.Count > 0)
@@ -165,7 +152,7 @@ namespace Tuition_Centre.Admin
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            FrmAdminUpdateProfile adminFrm = new FrmAdminUpdateProfile();
+            FrmAdminUpdateProfile adminFrm = new FrmAdminUpdateProfile(username);
             adminFrm.ShowDialog();
         }
     }

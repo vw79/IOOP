@@ -15,8 +15,11 @@ namespace Tuition_Centre.Class
     internal class AdminClass
     {
         //write method here//
+        private int adminUserId;
         private string adminName;
         private string adminId;
+        private string adminUsername;
+        private string adminPassword;
         private string adminPhone;
         private string adminEmail;
         private string adminICorPass;
@@ -49,13 +52,19 @@ namespace Tuition_Centre.Class
 
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
-        public string AdminPhone { get => adminPhone; set => adminPhone = value; }
-        public string AdminEmail { get => adminEmail; set => adminEmail = value; }
-        public string AdminAddress { get => adminAddress; set => adminAddress = value; }
-
         public AdminClass()
         {
 
+        }
+
+        public AdminClass(string adminUsername, string adminPassword, string adminEmail, string adminPhone, string adminAddress, int adminUserId)
+        {
+            this.adminUsername  = adminUsername;
+            this.adminPassword  = adminPassword;
+            this.adminEmail     = adminEmail;
+            this.adminPhone     = adminPhone;
+            this.adminAddress   = adminAddress;
+            this.adminUserId    = adminUserId;
         }
 
         public AdminClass(string name, string id, string phone, string email, string icpass, string address)
@@ -168,11 +177,11 @@ namespace Tuition_Centre.Class
                 {
                     recepId = "RCP001";
                 }
-                else if (recepDataId < 10)
+                else if (recepDataId < 9)
                 {
                     recepId = $"RCP00{recepDataId + 1}";
                 }
-                else if (recepDataId < 100)
+                else if (recepDataId < 99)
                 {
                     recepId = $"RCP0{recepDataId + 1}";
                 }
@@ -211,11 +220,11 @@ namespace Tuition_Centre.Class
                 {
                     tutorId = "TO001";
                 }
-                else if (tutorDataId < 10)
+                else if (tutorDataId < 9)
                 {
                     tutorId = $"TO00{tutorDataId + 1}";
                 }
-                else if (tutorDataId < 100)
+                else if (tutorDataId < 99)
                 {
                     tutorId = $"TO0{tutorDataId + 1}";
                 }
@@ -243,8 +252,24 @@ namespace Tuition_Centre.Class
                 cmd4.Parameters.AddWithValue("@tutorLevel", tutorLevel);
                 cmd4.ExecuteNonQuery();
                 con.Close();
-
             }
+        }
+
+        public void UpdateAdmin()
+        {
+            con.Open();
+            SqlCommand cmdUpdateUser = new SqlCommand("UPDATE users SET username = @adminUsername, password = @adminPassword WHERE usersId = @adminUserId", con);
+            cmdUpdateUser.Parameters.AddWithValue("@adminUsername", adminUsername);
+            cmdUpdateUser.Parameters.AddWithValue("@adminPassword", adminPassword);
+            cmdUpdateUser.Parameters.AddWithValue("@adminUserId", adminUserId);
+            cmdUpdateUser.ExecuteNonQuery();
+            SqlCommand cmdUpdateAdmin = new SqlCommand("UPDATE admin SET adminEmail = @adminEmail, adminPhone = @adminPhone, adminAddress = @adminAddress WHERE usersId = @adminUserId", con);
+            cmdUpdateAdmin.Parameters.AddWithValue("@adminEmail", adminEmail);
+            cmdUpdateAdmin.Parameters.AddWithValue("@adminPhone", adminPhone);
+            cmdUpdateAdmin.Parameters.AddWithValue("@adminAddress", adminAddress);
+            cmdUpdateAdmin.Parameters.AddWithValue("@adminUserId", adminUserId);
+            cmdUpdateAdmin.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

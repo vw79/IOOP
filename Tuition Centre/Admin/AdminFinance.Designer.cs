@@ -30,6 +30,7 @@
         {
             listBox1 = new ListBox();
             lblTittle = new Label();
+            lblCurrentMonth = new Label();
             SuspendLayout();
             // 
             // listBox1
@@ -51,11 +52,22 @@
             lblTittle.TabIndex = 1;
             lblTittle.Text = "This Month's Income";
             // 
+            // lblCurrentMonth
+            // 
+            lblCurrentMonth.AutoSize = true;
+            lblCurrentMonth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCurrentMonth.Location = new Point(227, 9);
+            lblCurrentMonth.Name = "lblCurrentMonth";
+            lblCurrentMonth.Size = new Size(99, 21);
+            lblCurrentMonth.TabIndex = 2;
+            lblCurrentMonth.Text = "Current Date";
+            // 
             // FrmAdminFinance
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 438);
+            Controls.Add(lblCurrentMonth);
             Controls.Add(lblTittle);
             Controls.Add(listBox1);
             Name = "FrmAdminFinance";
@@ -68,5 +80,6 @@
 
         private ListBox listBox1;
         private Label lblTittle;
+        private Label lblCurrentMonth;
     }
 }
