@@ -141,6 +141,7 @@
             // 
             // cmbPayment
             // 
+            cmbPayment.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPayment.FormattingEnabled = true;
             cmbPayment.Items.AddRange(new object[] { "Cash", "Credit Card", "Online Payment" });
             cmbPayment.Location = new Point(6, 34);

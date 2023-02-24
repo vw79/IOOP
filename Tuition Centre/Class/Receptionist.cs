@@ -66,7 +66,7 @@ namespace Tuition_Centre.Class
             this.memo = memo;
         }
 
-        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate)
+        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate, string payMethod, string cardNum, string cvv)
         {
             this.stuUsername = username;
             this.subId1 = subId1;
@@ -74,6 +74,9 @@ namespace Tuition_Centre.Class
             this.subId3 = subId3;
             this.stuLv = stuLv;
             this.stuEnrollDate = stuEnrollDate;
+            this.payMethod = payMethod;
+            this.cardNumber = cardNum;
+            this.CVV = cvv;
         }
 
 
@@ -83,7 +86,8 @@ namespace Tuition_Centre.Class
         {
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT r.recepId, r.recepName, r.recepIcP FROM receptionist r INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
+            SqlCommand cmd = new SqlCommand("SELECT r.recepId, r.recepName, r.recepIcP FROM receptionist r " +
+                                            "INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
             cmd.Parameters.AddWithValue("@un", un);
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -100,14 +104,15 @@ namespace Tuition_Centre.Class
 
         }
 
-        // Method to Register into users, studentInfo, studentSubject database 
+        // Method to Register into users, studentInfo database 
         public void addStudent()
         {
             // Create a new SqlConnection object with the connection string and return the status as result
             con.Open();
 
             // Insert the value of username, password, role to the users database
-            SqlCommand cmdUsers = new SqlCommand("INSERT INTO users (username, password, role) VALUES (@username, @password, @role)", con);
+            SqlCommand cmdUsers = new SqlCommand("INSERT INTO users (username, password, role) " +
+                                                 "VALUES (@username, @password, @role)", con);
             cmdUsers.Parameters.AddWithValue("@username", stuUsername);
             cmdUsers.Parameters.AddWithValue("@password", stuPw);
             cmdUsers.Parameters.AddWithValue("@role", role);
@@ -115,7 +120,7 @@ namespace Tuition_Centre.Class
 
             // Insert student's information to the studentInfo database
             SqlCommand cmdStuInfo = new SqlCommand("INSERT INTO studentInfo (level, username, studentId, studentName, studentPass, studentEmail, studentPhone, studentAddress, studentEnrollmentDate, birthday, studyCourse, memo) " +
-                                                 "VALUES (@stuLv, @stuUsername, @stuId, @stuName, @stuIcP, @stuEmail, @stuPhone, @stuAddress, @stuEnrollDate, @birthday, @studyCourse, @memo)", con);
+                                                   "VALUES (@stuLv, @stuUsername, @stuId, @stuName, @stuIcP, @stuEmail, @stuPhone, @stuAddress, @stuEnrollDate, @birthday, @studyCourse, @memo)", con);
             cmdStuInfo.Parameters.AddWithValue("@stuLv", stuLv);
             cmdStuInfo.Parameters.AddWithValue("@stuUsername", stuUsername);
             cmdStuInfo.Parameters.AddWithValue("@stuId", stuId);
@@ -133,25 +138,40 @@ namespace Tuition_Centre.Class
             con.Close();
         }
 
+        // Method to Register into studentSubject, paymentInfo
         public void addSubjectPay()
         {
-            // Create a new SqlConnection object with the connection string and return the status as result
             con.Open();
 
-            // Insert the value of username, password, role to the users database
-            SqlCommand stuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectid1, subjectid2, subjectid3) VALUES (@username, @subId1, @subId2, @subId3)", con);
+            // Insert the value of username, subject1, subject2,subject3 to the studentSSubject database
+            SqlCommand stuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectid1, subjectid2, subjectid3) " +
+                                               "VALUES (@username, @subId1, @subId2, @subId3)", con);
             stuSub.Parameters.AddWithValue("@username", stuUsername);
             stuSub.Parameters.AddWithValue("@subId1", subId1);
             stuSub.Parameters.AddWithValue("@subId2", subId2);
             stuSub.Parameters.AddWithValue("@subId3", subId3);
             stuSub.ExecuteNonQuery();
 
-            // Insert student's information to the studentInfo database
-            SqlCommand studentInfo = new SqlCommand("UPDATE studentInfo SET level=@stulv, studentEnrollmentDate=@stuEnrollDate WHERE username=@un", con);
+            // Update the value of level, studentEnrollmentDate in the studentInfo database
+            SqlCommand studentInfo = new SqlCommand("UPDATE studentInfo SET level=@stulv, studentEnrollmentDate=@stuEnrollDate " +
+                                                    "WHERE username=@un", con);
             studentInfo.Parameters.AddWithValue("@stuLv", stuLv);
             studentInfo.Parameters.AddWithValue("@stuEnrollDate", stuEnrollDate);
             studentInfo.Parameters.AddWithValue("@un", stuUsername);
             studentInfo.ExecuteNonQuery();
+
+            // Insert the value of studentDatabaseId, paymentMethod, cardNumber,CVV to the paymentInfo database
+            SqlCommand stuPay = new SqlCommand("INSERT INTO paymentInfo (studentDatabaseId, paymentMethod, cardNumber, CVV) " +
+                                               "SELECT s.studentDatabaseld, @payMethod, @cardNum, @cvv " +
+                                               "FROM studentInfo s " +
+                                               "LEFT JOIN paymentInfo p ON s.studentDatabaseld = p.studentDatabaseId " +
+                                               "WHERE s.username = @un", con);
+
+            stuPay.Parameters.AddWithValue("@payMethod", payMethod);
+            stuPay.Parameters.AddWithValue("@cardNum", cardNumber);
+            stuPay.Parameters.AddWithValue("@cvv", CVV);
+            stuPay.Parameters.AddWithValue("@un", stuUsername);
+            stuPay.ExecuteNonQuery();
 
             con.Close();
         }

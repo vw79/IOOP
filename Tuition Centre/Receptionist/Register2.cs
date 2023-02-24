@@ -49,7 +49,13 @@ namespace Tuition_Centre.Receptionist
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Recep rcp = new Recep(stuUsername, cmbSubject1.Text, cmbSubject2.Text, cmbSubject3.Text, cmbLevel.Text, dtpEnrollDate.Text);
+            if (cmbPayment.SelectedIndex == 0)
+            {
+                txtCardNum.Text = "-";
+                txtCVV.Text = "-";
+            }
+
+            Recep rcp = new Recep(stuUsername, cmbSubject1.Text, cmbSubject2.Text, cmbSubject3.Text, cmbLevel.Text, dtpEnrollDate.Text, cmbPayment.Text, txtCardNum.Text, txtCVV.Text);
             rcp.addSubjectPay();
 
             MessageBox.Show("haha");

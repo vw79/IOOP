@@ -1,4 +1,4 @@
-1) Delete the connection string in reaad me before you push.
+1) Delete the connection string in readme before you push.
 	
 	i) Open the app.config file and delete the ??? 
 		eg. add name ="myCS" connectionString='???'	
