@@ -86,7 +86,7 @@ namespace Tuition_Centre.Receptionist
             btnDeleteStu.Enabled = false;
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+      /*  private void btnSearch_Click(object sender, EventArgs e)
         {
             Recep rcp = new Recep();
             DataTable dt = rcp.SearchStu(searchName);
@@ -120,7 +120,7 @@ namespace Tuition_Centre.Receptionist
             lblSearch.Hide();
             txtSearch.Hide();
             this.Hide();
-        }
+        }*/
 
     }
 }
