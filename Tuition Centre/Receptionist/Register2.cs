@@ -17,7 +17,6 @@ namespace Tuition_Centre.Receptionist
     public partial class frmRegister2 : Form
     {
         private int stuDbId;
-        
         private string stuUsername;
         private string un;
         
@@ -40,6 +39,7 @@ namespace Tuition_Centre.Receptionist
             cmbLevel.SelectedIndex = 0;
         }
 
+        // Disable the payment method combobox input
         private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbPayment.SelectedItem.ToString() == "Cash")
@@ -53,6 +53,8 @@ namespace Tuition_Centre.Receptionist
                 grpCardInfo.Visible = true;
             }
         }
+
+        // Get the subject ID based on the selected subject and level
         private string GetSubjectId(string subject, string level)
         {
             // An array of all available subjects
@@ -147,11 +149,16 @@ namespace Tuition_Centre.Receptionist
             SqlCommand cmdName = new SqlCommand("SELECT studentName FROM studentInfo WHERE username = @stuUsername", con);
             cmdName.Parameters.AddWithValue("@stuUsername", stuUsername);
             string fullName = cmdName.ExecuteScalar().ToString();
-       
+            con.Close();
+
+            // Create a new Recep object and add the student's subject and payment information to the database
             Recep rcp = new Recep(stuUsername, subjectId1, subjectId2, subjectId3, cmbLevel.Text, dtpEnrollDate.Text, cmbPayment.Text, txtCardNum.Text, txtCVV.Text, fullName, stuDbId);
             rcp.addSubjectPay();
 
+            // Show a message box to indicate that the registration is complete
             MessageBox.Show("Register Complete");
+
+            // Create a new frmMainReceptionist object and show it while hiding this form
             frmMainReceptionist mainRcp = new frmMainReceptionist(un);
             mainRcp.Show();
             this.Hide();
