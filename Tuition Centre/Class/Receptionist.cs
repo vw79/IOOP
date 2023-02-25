@@ -1,14 +1,18 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography.Pkcs;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -16,11 +20,13 @@ namespace Tuition_Centre.Class
 {
     internal class Recep
     {
+        //Properties
         private string un;
         private string stuUsername;
         private string stuPw;
         private string role;
 
+        private int stuDbId;
         private string stuLv;
         private string stuId;
         private string stuName;
@@ -41,7 +47,7 @@ namespace Tuition_Centre.Class
         private string cardNumber;
         private string CVV;
 
-        private decimal fee;
+        private string fee;
         private string paidBy;
         private string date;
         private string paymentAmount;
@@ -49,6 +55,7 @@ namespace Tuition_Centre.Class
 
         private string searchName;
 
+        private int recepId;
         private string rcpPhone;
         private string rcpAddress;
         private string rcpEmail;
@@ -88,7 +95,7 @@ namespace Tuition_Centre.Class
             this.memo = memo;
         }
 
-        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate, string payMethod, string cardNum, string cvv, decimal fee, string paidBy, string date, string paymentAmount, string acceptanceStatus)
+        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate, string payMethod, string cardNum, string cvv, string fee, string paidBy, string date, string paymentAmount, string acceptanceStatus, string stuName, int stuDbId)
         {
             this.stuUsername = username;
             this.subId1 = subId1;
@@ -104,13 +111,16 @@ namespace Tuition_Centre.Class
             this.date = date;
             this.paymentAmount = paymentAmount;
             this.acceptanceStatus = acceptanceStatus;
+            this.stuName = stuName;
+            this.stuDbId = stuDbId;
         }
 
-        public Recep(string rcpPhone, string rcpAddress, string rcpEmail)
+        public Recep(string rcpPhone, string rcpAddress, string rcpEmail, int recepId)
         {
             this.rcpPhone = rcpPhone;
             this.rcpAddress = rcpAddress;
             this.rcpEmail = rcpEmail;
+            this.recepId = recepId;
         }
 
         // Method getting receptionist name from database and return as string
@@ -118,9 +128,6 @@ namespace Tuition_Centre.Class
         public string[] getRecepData(string un)
         {
             con.Open();
-
-
-
             SqlCommand cmd = new SqlCommand("SELECT r.recepId, r.recepName, r.recepIcP FROM receptionist r " +
                                             "INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
             cmd.Parameters.AddWithValue("@un", un);
@@ -178,8 +185,10 @@ namespace Tuition_Centre.Class
             con.Open();
 
             // Insert the value of username, subject1, subject2,subject3 to the studentSSubject database
-            SqlCommand cmdstuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectid1, subjectid2, subjectid3) " +
-                                                  "VALUES (@username, @subId1, @subId2, @subId3)", con);
+            SqlCommand cmdstuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectId1, subjectId2, subjectId3, fullName, studentDatabaseId) " +
+                                                  "SELECT s.username, @subId1, @subId2, @subId3, s.studentName, s.studentDatabaseld " +
+                                                  "FROM studentInfo s " +
+                                                  "WHERE s.username = @username", con);
             cmdstuSub.Parameters.AddWithValue("@username", stuUsername);
             cmdstuSub.Parameters.AddWithValue("@subId1", subId1);
             cmdstuSub.Parameters.AddWithValue("@subId2", subId2);
@@ -189,7 +198,7 @@ namespace Tuition_Centre.Class
             // Update the value of level, studentEnrollmentDate in the studentInfo database
             SqlCommand cmdStuInfo = new SqlCommand("UPDATE studentInfo SET level=@stulv, studentEnrollmentDate=@stuEnrollDate " +
                                                    "WHERE username=@un", con);
-            cmdStuInfo.Parameters.AddWithValue("@stuLv", stuLv);
+            cmdStuInfo.Parameters.AddWithValue("@stulv", stuLv);
             cmdStuInfo.Parameters.AddWithValue("@stuEnrollDate", stuEnrollDate);
             cmdStuInfo.Parameters.AddWithValue("@un", stuUsername);
             cmdStuInfo.ExecuteNonQuery();
@@ -298,17 +307,15 @@ namespace Tuition_Centre.Class
             return status;
         }
 
-            
-        
         public void UpdateRecepInfo()
         {
             con.Open();
 
-            SqlCommand cmdRecepInfo = new SqlCommand("UPDATE receptionist r INNER JOIN users u ON r.usersId = u.usersId SET r.recepPhone = @rcpPhone, r.recepAddress = @rcpAddress, r.recepEmail = @rcpEmail WHERE u.username=@un ", con);
+            SqlCommand cmdRecepInfo = new SqlCommand("UPDATE receptionist SET recepPhone = @rcpPhone, recepAddress = @rcpAddress, recepEmail = @rcpEmail WHERE usersId = @recepId", con);
             cmdRecepInfo.Parameters.AddWithValue("@rcpPhone", rcpPhone);
             cmdRecepInfo.Parameters.AddWithValue("@rcpAddress", rcpAddress);
             cmdRecepInfo.Parameters.AddWithValue("@rcpEmail", rcpEmail);
-            cmdRecepInfo.Parameters.AddWithValue("@un", un);
+            cmdRecepInfo.Parameters.AddWithValue("@recepId", recepId);
             cmdRecepInfo.ExecuteNonQuery();
 
             con.Close();

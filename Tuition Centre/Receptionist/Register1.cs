@@ -21,19 +21,24 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmRegister1 : Form
     {
-        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-
+        //Properties
         private string un;
         private string newStuId;
 
+        // Connection String
+        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+
+        // Default constructor
         public frmRegister1()
         {
             InitializeComponent();
         }
+        // Constructor that takes in the username of the current user
         public frmRegister1(string un)
         {
             InitializeComponent();
             this.un = un;
+
             // Create a new SqlConnection object with the connection string and return the status as result
             con.Open();
 
@@ -55,6 +60,7 @@ namespace Tuition_Centre.Receptionist
             this.newStuId = newStuId;
         }
 
+        // Button click event handler to navigate to the main receptionist form
         private void pictureHome_Click(object sender, EventArgs e)
         {
             frmMainReceptionist back = new frmMainReceptionist(un);
@@ -62,6 +68,7 @@ namespace Tuition_Centre.Receptionist
             this.Hide();
         }
 
+        // Button "next" that register student into users, studentInfo and navigate to register form 2
         private void btnNext_Click(object sender, EventArgs e)
         {
             // Validate input data
@@ -74,15 +81,17 @@ namespace Tuition_Centre.Receptionist
                 return;
             }
 
+            // Set some default values for the student
             string stuLv = "lv";
             string role = "student";
             string stuEnrollDate = "today";
             string stuUsername = txtUsername.Text;
 
+            // Create a new Recep object with the student information and add it to the database
             Recep rcp = new Recep(stuLv, txtUsername.Text, txtPw.Text, role, newStuId, txtStuName.Text, txtStuIcP.Text, txtStuEmail.Text, txtStuPhone.Text, txtStuAddress.Text, stuEnrollDate, dtpBirthday.Text, txtCourse.Text, txtMemo.Text);
             rcp.addStudent();
 
-
+            // Go to the next step of the registration process
             frmRegister2 regNext = new frmRegister2(un, stuUsername);
             regNext.Show();
             this.Hide();

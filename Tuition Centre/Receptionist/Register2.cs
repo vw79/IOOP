@@ -16,9 +16,11 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmRegister2 : Form
     {
+        private int stuDbId;
+        
         private string stuUsername;
         private string un;
-        private string subjectId;
+        
 
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
@@ -55,10 +57,10 @@ namespace Tuition_Centre.Receptionist
         private string GetSubjectId(string subject, string level)
         {
             // An array of all available subjects
-            string[] subjects = { "Math", "Science", "History", "English", "Bahasa Melayu", "Geography" };
+            string[] subjects = { "Mathematics", "Science", "History", "English", "Bahasa Melayu", "Geography" };
 
             // An array of the corresponding subject IDs
-            string[] subjectIds = { "math", "sci", "his", "eng", "bm", "geo" };
+            string[] subjectIds = { "mth", "sci", "his", "eng", "bah", "geo" };
 
             // A string to hold the final subject ID
             string subjectId = "";
@@ -81,6 +83,14 @@ namespace Tuition_Centre.Receptionist
                     else if (level == "Level 3")
                     {
                         subjectId = subjectIds[i] + "003";
+                    }
+                    else if (level == "Level 4")
+                    {
+                        subjectId = subjectIds[i] + "004";
+                    }
+                    else if (level == "Level 5")
+                    {
+                        subjectId = subjectIds[i] + "005";
                     }
                     return subjectId;
                 }
@@ -137,9 +147,14 @@ namespace Tuition_Centre.Receptionist
             string date = "-";
             string paymentAmount = "-";
             string acceptanceStatus = "-";
-            decimal fee = 0;
+            string fee = "";
 
             con.Open();
+            // Retrieve the full name of the student based on their username
+            SqlCommand cmdName = new SqlCommand("SELECT studentName FROM studentInfo WHERE username = @stuUsername", con);
+            cmdName.Parameters.AddWithValue("@stuUsername", stuUsername);
+            string fullName = cmdName.ExecuteScalar().ToString();
+
             SqlCommand cmdClass = new SqlCommand("SELECT c.subjectId, c.charges, s.subjectid1, s.subjectid2, s.subjectid3 " +
                                                  "FROM studentSubject s " +
                                                  "LEFT JOIN class c ON s.subjectid1 = c.subjectid OR s.subjectid2 = c.subjectid OR s.subjectid3 = c.subjectid " +
@@ -154,25 +169,25 @@ namespace Tuition_Centre.Receptionist
                 if (!reader.IsDBNull(reader.GetOrdinal("subjectid1")))
                 {
                     // Add the charges for subjectid1 to the fee
-                    fee += decimal.Parse(reader["charges"].ToString());
+                    fee += int.Parse(reader["charges"].ToString());
                 }
 
                 // Check if the subjectid2 column is not null
                 if (!reader.IsDBNull(reader.GetOrdinal("subjectid2")))
                 {
                     // Add the charges for subjectid2 to the fee
-                    fee += decimal.Parse(reader["charges"].ToString());
+                    fee += int.Parse(reader["charges"].ToString());
                 }
 
                 // Check if the subjectid3 column is not null
                 if (!reader.IsDBNull(reader.GetOrdinal("subjectid3")))
                 {
                     // Add the charges for subjectid3 to the fee
-                    fee += decimal.Parse(reader["charges"].ToString());
+                    fee += int.Parse(reader["charges"].ToString());
                 }
             }
 
-            Recep rcp = new Recep(stuUsername, subjectId1, subjectId2, subjectId3, cmbLevel.Text, dtpEnrollDate.Text, cmbPayment.Text, txtCardNum.Text, txtCVV.Text, fee, paidBy, date, paymentAmount, acceptanceStatus);
+            Recep rcp = new Recep(stuUsername, subjectId1, subjectId2, subjectId3, cmbLevel.Text, dtpEnrollDate.Text, cmbPayment.Text, txtCardNum.Text, txtCVV.Text, fee, paidBy, date, paymentAmount, acceptanceStatus, fullName, stuDbId);
             rcp.addSubjectPay();
 
 
