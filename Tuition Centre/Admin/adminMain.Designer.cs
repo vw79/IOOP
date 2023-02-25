@@ -54,9 +54,9 @@
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblName.Location = new Point(6, 19);
+            lblName.Location = new Point(7, 25);
             lblName.Name = "lblName";
-            lblName.Size = new Size(59, 21);
+            lblName.Size = new Size(73, 28);
             lblName.TabIndex = 3;
             lblName.Text = "Name :";
             // 
@@ -64,25 +64,29 @@
             // 
             grpbIdentity.Controls.Add(lblIdentity);
             grpbIdentity.Controls.Add(lblName);
-            grpbIdentity.Location = new Point(12, 12);
+            grpbIdentity.Location = new Point(14, 16);
+            grpbIdentity.Margin = new Padding(3, 4, 3, 4);
             grpbIdentity.Name = "grpbIdentity";
-            grpbIdentity.Size = new Size(776, 69);
+            grpbIdentity.Padding = new Padding(3, 4, 3, 4);
+            grpbIdentity.Size = new Size(887, 92);
             grpbIdentity.TabIndex = 5;
             grpbIdentity.TabStop = false;
+            grpbIdentity.Enter += grpbIdentity_Enter;
             // 
             // lblIdentity
             // 
             lblIdentity.AutoSize = true;
             lblIdentity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblIdentity.Location = new Point(6, 40);
+            lblIdentity.Location = new Point(7, 53);
             lblIdentity.Name = "lblIdentity";
-            lblIdentity.Size = new Size(32, 21);
+            lblIdentity.Size = new Size(40, 28);
             lblIdentity.TabIndex = 4;
             lblIdentity.Text = "ID :";
             // 
             // splitContainer1
             // 
-            splitContainer1.Location = new Point(12, 87);
+            splitContainer1.Location = new Point(14, 116);
+            splitContainer1.Margin = new Padding(3, 4, 3, 4);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -99,15 +103,17 @@
             splitContainer1.Panel2.Controls.Add(btnRegisterReceptionist);
             splitContainer1.Panel2.Controls.Add(btnDeleteTutor);
             splitContainer1.Panel2.Controls.Add(btnRegisterTutor);
-            splitContainer1.Size = new Size(776, 351);
-            splitContainer1.SplitterDistance = 140;
+            splitContainer1.Size = new Size(887, 468);
+            splitContainer1.SplitterDistance = 160;
+            splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 6;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(3, 141);
+            btnUpdate.Location = new Point(3, 188);
+            btnUpdate.Margin = new Padding(3, 4, 3, 4);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(134, 40);
+            btnUpdate.Size = new Size(153, 53);
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "Update Profile";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -115,18 +121,20 @@
             // 
             // btnFinance
             // 
-            btnFinance.Location = new Point(3, 95);
+            btnFinance.Location = new Point(3, 127);
+            btnFinance.Margin = new Padding(3, 4, 3, 4);
             btnFinance.Name = "btnFinance";
-            btnFinance.Size = new Size(134, 40);
+            btnFinance.Size = new Size(153, 53);
             btnFinance.TabIndex = 2;
             btnFinance.Text = "Financial Report";
             btnFinance.UseVisualStyleBackColor = true;
             // 
             // btnReceptionist
             // 
-            btnReceptionist.Location = new Point(3, 49);
+            btnReceptionist.Location = new Point(3, 65);
+            btnReceptionist.Margin = new Padding(3, 4, 3, 4);
             btnReceptionist.Name = "btnReceptionist";
-            btnReceptionist.Size = new Size(134, 40);
+            btnReceptionist.Size = new Size(153, 53);
             btnReceptionist.TabIndex = 1;
             btnReceptionist.Text = "Receptionist List";
             btnReceptionist.UseVisualStyleBackColor = true;
@@ -134,9 +142,10 @@
             // 
             // btnTutorList
             // 
-            btnTutorList.Location = new Point(3, 3);
+            btnTutorList.Location = new Point(3, 4);
+            btnTutorList.Margin = new Padding(3, 4, 3, 4);
             btnTutorList.Name = "btnTutorList";
-            btnTutorList.Size = new Size(134, 40);
+            btnTutorList.Size = new Size(153, 53);
             btnTutorList.TabIndex = 0;
             btnTutorList.Text = "Tutor List";
             btnTutorList.UseVisualStyleBackColor = true;
@@ -145,17 +154,20 @@
             // dgvContent
             // 
             dgvContent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvContent.Location = new Point(3, 3);
+            dgvContent.Location = new Point(3, 4);
+            dgvContent.Margin = new Padding(3, 4, 3, 4);
             dgvContent.Name = "dgvContent";
+            dgvContent.RowHeadersWidth = 51;
             dgvContent.RowTemplate.Height = 25;
-            dgvContent.Size = new Size(626, 289);
+            dgvContent.Size = new Size(715, 385);
             dgvContent.TabIndex = 5;
             // 
             // btnDeleteReceptionist
             // 
-            btnDeleteReceptionist.Location = new Point(529, 298);
+            btnDeleteReceptionist.Location = new Point(605, 397);
+            btnDeleteReceptionist.Margin = new Padding(3, 4, 3, 4);
             btnDeleteReceptionist.Name = "btnDeleteReceptionist";
-            btnDeleteReceptionist.Size = new Size(100, 50);
+            btnDeleteReceptionist.Size = new Size(114, 67);
             btnDeleteReceptionist.TabIndex = 4;
             btnDeleteReceptionist.Text = "Delete";
             btnDeleteReceptionist.UseVisualStyleBackColor = true;
@@ -163,9 +175,10 @@
             // 
             // btnRegisterReceptionist
             // 
-            btnRegisterReceptionist.Location = new Point(3, 298);
+            btnRegisterReceptionist.Location = new Point(3, 397);
+            btnRegisterReceptionist.Margin = new Padding(3, 4, 3, 4);
             btnRegisterReceptionist.Name = "btnRegisterReceptionist";
-            btnRegisterReceptionist.Size = new Size(100, 50);
+            btnRegisterReceptionist.Size = new Size(114, 67);
             btnRegisterReceptionist.TabIndex = 3;
             btnRegisterReceptionist.Text = "Register";
             btnRegisterReceptionist.UseVisualStyleBackColor = true;
@@ -173,9 +186,10 @@
             // 
             // btnDeleteTutor
             // 
-            btnDeleteTutor.Location = new Point(529, 298);
+            btnDeleteTutor.Location = new Point(605, 397);
+            btnDeleteTutor.Margin = new Padding(3, 4, 3, 4);
             btnDeleteTutor.Name = "btnDeleteTutor";
-            btnDeleteTutor.Size = new Size(100, 50);
+            btnDeleteTutor.Size = new Size(114, 67);
             btnDeleteTutor.TabIndex = 2;
             btnDeleteTutor.Text = "Delete";
             btnDeleteTutor.UseVisualStyleBackColor = true;
@@ -183,9 +197,10 @@
             // 
             // btnRegisterTutor
             // 
-            btnRegisterTutor.Location = new Point(3, 298);
+            btnRegisterTutor.Location = new Point(3, 397);
+            btnRegisterTutor.Margin = new Padding(3, 4, 3, 4);
             btnRegisterTutor.Name = "btnRegisterTutor";
-            btnRegisterTutor.Size = new Size(100, 50);
+            btnRegisterTutor.Size = new Size(114, 67);
             btnRegisterTutor.TabIndex = 1;
             btnRegisterTutor.Text = "Register";
             btnRegisterTutor.UseVisualStyleBackColor = true;
@@ -193,11 +208,12 @@
             // 
             // FrmMainAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(splitContainer1);
             Controls.Add(grpbIdentity);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmMainAdmin";
             Text = "Admin";
             Load += frmMainAdmin_Load;

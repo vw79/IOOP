@@ -42,11 +42,8 @@ namespace Tuition_Centre.Student
             cmd.Parameters.AddWithValue("@studentEmail", txtEmail.Text);
             cmd.Parameters.AddWithValue("@memo", txtmemo.Text);
             cmd.ExecuteNonQuery();
-
             con.Close();
             MessageBox.Show("Successfully update");
-
-
         }
 
         private void EditProfile_Load(object sender, EventArgs e)
@@ -70,7 +67,6 @@ namespace Tuition_Centre.Student
                 txtPhoneNumber.Text = rd.GetString(7);
                 txtEmail.Text = rd.GetString(6);
                 txtmemo.Text = rd.GetString(12);
-
             }
             con.Close();
         }

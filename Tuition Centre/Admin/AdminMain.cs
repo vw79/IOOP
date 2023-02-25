@@ -71,8 +71,6 @@ namespace Tuition_Centre.Admin
 
         private void btnReceptionist_Click(object sender, EventArgs e)
         {
-            TutorOrReceptionistClicked(true, false);
-            dgvContent.Columns.Clear();
             AdminClass loader = new AdminClass();
             DataTable dataTable = loader.ViewReceptionistList();
             DataTable filteredTable = new DataTable();
@@ -167,6 +165,11 @@ namespace Tuition_Centre.Admin
         {
             FrmAdminUpdateProfile adminFrm = new FrmAdminUpdateProfile();
             adminFrm.ShowDialog();
+        }
+
+        private void grpbIdentity_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

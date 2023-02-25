@@ -85,7 +85,7 @@ namespace Tuition_Centre.Tutor
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            frmMainTutor obj1 = new frmMainTutor();
+            frmMainTutor obj1 = new frmMainTutor(Name);
             this.Hide();
             obj1.ShowDialog();
         }

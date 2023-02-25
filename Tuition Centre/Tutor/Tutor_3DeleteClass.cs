@@ -24,7 +24,7 @@ namespace Tuition_Centre.Tutor
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmMainTutor obj = new frmMainTutor();
+            frmMainTutor obj = new frmMainTutor(Name);
             this.Hide();
             obj.ShowDialog();
         }
@@ -38,7 +38,7 @@ namespace Tuition_Centre.Tutor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMainTutor obj = new frmMainTutor();
+            frmMainTutor obj = new frmMainTutor(Name);
             this.Hide();
             obj.ShowDialog();
         }

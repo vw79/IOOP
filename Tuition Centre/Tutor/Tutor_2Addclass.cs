@@ -39,7 +39,7 @@ namespace Tuition_Centre.Tutor
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into class (subjectName, timestart, timeend, date, location, teacher, subjectid, charges) values(@name,@start,@end,@date,@loc,@teacher,@id,@char)", con);
+            SqlCommand cmd = new SqlCommand("insert into class (subjectName, timestart, timeend, date, location, teacher, subjectid, charges, username) values(@name,@start,@end,@date,@loc,@teacher,@id,@char,@username)", con);
             cmd.Parameters.AddWithValue("@id", cmbSubIDAdd.Text);
             cmd.Parameters.AddWithValue("@name", cmbSubNameAdd.Text);
             cmd.Parameters.AddWithValue("@date", dtpClassDate.Text);
@@ -48,28 +48,18 @@ namespace Tuition_Centre.Tutor
             cmd.Parameters.AddWithValue("@end", txbEndTime.Text);
             cmd.Parameters.AddWithValue("@teacher", lblTutorName.Text);
             cmd.Parameters.AddWithValue("@char", txbCharges.Text);
+            cmd.Parameters.AddWithValue("@username", Name);
             cmd.ExecuteNonQuery();
 
             con.Close();
             MessageBox.Show("Successfully Add New Class.");
         }
 
-        private void button5_Click(object sender, EventArgs e) // Clear Add New Class Form Button
-        {
-            string text = "Oops, You not confirmed!";
-            MessageBox.Show(text);
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
-            frmMainTutor obj = new frmMainTutor();
+            frmMainTutor obj = new frmMainTutor(Name);
             this.Hide();
             obj.ShowDialog();
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -101,11 +91,6 @@ namespace Tuition_Centre.Tutor
             obj.ShowDialog();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -127,14 +112,5 @@ namespace Tuition_Centre.Tutor
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

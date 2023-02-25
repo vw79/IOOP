@@ -27,11 +27,6 @@ namespace Tuition_Centre.Student
             obj1.ShowDialog();
         }
 
-        private void pictureBackward_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
@@ -41,7 +36,17 @@ namespace Tuition_Centre.Student
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Cancel Successfully");
-            
+
+        }
+        
+        private void pictureBackward_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UnpendingRequest_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
