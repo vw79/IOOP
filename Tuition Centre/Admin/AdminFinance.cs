@@ -25,9 +25,10 @@ namespace Tuition_Centre.Admin
             AdminClass calculator = new AdminClass();
             ArrayList report = calculator.CalculateIncome(month, year);
             lstbReport.Items.Add("Income for this month");
+            int count = 0;
             foreach (var item in report)
             {
-                int count = 0;
+                
                 switch (count)
                 {
                     case 0:
@@ -67,7 +68,7 @@ namespace Tuition_Centre.Admin
                         lstbReport.Items.Add($"Total incoem from Level 5 = RM{item}");
                         break;
                 }
-                lstbReport.Items.Add($"Total income = {item}");
+                count++;
             }
         }
 
@@ -78,10 +79,11 @@ namespace Tuition_Centre.Admin
             int year = dtpMonthYear.Value.Year;
             AdminClass calculator = new AdminClass();
             ArrayList report = calculator.CalculateIncome(month, year);
+            lstbReport.Items.Clear();
             lstbReport.Items.Add("Income for this month");
+            int count = 0;
             foreach (var item in report)
             {
-                int count = 0;
                 switch (count)
                 {
                     case 0:
@@ -121,7 +123,7 @@ namespace Tuition_Centre.Admin
                         lstbReport.Items.Add($"Total incoem from Level 5 = RM{item}");
                         break;
                 }
-                lstbReport.Items.Add($"Total income = {item}");
+                count++;
             }
         }
     }

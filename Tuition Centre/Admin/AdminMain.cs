@@ -18,7 +18,9 @@ namespace Tuition_Centre.Admin
 {
     public partial class FrmMainAdmin : Form
     {
+        //Declares username string
         private string username;
+
 
         public FrmMainAdmin(string un)
         {

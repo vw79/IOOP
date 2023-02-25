@@ -304,14 +304,73 @@ namespace Tuition_Centre.Class
             SqlDataReader reader = cmdReadPayment.ExecuteReader();
             while (reader.Read())
             {
-                MessageBox.Show("This ran");
                 payment = reader.GetString(0);
                 subject1 = reader.GetString(1);
                 subject2 = reader.GetString(2);
                 subject3 = reader.GetString(3);
-                SubjectCalculator(subject1, mth, sci, his, eng, bah, geo, payment);
-                SubjectCalculator(subject2, mth, sci, his, eng, bah, geo, payment);
-                SubjectCalculator(subject3, mth, sci, his, eng, bah, geo, payment);
+                switch (subject1[0].ToString())
+                {
+                    case "m":
+                        mth += Convert.ToInt32(payment);
+                        break;
+                    case "s":
+                        sci += Convert.ToInt32(payment);
+                        break;
+                    case "h":
+                        his += Convert.ToInt32(payment);
+                        break;
+                    case "e":
+                        eng += Convert.ToInt32(payment);
+                        break;
+                    case "b":
+                        bah += Convert.ToInt32(payment);
+                        break;
+                    case "g":
+                        geo += Convert.ToInt32(payment);
+                        break;
+                }
+                switch (subject2[0].ToString())
+                {
+                    case "m":
+                        mth += Convert.ToInt32(payment);
+                        break;
+                    case "s":
+                        sci += Convert.ToInt32(payment);
+                        break;
+                    case "h":
+                        his += Convert.ToInt32(payment);
+                        break;
+                    case "e":
+                        eng += Convert.ToInt32(payment);
+                        break;
+                    case "b":
+                        bah += Convert.ToInt32(payment);
+                        break;
+                    case "g":
+                        geo += Convert.ToInt32(payment);
+                        break;
+                }
+                switch (subject3[0].ToString())
+                {
+                    case "m":
+                        mth += Convert.ToInt32(payment);
+                        break;
+                    case "s":
+                        sci += Convert.ToInt32(payment);
+                        break;
+                    case "h":
+                        his += Convert.ToInt32(payment);
+                        break;
+                    case "e":
+                        eng += Convert.ToInt32(payment);
+                        break;
+                    case "b":
+                        bah += Convert.ToInt32(payment);
+                        break;
+                    case "g":
+                        geo += Convert.ToInt32(payment);
+                        break;
+                }
                 switch (subject1[5])
                 {
                     case '1':
@@ -346,35 +405,7 @@ namespace Tuition_Centre.Class
             report.Add(level5);
             reader.Close();
             con.Close();
-            MessageBox.Show(total.ToString());
             return report;
-        }
-
-        private int SubjectCalculator(string subject, int mth, int sci, int his, int eng, int bah, int geo, string payment)
-        {
-            switch (subject[0])
-            {
-                case 'm':
-                    mth += Convert.ToInt32(payment);
-                    return mth;
-                case 's':
-                    sci += Convert.ToInt32(payment);
-                    return sci;
-                case 'h':
-                    his += Convert.ToInt32(payment);
-                    return his;
-                case 'e':
-                    eng += Convert.ToInt32(payment);
-                    return eng;
-                case 'b':
-                    bah += Convert.ToInt32(payment);
-                    return bah;
-                case 'g':
-                    geo += Convert.ToInt32(payment);
-                    return geo;
-                default:
-                    throw new ArgumentException("Invalid subject");
-            }
         }
 
     }
