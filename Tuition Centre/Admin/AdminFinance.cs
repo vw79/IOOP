@@ -20,15 +20,20 @@ namespace Tuition_Centre.Admin
         public FrmAdminFinance()
         {
             InitializeComponent();
+            //Get the month and year from the date time picker
             int month = dtpMonthYear.Value.Month;
             int year = dtpMonthYear.Value.Year;
+            //Creates a new object and assign report as an ArrayList from the class and method
             AdminClass calculator = new AdminClass();
             ArrayList report = calculator.CalculateIncome(month, year);
+            //Adds this string into the list
             lstbReport.Items.Add("Income for this month");
+            //Declare count as 0
             int count = 0;
+            //Prints out the total amount earned in the list box
             foreach (var item in report)
             {
-                
+                //Determines how much count is and determine what should be printed
                 switch (count)
                 {
                     case 0:
@@ -68,22 +73,31 @@ namespace Tuition_Centre.Admin
                         lstbReport.Items.Add($"Total incoem from Level 5 = RM{item}");
                         break;
                 }
+                //Increase count by one each loop
                 count++;
             }
         }
 
         private void dtbMonthYear_ValueChanged(object sender, EventArgs e)
         {
+            //Forces the day of the date time picker to always be 1
             dtpMonthYear.Value = new DateTime(dtpMonthYear.Value.Year, dtpMonthYear.Value.Month, 1);
+            //Get the month and year from the date time picker
             int month = dtpMonthYear.Value.Month;
             int year = dtpMonthYear.Value.Year;
+            //Creates a new object and assign report as an ArrayList from the class and method
             AdminClass calculator = new AdminClass();
             ArrayList report = calculator.CalculateIncome(month, year);
+            //Clears the list
             lstbReport.Items.Clear();
+            //Add the string
             lstbReport.Items.Add("Income for this month");
+            //Declare count as 0
             int count = 0;
+            //Prints out the total amount earned in the list box
             foreach (var item in report)
             {
+                //Determines how much count is and determine what should be printed
                 switch (count)
                 {
                     case 0:
@@ -123,6 +137,7 @@ namespace Tuition_Centre.Admin
                         lstbReport.Items.Add($"Total incoem from Level 5 = RM{item}");
                         break;
                 }
+                //Increase count by one each loop
                 count++;
             }
         }

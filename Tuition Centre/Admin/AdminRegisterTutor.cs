@@ -20,6 +20,7 @@ namespace Tuition_Centre.Admin
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            //Checks if the textbox are empty or not
             if (!string.IsNullOrEmpty(txtbFullName.Text) || !string.IsNullOrEmpty(txtbPhone.Text) || !string.IsNullOrEmpty(txtbIcP.Text) || 
                 !string.IsNullOrEmpty(txtbAddress.Text) || !string.IsNullOrEmpty(txtbEmail.Text) || !string.IsNullOrEmpty(txtbSubject.Text) ||
                 !string.IsNullOrEmpty(cmbLevel.Text) || !string.IsNullOrEmpty(dtpDOB.Text) || !string.IsNullOrEmpty(txtbUsername.Text) ||
@@ -29,6 +30,7 @@ namespace Tuition_Centre.Admin
             }
             else
             {
+                //Read user input and assign value into the variables
                 string fullName = txtbFullName.Text;
                 string phone = txtbPhone.Text;
                 string icP = txtbIcP.Text;
@@ -39,6 +41,8 @@ namespace Tuition_Centre.Admin
                 string dob = dtpDOB.Text;
                 string username = txtbUsername.Text;
                 string password = txtbPassword.Text;
+
+                //Create object and call method to create a new tutor while closing this form
                 AdminClass register = new AdminClass(fullName, username, password, phone, email, dob, address, subject, level, icP);
                 register.RegisterTutor();
                 this.Close();    

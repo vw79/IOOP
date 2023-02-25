@@ -28,19 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblCurrentMonth = new Label();
             dtpMonthYear = new DateTimePicker();
             lstbReport = new ListBox();
             SuspendLayout();
-            // 
-            // lblCurrentMonth
-            // 
-            lblCurrentMonth.AutoSize = true;
-            lblCurrentMonth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCurrentMonth.Location = new Point(227, 9);
-            lblCurrentMonth.Name = "lblCurrentMonth";
-            lblCurrentMonth.Size = new Size(0, 21);
-            lblCurrentMonth.TabIndex = 2;
             // 
             // dtpMonthYear
             // 
@@ -69,15 +59,12 @@
             ClientSize = new Size(800, 438);
             Controls.Add(lstbReport);
             Controls.Add(dtpMonthYear);
-            Controls.Add(lblCurrentMonth);
             Name = "FrmAdminFinance";
             Text = "Income Report";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label lblCurrentMonth;
         private DateTimePicker dtpMonthYear;
         private ListBox lstbReport;
     }
