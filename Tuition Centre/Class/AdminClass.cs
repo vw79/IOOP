@@ -8,6 +8,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 using Tuition_Centre.Admin;
 
 namespace Tuition_Centre.Class
@@ -49,6 +50,23 @@ namespace Tuition_Centre.Class
         private string tutorLevel;
 
         private int usersId;
+
+        private string payment;
+        private string subject1;
+        private string subject2;
+        private string subject3;
+        private int mth;
+        private int sci;
+        private int his;
+        private int eng;
+        private int bah;
+        private int geo;
+        private int level1;
+        private int level2;
+        private int level3;
+        private int level4;
+        private int level5;
+        private int total;
 
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
@@ -272,10 +290,92 @@ namespace Tuition_Centre.Class
             con.Close();
         }
 
-        public void CalculateLevelIncome()
+        public ArrayList CalculateIncome(int month, int year)
         {
+            ArrayList report = new ArrayList();
             con.Open();
-            //SqlCommand cmdReadPayment = new SqlCommand("SELECT payment.paymentAmount, studentinfo.username FROM payment INNER JOIN studentinfo ON ", con);
+            SqlCommand cmdReadPayment = new SqlCommand("SELECT payment.paymentAmount, studentSubject.subjectid1, studentSubject.subjectid2, studentSubject.subjectid3 " +
+                                                        "FROM payment " +
+                                                        "INNER JOIN studentSubject " +
+                                                        "ON payment.studentDatabaseId = studentSubject.studentDatabaseId " +
+                                                        "WHERE MONTH(payment.date) = @month AND YEAR(payment.date) =@year", con);
+            cmdReadPayment.Parameters.AddWithValue("@month",month.ToString());
+            cmdReadPayment.Parameters.AddWithValue("@year", year.ToString());
+            SqlDataReader reader = cmdReadPayment.ExecuteReader();
+            while (reader.Read())
+            {
+                MessageBox.Show("This ran");
+                payment = reader.GetString(0);
+                subject1 = reader.GetString(1);
+                subject2 = reader.GetString(2);
+                subject3 = reader.GetString(3);
+                SubjectCalculator(subject1, mth, sci, his, eng, bah, geo, payment);
+                SubjectCalculator(subject2, mth, sci, his, eng, bah, geo, payment);
+                SubjectCalculator(subject3, mth, sci, his, eng, bah, geo, payment);
+                switch (subject1[5])
+                {
+                    case '1':
+                        level1 += Convert.ToInt32(payment);
+                        break;
+                    case '2':
+                        level2 += Convert.ToInt32(payment);
+                        break;
+                    case '3':
+                        level3 += Convert.ToInt32(payment);
+                        break;
+                    case '4':
+                        level4 += Convert.ToInt32(payment);
+                        break;
+                    case '5':
+                        level5 += Convert.ToInt32(payment);
+                        break;
+                }
+                total += Convert.ToInt32(payment);
+            }
+            report.Add(total);
+            report.Add(mth);
+            report.Add(sci);
+            report.Add(his);
+            report.Add(eng);
+            report.Add(bah);
+            report.Add(geo);
+            report.Add(level1);
+            report.Add(level2);
+            report.Add(level3);
+            report.Add(level4);
+            report.Add(level5);
+            reader.Close();
+            con.Close();
+            MessageBox.Show(total.ToString());
+            return report;
         }
+
+        private int SubjectCalculator(string subject, int mth, int sci, int his, int eng, int bah, int geo, string payment)
+        {
+            switch (subject[0])
+            {
+                case 'm':
+                    mth += Convert.ToInt32(payment);
+                    return mth;
+                case 's':
+                    sci += Convert.ToInt32(payment);
+                    return sci;
+                case 'h':
+                    his += Convert.ToInt32(payment);
+                    return his;
+                case 'e':
+                    eng += Convert.ToInt32(payment);
+                    return eng;
+                case 'b':
+                    bah += Convert.ToInt32(payment);
+                    return bah;
+                case 'g':
+                    geo += Convert.ToInt32(payment);
+                    return geo;
+                default:
+                    throw new ArgumentException("Invalid subject");
+            }
+        }
+
     }
 }

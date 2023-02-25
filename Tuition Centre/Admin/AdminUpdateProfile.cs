@@ -21,7 +21,6 @@ namespace Tuition_Centre.Admin
         {
             InitializeComponent();
             username = un;
-            MessageBox.Show(username);
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
             SqlCommand cmdGetUsers = new SqlCommand("SELECT users.usersId, users.username, users.password, admin.adminEmail, admin.adminPhone, admin.adminAddress FROM admin INNER JOIN users ON admin.usersId = users.usersId WHERE username = @un", con);

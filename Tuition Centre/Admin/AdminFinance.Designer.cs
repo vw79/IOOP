@@ -30,7 +30,7 @@
         {
             lblCurrentMonth = new Label();
             dtpMonthYear = new DateTimePicker();
-            listBox1 = new ListBox();
+            lstbReport = new ListBox();
             SuspendLayout();
             // 
             // lblCurrentMonth
@@ -53,21 +53,21 @@
             dtpMonthYear.TabIndex = 3;
             dtpMonthYear.ValueChanged += dtbMonthYear_ValueChanged;
             // 
-            // listBox1
+            // lstbReport
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 41);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(776, 394);
-            listBox1.TabIndex = 4;
+            lstbReport.FormattingEnabled = true;
+            lstbReport.ItemHeight = 15;
+            lstbReport.Location = new Point(12, 41);
+            lstbReport.Name = "lstbReport";
+            lstbReport.Size = new Size(776, 394);
+            lstbReport.TabIndex = 4;
             // 
             // FrmAdminFinance
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 438);
-            Controls.Add(listBox1);
+            Controls.Add(lstbReport);
             Controls.Add(dtpMonthYear);
             Controls.Add(lblCurrentMonth);
             Name = "FrmAdminFinance";
@@ -79,6 +79,6 @@
         #endregion
         private Label lblCurrentMonth;
         private DateTimePicker dtpMonthYear;
-        private ListBox listBox1;
+        private ListBox lstbReport;
     }
 }
