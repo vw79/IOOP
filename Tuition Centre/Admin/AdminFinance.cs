@@ -15,10 +15,10 @@ namespace Tuition_Centre.Admin
         public static string name;
 
 
-        public FrmAdminFinance(string n)
+        public FrmAdminFinance()
         {
             InitializeComponent();
-            name = n;
+
         }
 
 
@@ -27,5 +27,9 @@ namespace Tuition_Centre.Admin
 
         }
 
+        private void dtbMonthYear_ValueChanged(object sender, EventArgs e)
+        {
+            dtpMonthYear.Value = new DateTime(dtpMonthYear.Value.Year, dtpMonthYear.Value.Month, 1);
+        }
     }
 }

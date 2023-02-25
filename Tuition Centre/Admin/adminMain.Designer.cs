@@ -134,6 +134,7 @@
             btnFinance.TabIndex = 2;
             btnFinance.Text = "Financial Report";
             btnFinance.UseVisualStyleBackColor = true;
+            btnFinance.Click += btnFinance_Click;
             // 
             // btnReceptionist
             // 

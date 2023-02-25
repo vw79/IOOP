@@ -28,29 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
-            lblTittle = new Label();
             lblCurrentMonth = new Label();
+            dtpMonthYear = new DateTimePicker();
+            listBox1 = new ListBox();
             SuspendLayout();
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 47);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(776, 379);
-            listBox1.TabIndex = 0;
-            // 
-            // lblTittle
-            // 
-            lblTittle.AutoSize = true;
-            lblTittle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTittle.Location = new Point(12, 9);
-            lblTittle.Name = "lblTittle";
-            lblTittle.Size = new Size(154, 21);
-            lblTittle.TabIndex = 1;
-            lblTittle.Text = "This Month's Income";
             // 
             // lblCurrentMonth
             // 
@@ -58,18 +39,37 @@
             lblCurrentMonth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblCurrentMonth.Location = new Point(227, 9);
             lblCurrentMonth.Name = "lblCurrentMonth";
-            lblCurrentMonth.Size = new Size(99, 21);
+            lblCurrentMonth.Size = new Size(0, 21);
             lblCurrentMonth.TabIndex = 2;
-            lblCurrentMonth.Text = "Current Date";
+            // 
+            // dtpMonthYear
+            // 
+            dtpMonthYear.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpMonthYear.CustomFormat = "MMMM yyyy";
+            dtpMonthYear.Format = DateTimePickerFormat.Custom;
+            dtpMonthYear.Location = new Point(12, 12);
+            dtpMonthYear.Name = "dtpMonthYear";
+            dtpMonthYear.Size = new Size(138, 23);
+            dtpMonthYear.TabIndex = 3;
+            dtpMonthYear.ValueChanged += dtbMonthYear_ValueChanged;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(12, 41);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(776, 394);
+            listBox1.TabIndex = 4;
             // 
             // FrmAdminFinance
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 438);
-            Controls.Add(lblCurrentMonth);
-            Controls.Add(lblTittle);
             Controls.Add(listBox1);
+            Controls.Add(dtpMonthYear);
+            Controls.Add(lblCurrentMonth);
             Name = "FrmAdminFinance";
             Text = "Income Report";
             ResumeLayout(false);
@@ -77,9 +77,8 @@
         }
 
         #endregion
-
-        private ListBox listBox1;
-        private Label lblTittle;
         private Label lblCurrentMonth;
+        private DateTimePicker dtpMonthYear;
+        private ListBox listBox1;
     }
 }

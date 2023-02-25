@@ -271,5 +271,11 @@ namespace Tuition_Centre.Class
             cmdUpdateAdmin.ExecuteNonQuery();
             con.Close();
         }
+
+        public void CalculateLevelIncome()
+        {
+            con.Open();
+            //SqlCommand cmdReadPayment = new SqlCommand("SELECT payment.paymentAmount, studentinfo.username FROM payment INNER JOIN studentinfo ON ", con);
+        }
     }
 }

@@ -162,5 +162,11 @@ namespace Tuition_Centre.Admin
             main.Show();
             this.Close();
         }
+
+        private void btnFinance_Click(object sender, EventArgs e)
+        {
+            FrmAdminFinance finance = new FrmAdminFinance();
+            finance.ShowDialog();
+        }
     }
 }
