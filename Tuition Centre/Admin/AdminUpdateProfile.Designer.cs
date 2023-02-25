@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lblEmail = new Label();
-            txbEmail = new TextBox();
+            txtbEmail = new TextBox();
             lblPhone = new Label();
             txtbPhone = new TextBox();
             lblAddress = new Label();
@@ -37,7 +37,7 @@
             lblUsername = new Label();
             txtbUsername = new TextBox();
             lblPassword = new Label();
-            textBox1 = new TextBox();
+            txtbPassword = new TextBox();
             btnUpdate = new Button();
             SuspendLayout();
             // 
@@ -51,12 +51,12 @@
             lblEmail.TabIndex = 0;
             lblEmail.Text = "Email";
             // 
-            // txbEmail
+            // txtbEmail
             // 
-            txbEmail.Location = new Point(96, 133);
-            txbEmail.Name = "txbEmail";
-            txbEmail.Size = new Size(138, 23);
-            txbEmail.TabIndex = 1;
+            txtbEmail.Location = new Point(96, 133);
+            txtbEmail.Name = "txtbEmail";
+            txtbEmail.Size = new Size(138, 23);
+            txtbEmail.TabIndex = 1;
             // 
             // lblPhone
             // 
@@ -119,12 +119,12 @@
             lblPassword.TabIndex = 8;
             lblPassword.Text = "Password";
             // 
-            // textBox1
+            // txtbPassword
             // 
-            textBox1.Location = new Point(96, 83);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(138, 23);
-            textBox1.TabIndex = 9;
+            txtbPassword.Location = new Point(96, 83);
+            txtbPassword.Name = "txtbPassword";
+            txtbPassword.Size = new Size(138, 23);
+            txtbPassword.TabIndex = 9;
             // 
             // btnUpdate
             // 
@@ -134,6 +134,7 @@
             btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // FrmAdminUpdateProfile
             // 
@@ -141,7 +142,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(510, 289);
             Controls.Add(btnUpdate);
-            Controls.Add(textBox1);
+            Controls.Add(txtbPassword);
             Controls.Add(lblPassword);
             Controls.Add(txtbUsername);
             Controls.Add(lblUsername);
@@ -149,7 +150,7 @@
             Controls.Add(lblAddress);
             Controls.Add(txtbPhone);
             Controls.Add(lblPhone);
-            Controls.Add(txbEmail);
+            Controls.Add(txtbEmail);
             Controls.Add(lblEmail);
             Name = "FrmAdminUpdateProfile";
             Text = "Update Profile";
@@ -160,7 +161,7 @@
         #endregion
 
         private Label lblEmail;
-        private TextBox txbEmail;
+        private TextBox txtbEmail;
         private Label lblPhone;
         private TextBox txtbPhone;
         private Label lblAddress;
@@ -168,7 +169,7 @@
         private Label lblUsername;
         private TextBox txtbUsername;
         private Label lblPassword;
-        private TextBox textBox1;
+        private TextBox txtbPassword;
         private Button btnUpdate;
     }
 }

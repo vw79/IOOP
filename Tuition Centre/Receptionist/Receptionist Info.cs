@@ -15,12 +15,12 @@ namespace Tuition_Centre.Receptionist
     public partial class frmUpdateRcp : Form
     {
         private string un;
-       
+
         public frmUpdateRcp()
         {
             InitializeComponent();
         }
-       
+
         public frmUpdateRcp(string un)
         {
 
@@ -38,6 +38,24 @@ namespace Tuition_Centre.Receptionist
         {
             frmMainReceptionist back = new frmMainReceptionist(un);
             back.Show();
+            this.Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            // Validate input data
+            if (string.IsNullOrEmpty(txtContact.Text) && string.IsNullOrEmpty(txtAdress.Text) && string.IsNullOrEmpty(txtEmail.Text))
+            {
+                MessageBox.Show("Data cannot be empty.");
+                return;
+            }
+
+            Recep rcpt = new Recep(txtContact.Text, txtAdress.Text, txtEmail.Text);
+            rcpt.UpdateRecepInfo();
+
+            MessageBox.Show("Receptionist Info Updated");
+            frmMainReceptionist mainMenu = new frmMainReceptionist(un);
+            mainMenu.Show();
             this.Hide();
         }
     }

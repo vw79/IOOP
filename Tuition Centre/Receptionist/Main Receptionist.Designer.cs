@@ -28,94 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegNewStu = new System.Windows.Forms.Button();
-            this.btnUpdateRcpInfo = new System.Windows.Forms.Button();
-            this.btnUpdateStudentInfo = new System.Windows.Forms.Button();
-            this.btnPayment = new System.Windows.Forms.Button();
-            this.lblWlcRcp = new System.Windows.Forms.Label();
-            this.picLogout = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
-            this.SuspendLayout();
+            btnRegNewStu = new Button();
+            btnUpdateRcpInfo = new Button();
+            btnUpdateStudentInfo = new Button();
+            btnPayment = new Button();
+            lblWlcRcp = new Label();
+            picLogout = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picLogout).BeginInit();
+            SuspendLayout();
             // 
             // btnRegNewStu
             // 
-            this.btnRegNewStu.Location = new System.Drawing.Point(183, 237);
-            this.btnRegNewStu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRegNewStu.Name = "btnRegNewStu";
-            this.btnRegNewStu.Size = new System.Drawing.Size(201, 65);
-            this.btnRegNewStu.TabIndex = 0;
-            this.btnRegNewStu.Text = "Register New Student";
-            this.btnRegNewStu.UseVisualStyleBackColor = true;
+            btnRegNewStu.Location = new Point(160, 178);
+            btnRegNewStu.Name = "btnRegNewStu";
+            btnRegNewStu.Size = new Size(176, 49);
+            btnRegNewStu.TabIndex = 0;
+            btnRegNewStu.Text = "Register New Student";
+            btnRegNewStu.UseVisualStyleBackColor = true;
+            btnRegNewStu.Click += btnRegNewStu_Click;
             // 
             // btnUpdateRcpInfo
             // 
-            this.btnUpdateRcpInfo.Location = new System.Drawing.Point(491, 237);
-            this.btnUpdateRcpInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdateRcpInfo.Name = "btnUpdateRcpInfo";
-            this.btnUpdateRcpInfo.Size = new System.Drawing.Size(201, 65);
-            this.btnUpdateRcpInfo.TabIndex = 1;
-            this.btnUpdateRcpInfo.Text = "Update Receptionist Info";
-            this.btnUpdateRcpInfo.UseVisualStyleBackColor = true;
+            btnUpdateRcpInfo.Location = new Point(430, 178);
+            btnUpdateRcpInfo.Name = "btnUpdateRcpInfo";
+            btnUpdateRcpInfo.Size = new Size(176, 49);
+            btnUpdateRcpInfo.TabIndex = 1;
+            btnUpdateRcpInfo.Text = "Update Receptionist Info";
+            btnUpdateRcpInfo.UseVisualStyleBackColor = true;
+            btnUpdateRcpInfo.Click += btnUpdateRcpInfo_Click;
             // 
             // btnUpdateStudentInfo
             // 
-            this.btnUpdateStudentInfo.Location = new System.Drawing.Point(183, 375);
-            this.btnUpdateStudentInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdateStudentInfo.Name = "btnUpdateStudentInfo";
-            this.btnUpdateStudentInfo.Size = new System.Drawing.Size(201, 65);
-            this.btnUpdateStudentInfo.TabIndex = 2;
-            this.btnUpdateStudentInfo.Text = "Update Student Info";
-            this.btnUpdateStudentInfo.UseVisualStyleBackColor = true;
+            btnUpdateStudentInfo.Location = new Point(160, 281);
+            btnUpdateStudentInfo.Name = "btnUpdateStudentInfo";
+            btnUpdateStudentInfo.Size = new Size(176, 49);
+            btnUpdateStudentInfo.TabIndex = 2;
+            btnUpdateStudentInfo.Text = "Update Student Info";
+            btnUpdateStudentInfo.UseVisualStyleBackColor = true;
+            btnUpdateStudentInfo.Click += btnUpdateStudentInfo_Click;
             // 
             // btnPayment
             // 
-            this.btnPayment.Location = new System.Drawing.Point(491, 375);
-            this.btnPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(201, 65);
-            this.btnPayment.TabIndex = 3;
-            this.btnPayment.Text = "Payment";
-            this.btnPayment.UseVisualStyleBackColor = true;
+            btnPayment.Location = new Point(430, 281);
+            btnPayment.Name = "btnPayment";
+            btnPayment.Size = new Size(176, 49);
+            btnPayment.TabIndex = 3;
+            btnPayment.Text = "Payment";
+            btnPayment.UseVisualStyleBackColor = true;
+            btnPayment.Click += btnPayment_Click;
             // 
             // lblWlcRcp
             // 
-            this.lblWlcRcp.AutoSize = true;
-            this.lblWlcRcp.Location = new System.Drawing.Point(91, 115);
-            this.lblWlcRcp.Name = "lblWlcRcp";
-            this.lblWlcRcp.Size = new System.Drawing.Size(193, 20);
-            this.lblWlcRcp.TabIndex = 4;
-            this.lblWlcRcp.Text = "Welcome back, [your name]";
+            lblWlcRcp.AutoSize = true;
+            lblWlcRcp.Location = new Point(80, 86);
+            lblWlcRcp.Name = "lblWlcRcp";
+            lblWlcRcp.Size = new Size(156, 15);
+            lblWlcRcp.TabIndex = 4;
+            lblWlcRcp.Text = "Welcome back, [your name]";
             // 
             // picLogout
             // 
-            this.picLogout.Image = global::Tuition_Centre.Properties.Resources.logout;
-            this.picLogout.Location = new System.Drawing.Point(832, 16);
-            this.picLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picLogout.Name = "picLogout";
-            this.picLogout.Size = new System.Drawing.Size(69, 61);
-            this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogout.TabIndex = 10;
-            this.picLogout.TabStop = false;
+            picLogout.Image = Properties.Resources.logout;
+            picLogout.Location = new Point(728, 12);
+            picLogout.Name = "picLogout";
+            picLogout.Size = new Size(60, 46);
+            picLogout.SizeMode = PictureBoxSizeMode.Zoom;
+            picLogout.TabIndex = 10;
+            picLogout.TabStop = false;
+            picLogout.Click += picLogout_Click;
             // 
             // frmMainReceptionist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Controls.Add(this.picLogout);
-            this.Controls.Add(this.lblWlcRcp);
-            this.Controls.Add(this.btnPayment);
-            this.Controls.Add(this.btnUpdateStudentInfo);
-            this.Controls.Add(this.btnUpdateRcpInfo);
-            this.Controls.Add(this.btnRegNewStu);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmMainReceptionist";
-            this.Text = "Receptionist";
-            this.Load += new System.EventHandler(this.frmMainReceptionist_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogout)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(picLogout);
+            Controls.Add(lblWlcRcp);
+            Controls.Add(btnPayment);
+            Controls.Add(btnUpdateStudentInfo);
+            Controls.Add(btnUpdateRcpInfo);
+            Controls.Add(btnRegNewStu);
+            Name = "frmMainReceptionist";
+            Text = "Receptionist";
+            ((System.ComponentModel.ISupportInitialize)picLogout).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

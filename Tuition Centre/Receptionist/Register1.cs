@@ -49,6 +49,8 @@ namespace Tuition_Centre.Receptionist
 
             cmdGetId.ExecuteNonQuery();
 
+            con.Close();
+
             lblNewStuId.Text = newStuId;
             this.newStuId = newStuId;
         }

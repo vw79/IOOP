@@ -33,6 +33,7 @@
             grpbIdentity = new GroupBox();
             lblIdentity = new Label();
             splitContainer1 = new SplitContainer();
+            btnLogOut = new Button();
             btnUpdate = new Button();
             btnFinance = new Button();
             btnReceptionist = new Button();
@@ -91,6 +92,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(btnLogOut);
             splitContainer1.Panel1.Controls.Add(btnUpdate);
             splitContainer1.Panel1.Controls.Add(btnFinance);
             splitContainer1.Panel1.Controls.Add(btnReceptionist);
@@ -107,6 +109,16 @@
             splitContainer1.SplitterDistance = 160;
             splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 6;
+            // 
+            // btnLogOut
+            // 
+            btnLogOut.Location = new Point(3, 311);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(134, 40);
+            btnLogOut.TabIndex = 5;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // btnUpdate
             // 
@@ -245,5 +257,6 @@
         private Button btnRegisterReceptionist;
         private Button btnDeleteReceptionist;
         private DataGridView dgvContent;
+        private Button btnLogOut;
     }
 }

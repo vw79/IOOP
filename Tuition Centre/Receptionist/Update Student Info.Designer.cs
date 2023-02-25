@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateStu));
             panel1 = new Panel();
             btnDeleteStu = new Button();
             btnUpPay = new Button();
@@ -37,10 +38,12 @@
             panel2 = new Panel();
             panel3 = new Panel();
             dgvChangeSubject = new DataGridView();
+            pictureHome = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvChangeSubject).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -62,7 +65,6 @@
             btnDeleteStu.TabIndex = 2;
             btnDeleteStu.Text = "Delete Student";
             btnDeleteStu.UseVisualStyleBackColor = true;
-            btnDeleteStu.Click += btnDeleteStu_Click;
             // 
             // btnUpPay
             // 
@@ -72,7 +74,6 @@
             btnUpPay.TabIndex = 1;
             btnUpPay.Text = "Update Payment";
             btnUpPay.UseVisualStyleBackColor = true;
-            btnUpPay.Click += btnUpPay_Click;
             // 
             // btnUpSub
             // 
@@ -82,7 +83,6 @@
             btnUpSub.TabIndex = 0;
             btnUpSub.Text = "Update Subject";
             btnUpSub.UseVisualStyleBackColor = true;
-            btnUpSub.Click += btnUpSub_Click;
             // 
             // lblStuName
             // 
@@ -105,6 +105,7 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Controls.Add(pictureHome);
             panel2.Controls.Add(lblStuID);
             panel2.Controls.Add(lblStuName);
             panel2.Location = new Point(12, 12);
@@ -130,6 +131,17 @@
             dgvChangeSubject.Size = new Size(581, 305);
             dgvChangeSubject.TabIndex = 0;
             // 
+            // pictureHome
+            // 
+            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
+            pictureHome.Location = new Point(723, -2);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(51, 43);
+            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureHome.TabIndex = 48;
+            pictureHome.TabStop = false;
+            pictureHome.Click += pictureHome_Click;
+            // 
             // frmUpdateStu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -145,6 +157,7 @@
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvChangeSubject).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             ResumeLayout(false);
         }
 
@@ -159,5 +172,6 @@
         private Panel panel2;
         private Panel panel3;
         private DataGridView dgvChangeSubject;
+        private PictureBox pictureHome;
     }
 }

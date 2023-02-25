@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +16,9 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmUpdateStu : Form
     {
+        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+
+        private string un;
         private string searchName;
         private string stuId;
         private string stuName;
@@ -25,28 +31,78 @@ namespace Tuition_Centre.Receptionist
             InitializeComponent();
         }
 
-        public frmUpdateStu(string un)
+        public frmUpdateStu(string un, string stuName)
         {
             InitializeComponent();
+            this.un = un;
+            con.Open();
+
+            SqlCommand rdChangeSub = new SqlCommand("SELECT s.studentId, c.date, s.studentName, c.oldSubject, c.newSubject, c.reasons, c.acceptanceStatus " +
+                                                    "FROM changeSubject c " +
+                                                    "INNER JOIN studentInfo s ON s.studentDatabaseld = c.studentDatabaseId ", con);
+
+            SqlDataReader rd = rdChangeSub.ExecuteReader();
+
 
             // Create a new DataTable with only the desired columns
             DataTable filteredTable = new DataTable();
-            filteredTable.Columns.Add("ID");
-            filteredTable.Columns.Add("Name");
-            filteredTable.Columns.Add("Enrollment Date");
-            filteredTable.Columns.Add("Study Course");
+            filteredTable.Columns.Add("Date");
+            filteredTable.Columns.Add("Student Name");
+            filteredTable.Columns.Add("Old Subject");
+            filteredTable.Columns.Add("New Subject");
+            filteredTable.Columns.Add("Reason");
+            filteredTable.Columns.Add("Status");
 
             // Add the rows from the dt to the filteredTable
-            foreach (DataRow row in filteredTable.Rows)
+            while (rd.Read())
             {
-                filteredTable.Rows.Add(row["studentId"], row["studentName"], row["studentEnrollmentDate"], row["studyCourse"]);
+                filteredTable.Rows.Add(rd.GetString(0), rd.GetString(1), rd.GetString(2), rd.GetString(3), rd.GetString(4), rd.GetString(5));
             }
+
+            rd.Close();
+            con.Close();
 
             // Set the DataSource property of the dgvStuInfo to the filteredTable containing only the desired columns
             dgvChangeSubject.DataSource = filteredTable;
-
+            dgvChangeSubject.ReadOnly = true;
+           // dgvChangeSubject.SelectionChanged += dgvChangeSubject_SelectionChanged;
         }
 
+        /*
+        private void dgvChangeSubject_SelectionChanged(object sender, EventArgs e)
+        {
+            // Get the currently selected row in the DataGridView
+            DataGridViewRow selectedRow = dgvChangeSubject.CurrentRow;
+
+            // Extract the data for each column from the selected row
+            string id = selectedRow.Cells
+            string date = selectedRow.Cells["Date"].Value.ToString();
+            string studentName = selectedRow.Cells["Student Name"].Value.ToString();
+            string oldSubject = selectedRow.Cells["Old Subject"].Value.ToString();
+            string newSubject = selectedRow.Cells["New Subject"].Value.ToString();
+            string reason = selectedRow.Cells["Reason"].Value.ToString();
+            string status = selectedRow.Cells["Status"].Value.ToString();
+
+            lblStuName.Text = studentName;
+
+            // Create a new instance of the frmUpdateSubject form and pass in the extracted data as parameters
+            frmUpdateStu1 updateStuSub = new frmUpdateStu1(date, studentName, oldSubject, newSubject, reason, status);
+
+            // Add the frmUpdateSubject form to the panel3 control
+            panel3.Controls.Clear();
+            panel3.Controls.Add(updateStuSub);
+            updateStuSub.Dock = DockStyle.Fill;
+            updateStuSub.BringToFront();
+        }*/
+
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            frmMainReceptionist back = new frmMainReceptionist(un);
+            back.Show();
+            this.Hide();
+        }
+
+        /*
         private void openChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
