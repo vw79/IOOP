@@ -15,7 +15,7 @@ namespace Tuition_Centre.Receptionist
     public partial class frmStuSearch : Form
     {
         private string un;
-        private string stuName
+        private string stuName;
         public frmStuSearch()
         {
             InitializeComponent();

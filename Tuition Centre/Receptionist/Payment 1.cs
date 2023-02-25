@@ -29,22 +29,29 @@ namespace Tuition_Centre.Receptionist
         {
             InitializeComponent();
             this.un = un;
+            dgvStuInfo.RowHeaderMouseDoubleClick += dgvStuInfo_RowHeaderMouseDoubleClick;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            // Get the search term from txtSearch
-            searchName = txtSearch.Text;
+            // Get the search term from the textbox
+            string searchName = txtSearch.Text;
 
+            if (string.IsNullOrWhiteSpace(searchName))
+            {
+                MessageBox.Show("Please enter a search term.");
+                return;
+            }
+
+            // Create a new Receptionist object
             Recep rcp = new Recep();
 
-            // Call the SearchStudent method to retrieve the search results
-            DataTable dt = rcp.searchStu();
+            // Call the SearchStu method of the Receptionist object and pass in the search term
+            DataTable dt = rcp.searchStu(searchName);
 
-            // Check if the search results are null
             if (dt == null)
             {
-                MessageBox.Show("Student does not exist.");
+                MessageBox.Show("No students found.");
             }
             else
             {
@@ -67,28 +74,25 @@ namespace Tuition_Centre.Receptionist
             }
         }
 
-        
-        /*
-        private void dgvStuInfo_SelectionChanged(object sender, EventArgs e)
+        private void dgvStuInfo_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // Check if there is at least one row selected
-            if (dgvStuInfo.SelectedRows.Count > 0)
-            {
-                // Get the selected student's data from the dgvStuInfo's SelectedRows collection
-                string name = dgvStuInfo.SelectedRows[0].Cells["Name"].Value.ToString();
-                string id = dgvStuInfo.SelectedRows[0].Cells["ID"].Value.ToString();
+            // Get the selected row
+            DataGridViewRow row = dgvStuInfo.Rows[e.RowIndex];
 
-                // Open the new form and pass in the selected student's data
-                frmPayment2 newForm = new frmPayment2(name, id);
+            // Get the student ID from the row
+            string studentId = row.Cells["ID"].Value.ToString();
 
-                // Show the new form
-                newForm.Show();
+            // Get the student name from the row
+            string studentName = row.Cells["Name"].Value.ToString();
 
-                // Hide the search form
-                this.Hide();
-            }
+            // Create a new instance of the next form and pass in the student ID and name
+            frmPayment2 nextForm = new frmPayment2(un, studentId, studentName);
+
+            // Show the next form
+            nextForm.Show();
+            this.Hide();
         }
-        */
+
         private void pictureHome_Click(object sender, EventArgs e)
         {
             frmMainReceptionist back = new frmMainReceptionist(un);

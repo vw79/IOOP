@@ -204,16 +204,17 @@ namespace Tuition_Centre.Class
         }
 
         // Method to search for a student in the database and return the results as a DataTable
-        public DataTable searchStu()
+        public DataTable searchStu(string searchName)
         {
-            string searchName = "";
+
             // Create a new SqlConnection object with the connection string
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
 
             // Create a new SqlCommand object with a SELECT statement to search for the student
             // The search term is passed as a parameter to prevent SQL injection attacks
             SqlCommand cmd = new SqlCommand("SELECT studentId, studentName, studentEnrollmentDate, studyCourse FROM studentInfo WHERE studentName LIKE @searchName", con);
-            cmd.Parameters.AddWithValue("searchName", "%" + searchName + "%");
+            cmd.Parameters.AddWithValue("@searchName", "%" + searchName + "%");
 
             // Create a new SqlDataAdapter object with the SqlCommand object as a parameter
             SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -224,15 +225,17 @@ namespace Tuition_Centre.Class
             // Fill the DataTable with the search results using the SqlDataAdapter
             adp.Fill(dt);
 
-            if (dt.Rows.Count == 0)
+            con.Close();
+
+            // Return the DataTable if rows are found, otherwise return null
+            if (dt.Rows.Count > 0)
             {
-                con.Close();
+                return dt;
+            }
+            else
+            {
                 return null;
             }
-
-            con.Close() ;
-            // Return the DataTable
-            return dt;
         }
 
 
