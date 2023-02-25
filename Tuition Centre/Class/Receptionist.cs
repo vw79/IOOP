@@ -66,11 +66,6 @@ namespace Tuition_Centre.Class
 
         }
 
-        public Recep(string un) 
-        { 
-            this.un = un;
-        }
-
         public Recep(string stuLv, string stuUsername, string stuPw, string role, string stuId, string stuName, string stuIcP, string stuEmail, string stuPhone, string stuAddress, string stuEnrollDate, string birthday, string studyCourse, string memo)
         {
             this.stuLv = stuLv;
@@ -209,8 +204,9 @@ namespace Tuition_Centre.Class
         }
 
         // Method to search for a student in the database and return the results as a DataTable
-        public DataTable SearchStu(string searchName)
+        public DataTable searchStu()
         {
+            string searchName = "";
             // Create a new SqlConnection object with the connection string
             con.Open();
 

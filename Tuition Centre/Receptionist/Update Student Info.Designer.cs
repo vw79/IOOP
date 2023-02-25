@@ -36,13 +36,10 @@
             lblStuName = new Label();
             lblStuID = new Label();
             panel2 = new Panel();
-            panel3 = new Panel();
-            dgvChangeSubject = new DataGridView();
             pictureHome = new PictureBox();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvChangeSubject).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
             SuspendLayout();
             // 
@@ -113,24 +110,6 @@
             panel2.Size = new Size(776, 105);
             panel2.TabIndex = 3;
             // 
-            // panel3
-            // 
-            panel3.BorderStyle = BorderStyle.Fixed3D;
-            panel3.Controls.Add(dgvChangeSubject);
-            panel3.Location = new Point(197, 123);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(591, 315);
-            panel3.TabIndex = 4;
-            // 
-            // dgvChangeSubject
-            // 
-            dgvChangeSubject.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvChangeSubject.Location = new Point(3, 3);
-            dgvChangeSubject.Name = "dgvChangeSubject";
-            dgvChangeSubject.RowTemplate.Height = 25;
-            dgvChangeSubject.Size = new Size(581, 305);
-            dgvChangeSubject.TabIndex = 0;
-            // 
             // pictureHome
             // 
             pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
@@ -140,7 +119,14 @@
             pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
             pictureHome.TabIndex = 48;
             pictureHome.TabStop = false;
-            pictureHome.Click += pictureHome_Click;
+            // 
+            // panel3
+            // 
+            panel3.BorderStyle = BorderStyle.Fixed3D;
+            panel3.Location = new Point(197, 123);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(591, 315);
+            panel3.TabIndex = 4;
             // 
             // frmUpdateStu
             // 
@@ -155,8 +141,6 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvChangeSubject).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             ResumeLayout(false);
         }
@@ -171,7 +155,6 @@
         private Label lblStuID;
         private Panel panel2;
         private Panel panel3;
-        private DataGridView dgvChangeSubject;
         private PictureBox pictureHome;
     }
 }

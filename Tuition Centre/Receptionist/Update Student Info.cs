@@ -35,37 +35,12 @@ namespace Tuition_Centre.Receptionist
         {
             InitializeComponent();
             this.un = un;
-            con.Open();
 
-            SqlCommand rdChangeSub = new SqlCommand("SELECT s.studentId, c.date, s.studentName, c.oldSubject, c.newSubject, c.reasons, c.acceptanceStatus " +
-                                                    "FROM changeSubject c " +
-                                                    "INNER JOIN studentInfo s ON s.studentDatabaseld = c.studentDatabaseId ", con);
-
-            SqlDataReader rd = rdChangeSub.ExecuteReader();
-
-
-            // Create a new DataTable with only the desired columns
-            DataTable filteredTable = new DataTable();
-            filteredTable.Columns.Add("Date");
-            filteredTable.Columns.Add("Student Name");
-            filteredTable.Columns.Add("Old Subject");
-            filteredTable.Columns.Add("New Subject");
-            filteredTable.Columns.Add("Reason");
-            filteredTable.Columns.Add("Status");
-
-            // Add the rows from the dt to the filteredTable
-            while (rd.Read())
-            {
-                filteredTable.Rows.Add(rd.GetString(0), rd.GetString(1), rd.GetString(2), rd.GetString(3), rd.GetString(4), rd.GetString(5));
-            }
-
-            rd.Close();
-            con.Close();
-
-            // Set the DataSource property of the dgvStuInfo to the filteredTable containing only the desired columns
-            dgvChangeSubject.DataSource = filteredTable;
-            dgvChangeSubject.ReadOnly = true;
-           // dgvChangeSubject.SelectionChanged += dgvChangeSubject_SelectionChanged;
+            frmStuSearch selectStu = new frmStuSearch();
+            selectStu.TopLevel = true;
+            panel3.Controls.Clear();
+            panel3.Controls.Add(selectStu);
+            selectStu.Show();
         }
 
         /*
@@ -93,7 +68,7 @@ namespace Tuition_Centre.Receptionist
             panel3.Controls.Add(updateStuSub);
             updateStuSub.Dock = DockStyle.Fill;
             updateStuSub.BringToFront();
-        }*/
+        }
 
         private void pictureHome_Click(object sender, EventArgs e)
         {
@@ -102,7 +77,7 @@ namespace Tuition_Centre.Receptionist
             this.Hide();
         }
 
-        /*
+        
         private void openChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
@@ -116,16 +91,29 @@ namespace Tuition_Centre.Receptionist
             this.panel3.Controls.Add(childForm);
             this.panel3.Tag = childForm;
             childForm.Show();
-        }
+        } */
+
 
         private void btnUpSub_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmUpdateStu1(), btnUpSub);
+            // openChildForm(new frmUpdateStu1(), btnUpSub);
             btnUpSub.Enabled = false;
             btnUpPay.Enabled = true;
             btnDeleteStu.Enabled = true;
+
+            panel3.Visible = true;
+            panel3.BringToFront();
+
+            frmUpdateStu1 upStu1 = new frmUpdateStu1();
+            upStu1.TopLevel = false;
+            panel3.Controls.Clear();
+            panel3.Controls.Add(upStu1);
+            upStu1.Show();
         }
 
+
+
+        /*
         private void btnUpPay_Click(object sender, EventArgs e)
         {
             openChildForm(new frmUpdateStu2(), btnUpPay);
@@ -142,7 +130,7 @@ namespace Tuition_Centre.Receptionist
             btnDeleteStu.Enabled = false;
         }
 
-      /*  private void btnSearch_Click(object sender, EventArgs e)
+       private void btnSearch_Click(object sender, EventArgs e)
         {
             Recep rcp = new Recep();
             DataTable dt = rcp.SearchStu(searchName);
@@ -176,7 +164,11 @@ namespace Tuition_Centre.Receptionist
             lblSearch.Hide();
             txtSearch.Hide();
             this.Hide();
-        }*/
+        } */
+
+
+
+
 
     }
 }

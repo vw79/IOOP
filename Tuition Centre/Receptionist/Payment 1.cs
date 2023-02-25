@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -18,9 +20,6 @@ namespace Tuition_Centre.Receptionist
         private string un;
         private string searchName;
 
-        // Create a new Receptionist object
-        private Recep rcp = new Recep();
-
         public frmPayment1()
         {
             InitializeComponent();
@@ -30,21 +29,22 @@ namespace Tuition_Centre.Receptionist
         {
             InitializeComponent();
             this.un = un;
-            // Attach the event handler to the DataGridView's SelectionChanged event
-            dgvStuInfo.SelectionChanged += dgvStuInfo_SelectionChanged;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // Get the search term from txtSearch
-            rcp.SearchName = txtSearch.Text;
+            searchName = txtSearch.Text;
 
-            // Call the SearchStu method of the Receptionist object and pass in the search term
-            DataTable dt = rcp.SearchStu(searchName);
+            Recep rcp = new Recep();
 
+            // Call the SearchStudent method to retrieve the search results
+            DataTable dt = rcp.searchStu();
+
+            // Check if the search results are null
             if (dt == null)
             {
-                MessageBox.Show("Student Name Not Found");
+                MessageBox.Show("Student does not exist.");
             }
             else
             {
@@ -67,6 +67,8 @@ namespace Tuition_Centre.Receptionist
             }
         }
 
+        
+        /*
         private void dgvStuInfo_SelectionChanged(object sender, EventArgs e)
         {
             // Check if there is at least one row selected
@@ -86,7 +88,7 @@ namespace Tuition_Centre.Receptionist
                 this.Hide();
             }
         }
-
+        */
         private void pictureHome_Click(object sender, EventArgs e)
         {
             frmMainReceptionist back = new frmMainReceptionist(un);
