@@ -21,6 +21,7 @@ namespace Tuition_Centre.Admin
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            //Checks if the textbox are empty or not
             if (!string.IsNullOrEmpty(txtbName.Text) || !string.IsNullOrEmpty(txtbIcP.Text) || !string.IsNullOrEmpty(txtbPhone.Text) || 
                 !string.IsNullOrEmpty(txtbEmail.Text) || !string.IsNullOrEmpty(txtbAddress.Text) || !string.IsNullOrEmpty(txtbUsername.Text) ||
                 !string.IsNullOrEmpty(txtbPassword.Text))
@@ -29,6 +30,7 @@ namespace Tuition_Centre.Admin
             }
             else
             {
+                //Read user input and assign value into the variables
                 string name = txtbName.Text;
                 string icP = txtbIcP.Text;
                 string phone = txtbPhone.Text;
@@ -37,6 +39,7 @@ namespace Tuition_Centre.Admin
                 string username = txtbUsername.Text;
                 string password = txtbPassword.Text;
 
+                //Calls object and method to create a new receptionist while closing this form
                 AdminClass register = new AdminClass(name, icP, email, phone, address, username, password);
                 register.RegisterReceptionist();
                 this.Close();

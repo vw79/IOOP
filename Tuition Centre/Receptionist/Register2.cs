@@ -16,10 +16,10 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmRegister2 : Form
     {
+        private int stuDbId;
         private string stuUsername;
         private string un;
-        private string subjectId;
-
+        
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
@@ -39,6 +39,7 @@ namespace Tuition_Centre.Receptionist
             cmbLevel.SelectedIndex = 0;
         }
 
+        // Disable the payment method combobox input
         private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbPayment.SelectedItem.ToString() == "Cash")
@@ -52,13 +53,15 @@ namespace Tuition_Centre.Receptionist
                 grpCardInfo.Visible = true;
             }
         }
+
+        // Get the subject ID based on the selected subject and level
         private string GetSubjectId(string subject, string level)
         {
             // An array of all available subjects
-            string[] subjects = { "Math", "Science", "History", "English", "Bahasa Melayu", "Geography" };
+            string[] subjects = { "Mathematics", "Science", "History", "English", "Bahasa Melayu", "Geography" };
 
             // An array of the corresponding subject IDs
-            string[] subjectIds = { "math", "sci", "his", "eng", "bm", "geo" };
+            string[] subjectIds = { "mth", "sci", "his", "eng", "bah", "geo" };
 
             // A string to hold the final subject ID
             string subjectId = "";
@@ -81,6 +84,14 @@ namespace Tuition_Centre.Receptionist
                     else if (level == "Level 3")
                     {
                         subjectId = subjectIds[i] + "003";
+                    }
+                    else if (level == "Level 4")
+                    {
+                        subjectId = subjectIds[i] + "004";
+                    }
+                    else if (level == "Level 5")
+                    {
+                        subjectId = subjectIds[i] + "005";
                     }
                     return subjectId;
                 }
@@ -133,50 +144,21 @@ namespace Tuition_Centre.Receptionist
                 subjectId3 = GetSubjectId(cmbSubject3.Text, cmbLevel.Text);
             }
 
-            string paidBy = "-";
-            string date = "-";
-            string paymentAmount = "-";
-            string acceptanceStatus = "-";
-            decimal fee = 0;
-
             con.Open();
-            SqlCommand cmdClass = new SqlCommand("SELECT c.subjectId, c.charges, s.subjectid1, s.subjectid2, s.subjectid3 " +
-                                                 "FROM studentSubject s " +
-                                                 "LEFT JOIN class c ON s.subjectid1 = c.subjectid OR s.subjectid2 = c.subjectid OR s.subjectid3 = c.subjectid " +
-                                                 "WHERE s.username = @stuUsername", con);
+            // Retrieve the full name of the student based on their username
+            SqlCommand cmdName = new SqlCommand("SELECT studentName FROM studentInfo WHERE username = @stuUsername", con);
+            cmdName.Parameters.AddWithValue("@stuUsername", stuUsername);
+            string fullName = cmdName.ExecuteScalar().ToString();
+            con.Close();
 
-            cmdClass.Parameters.AddWithValue("@stuUsername", stuUsername);
-            SqlDataReader reader = cmdClass.ExecuteReader();
-
-            while (reader.Read())
-            {
-                // Check if the subjectid1 column is not null
-                if (!reader.IsDBNull(reader.GetOrdinal("subjectid1")))
-                {
-                    // Add the charges for subjectid1 to the fee
-                    fee += decimal.Parse(reader["charges"].ToString());
-                }
-
-                // Check if the subjectid2 column is not null
-                if (!reader.IsDBNull(reader.GetOrdinal("subjectid2")))
-                {
-                    // Add the charges for subjectid2 to the fee
-                    fee += decimal.Parse(reader["charges"].ToString());
-                }
-
-                // Check if the subjectid3 column is not null
-                if (!reader.IsDBNull(reader.GetOrdinal("subjectid3")))
-                {
-                    // Add the charges for subjectid3 to the fee
-                    fee += decimal.Parse(reader["charges"].ToString());
-                }
-            }
-
-            Recep rcp = new Recep(stuUsername, subjectId1, subjectId2, subjectId3, cmbLevel.Text, dtpEnrollDate.Text, cmbPayment.Text, txtCardNum.Text, txtCVV.Text, fee, paidBy, date, paymentAmount, acceptanceStatus);
+            // Create a new Recep object and add the student's subject and payment information to the database
+            Recep rcp = new Recep(stuUsername, subjectId1, subjectId2, subjectId3, cmbLevel.Text, dtpEnrollDate.Text, cmbPayment.Text, txtCardNum.Text, txtCVV.Text, fullName, stuDbId);
             rcp.addSubjectPay();
 
-
+            // Show a message box to indicate that the registration is complete
             MessageBox.Show("Register Complete");
+
+            // Create a new frmMainReceptionist object and show it while hiding this form
             frmMainReceptionist mainRcp = new frmMainReceptionist(un);
             mainRcp.Show();
             this.Hide();

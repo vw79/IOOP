@@ -13,6 +13,7 @@ namespace Tuition_Centre.Admin
     public partial class FrmConfirm : Form
     {
 
+        //Property while allowing this property to be accessed ooutside
         public bool confirmation{ get; set; }
 
         public FrmConfirm()
@@ -20,12 +21,14 @@ namespace Tuition_Centre.Admin
             InitializeComponent();
         }
 
+        //Declares the property as true and closing the form
         private void btnYes_Click(object sender, EventArgs e)
         {
             confirmation = true;
             this.Close();
         }
 
+        //Declares the property as false and closing the form
         private void btnNo_Click(object sender, EventArgs e)
         {
             confirmation = false;

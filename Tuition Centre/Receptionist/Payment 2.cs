@@ -20,7 +20,7 @@ namespace Tuition_Centre.Receptionist
             InitializeComponent();
         }
 
-        public frmPayment2(string name, string id)
+        public frmPayment2(string un, string id, string name)
         {
             InitializeComponent();
             this.un = un;
