@@ -255,9 +255,6 @@ namespace Tuition_Centre.Class
             }
         }
 
-<<<<<<< HEAD
-        
-=======
         public void UpdateAdmin()
         {
             con.Open();
@@ -274,6 +271,5 @@ namespace Tuition_Centre.Class
             cmdUpdateAdmin.ExecuteNonQuery();
             con.Close();
         }
->>>>>>> c4de31f4174d4bb5fc59563bf17e49facfca4668
     }
 }

@@ -154,17 +154,16 @@ namespace Tuition_Centre.Admin
             adminFrm.ShowDialog();
         }
 
-<<<<<<< HEAD
         private void grpbIdentity_Enter(object sender, EventArgs e)
         {
 
-=======
+        }
+
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
             this.Close();
->>>>>>> c4de31f4174d4bb5fc59563bf17e49facfca4668
         }
     }
 }
