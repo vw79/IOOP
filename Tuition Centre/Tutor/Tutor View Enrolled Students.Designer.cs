@@ -42,15 +42,14 @@
             // 
             groupBox1.Controls.Add(dgv1);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(6, 87);
+            groupBox1.Location = new Point(6, 106);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(259, 460);
+            groupBox1.Size = new Size(259, 421);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "View Enrolled Students";
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // dgv1
             // 
@@ -59,22 +58,22 @@
             dgv1.Name = "dgv1";
             dgv1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             dgv1.RowTemplate.Height = 29;
-            dgv1.Size = new Size(247, 424);
+            dgv1.Size = new Size(247, 384);
             dgv1.TabIndex = 0;
-            dgv1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(13, 22);
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(12, 26);
             label3.Name = "label3";
-            label3.Size = new Size(121, 20);
+            label3.Size = new Size(123, 20);
             label3.TabIndex = 11;
             label3.Text = "Insert Class Code";
             // 
             // txtClassCode
             // 
-            txtClassCode.Location = new Point(140, 18);
+            txtClassCode.Location = new Point(140, 22);
             txtClassCode.Name = "txtClassCode";
             txtClassCode.Size = new Size(125, 27);
             txtClassCode.TabIndex = 12;
@@ -82,7 +81,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(165, 51);
+            btnSearch.Location = new Point(171, 55);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 13;
@@ -94,7 +93,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(277, 551);
+            ClientSize = new Size(273, 529);
             Controls.Add(btnSearch);
             Controls.Add(txtClassCode);
             Controls.Add(label3);

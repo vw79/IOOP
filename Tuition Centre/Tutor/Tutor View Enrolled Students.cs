@@ -20,26 +20,7 @@ namespace Tuition_Centre.Tutor
             Name = un;
         }
 
-        private void View_Enrolled_Students_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // View Student 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string mainconn = ConfigurationManager.ConnectionStrings["myCS"].ConnectionString;
@@ -52,6 +33,17 @@ namespace Tuition_Centre.Tutor
             sdr.Fill(dt);
             dgv1.DataSource = dt;
             dgv1.Columns["fullname"].Width = 200;
+        }
+
+
+        private void View_Enrolled_Students_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

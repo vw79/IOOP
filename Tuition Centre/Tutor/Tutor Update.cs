@@ -20,11 +20,8 @@ namespace Tuition_Centre.Tutor
             Name = un;
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
+        // To Main Tutor Form
         private void button1_Click(object sender, EventArgs e)
         {
             frmMainTutor obj1 = new frmMainTutor(Name);
@@ -32,35 +29,21 @@ namespace Tuition_Centre.Tutor
             obj1.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
-            this.Hide();
-            obj1.ShowDialog();
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile(Name);
-            this.Hide();
-            obj1.ShowDialog();
-        }
-
+        // Logout Confirm Form
         private void button4_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialog = MessageBox.Show("Do you want to Logout?", "Exit", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Main obj = new Main();
+                this.Hide();
+                obj.ShowDialog();
+            }
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // To Main Tutor Form
         private void button6_Click(object sender, EventArgs e)
         {
             frmMainTutor obj = new frmMainTutor(Name);
@@ -68,20 +51,27 @@ namespace Tuition_Centre.Tutor
             obj.ShowDialog();
         }
 
+        // New Information Inpute.
         private void button5_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-            con.Open();
-            SqlCommand cmd = new SqlCommand("Update tutor set tutorPhone=@phone, tutorAddress=@address, subject=@subject where tutorName=@username", con);
-            cmd.Parameters.AddWithValue("@username", Name);
-            cmd.Parameters.AddWithValue("@phone", txbUpdatePh.Text);
-            cmd.Parameters.AddWithValue("@address", txbUpdateAddress.Text);
-            cmd.Parameters.AddWithValue("@subject", cmbUpdateSub.Text);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Successfully update");
+            DialogResult dialog = MessageBox.Show("Confirm the Information?", "Exit", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Update tutor set tutorPhone=@phone, tutorAddress=@address, subject=@subject where tutorName=@username", con);
+                cmd.Parameters.AddWithValue("@username", Name);
+                cmd.Parameters.AddWithValue("@phone", txbUpdatePh.Text);
+                cmd.Parameters.AddWithValue("@address", txbUpdateAddress.Text);
+                cmd.Parameters.AddWithValue("@subject", cmbUpdateSub.Text);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Successfully update!");
+            }
         }
 
+
+        // Display Current User Information, unchangeable.
         private void frmTutor_UpdateProfile_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
@@ -91,11 +81,11 @@ namespace Tuition_Centre.Tutor
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblTutorName.Text = rd.GetString(6);
+                lblTutorName.Text = rd.GetString(5);
                 lblTutorID.Text = rd.GetString(1);
-                lblUpdateName.Text = rd.GetString(6);
+                lblUpdateName.Text = rd.GetString(5);
                 lblUpdateID.Text = rd.GetString(1);
-                lblUpdateDOB.Text = rd.GetString(10);
+                lblUpdateDOB.Text = rd.GetString(9);
             }
             con.Close();
         }

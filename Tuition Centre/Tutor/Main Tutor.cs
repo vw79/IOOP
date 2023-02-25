@@ -24,12 +24,7 @@ namespace Tuition_Centre.Tutor
         }
 
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Update Profile Form
         private void button3_Click(object sender, EventArgs e)
         {
             frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile(Name);
@@ -37,24 +32,28 @@ namespace Tuition_Centre.Tutor
             obj1.ShowDialog();
         }
 
+
+        // Tutor Logout
         private void button4_Click(object sender, EventArgs e)
         {
-            Main obj = new Main();
-            this.Hide();
-            obj.ShowDialog();
+            DialogResult dialog = MessageBox.Show("Do you want to Logout?", "Exit", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Main obj = new Main();
+                this.Hide();
+                obj.ShowDialog();
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        // Tutor Add New Form
         private void button5_Click(object sender, EventArgs e)
         {
             frmTutor_ClassAdd obj1 = new frmTutor_ClassAdd(Name);
             this.Hide();
             obj1.ShowDialog();
         }
+
 
         private void frmMainTutor_Load(object sender, EventArgs e)
         {
@@ -70,29 +69,7 @@ namespace Tuition_Centre.Tutor
             }
             con.Close();
 
-            /*
-            con.Open();
-            SqlCommand cmd1 = new SqlCommand("SELECT subjectName, timestart, timeend, date, location, teacher FROM class where username like '" + Name + "%'", con);
-            cmd.Parameters.AddWithValue("@username", Name);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd1);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
 
-            DataTable filteredTable = new DataTable();
-            filteredTable.Columns.Add("Subject Name");
-            filteredTable.Columns.Add("Time Start");
-            filteredTable.Columns.Add("Time End");
-            filteredTable.Columns.Add("Date");
-            filteredTable.Columns.Add("Location");
-            filteredTable.Columns.Add("Tutor Full Name");
-            foreach (DataRow row in dataTable.Rows)
-            {
-                filteredTable.Rows.Add(row["subjectName"], row["timestart"], row["timeend"], row["date"], row["location"], row["teacher"]);
-            }
-            dgv1.DataSource = filteredTable;
-            con.Close();
-            
-            */
             // Take Class information with specific columns
 
             string mainconn = ConfigurationManager.ConnectionStrings["myCS"].ConnectionString;
@@ -105,7 +82,9 @@ namespace Tuition_Centre.Tutor
             sdr.Fill(dt);
             dgv1.DataSource = dt;
 
-            // Delete Class process
+
+            // Delete Class 
+
             DataGridViewButtonColumn buttoncolumn = new DataGridViewButtonColumn();
             dgv1.Columns.Insert(7, buttoncolumn);
             buttoncolumn.HeaderText = "Delete Class";
@@ -114,7 +93,9 @@ namespace Tuition_Centre.Tutor
             buttoncolumn.UseColumnTextForButtonValue = true;
             sqlconnn.Close();
 
+
             // View All Classes
+
             DataGridViewButtonColumn buttoncolumnView = new DataGridViewButtonColumn();
             dgv1.Columns.Insert(8, buttoncolumnView);
             buttoncolumnView.HeaderText = "View Students";
@@ -124,14 +105,16 @@ namespace Tuition_Centre.Tutor
             sqlconnn.Close();
         }
 
+        // Class Delete and View Student  
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string mainconn = ConfigurationManager.ConnectionStrings["myCS"].ConnectionString;
             SqlConnection sqlconnn = new SqlConnection(mainconn);
+            // To Delete Class
             if (e.ColumnIndex == 7)
             {
                 DataGridViewRow row = dgv1.Rows[e.RowIndex];
-                if (MessageBox.Show(string.Format("Do you want to Delete Now?", row.Cells["classid"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format("Do you want to Delete this Class?", row.Cells["classid"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (SqlConnection con1 = new SqlConnection(mainconn))
                     {
@@ -142,12 +125,13 @@ namespace Tuition_Centre.Tutor
                             cmd.ExecuteNonQuery();
                             con1.Close();
                             frmMainTutor obj = new frmMainTutor(Name);
-                            this.Close();
+                            this.Hide();
                             obj.ShowDialog();
                         }
                     }
                 }
             }
+            // To View Students
             else if (e.ColumnIndex == 8)
             {
                 frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);

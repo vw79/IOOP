@@ -72,12 +72,11 @@
             button1.TabIndex = 2;
             button1.Text = "Class Information";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // button4
             // 
             button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(339, 27);
+            button4.Location = new Point(339, 28);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(160, 31);
@@ -89,7 +88,7 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(173, 27);
+            button3.Location = new Point(173, 28);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(160, 31);
@@ -145,7 +144,6 @@
             lblTutorName.TabIndex = 2;
             lblTutorName.Text = "Tutor Name";
             lblTutorName.UseCompatibleTextRendering = true;
-            lblTutorName.Click += label1_Click;
             // 
             // lblTutorID
             // 

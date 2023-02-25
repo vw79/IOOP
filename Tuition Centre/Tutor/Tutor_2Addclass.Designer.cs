@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            splitContainer1 = new SplitContainer();
             groupBox2 = new GroupBox();
-            button1 = new Button();
             button4 = new Button();
-            button2 = new Button();
+            button1 = new Button();
             button3 = new Button();
             confirm = new Button();
             groupBox1 = new GroupBox();
@@ -56,10 +54,7 @@
             lblTutorName = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             groupBox3 = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
+            button2 = new Button();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
@@ -69,58 +64,25 @@
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
-            // splitContainer1
-            // 
-            splitContainer1.Location = new Point(6, 91);
-            splitContainer1.Margin = new Padding(3, 4, 3, 4);
-            splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            splitContainer1.Panel1.Controls.Add(groupBox2);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.Controls.Add(confirm);
-            splitContainer1.Panel2.Controls.Add(groupBox1);
-            splitContainer1.Panel2.Controls.Add(button7);
-            splitContainer1.Size = new Size(696, 307);
-            splitContainer1.SplitterDistance = 173;
-            splitContainer1.SplitterWidth = 5;
-            splitContainer1.TabIndex = 6;
-            // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(button4);
-            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(button3);
             groupBox2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            groupBox2.Location = new Point(3, 4);
+            groupBox2.Location = new Point(205, 13);
             groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 4, 3, 4);
-            groupBox2.Size = new Size(165, 185);
+            groupBox2.Size = new Size(494, 71);
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
             groupBox2.Text = "Menu";
             // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(0, 29);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(160, 31);
-            button1.TabIndex = 2;
-            button1.Text = "Class Information";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // button4
             // 
             button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(1, 145);
+            button4.Location = new Point(328, 29);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(160, 31);
@@ -129,22 +91,22 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // button2
+            // button1
             // 
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(2, 68);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(158, 31);
-            button2.TabIndex = 3;
-            button2.Text = "View Enrolled Students";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(5, 29);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(160, 31);
+            button1.TabIndex = 2;
+            button1.Text = "Class Information";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(1, 107);
+            button3.Location = new Point(166, 29);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(160, 31);
@@ -155,10 +117,11 @@
             // 
             // confirm
             // 
-            confirm.Location = new Point(281, 264);
+            confirm.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            confirm.Location = new Point(533, 262);
             confirm.Margin = new Padding(3, 4, 3, 4);
             confirm.Name = "confirm";
-            confirm.Size = new Size(117, 31);
+            confirm.Size = new Size(121, 31);
             confirm.TabIndex = 2;
             confirm.Text = "Confirm";
             confirm.UseVisualStyleBackColor = true;
@@ -168,7 +131,7 @@
             // 
             groupBox1.Controls.Add(splitContainer2);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            groupBox1.Location = new Point(3, 4);
+            groupBox1.Location = new Point(6, 92);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
@@ -176,7 +139,6 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Update or Delete Class";
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // splitContainer2
             // 
@@ -208,7 +170,6 @@
             splitContainer2.SplitterDistance = 151;
             splitContainer2.SplitterWidth = 5;
             splitContainer2.TabIndex = 0;
-            splitContainer2.SplitterMoved += splitContainer2_SplitterMoved;
             // 
             // label9
             // 
@@ -341,11 +302,11 @@
             cmbSubIDAdd.Name = "cmbSubIDAdd";
             cmbSubIDAdd.Size = new Size(186, 29);
             cmbSubIDAdd.TabIndex = 0;
-            cmbSubIDAdd.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // button7
             // 
-            button7.Location = new Point(105, 264);
+            button7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.Location = new Point(533, 213);
             button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
             button7.Size = new Size(121, 31);
@@ -381,25 +342,36 @@
             groupBox3.Controls.Add(lblTutorID);
             groupBox3.Location = new Point(6, 1);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(696, 83);
+            groupBox3.Size = new Size(193, 83);
             groupBox3.TabIndex = 9;
             groupBox3.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(533, 163);
+            button2.Name = "button2";
+            button2.Size = new Size(121, 29);
+            button2.TabIndex = 10;
+            button2.Text = "Cancel";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // frmTutor_ClassAdd
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(705, 407);
+            ClientSize = new Size(705, 361);
+            Controls.Add(button2);
+            Controls.Add(groupBox1);
+            Controls.Add(confirm);
+            Controls.Add(groupBox2);
+            Controls.Add(button7);
             Controls.Add(groupBox3);
-            Controls.Add(splitContainer1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmTutor_ClassAdd";
             Text = "Update or Delete Class";
             Load += frmTutor_ClassAdd_Load;
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             splitContainer2.Panel1.ResumeLayout(false);
@@ -414,8 +386,6 @@
         }
 
         #endregion
-
-        private SplitContainer splitContainer1;
         private GroupBox groupBox1;
         private Label lblTutorID;
         private Label lblTutorName;
@@ -434,7 +404,6 @@
         private GroupBox groupBox2;
         private Button button1;
         private Button button4;
-        private Button button2;
         private Button button3;
         private ComboBox cmbLocation;
         private Label label8;
@@ -443,5 +412,6 @@
         private TextBox txbCharges;
         private TextBox txbEndTime;
         private GroupBox groupBox3;
+        private Button button2;
     }
 }
