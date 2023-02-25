@@ -44,40 +44,7 @@ namespace Tuition_Centre.Tutor
             obj.ShowDialog();
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
-            this.Hide();
-            obj1.ShowDialog();
-        }
-
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
@@ -89,19 +56,8 @@ namespace Tuition_Centre.Tutor
             obj1.ShowDialog();
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-            Tutor_DelClass obj1 = new Tutor_DelClass();
-            this.Hide();
-            obj1.ShowDialog();
-        }
-
-
-
         private void frmMainTutor_Load(object sender, EventArgs e)
         {
-
-
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from tutor where tutorName = @username", con);
@@ -137,31 +93,42 @@ namespace Tuition_Centre.Tutor
             con.Close();
             
             */
+            // Take Class information with specific columns
 
             string mainconn = ConfigurationManager.ConnectionStrings["myCS"].ConnectionString;
             SqlConnection sqlconnn = new SqlConnection(mainconn);
-            string sqlquery = "select classid, subjectName, timestart, timeend, date, location, teacher from class where username like '" + Name + "%'";
+            string sqlquery = "select classid, subjectid, subjectName, timestart, timeend, date, location from class where username like '" + Name + "%'";
             sqlconnn.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconnn);
             SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
             DataTable dt = new DataTable();
             sdr.Fill(dt);
             dgv1.DataSource = dt;
+
+            // Delete Class process
             DataGridViewButtonColumn buttoncolumn = new DataGridViewButtonColumn();
-            dgv1.Columns.Insert(6, buttoncolumn);
-            buttoncolumn.HeaderText = "Delete Row";
-            buttoncolumn.Width = 110;
+            dgv1.Columns.Insert(7, buttoncolumn);
+            buttoncolumn.HeaderText = "Delete Class";
             buttoncolumn.Text = "Delete";
+            buttoncolumn.Width = 120;
             buttoncolumn.UseColumnTextForButtonValue = true;
             sqlconnn.Close();
 
+            // View All Classes
+            DataGridViewButtonColumn buttoncolumnView = new DataGridViewButtonColumn();
+            dgv1.Columns.Insert(8, buttoncolumnView);
+            buttoncolumnView.HeaderText = "View Students";
+            buttoncolumnView.Text = "View";
+            buttoncolumnView.Width = 135;
+            buttoncolumnView.UseColumnTextForButtonValue = true;
+            sqlconnn.Close();
         }
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string mainconn = ConfigurationManager.ConnectionStrings["myCS"].ConnectionString;
             SqlConnection sqlconnn = new SqlConnection(mainconn);
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 7)
             {
                 DataGridViewRow row = dgv1.Rows[e.RowIndex];
                 if (MessageBox.Show(string.Format("Do you want to Delete Now?", row.Cells["classid"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -174,16 +141,20 @@ namespace Tuition_Centre.Tutor
                             con1.Open();
                             cmd.ExecuteNonQuery();
                             con1.Close();
+                            frmMainTutor obj = new frmMainTutor(Name);
+                            this.Close();
+                            obj.ShowDialog();
                         }
                     }
                 }
             }
+            else if (e.ColumnIndex == 8)
+            {
+                frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
+                obj1.ShowDialog();
+            }
         }
 
-        private void groupBox2_Enter_1(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

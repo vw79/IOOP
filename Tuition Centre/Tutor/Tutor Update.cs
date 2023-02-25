@@ -17,7 +17,7 @@ namespace Tuition_Centre.Tutor
         public frmTutor_UpdateProfile(string un)
         {
             InitializeComponent();
-            Name = un; 
+            Name = un;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -48,9 +48,7 @@ namespace Tuition_Centre.Tutor
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Main obj = new Main();
-            this.Hide();
-            obj.ShowDialog();
+
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -60,7 +58,7 @@ namespace Tuition_Centre.Tutor
 
         private void label7_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -80,7 +78,6 @@ namespace Tuition_Centre.Tutor
             cmd.Parameters.AddWithValue("@address", txbUpdateAddress.Text);
             cmd.Parameters.AddWithValue("@subject", cmbUpdateSub.Text);
             cmd.ExecuteNonQuery();
-
             con.Close();
             MessageBox.Show("Successfully update");
         }
@@ -101,8 +98,6 @@ namespace Tuition_Centre.Tutor
                 lblUpdateDOB.Text = rd.GetString(10);
             }
             con.Close();
-
-            
         }
     }
 }

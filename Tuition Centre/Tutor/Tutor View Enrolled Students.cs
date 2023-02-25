@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,100 +22,7 @@ namespace Tuition_Centre.Tutor
 
         private void View_Enrolled_Students_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            frmMainTutor obj1 = new frmMainTutor(Name);
-            this.Hide();
-            obj1.ShowDialog();
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            frmTutor_UpdateProfile obj1 = new frmTutor_UpdateProfile(Name);
-            this.Hide();
-            obj1.ShowDialog();
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            Main obj = new Main();
-            this.Hide();
-            obj.ShowDialog();
-        }
-
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-            frmTutor_StudentList obj = new frmTutor_StudentList();
-            this.Hide();
-            obj.ShowDialog();
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -121,11 +30,28 @@ namespace Tuition_Centre.Tutor
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmTutor_ViewStudents obj1 = new frmTutor_ViewStudents(Name);
-            this.Hide();
-            obj1.ShowDialog();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string mainconn = ConfigurationManager.ConnectionStrings["myCS"].ConnectionString;
+            SqlConnection sqlconnn = new SqlConnection(mainconn);
+            string sqlquery = "select fullname from studentSubject where subjectid1 = '" + txtClassCode.Text + "' or subjectid2 = '" + txtClassCode.Text + "' or subjectid3 = '" + txtClassCode.Text + "'";
+            sqlconnn.Open();
+            SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconnn);
+            SqlDataAdapter sdr = new SqlDataAdapter(sqlcomm);
+            DataTable dt = new DataTable();
+            sdr.Fill(dt);
+            dgv1.DataSource = dt;
+            dgv1.Columns["fullname"].Width = 200;
         }
     }
 }

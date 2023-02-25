@@ -28,344 +28,336 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txbUpdateAddress = new System.Windows.Forms.TextBox();
-            this.cmbUpdateSub = new System.Windows.Forms.ComboBox();
-            this.lblUpdateDOB = new System.Windows.Forms.Label();
-            this.lblUpdateID = new System.Windows.Forms.Label();
-            this.lblUpdateName = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbUpdatePh = new System.Windows.Forms.TextBox();
-            this.lblTutorID = new System.Windows.Forms.Label();
-            this.lblTutorName = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(10, 90);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.button6);
-            this.splitContainer1.Panel2.Controls.Add(this.button5);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(754, 354);
-            this.splitContainer1.SplitterDistance = 188;
-            this.splitContainer1.SplitterWidth = 5;
-            this.splitContainer1.TabIndex = 6;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(3, 4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(165, 189);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Menu";
+            button1 = new Button();
+            button4 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button6 = new Button();
+            button5 = new Button();
+            groupBox1 = new GroupBox();
+            txbUpdateAddress = new TextBox();
+            cmbUpdateSub = new ComboBox();
+            lblUpdateDOB = new Label();
+            lblUpdateID = new Label();
+            lblUpdateName = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            txbUpdatePh = new TextBox();
+            lblTutorID = new Label();
+            lblTutorName = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            splitContainer1 = new SplitContainer();
+            groupBox2 = new GroupBox();
+            groupBox3 = new GroupBox();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(0, 29);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Class Information";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(0, 29);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(160, 31);
+            button1.TabIndex = 2;
+            button1.Text = "Class Information";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(1, 145);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 31);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(1, 145);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(160, 31);
+            button4.TabIndex = 5;
+            button4.Text = "Logout";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(2, 68);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 31);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "View Enrolled Students";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(2, 68);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(158, 31);
+            button2.TabIndex = 3;
+            button2.Text = "View Enrolled Students";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(1, 107);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 31);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Update Information";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(1, 107);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(160, 31);
+            button3.TabIndex = 4;
+            button3.Text = "Update Information";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(314, 305);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 31);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Cancel";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            button6.Location = new Point(314, 305);
+            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(86, 31);
+            button6.TabIndex = 0;
+            button6.Text = "Cancel";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(162, 305);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 31);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Confirm";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button5.Location = new Point(162, 305);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(86, 31);
+            button5.TabIndex = 0;
+            button5.Text = "Confirm";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txbUpdateAddress);
-            this.groupBox1.Controls.Add(this.cmbUpdateSub);
-            this.groupBox1.Controls.Add(this.lblUpdateDOB);
-            this.groupBox1.Controls.Add(this.lblUpdateID);
-            this.groupBox1.Controls.Add(this.lblUpdateName);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txbUpdatePh);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(3, 8);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(554, 280);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Update Profile";
+            groupBox1.Controls.Add(txbUpdateAddress);
+            groupBox1.Controls.Add(cmbUpdateSub);
+            groupBox1.Controls.Add(lblUpdateDOB);
+            groupBox1.Controls.Add(lblUpdateID);
+            groupBox1.Controls.Add(lblUpdateName);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(txbUpdatePh);
+            groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            groupBox1.Location = new Point(3, 4);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(535, 280);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Update Profile";
             // 
             // txbUpdateAddress
             // 
-            this.txbUpdateAddress.Location = new System.Drawing.Point(159, 231);
-            this.txbUpdateAddress.Name = "txbUpdateAddress";
-            this.txbUpdateAddress.Size = new System.Drawing.Size(331, 29);
-            this.txbUpdateAddress.TabIndex = 13;
+            txbUpdateAddress.Location = new Point(159, 231);
+            txbUpdateAddress.Name = "txbUpdateAddress";
+            txbUpdateAddress.Size = new Size(331, 29);
+            txbUpdateAddress.TabIndex = 13;
             // 
             // cmbUpdateSub
             // 
-            this.cmbUpdateSub.FormattingEnabled = true;
-            this.cmbUpdateSub.Items.AddRange(new object[] {
-            "Mathematics",
-            "Science",
-            "History",
-            "English"});
-            this.cmbUpdateSub.Location = new System.Drawing.Point(159, 184);
-            this.cmbUpdateSub.Name = "cmbUpdateSub";
-            this.cmbUpdateSub.Size = new System.Drawing.Size(151, 29);
-            this.cmbUpdateSub.TabIndex = 12;
+            cmbUpdateSub.FormattingEnabled = true;
+            cmbUpdateSub.Items.AddRange(new object[] { "Mathematics", "Science", "History", "English" });
+            cmbUpdateSub.Location = new Point(159, 184);
+            cmbUpdateSub.Name = "cmbUpdateSub";
+            cmbUpdateSub.Size = new Size(151, 29);
+            cmbUpdateSub.TabIndex = 12;
             // 
             // lblUpdateDOB
             // 
-            this.lblUpdateDOB.AutoSize = true;
-            this.lblUpdateDOB.Location = new System.Drawing.Point(159, 111);
-            this.lblUpdateDOB.Name = "lblUpdateDOB";
-            this.lblUpdateDOB.Size = new System.Drawing.Size(134, 23);
-            this.lblUpdateDOB.TabIndex = 11;
-            this.lblUpdateDOB.Text = "01 January 1980";
+            lblUpdateDOB.AutoSize = true;
+            lblUpdateDOB.Location = new Point(159, 111);
+            lblUpdateDOB.Name = "lblUpdateDOB";
+            lblUpdateDOB.Size = new Size(134, 23);
+            lblUpdateDOB.TabIndex = 11;
+            lblUpdateDOB.Text = "01 January 1980";
             // 
             // lblUpdateID
             // 
-            this.lblUpdateID.AutoSize = true;
-            this.lblUpdateID.Location = new System.Drawing.Point(159, 77);
-            this.lblUpdateID.Name = "lblUpdateID";
-            this.lblUpdateID.Size = new System.Drawing.Size(89, 23);
-            this.lblUpdateID.TabIndex = 10;
-            this.lblUpdateID.Text = "TP1234567";
-            this.lblUpdateID.Click += new System.EventHandler(this.label10_Click);
+            lblUpdateID.AutoSize = true;
+            lblUpdateID.Location = new Point(159, 77);
+            lblUpdateID.Name = "lblUpdateID";
+            lblUpdateID.Size = new Size(89, 23);
+            lblUpdateID.TabIndex = 10;
+            lblUpdateID.Text = "TP1234567";
+            lblUpdateID.Click += label10_Click;
             // 
             // lblUpdateName
             // 
-            this.lblUpdateName.AutoSize = true;
-            this.lblUpdateName.Location = new System.Drawing.Point(159, 44);
-            this.lblUpdateName.Name = "lblUpdateName";
-            this.lblUpdateName.Size = new System.Drawing.Size(102, 23);
-            this.lblUpdateName.TabIndex = 9;
-            this.lblUpdateName.Text = "Tutor Name";
+            lblUpdateName.AutoSize = true;
+            lblUpdateName.Location = new Point(159, 44);
+            lblUpdateName.Name = "lblUpdateName";
+            lblUpdateName.Size = new Size(102, 23);
+            lblUpdateName.TabIndex = 9;
+            lblUpdateName.Text = "Tutor Name";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 23);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Address         :";
+            label8.AutoSize = true;
+            label8.Location = new Point(12, 231);
+            label8.Name = "label8";
+            label8.Size = new Size(119, 23);
+            label8.TabIndex = 8;
+            label8.Text = "Address         :";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 187);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 23);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Subjects        :";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            label7.AutoSize = true;
+            label7.Location = new Point(12, 187);
+            label7.Name = "label7";
+            label7.Size = new Size(117, 23);
+            label7.TabIndex = 7;
+            label7.Text = "Subjects        :";
+            label7.Click += label7_Click;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 149);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 23);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Phone           :";
+            label6.AutoSize = true;
+            label6.Location = new Point(14, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(117, 23);
+            label6.TabIndex = 6;
+            label6.Text = "Phone           :";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 23);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Date of Birth : ";
+            label5.AutoSize = true;
+            label5.Location = new Point(14, 113);
+            label5.Name = "label5";
+            label5.Size = new Size(123, 23);
+            label5.TabIndex = 5;
+            label5.Text = "Date of Birth : ";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 77);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "ID                 :";
+            label4.AutoSize = true;
+            label4.Location = new Point(13, 77);
+            label4.Name = "label4";
+            label4.Size = new Size(116, 23);
+            label4.TabIndex = 4;
+            label4.Text = "ID                 :";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Name            :";
+            label3.AutoSize = true;
+            label3.Location = new Point(11, 44);
+            label3.Name = "label3";
+            label3.Size = new Size(121, 23);
+            label3.TabIndex = 3;
+            label3.Text = "Name            :";
             // 
             // txbUpdatePh
             // 
-            this.txbUpdatePh.Location = new System.Drawing.Point(159, 141);
-            this.txbUpdatePh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txbUpdatePh.Name = "txbUpdatePh";
-            this.txbUpdatePh.Size = new System.Drawing.Size(238, 29);
-            this.txbUpdatePh.TabIndex = 0;
+            txbUpdatePh.Location = new Point(159, 141);
+            txbUpdatePh.Margin = new Padding(3, 4, 3, 4);
+            txbUpdatePh.Name = "txbUpdatePh";
+            txbUpdatePh.Size = new Size(238, 29);
+            txbUpdatePh.TabIndex = 0;
             // 
             // lblTutorID
             // 
-            this.lblTutorID.AutoSize = true;
-            this.lblTutorID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.lblTutorID.Location = new System.Drawing.Point(6, 45);
-            this.lblTutorID.Name = "lblTutorID";
-            this.lblTutorID.Size = new System.Drawing.Size(69, 20);
-            this.lblTutorID.TabIndex = 8;
-            this.lblTutorID.Text = "Tutor ID: ";
+            lblTutorID.AutoSize = true;
+            lblTutorID.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            lblTutorID.Location = new Point(6, 45);
+            lblTutorID.Name = "lblTutorID";
+            lblTutorID.Size = new Size(69, 20);
+            lblTutorID.TabIndex = 8;
+            lblTutorID.Text = "Tutor ID: ";
             // 
             // lblTutorName
             // 
-            this.lblTutorName.AutoSize = true;
-            this.lblTutorName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTutorName.Location = new System.Drawing.Point(6, 12);
-            this.lblTutorName.Name = "lblTutorName";
-            this.lblTutorName.Size = new System.Drawing.Size(135, 33);
-            this.lblTutorName.TabIndex = 7;
-            this.lblTutorName.Text = "Tutor Name: ";
-            this.lblTutorName.UseCompatibleTextRendering = true;
+            lblTutorName.AutoSize = true;
+            lblTutorName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTutorName.Location = new Point(6, 12);
+            lblTutorName.Name = "lblTutorName";
+            lblTutorName.Size = new Size(135, 33);
+            lblTutorName.TabIndex = 7;
+            lblTutorName.Text = "Tutor Name: ";
+            lblTutorName.UseCompatibleTextRendering = true;
+            // 
+            // splitContainer1
+            // 
+            splitContainer1.Location = new Point(10, 90);
+            splitContainer1.Margin = new Padding(3, 4, 3, 4);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(groupBox2);
+            splitContainer1.Panel1.Paint += splitContainer1_Panel1_Paint;
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(button6);
+            splitContainer1.Panel2.Controls.Add(button5);
+            splitContainer1.Panel2.Controls.Add(groupBox1);
+            splitContainer1.Size = new Size(724, 354);
+            splitContainer1.SplitterDistance = 175;
+            splitContainer1.SplitterWidth = 5;
+            splitContainer1.TabIndex = 6;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(button4);
+            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(button3);
+            groupBox2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            groupBox2.Location = new Point(3, 4);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(165, 189);
+            groupBox2.TabIndex = 7;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Menu";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lblTutorName);
-            this.groupBox3.Controls.Add(this.lblTutorID);
-            this.groupBox3.Location = new System.Drawing.Point(10, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(754, 83);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
+            groupBox3.Controls.Add(lblTutorName);
+            groupBox3.Controls.Add(lblTutorID);
+            groupBox3.Location = new Point(10, 0);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(724, 83);
+            groupBox3.TabIndex = 9;
+            groupBox3.TabStop = false;
             // 
             // frmTutor_UpdateProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 456);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmTutor_UpdateProfile";
-            this.Text = "Tutor Update Profile";
-            this.Load += new System.EventHandler(this.frmTutor_UpdateProfile_Load);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(740, 456);
+            Controls.Add(groupBox3);
+            Controls.Add(splitContainer1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmTutor_UpdateProfile";
+            Text = "Tutor Update Profile";
+            Load += frmTutor_UpdateProfile_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private SplitContainer splitContainer1;
         private Label lblTutorID;
         private Label lblTutorName;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private GroupBox groupBox2;
         private Button button1;
         private Button button4;
         private Button button2;
@@ -385,6 +377,8 @@
         private TextBox txbUpdatePh;
         private ComboBox cmbUpdateSub;
         private TextBox txbUpdateAddress;
+        private SplitContainer splitContainer1;
+        private GroupBox groupBox2;
         private GroupBox groupBox3;
     }
 }

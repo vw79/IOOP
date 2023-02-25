@@ -65,7 +65,7 @@ namespace Tuition_Centre.Tutor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Main obj = new Main();
+            frmMainTutor obj = new frmMainTutor(Name);
             this.Hide();
             obj.ShowDialog();
         }
@@ -105,7 +105,7 @@ namespace Tuition_Centre.Tutor
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
-                lblTutorName.Text = rd.GetString(6);
+                lblTutorName.Text = rd.GetString(5);
                 lblTutorID.Text = rd.GetString(1);
             }
             con.Close();

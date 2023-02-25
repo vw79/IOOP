@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBox2 = new GroupBox();
             button1 = new Button();
             button4 = new Button();
-            button2 = new Button();
             button3 = new Button();
             groupBox1 = new GroupBox();
             dgv1 = new DataGridView();
-            btnDel = new Button();
             button5 = new Button();
             lblTutorName = new Label();
             lblTutorID = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             groupBox3 = new GroupBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv1).BeginInit();
@@ -51,18 +51,16 @@
             // 
             groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(button4);
-            groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(button3);
             groupBox2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             groupBox2.Location = new Point(243, 13);
             groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 4, 3, 4);
-            groupBox2.Size = new Size(674, 72);
+            groupBox2.Size = new Size(510, 72);
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "Menu";
-            groupBox2.Enter += groupBox2_Enter_1;
             // 
             // button1
             // 
@@ -79,7 +77,7 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(504, 29);
+            button4.Location = new Point(339, 27);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(160, 31);
@@ -88,22 +86,10 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(174, 28);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(158, 31);
-            button2.TabIndex = 3;
-            button2.Text = "View Enrolled Students";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // button3
             // 
             button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(338, 29);
+            button3.Location = new Point(173, 27);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(160, 31);
@@ -115,17 +101,17 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(dgv1);
-            groupBox1.Controls.Add(btnDel);
             groupBox1.Controls.Add(button5);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             groupBox1.Location = new Point(11, 93);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(906, 423);
+            groupBox1.Size = new Size(1199, 423);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Class Information";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // dgv1
             // 
@@ -134,20 +120,9 @@
             dgv1.Name = "dgv1";
             dgv1.RowHeadersWidth = 51;
             dgv1.RowTemplate.Height = 29;
-            dgv1.Size = new Size(889, 332);
+            dgv1.Size = new Size(1186, 332);
             dgv1.TabIndex = 2;
             dgv1.CellContentClick += dgv1_CellContentClick;
-            // 
-            // btnDel
-            // 
-            btnDel.Location = new Point(161, 32);
-            btnDel.Margin = new Padding(3, 4, 3, 4);
-            btnDel.Name = "btnDel";
-            btnDel.Size = new Size(151, 40);
-            btnDel.TabIndex = 1;
-            btnDel.Text = "Delete Class";
-            btnDel.UseVisualStyleBackColor = true;
-            btnDel.Click += button6_Click_1;
             // 
             // button5
             // 
@@ -192,11 +167,15 @@
             groupBox3.TabIndex = 4;
             groupBox3.TabStop = false;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // frmMainTutor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(928, 614);
+            ClientSize = new Size(1216, 522);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox3);
@@ -212,6 +191,16 @@
             ResumeLayout(false);
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void label1_Click_1(object sender, EventArgs e)
         {
             throw new NotImplementedException();
@@ -221,15 +210,14 @@
         private Button button4;
         private Button button3;
         private Button button1;
-        private Button button2;
         private Label lblTutorName;
         private Label lblTutorID;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private Button btnDel;
         private Button button5;
         private GroupBox groupBox3;
         private DataGridView dgv1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
