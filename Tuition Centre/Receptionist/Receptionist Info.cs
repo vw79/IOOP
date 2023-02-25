@@ -50,12 +50,12 @@ namespace Tuition_Centre.Receptionist
                 return;
             }
 
-            Recep rcp = new Recep(txtContact.Text, txtAdress.Text, txtEmail.Text);
-            rcp.UpdateRecepInfo(un);
+            Recep rcpt = new Recep(txtContact.Text, txtAdress.Text, txtEmail.Text);
+            rcpt.UpdateRecepInfo();
 
             MessageBox.Show("Receptionist Info Updated");
-            frmMainReceptionist main = new frmMainReceptionist(un);
-            main.Show();
+            frmMainReceptionist mainMenu = new frmMainReceptionist(un);
+            mainMenu.Show();
             this.Hide();
         }
     }

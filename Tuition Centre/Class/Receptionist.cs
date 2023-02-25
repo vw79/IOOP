@@ -41,6 +41,12 @@ namespace Tuition_Centre.Class
         private string cardNumber;
         private string CVV;
 
+        private decimal fee;
+        private string paidBy;
+        private string date;
+        private string paymentAmount;
+        private string acceptanceStatus;
+
         private string searchName;
 
         private string rcpPhone;
@@ -57,6 +63,11 @@ namespace Tuition_Centre.Class
         public Recep()
         {
 
+        }
+
+        public Recep(string un) 
+        { 
+            this.un = un;
         }
 
         public Recep(string stuLv, string stuUsername, string stuPw, string role, string stuId, string stuName, string stuIcP, string stuEmail, string stuPhone, string stuAddress, string stuEnrollDate, string birthday, string studyCourse, string memo)
@@ -77,7 +88,7 @@ namespace Tuition_Centre.Class
             this.memo = memo;
         }
 
-        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate, string payMethod, string cardNum, string cvv)
+        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate, string payMethod, string cardNum, string cvv, decimal fee, string paidBy, string date, string paymentAmount, string acceptanceStatus)
         {
             this.stuUsername = username;
             this.subId1 = subId1;
@@ -88,6 +99,11 @@ namespace Tuition_Centre.Class
             this.payMethod = payMethod;
             this.cardNumber = cardNum;
             this.CVV = cvv;
+            this.fee = fee;
+            this.paidBy = paidBy;   
+            this.date = date;
+            this.paymentAmount = paymentAmount;
+            this.acceptanceStatus = acceptanceStatus;
         }
 
         public Recep(string rcpPhone, string rcpAddress, string rcpEmail)
@@ -163,7 +179,7 @@ namespace Tuition_Centre.Class
 
             // Insert the value of username, subject1, subject2,subject3 to the studentSSubject database
             SqlCommand cmdstuSub = new SqlCommand("INSERT INTO studentSubject (username, subjectid1, subjectid2, subjectid3) " +
-                                               "VALUES (@username, @subId1, @subId2, @subId3)", con);
+                                                  "VALUES (@username, @subId1, @subId2, @subId3)", con);
             cmdstuSub.Parameters.AddWithValue("@username", stuUsername);
             cmdstuSub.Parameters.AddWithValue("@subId1", subId1);
             cmdstuSub.Parameters.AddWithValue("@subId2", subId2);
@@ -172,24 +188,38 @@ namespace Tuition_Centre.Class
 
             // Update the value of level, studentEnrollmentDate in the studentInfo database
             SqlCommand cmdStuInfo = new SqlCommand("UPDATE studentInfo SET level=@stulv, studentEnrollmentDate=@stuEnrollDate " +
-                                                    "WHERE username=@un", con);
+                                                   "WHERE username=@un", con);
             cmdStuInfo.Parameters.AddWithValue("@stuLv", stuLv);
             cmdStuInfo.Parameters.AddWithValue("@stuEnrollDate", stuEnrollDate);
             cmdStuInfo.Parameters.AddWithValue("@un", stuUsername);
             cmdStuInfo.ExecuteNonQuery();
 
             // Insert the value of studentDatabaseId, paymentMethod, cardNumber,CVV to the paymentInfo database
-            SqlCommand cmdStuPay = new SqlCommand("INSERT INTO paymentInfo (studentDatabaseId, paymentMethod, cardNumber, CVV) " +
+            SqlCommand cmdStuPayInfo = new SqlCommand("INSERT INTO paymentInfo (studentDatabaseId, paymentMethod, cardNumber, CVV) " +
                                                   "SELECT s.studentDatabaseld, @payMethod, @cardNum, @cvv " +
                                                   "FROM studentInfo s " +
                                                   "LEFT JOIN paymentInfo p ON s.studentDatabaseld = p.studentDatabaseId " +
                                                   "WHERE s.username = @un", con);
 
-            cmdStuPay.Parameters.AddWithValue("@payMethod", payMethod);
-            cmdStuPay.Parameters.AddWithValue("@cardNum", cardNumber);
-            cmdStuPay.Parameters.AddWithValue("@cvv", CVV);
-            cmdStuPay.Parameters.AddWithValue("@un", stuUsername);
-            cmdStuPay.ExecuteNonQuery();
+            cmdStuPayInfo.Parameters.AddWithValue("@payMethod", payMethod);
+            cmdStuPayInfo.Parameters.AddWithValue("@cardNum", cardNumber);
+            cmdStuPayInfo.Parameters.AddWithValue("@cvv", CVV);
+            cmdStuPayInfo.Parameters.AddWithValue("@un", stuUsername);
+            cmdStuPayInfo.ExecuteNonQuery();
+
+            SqlCommand cmdPayment = new SqlCommand("INSERT INTO payment (studentDatabaseId, fee, paidBy, date, paymentAmount, acceptanceStatus) " +
+                                                "SELECT s.studentDatabaseld, @fee, @paidBy, @date, @paymentAmount, @acceptanceStatus " +
+                                                "FROM studentInfo s " +
+                                                "LEFT JOIN payment p ON s.studentDatabaseld = p.studentDatabaseId " +
+                                                "WHERE s.username = @un", con);
+
+            cmdPayment.Parameters.AddWithValue("@fee", fee);
+            cmdPayment.Parameters.AddWithValue("@paidBy", paidBy);
+            cmdPayment.Parameters.AddWithValue("@date", date);
+            cmdPayment.Parameters.AddWithValue("@paymentAmount", paymentAmount);
+            cmdPayment.Parameters.AddWithValue("@acceptanceStatus", acceptanceStatus);
+            cmdPayment.Parameters.AddWithValue("@un", stuUsername);
+            cmdPayment.ExecuteNonQuery();
 
             con.Close();
         }
@@ -270,11 +300,11 @@ namespace Tuition_Centre.Class
 
             
         
-        public void UpdateRecepInfo(string un)
+        public void UpdateRecepInfo()
         {
             con.Open();
 
-            SqlCommand cmdRecepInfo = new SqlCommand("UPDATE receptionist r INNER JOIN users u ON r.usersId = u.usersId SET r.recepPhone = @rcpPhone, r.recepAddress = @rcpAddress, r.recepEmail = @rcpEmail WHERE u.username=@un", con);
+            SqlCommand cmdRecepInfo = new SqlCommand("UPDATE receptionist r INNER JOIN users u ON r.usersId = u.usersId SET r.recepPhone = @rcpPhone, r.recepAddress = @rcpAddress, r.recepEmail = @rcpEmail WHERE u.username=@un ", con);
             cmdRecepInfo.Parameters.AddWithValue("@rcpPhone", rcpPhone);
             cmdRecepInfo.Parameters.AddWithValue("@rcpAddress", rcpAddress);
             cmdRecepInfo.Parameters.AddWithValue("@rcpEmail", rcpEmail);
