@@ -47,12 +47,6 @@ namespace Tuition_Centre.Class
         private string cardNumber;
         private string CVV;
 
-        private string fee;
-        private string paidBy;
-        private string date;
-        private string paymentAmount;
-        private string acceptanceStatus;
-
         private string searchName;
 
         private int recepId;
@@ -95,7 +89,7 @@ namespace Tuition_Centre.Class
             this.memo = memo;
         }
 
-        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate, string payMethod, string cardNum, string cvv, string fee, string paidBy, string date, string paymentAmount, string acceptanceStatus, string stuName, int stuDbId)
+        public Recep(string username, string subId1, string subId2, string subId3, string stuLv, string stuEnrollDate, string payMethod, string cardNum, string cvv, string stuName, int stuDbId)
         {
             this.stuUsername = username;
             this.subId1 = subId1;
@@ -106,11 +100,6 @@ namespace Tuition_Centre.Class
             this.payMethod = payMethod;
             this.cardNumber = cardNum;
             this.CVV = cvv;
-            this.fee = fee;
-            this.paidBy = paidBy;   
-            this.date = date;
-            this.paymentAmount = paymentAmount;
-            this.acceptanceStatus = acceptanceStatus;
             this.stuName = stuName;
             this.stuDbId = stuDbId;
         }
@@ -215,20 +204,6 @@ namespace Tuition_Centre.Class
             cmdStuPayInfo.Parameters.AddWithValue("@cvv", CVV);
             cmdStuPayInfo.Parameters.AddWithValue("@un", stuUsername);
             cmdStuPayInfo.ExecuteNonQuery();
-
-            SqlCommand cmdPayment = new SqlCommand("INSERT INTO payment (studentDatabaseId, fee, paidBy, date, paymentAmount, acceptanceStatus) " +
-                                                "SELECT s.studentDatabaseld, @fee, @paidBy, @date, @paymentAmount, @acceptanceStatus " +
-                                                "FROM studentInfo s " +
-                                                "LEFT JOIN payment p ON s.studentDatabaseld = p.studentDatabaseId " +
-                                                "WHERE s.username = @un", con);
-
-            cmdPayment.Parameters.AddWithValue("@fee", fee);
-            cmdPayment.Parameters.AddWithValue("@paidBy", paidBy);
-            cmdPayment.Parameters.AddWithValue("@date", date);
-            cmdPayment.Parameters.AddWithValue("@paymentAmount", paymentAmount);
-            cmdPayment.Parameters.AddWithValue("@acceptanceStatus", acceptanceStatus);
-            cmdPayment.Parameters.AddWithValue("@un", stuUsername);
-            cmdPayment.ExecuteNonQuery();
 
             con.Close();
         }
