@@ -19,7 +19,7 @@ namespace Tuition_Centre.Receptionist
         private int stuDbId;
         private string stuUsername;
         private string un;
-        
+
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
@@ -28,14 +28,18 @@ namespace Tuition_Centre.Receptionist
             InitializeComponent();
         }
 
+        // Constructor that takes in the username of the current user and the username of the new student
         public frmRegister2(string un, string stuUsername)
         {
             InitializeComponent();
             this.stuUsername = stuUsername;
             this.un = un;
             grpCardInfo.Visible = false;
+
             // Attach the cmbPayment_SelectedIndexChanged method to the SelectedIndexChanged event of the cmbPayment ComboBox
             cmbPayment.SelectedIndexChanged += cmbPayment_SelectedIndexChanged;
+
+            // Set the default index of the cmbLevel ComboBox to 0
             cmbLevel.SelectedIndex = 0;
         }
 
@@ -44,12 +48,12 @@ namespace Tuition_Centre.Receptionist
         {
             if (cmbPayment.SelectedItem.ToString() == "Cash")
             {
-                // If the user selects "credit card", show the panel
+                // If the user selects "credit card", hide the panel
                 grpCardInfo.Visible = false;
             }
             else
             {
-                // If the user selects any other payment method, hide the panel
+                // If the user selects any other payment method, show the panel
                 grpCardInfo.Visible = true;
             }
         }
@@ -122,6 +126,19 @@ namespace Tuition_Centre.Receptionist
                 txtCVV.Text = "-";
             }
 
+            // Validate the contact field to ensure it only contains numbers.
+            if (!decimal.TryParse(txtCardNum.Text, out decimal amount))
+            {
+                MessageBox.Show("Invalid amount. Please enter a numeric value.");
+                return; // Stop the method from continuing.
+            }
+
+            if (!decimal.TryParse(txtCVV.Text, out decimal amount1))
+            {
+                MessageBox.Show("Invalid amount. Please enter a numeric value.");
+                return; // Stop the method from continuing.
+            }
+
             string subjectId1 = "";
             string subjectId2 = "";
             string subjectId3 = "";
@@ -149,6 +166,12 @@ namespace Tuition_Centre.Receptionist
             SqlCommand cmdName = new SqlCommand("SELECT studentName FROM studentInfo WHERE username = @stuUsername", con);
             cmdName.Parameters.AddWithValue("@stuUsername", stuUsername);
             string fullName = cmdName.ExecuteScalar().ToString();
+
+            // Retrieve the database ID of the student based on their username
+            SqlCommand cmdDbId = new SqlCommand("SELECT studentDbId FROM studentInfo WHERE username = @stuUsername", con);
+            cmdDbId.Parameters.AddWithValue("@stuUsername", stuUsername);
+            stuDbId = (int)cmdDbId.ExecuteScalar();
+
             con.Close();
 
             // Create a new Recep object and add the student's subject and payment information to the database

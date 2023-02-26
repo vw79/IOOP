@@ -33,6 +33,7 @@ namespace Tuition_Centre.Receptionist
         {
             InitializeComponent();
         }
+
         // Constructor that takes in the username of the current user
         public frmRegister1(string un)
         {

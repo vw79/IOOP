@@ -36,12 +36,12 @@
             lblStuID = new Label();
             lblStuName = new Label();
             panel3 = new Panel();
+            lblPayMethod = new Label();
+            dtpDate = new DateTimePicker();
             btnReceipt = new Button();
             cmbPay = new ComboBox();
             lblAmount = new Label();
             txtAmount = new TextBox();
-            dtpDate = new DateTimePicker();
-            lblPayMethod = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
             panel3.SuspendLayout();
@@ -75,7 +75,7 @@
             lblStuIDS.BorderStyle = BorderStyle.Fixed3D;
             lblStuIDS.Location = new Point(132, 54);
             lblStuIDS.Name = "lblStuIDS";
-            lblStuIDS.Size = new Size(200, 20);
+            lblStuIDS.Size = new Size(200, 25);
             lblStuIDS.TabIndex = 4;
             // 
             // lblStuNameS
@@ -83,7 +83,7 @@
             lblStuNameS.BorderStyle = BorderStyle.Fixed3D;
             lblStuNameS.Location = new Point(132, 21);
             lblStuNameS.Name = "lblStuNameS";
-            lblStuNameS.Size = new Size(200, 20);
+            lblStuNameS.Size = new Size(200, 25);
             lblStuNameS.TabIndex = 3;
             // 
             // lblStuID
@@ -116,6 +116,23 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(776, 315);
             panel3.TabIndex = 5;
+            // 
+            // lblPayMethod
+            // 
+            lblPayMethod.AutoSize = true;
+            lblPayMethod.Location = new Point(124, 145);
+            lblPayMethod.Name = "lblPayMethod";
+            lblPayMethod.Size = new Size(99, 15);
+            lblPayMethod.TabIndex = 5;
+            lblPayMethod.Text = "Payment Method";
+            // 
+            // dtpDate
+            // 
+            dtpDate.Format = DateTimePickerFormat.Custom;
+            dtpDate.Location = new Point(443, 86);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(200, 23);
+            dtpDate.TabIndex = 4;
             // 
             // btnReceipt
             // 
@@ -153,23 +170,6 @@
             txtAmount.PlaceholderText = "Enter Amount";
             txtAmount.Size = new Size(200, 23);
             txtAmount.TabIndex = 0;
-            // 
-            // dtpDate
-            // 
-            dtpDate.Format = DateTimePickerFormat.Custom;
-            dtpDate.Location = new Point(443, 86);
-            dtpDate.Name = "dtpDate";
-            dtpDate.Size = new Size(200, 23);
-            dtpDate.TabIndex = 4;
-            // 
-            // lblPayMethod
-            // 
-            lblPayMethod.AutoSize = true;
-            lblPayMethod.Location = new Point(124, 145);
-            lblPayMethod.Name = "lblPayMethod";
-            lblPayMethod.Size = new Size(99, 15);
-            lblPayMethod.TabIndex = 5;
-            lblPayMethod.Text = "Payment Method";
             // 
             // frmPayment2
             // 

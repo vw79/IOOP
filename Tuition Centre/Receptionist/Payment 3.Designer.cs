@@ -91,7 +91,7 @@
             lblStuNameS.BorderStyle = BorderStyle.Fixed3D;
             lblStuNameS.Location = new Point(224, 78);
             lblStuNameS.Name = "lblStuNameS";
-            lblStuNameS.Size = new Size(200, 23);
+            lblStuNameS.Size = new Size(200, 25);
             lblStuNameS.TabIndex = 5;
             // 
             // lblStuIDS
@@ -99,7 +99,7 @@
             lblStuIDS.BorderStyle = BorderStyle.Fixed3D;
             lblStuIDS.Location = new Point(224, 118);
             lblStuIDS.Name = "lblStuIDS";
-            lblStuIDS.Size = new Size(200, 23);
+            lblStuIDS.Size = new Size(200, 25);
             lblStuIDS.TabIndex = 6;
             // 
             // lblPayS
@@ -107,7 +107,7 @@
             lblPayS.BorderStyle = BorderStyle.Fixed3D;
             lblPayS.Location = new Point(224, 248);
             lblPayS.Name = "lblPayS";
-            lblPayS.Size = new Size(200, 23);
+            lblPayS.Size = new Size(200, 25);
             lblPayS.TabIndex = 8;
             // 
             // lblAmountS
@@ -115,7 +115,7 @@
             lblAmountS.BorderStyle = BorderStyle.Fixed3D;
             lblAmountS.Location = new Point(224, 286);
             lblAmountS.Name = "lblAmountS";
-            lblAmountS.Size = new Size(200, 23);
+            lblAmountS.Size = new Size(200, 25);
             lblAmountS.TabIndex = 9;
             // 
             // btnMainMenu

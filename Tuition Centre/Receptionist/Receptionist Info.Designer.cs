@@ -78,9 +78,9 @@
             // lblRcpICS
             // 
             lblRcpICS.BorderStyle = BorderStyle.Fixed3D;
-            lblRcpICS.Location = new Point(146, 71);
+            lblRcpICS.Location = new Point(146, 70);
             lblRcpICS.Name = "lblRcpICS";
-            lblRcpICS.Size = new Size(200, 20);
+            lblRcpICS.Size = new Size(200, 25);
             lblRcpICS.TabIndex = 6;
             // 
             // lblRcpNameS
@@ -88,21 +88,21 @@
             lblRcpNameS.BorderStyle = BorderStyle.Fixed3D;
             lblRcpNameS.Location = new Point(146, 45);
             lblRcpNameS.Name = "lblRcpNameS";
-            lblRcpNameS.Size = new Size(200, 20);
+            lblRcpNameS.Size = new Size(200, 25);
             lblRcpNameS.TabIndex = 5;
             // 
             // lblRcpIDS
             // 
             lblRcpIDS.BorderStyle = BorderStyle.Fixed3D;
-            lblRcpIDS.Location = new Point(146, 21);
+            lblRcpIDS.Location = new Point(146, 18);
             lblRcpIDS.Name = "lblRcpIDS";
-            lblRcpIDS.Size = new Size(200, 20);
+            lblRcpIDS.Size = new Size(200, 25);
             lblRcpIDS.TabIndex = 4;
             // 
             // lblRcpIC
             // 
             lblRcpIC.AutoSize = true;
-            lblRcpIC.Location = new Point(18, 72);
+            lblRcpIC.Location = new Point(18, 71);
             lblRcpIC.Name = "lblRcpIC";
             lblRcpIC.Size = new Size(77, 15);
             lblRcpIC.TabIndex = 3;
@@ -111,7 +111,7 @@
             // lblRcpName
             // 
             lblRcpName.AutoSize = true;
-            lblRcpName.Location = new Point(18, 46);
+            lblRcpName.Location = new Point(18, 45);
             lblRcpName.Name = "lblRcpName";
             lblRcpName.Size = new Size(45, 15);
             lblRcpName.TabIndex = 2;
@@ -120,7 +120,7 @@
             // lblRcpID
             // 
             lblRcpID.AutoSize = true;
-            lblRcpID.Location = new Point(18, 22);
+            lblRcpID.Location = new Point(18, 19);
             lblRcpID.Name = "lblRcpID";
             lblRcpID.Size = new Size(24, 15);
             lblRcpID.TabIndex = 1;

@@ -50,6 +50,7 @@
             grpName = new GroupBox();
             grpAddress = new GroupBox();
             grpStuId = new GroupBox();
+            lblNewStuId = new Label();
             lblStuId = new Label();
             grpUsername = new GroupBox();
             lblUsername = new Label();
@@ -63,7 +64,6 @@
             grpBirthday = new GroupBox();
             lblBirthday = new Label();
             pictureHome = new PictureBox();
-            lblNewStuId = new Label();
             grpPhone.SuspendLayout();
             grpEmail.SuspendLayout();
             grpName.SuspendLayout();
@@ -254,6 +254,14 @@
             grpStuId.TabIndex = 39;
             grpStuId.TabStop = false;
             // 
+            // lblNewStuId
+            // 
+            lblNewStuId.BorderStyle = BorderStyle.Fixed3D;
+            lblNewStuId.Location = new Point(6, 37);
+            lblNewStuId.Name = "lblNewStuId";
+            lblNewStuId.Size = new Size(200, 25);
+            lblNewStuId.TabIndex = 48;
+            // 
             // lblStuId
             // 
             lblStuId.AutoSize = true;
@@ -378,14 +386,6 @@
             pictureHome.TabIndex = 46;
             pictureHome.TabStop = false;
             pictureHome.Click += pictureHome_Click;
-            // 
-            // lblNewStuId
-            // 
-            lblNewStuId.BorderStyle = BorderStyle.Fixed3D;
-            lblNewStuId.Location = new Point(6, 37);
-            lblNewStuId.Name = "lblNewStuId";
-            lblNewStuId.Size = new Size(200, 23);
-            lblNewStuId.TabIndex = 48;
             // 
             // frmRegister1
             // 

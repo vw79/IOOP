@@ -21,11 +21,11 @@ namespace Tuition_Centre.Receptionist
             InitializeComponent();
         }
 
-        public frmStuSearch(string un, string stuName)
+        public frmStuSearch(string un)
         {
             InitializeComponent();
             this.un = un;
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+          /*  SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
 
             con.Open();
 
@@ -58,5 +58,40 @@ namespace Tuition_Centre.Receptionist
             dgvChangeSub.DataSource = filteredTable;
             dgvChangeSub.ReadOnly = true;
         }
+
+        /*
+        private void dgvChangeSubject_SelectionChanged(object sender, EventArgs e)
+        {
+            // Get the currently selected row in the DataGridView
+            DataGridViewRow selectedRow = dgvChangeSubject.CurrentRow;
+
+            // Extract the data for each column from the selected row
+            string id = selectedRow.Cells
+            string date = selectedRow.Cells["Date"].Value.ToString();
+            string studentName = selectedRow.Cells["Student Name"].Value.ToString();
+            string oldSubject = selectedRow.Cells["Old Subject"].Value.ToString();
+            string newSubject = selectedRow.Cells["New Subject"].Value.ToString();
+            string reason = selectedRow.Cells["Reason"].Value.ToString();
+            string status = selectedRow.Cells["Status"].Value.ToString();
+
+            lblStuName.Text = studentName;
+
+            // Create a new instance of the frmUpdateSubject form and pass in the extracted data as parameters
+            frmUpdateStu1 updateStuSub = new frmUpdateStu1(date, studentName, oldSubject, newSubject, reason, status);
+
+            // Add the frmUpdateSubject form to the panel3 control
+            panel3.Controls.Clear();
+            panel3.Controls.Add(updateStuSub);
+            updateStuSub.Dock = DockStyle.Fill;
+            updateStuSub.BringToFront();
+        }
+
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            frmMainReceptionist back = new frmMainReceptionist(un);
+            back.Show();
+            this.Hide();
+        }
+        */
     }
 }

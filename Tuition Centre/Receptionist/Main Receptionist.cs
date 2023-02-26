@@ -57,7 +57,7 @@ namespace Tuition_Centre.Receptionist
         // Button click event handler to navigate to the update student info form
         private void btnUpdateStudentInfo_Click(object sender, EventArgs e)
         {
-            frmUpdateStu studentInfoPage1 = new frmUpdateStu(un, stuName);
+            frmUpdateStu studentInfoPage1 = new frmUpdateStu(un);
             studentInfoPage1.Show();
             this.Hide();
         }

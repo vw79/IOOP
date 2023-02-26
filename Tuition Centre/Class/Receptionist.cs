@@ -249,15 +249,15 @@ namespace Tuition_Centre.Class
                 return null;
             }
         }
+  
+        public void UpdateStuSubject()
+        {
+            SqlCommand cdmUpSub = new SqlCommand()
+        }
 
 
 
         /*
-        public void UpdateStuSubject(Receptionist)
-        {
-
-        }
-
         public void UpdateStuPayment(Receptionist)
         {
 

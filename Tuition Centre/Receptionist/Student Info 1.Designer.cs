@@ -28,102 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblStuStatus = new System.Windows.Forms.Label();
-            this.lblCurrentSub = new System.Windows.Forms.Label();
-            this.lblSubAfterUp = new System.Windows.Forms.Label();
-            this.cmbSubAfterUp = new System.Windows.Forms.ComboBox();
-            this.lblStuStatusS = new System.Windows.Forms.Label();
-            this.lblCurrentSubS = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // lblStuStatus
-            // 
-            this.lblStuStatus.AutoSize = true;
-            this.lblStuStatus.Location = new System.Drawing.Point(28, 32);
-            this.lblStuStatus.Name = "lblStuStatus";
-            this.lblStuStatus.Size = new System.Drawing.Size(78, 15);
-            this.lblStuStatus.TabIndex = 0;
-            this.lblStuStatus.Text = "Study Status: ";
+            lblCurrentSub = new Label();
+            lblSubAfterUp = new Label();
+            cmbSubAfterUp = new ComboBox();
+            btnUpdate = new Button();
+            lstSubject = new ListBox();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            SuspendLayout();
             // 
             // lblCurrentSub
             // 
-            this.lblCurrentSub.AutoSize = true;
-            this.lblCurrentSub.Location = new System.Drawing.Point(28, 76);
-            this.lblCurrentSub.Name = "lblCurrentSub";
-            this.lblCurrentSub.Size = new System.Drawing.Size(100, 15);
-            this.lblCurrentSub.TabIndex = 1;
-            this.lblCurrentSub.Text = "Current Subjects: ";
+            lblCurrentSub.AutoSize = true;
+            lblCurrentSub.Location = new Point(28, 42);
+            lblCurrentSub.Name = "lblCurrentSub";
+            lblCurrentSub.Size = new Size(100, 15);
+            lblCurrentSub.TabIndex = 1;
+            lblCurrentSub.Text = "Current Subjects: ";
             // 
             // lblSubAfterUp
             // 
-            this.lblSubAfterUp.AutoSize = true;
-            this.lblSubAfterUp.Location = new System.Drawing.Point(28, 126);
-            this.lblSubAfterUp.Name = "lblSubAfterUp";
-            this.lblSubAfterUp.Size = new System.Drawing.Size(124, 15);
-            this.lblSubAfterUp.TabIndex = 2;
-            this.lblSubAfterUp.Text = "Subjects after update: ";
+            lblSubAfterUp.AutoSize = true;
+            lblSubAfterUp.Location = new Point(28, 126);
+            lblSubAfterUp.Name = "lblSubAfterUp";
+            lblSubAfterUp.Size = new Size(124, 15);
+            lblSubAfterUp.TabIndex = 2;
+            lblSubAfterUp.Text = "Subjects after update: ";
             // 
             // cmbSubAfterUp
             // 
-            this.cmbSubAfterUp.FormattingEnabled = true;
-            this.cmbSubAfterUp.Location = new System.Drawing.Point(179, 126);
-            this.cmbSubAfterUp.Name = "cmbSubAfterUp";
-            this.cmbSubAfterUp.Size = new System.Drawing.Size(200, 23);
-            this.cmbSubAfterUp.TabIndex = 3;
-            // 
-            // lblStuStatusS
-            // 
-            this.lblStuStatusS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStuStatusS.Location = new System.Drawing.Point(179, 31);
-            this.lblStuStatusS.Name = "lblStuStatusS";
-            this.lblStuStatusS.Size = new System.Drawing.Size(200, 23);
-            this.lblStuStatusS.TabIndex = 4;
-            // 
-            // lblCurrentSubS
-            // 
-            this.lblCurrentSubS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCurrentSubS.Location = new System.Drawing.Point(179, 75);
-            this.lblCurrentSubS.Name = "lblCurrentSubS";
-            this.lblCurrentSubS.Size = new System.Drawing.Size(200, 23);
-            this.lblCurrentSubS.TabIndex = 5;
+            cmbSubAfterUp.FormattingEnabled = true;
+            cmbSubAfterUp.Items.AddRange(new object[] { "", "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
+            cmbSubAfterUp.Location = new Point(179, 126);
+            cmbSubAfterUp.Name = "cmbSubAfterUp";
+            cmbSubAfterUp.Size = new Size(200, 23);
+            cmbSubAfterUp.TabIndex = 3;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(441, 215);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Location = new Point(441, 215);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(75, 23);
+            btnUpdate.TabIndex = 6;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // lstSubject
+            // 
+            lstSubject.FormattingEnabled = true;
+            lstSubject.ItemHeight = 15;
+            lstSubject.Location = new Point(179, 42);
+            lstSubject.Name = "lstSubject";
+            lstSubject.Size = new Size(200, 64);
+            lstSubject.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "", "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
+            comboBox1.Location = new Point(179, 155);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(200, 23);
+            comboBox1.TabIndex = 8;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "", "Mathematics", "Science", "History", "English ", "Bahasa Melayu", "Geography" });
+            comboBox2.Location = new Point(179, 184);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(200, 23);
+            comboBox2.TabIndex = 9;
             // 
             // frmUpdateStu1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 276);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.lblCurrentSubS);
-            this.Controls.Add(this.lblStuStatusS);
-            this.Controls.Add(this.cmbSubAfterUp);
-            this.Controls.Add(this.lblSubAfterUp);
-            this.Controls.Add(this.lblCurrentSub);
-            this.Controls.Add(this.lblStuStatus);
-            this.Name = "frmUpdateStu1";
-            this.Text = "Student_Info_1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(575, 276);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(lstSubject);
+            Controls.Add(btnUpdate);
+            Controls.Add(cmbSubAfterUp);
+            Controls.Add(lblSubAfterUp);
+            Controls.Add(lblCurrentSub);
+            Name = "frmUpdateStu1";
+            Text = "Student_Info_1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Label lblStuStatus;
         private Label lblCurrentSub;
         private Label lblSubAfterUp;
         private ComboBox cmbSubAfterUp;
-        private Label lblStuStatusS;
-        private Label lblCurrentSubS;
         private Button btnUpdate;
+        private ListBox lstSubject;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
     }
 }
