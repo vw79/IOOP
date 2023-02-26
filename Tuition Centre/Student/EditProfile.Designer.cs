@@ -28,420 +28,420 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picEdit = new System.Windows.Forms.PictureBox();
-            this.picProfile = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.grpStudentNumber = new System.Windows.Forms.GroupBox();
-            this.lblStudentNumber = new System.Windows.Forms.Label();
-            this.grpmemo = new System.Windows.Forms.GroupBox();
-            this.txtmemo = new System.Windows.Forms.TextBox();
-            this.grpEmail = new System.Windows.Forms.GroupBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.grpPhoneNumber = new System.Windows.Forms.GroupBox();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.grpBirthday = new System.Windows.Forms.GroupBox();
-            this.birthday = new System.Windows.Forms.DateTimePicker();
-            this.grpPassport = new System.Windows.Forms.GroupBox();
-            this.txtPassport = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.grpStudyCourse = new System.Windows.Forms.GroupBox();
-            this.lblStudyCourse = new System.Windows.Forms.Label();
-            this.grpName = new System.Windows.Forms.GroupBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblStudentName = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblStudentNum = new System.Windows.Forms.Label();
-            this.lblStudentCourse = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.pictureHome = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.grpStudentNumber.SuspendLayout();
-            this.grpmemo.SuspendLayout();
-            this.grpEmail.SuspendLayout();
-            this.grpPhoneNumber.SuspendLayout();
-            this.grpBirthday.SuspendLayout();
-            this.grpPassport.SuspendLayout();
-            this.grpStudyCourse.SuspendLayout();
-            this.grpName.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).BeginInit();
-            this.SuspendLayout();
+            picEdit = new PictureBox();
+            picProfile = new PictureBox();
+            groupBox1 = new GroupBox();
+            grpStudentNumber = new GroupBox();
+            lblStudentNumber = new Label();
+            grpmemo = new GroupBox();
+            txtmemo = new TextBox();
+            grpEmail = new GroupBox();
+            txtEmail = new TextBox();
+            grpPhoneNumber = new GroupBox();
+            txtPhoneNumber = new TextBox();
+            grpBirthday = new GroupBox();
+            birthday = new DateTimePicker();
+            grpPassport = new GroupBox();
+            txtPassport = new TextBox();
+            label1 = new Label();
+            grpStudyCourse = new GroupBox();
+            lblStudyCourse = new Label();
+            grpName = new GroupBox();
+            lblName = new Label();
+            lblStudentName = new Label();
+            groupBox2 = new GroupBox();
+            lblStudentNum = new Label();
+            lblStudentCourse = new Label();
+            label2 = new Label();
+            btnUpdate = new Button();
+            pictureHome = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picEdit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picProfile).BeginInit();
+            groupBox1.SuspendLayout();
+            grpStudentNumber.SuspendLayout();
+            grpmemo.SuspendLayout();
+            grpEmail.SuspendLayout();
+            grpPhoneNumber.SuspendLayout();
+            grpBirthday.SuspendLayout();
+            grpPassport.SuspendLayout();
+            grpStudyCourse.SuspendLayout();
+            grpName.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
+            SuspendLayout();
             // 
             // picEdit
             // 
-            this.picEdit.Image = global::Tuition_Centre.Properties.Resources.edit;
-            this.picEdit.Location = new System.Drawing.Point(261, 260);
-            this.picEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picEdit.Name = "picEdit";
-            this.picEdit.Size = new System.Drawing.Size(69, 67);
-            this.picEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picEdit.TabIndex = 3;
-            this.picEdit.TabStop = false;
+            picEdit.Image = Properties.Resources.edit;
+            picEdit.Location = new Point(261, 260);
+            picEdit.Margin = new Padding(3, 4, 3, 4);
+            picEdit.Name = "picEdit";
+            picEdit.Size = new Size(69, 67);
+            picEdit.SizeMode = PictureBoxSizeMode.Zoom;
+            picEdit.TabIndex = 3;
+            picEdit.TabStop = false;
             // 
             // picProfile
             // 
-            this.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picProfile.Image = global::Tuition_Centre.Properties.Resources.catt;
-            this.picProfile.Location = new System.Drawing.Point(81, 73);
-            this.picProfile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.picProfile.Name = "picProfile";
-            this.picProfile.Size = new System.Drawing.Size(221, 252);
-            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picProfile.TabIndex = 2;
-            this.picProfile.TabStop = false;
+            picProfile.BorderStyle = BorderStyle.Fixed3D;
+            picProfile.Image = Properties.Resources.catt;
+            picProfile.Location = new Point(81, 73);
+            picProfile.Margin = new Padding(3, 4, 3, 4);
+            picProfile.Name = "picProfile";
+            picProfile.Size = new Size(221, 252);
+            picProfile.SizeMode = PictureBoxSizeMode.Zoom;
+            picProfile.TabIndex = 2;
+            picProfile.TabStop = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Controls.Add(this.grpStudentNumber);
-            this.groupBox1.Controls.Add(this.grpmemo);
-            this.groupBox1.Controls.Add(this.grpEmail);
-            this.groupBox1.Controls.Add(this.grpPhoneNumber);
-            this.groupBox1.Controls.Add(this.grpBirthday);
-            this.groupBox1.Controls.Add(this.grpPassport);
-            this.groupBox1.Controls.Add(this.grpStudyCourse);
-            this.groupBox1.Controls.Add(this.grpName);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Location = new System.Drawing.Point(375, 56);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(479, 476);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
+            groupBox1.BackColor = SystemColors.ButtonFace;
+            groupBox1.Controls.Add(grpStudentNumber);
+            groupBox1.Controls.Add(grpmemo);
+            groupBox1.Controls.Add(grpEmail);
+            groupBox1.Controls.Add(grpPhoneNumber);
+            groupBox1.Controls.Add(grpBirthday);
+            groupBox1.Controls.Add(grpPassport);
+            groupBox1.Controls.Add(grpStudyCourse);
+            groupBox1.Controls.Add(grpName);
+            groupBox1.FlatStyle = FlatStyle.System;
+            groupBox1.Location = new Point(375, 56);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(479, 476);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
             // 
             // grpStudentNumber
             // 
-            this.grpStudentNumber.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpStudentNumber.Controls.Add(this.lblStudentNumber);
-            this.grpStudentNumber.Location = new System.Drawing.Point(27, 253);
-            this.grpStudentNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpStudentNumber.Name = "grpStudentNumber";
-            this.grpStudentNumber.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpStudentNumber.Size = new System.Drawing.Size(205, 71);
-            this.grpStudentNumber.TabIndex = 15;
-            this.grpStudentNumber.TabStop = false;
-            this.grpStudentNumber.Text = "Student Number";
+            grpStudentNumber.BackColor = SystemColors.ControlLight;
+            grpStudentNumber.Controls.Add(lblStudentNumber);
+            grpStudentNumber.Location = new Point(27, 253);
+            grpStudentNumber.Margin = new Padding(3, 4, 3, 4);
+            grpStudentNumber.Name = "grpStudentNumber";
+            grpStudentNumber.Padding = new Padding(3, 4, 3, 4);
+            grpStudentNumber.Size = new Size(205, 71);
+            grpStudentNumber.TabIndex = 15;
+            grpStudentNumber.TabStop = false;
+            grpStudentNumber.Text = "Student Number";
             // 
             // lblStudentNumber
             // 
-            this.lblStudentNumber.AutoSize = true;
-            this.lblStudentNumber.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lblStudentNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblStudentNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentNumber.Location = new System.Drawing.Point(15, 25);
-            this.lblStudentNumber.Name = "lblStudentNumber";
-            this.lblStudentNumber.Size = new System.Drawing.Size(189, 30);
-            this.lblStudentNumber.TabIndex = 7;
-            this.lblStudentNumber.Text = "   Student Number   ";
+            lblStudentNumber.AutoSize = true;
+            lblStudentNumber.BackColor = SystemColors.InactiveCaption;
+            lblStudentNumber.BorderStyle = BorderStyle.FixedSingle;
+            lblStudentNumber.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStudentNumber.Location = new Point(15, 25);
+            lblStudentNumber.Name = "lblStudentNumber";
+            lblStudentNumber.Size = new Size(189, 30);
+            lblStudentNumber.TabIndex = 7;
+            lblStudentNumber.Text = "   Student Number   ";
             // 
             // grpmemo
             // 
-            this.grpmemo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpmemo.Controls.Add(this.txtmemo);
-            this.grpmemo.Location = new System.Drawing.Point(27, 332);
-            this.grpmemo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpmemo.Name = "grpmemo";
-            this.grpmemo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpmemo.Size = new System.Drawing.Size(430, 131);
-            this.grpmemo.TabIndex = 14;
-            this.grpmemo.TabStop = false;
-            this.grpmemo.Text = "Write about yourself";
+            grpmemo.BackColor = SystemColors.ControlLight;
+            grpmemo.Controls.Add(txtmemo);
+            grpmemo.Location = new Point(27, 332);
+            grpmemo.Margin = new Padding(3, 4, 3, 4);
+            grpmemo.Name = "grpmemo";
+            grpmemo.Padding = new Padding(3, 4, 3, 4);
+            grpmemo.Size = new Size(430, 131);
+            grpmemo.TabIndex = 14;
+            grpmemo.TabStop = false;
+            grpmemo.Text = "Write about yourself";
             // 
             // txtmemo
             // 
-            this.txtmemo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtmemo.Location = new System.Drawing.Point(15, 29);
-            this.txtmemo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtmemo.Multiline = true;
-            this.txtmemo.Name = "txtmemo";
-            this.txtmemo.PlaceholderText = "Type something here....";
-            this.txtmemo.Size = new System.Drawing.Size(405, 92);
-            this.txtmemo.TabIndex = 0;
+            txtmemo.BackColor = SystemColors.ControlLightLight;
+            txtmemo.Location = new Point(15, 29);
+            txtmemo.Margin = new Padding(3, 4, 3, 4);
+            txtmemo.Multiline = true;
+            txtmemo.Name = "txtmemo";
+            txtmemo.PlaceholderText = "Type something here....";
+            txtmemo.Size = new Size(405, 92);
+            txtmemo.TabIndex = 0;
             // 
             // grpEmail
             // 
-            this.grpEmail.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpEmail.Controls.Add(this.txtEmail);
-            this.grpEmail.Location = new System.Drawing.Point(253, 180);
-            this.grpEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpEmail.Name = "grpEmail";
-            this.grpEmail.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpEmail.Size = new System.Drawing.Size(205, 65);
-            this.grpEmail.TabIndex = 13;
-            this.grpEmail.TabStop = false;
-            this.grpEmail.Text = "Email                                ";
+            grpEmail.BackColor = SystemColors.ControlLight;
+            grpEmail.Controls.Add(txtEmail);
+            grpEmail.Location = new Point(253, 180);
+            grpEmail.Margin = new Padding(3, 4, 3, 4);
+            grpEmail.Name = "grpEmail";
+            grpEmail.Padding = new Padding(3, 4, 3, 4);
+            grpEmail.Size = new Size(205, 65);
+            grpEmail.TabIndex = 13;
+            grpEmail.TabStop = false;
+            grpEmail.Text = "Email                                ";
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtEmail.Location = new System.Drawing.Point(13, 27);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "Email";
-            this.txtEmail.Size = new System.Drawing.Size(182, 27);
-            this.txtEmail.TabIndex = 2;
+            txtEmail.BackColor = SystemColors.ControlLightLight;
+            txtEmail.Location = new Point(13, 27);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "Email";
+            txtEmail.Size = new Size(182, 27);
+            txtEmail.TabIndex = 2;
             // 
             // grpPhoneNumber
             // 
-            this.grpPhoneNumber.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpPhoneNumber.Controls.Add(this.txtPhoneNumber);
-            this.grpPhoneNumber.Location = new System.Drawing.Point(27, 180);
-            this.grpPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpPhoneNumber.Name = "grpPhoneNumber";
-            this.grpPhoneNumber.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpPhoneNumber.Size = new System.Drawing.Size(205, 65);
-            this.grpPhoneNumber.TabIndex = 12;
-            this.grpPhoneNumber.TabStop = false;
-            this.grpPhoneNumber.Text = "Phone Number                                  ";
+            grpPhoneNumber.BackColor = SystemColors.ControlLight;
+            grpPhoneNumber.Controls.Add(txtPhoneNumber);
+            grpPhoneNumber.Location = new Point(27, 180);
+            grpPhoneNumber.Margin = new Padding(3, 4, 3, 4);
+            grpPhoneNumber.Name = "grpPhoneNumber";
+            grpPhoneNumber.Padding = new Padding(3, 4, 3, 4);
+            grpPhoneNumber.Size = new Size(205, 65);
+            grpPhoneNumber.TabIndex = 12;
+            grpPhoneNumber.TabStop = false;
+            grpPhoneNumber.Text = "Phone Number                                  ";
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(15, 27);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PlaceholderText = "Phone Number";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(182, 27);
-            this.txtPhoneNumber.TabIndex = 2;
+            txtPhoneNumber.BackColor = SystemColors.ControlLightLight;
+            txtPhoneNumber.Location = new Point(15, 27);
+            txtPhoneNumber.Margin = new Padding(3, 4, 3, 4);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.PlaceholderText = "Phone Number";
+            txtPhoneNumber.Size = new Size(182, 27);
+            txtPhoneNumber.TabIndex = 2;
             // 
             // grpBirthday
             // 
-            this.grpBirthday.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpBirthday.Controls.Add(this.birthday);
-            this.grpBirthday.Location = new System.Drawing.Point(253, 107);
-            this.grpBirthday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBirthday.Name = "grpBirthday";
-            this.grpBirthday.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBirthday.Size = new System.Drawing.Size(205, 65);
-            this.grpBirthday.TabIndex = 1;
-            this.grpBirthday.TabStop = false;
-            this.grpBirthday.Text = "Birthday                                 ";
+            grpBirthday.BackColor = SystemColors.ControlLight;
+            grpBirthday.Controls.Add(birthday);
+            grpBirthday.Location = new Point(253, 107);
+            grpBirthday.Margin = new Padding(3, 4, 3, 4);
+            grpBirthday.Name = "grpBirthday";
+            grpBirthday.Padding = new Padding(3, 4, 3, 4);
+            grpBirthday.Size = new Size(205, 65);
+            grpBirthday.TabIndex = 1;
+            grpBirthday.TabStop = false;
+            grpBirthday.Text = "Birthday                                 ";
             // 
             // birthday
             // 
-            this.birthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthday.Location = new System.Drawing.Point(13, 25);
-            this.birthday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.birthday.Name = "birthday";
-            this.birthday.Size = new System.Drawing.Size(183, 27);
-            this.birthday.TabIndex = 0;
+            birthday.Format = DateTimePickerFormat.Custom;
+            birthday.Location = new Point(13, 25);
+            birthday.Margin = new Padding(3, 4, 3, 4);
+            birthday.Name = "birthday";
+            birthday.Size = new Size(183, 27);
+            birthday.TabIndex = 0;
             // 
             // grpPassport
             // 
-            this.grpPassport.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpPassport.Controls.Add(this.txtPassport);
-            this.grpPassport.Controls.Add(this.label1);
-            this.grpPassport.Location = new System.Drawing.Point(27, 107);
-            this.grpPassport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpPassport.Name = "grpPassport";
-            this.grpPassport.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpPassport.Size = new System.Drawing.Size(205, 65);
-            this.grpPassport.TabIndex = 11;
-            this.grpPassport.TabStop = false;
-            this.grpPassport.Text = "Passport Number / Mykad                                  ";
+            grpPassport.BackColor = SystemColors.ControlLight;
+            grpPassport.Controls.Add(txtPassport);
+            grpPassport.Controls.Add(label1);
+            grpPassport.Location = new Point(27, 107);
+            grpPassport.Margin = new Padding(3, 4, 3, 4);
+            grpPassport.Name = "grpPassport";
+            grpPassport.Padding = new Padding(3, 4, 3, 4);
+            grpPassport.Size = new Size(205, 65);
+            grpPassport.TabIndex = 11;
+            grpPassport.TabStop = false;
+            grpPassport.Text = "Passport Number / Mykad                                  ";
             // 
             // txtPassport
             // 
-            this.txtPassport.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtPassport.Location = new System.Drawing.Point(15, 25);
-            this.txtPassport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPassport.Name = "txtPassport";
-            this.txtPassport.PlaceholderText = "Passport Number / Mykad";
-            this.txtPassport.Size = new System.Drawing.Size(182, 27);
-            this.txtPassport.TabIndex = 1;
-            this.txtPassport.TextChanged += new System.EventHandler(this.txtPassport_TextChanged);
+            txtPassport.BackColor = SystemColors.ControlLightLight;
+            txtPassport.Location = new Point(15, 25);
+            txtPassport.Margin = new Padding(3, 4, 3, 4);
+            txtPassport.Name = "txtPassport";
+            txtPassport.PlaceholderText = "Passport Number / Mykad";
+            txtPassport.Size = new Size(182, 27);
+            txtPassport.TabIndex = 1;
+            txtPassport.TextChanged += txtPassport_TextChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(15, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(2, 30);
-            this.label1.TabIndex = 0;
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ControlLight;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(15, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(2, 30);
+            label1.TabIndex = 0;
             // 
             // grpStudyCourse
             // 
-            this.grpStudyCourse.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpStudyCourse.Controls.Add(this.lblStudyCourse);
-            this.grpStudyCourse.Location = new System.Drawing.Point(253, 253);
-            this.grpStudyCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpStudyCourse.Name = "grpStudyCourse";
-            this.grpStudyCourse.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpStudyCourse.Size = new System.Drawing.Size(205, 71);
-            this.grpStudyCourse.TabIndex = 10;
-            this.grpStudyCourse.TabStop = false;
-            this.grpStudyCourse.Text = "Study Course";
+            grpStudyCourse.BackColor = SystemColors.ControlLight;
+            grpStudyCourse.Controls.Add(lblStudyCourse);
+            grpStudyCourse.Location = new Point(253, 253);
+            grpStudyCourse.Margin = new Padding(3, 4, 3, 4);
+            grpStudyCourse.Name = "grpStudyCourse";
+            grpStudyCourse.Padding = new Padding(3, 4, 3, 4);
+            grpStudyCourse.Size = new Size(205, 71);
+            grpStudyCourse.TabIndex = 10;
+            grpStudyCourse.TabStop = false;
+            grpStudyCourse.Text = "Study Course";
             // 
             // lblStudyCourse
             // 
-            this.lblStudyCourse.AutoSize = true;
-            this.lblStudyCourse.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lblStudyCourse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblStudyCourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStudyCourse.Location = new System.Drawing.Point(15, 28);
-            this.lblStudyCourse.Name = "lblStudyCourse";
-            this.lblStudyCourse.Size = new System.Drawing.Size(199, 30);
-            this.lblStudyCourse.TabIndex = 8;
-            this.lblStudyCourse.Text = "       Study Course       ";
+            lblStudyCourse.AutoSize = true;
+            lblStudyCourse.BackColor = SystemColors.InactiveCaption;
+            lblStudyCourse.BorderStyle = BorderStyle.FixedSingle;
+            lblStudyCourse.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStudyCourse.Location = new Point(15, 28);
+            lblStudyCourse.Name = "lblStudyCourse";
+            lblStudyCourse.Size = new Size(199, 30);
+            lblStudyCourse.TabIndex = 8;
+            lblStudyCourse.Text = "       Study Course       ";
             // 
             // grpName
             // 
-            this.grpName.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grpName.Controls.Add(this.lblName);
-            this.grpName.Location = new System.Drawing.Point(27, 29);
-            this.grpName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpName.Name = "grpName";
-            this.grpName.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpName.Size = new System.Drawing.Size(430, 65);
-            this.grpName.TabIndex = 0;
-            this.grpName.TabStop = false;
-            this.grpName.Text = "Name                                  ";
+            grpName.BackColor = SystemColors.ControlLight;
+            grpName.Controls.Add(lblName);
+            grpName.Location = new Point(27, 29);
+            grpName.Margin = new Padding(3, 4, 3, 4);
+            grpName.Name = "grpName";
+            grpName.Padding = new Padding(3, 4, 3, 4);
+            grpName.Size = new Size(430, 65);
+            grpName.TabIndex = 0;
+            grpName.TabStop = false;
+            grpName.Text = "Name                                  ";
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(15, 25);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(441, 30);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name                                                                           ";
+            lblName.AutoSize = true;
+            lblName.BackColor = SystemColors.ControlLightLight;
+            lblName.BorderStyle = BorderStyle.Fixed3D;
+            lblName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblName.Location = new Point(15, 25);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(441, 30);
+            lblName.TabIndex = 0;
+            lblName.Text = "Name                                                                           ";
             // 
             // lblStudentName
             // 
-            this.lblStudentName.AutoSize = true;
-            this.lblStudentName.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lblStudentName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentName.Location = new System.Drawing.Point(96, 349);
-            this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(214, 41);
-            this.lblStudentName.TabIndex = 6;
-            this.lblStudentName.Text = "Student  Name";
-            this.lblStudentName.Click += new System.EventHandler(this.lblStudentName_Click);
+            lblStudentName.AutoSize = true;
+            lblStudentName.BackColor = SystemColors.InactiveCaption;
+            lblStudentName.Font = new Font("Segoe UI", 18F, FontStyle.Italic, GraphicsUnit.Point);
+            lblStudentName.Location = new Point(96, 349);
+            lblStudentName.Name = "lblStudentName";
+            lblStudentName.Size = new Size(214, 41);
+            lblStudentName.TabIndex = 6;
+            lblStudentName.Text = "Student  Name";
+            lblStudentName.Click += lblStudentName_Click;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox2.Controls.Add(this.lblStudentNum);
-            this.groupBox2.Controls.Add(this.lblStudentCourse);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(74, 379);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(229, 93);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
+            groupBox2.BackColor = SystemColors.ControlLight;
+            groupBox2.Controls.Add(lblStudentNum);
+            groupBox2.Controls.Add(lblStudentCourse);
+            groupBox2.Controls.Add(label2);
+            groupBox2.ForeColor = SystemColors.ControlText;
+            groupBox2.Location = new Point(74, 379);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(229, 93);
+            groupBox2.TabIndex = 5;
+            groupBox2.TabStop = false;
             // 
             // lblStudentNum
             // 
-            this.lblStudentNum.AutoSize = true;
-            this.lblStudentNum.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentNum.Location = new System.Drawing.Point(47, 25);
-            this.lblStudentNum.Name = "lblStudentNum";
-            this.lblStudentNum.Size = new System.Drawing.Size(162, 28);
-            this.lblStudentNum.TabIndex = 4;
-            this.lblStudentNum.Text = "Student  Number";
+            lblStudentNum.AutoSize = true;
+            lblStudentNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStudentNum.Location = new Point(47, 25);
+            lblStudentNum.Name = "lblStudentNum";
+            lblStudentNum.Size = new Size(162, 28);
+            lblStudentNum.TabIndex = 4;
+            lblStudentNum.Text = "Student  Number";
+            lblStudentNum.Click += lblStudentNum_Click;
             // 
             // lblStudentCourse
             // 
-            this.lblStudentCourse.AutoSize = true;
-            this.lblStudentCourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStudentCourse.Location = new System.Drawing.Point(61, 60);
-            this.lblStudentCourse.Name = "lblStudentCourse";
-            this.lblStudentCourse.Size = new System.Drawing.Size(127, 28);
-            this.lblStudentCourse.TabIndex = 2;
-            this.lblStudentCourse.Text = "Study Course";
+            lblStudentCourse.AutoSize = true;
+            lblStudentCourse.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStudentCourse.Location = new Point(61, 60);
+            lblStudentCourse.Name = "lblStudentCourse";
+            lblStudentCourse.Size = new Size(127, 28);
+            lblStudentCourse.TabIndex = 2;
+            lblStudentCourse.Text = "Study Course";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "_________________________________";
+            label2.AutoSize = true;
+            label2.Location = new Point(22, 40);
+            label2.Name = "label2";
+            label2.Size = new Size(207, 20);
+            label2.TabIndex = 1;
+            label2.Text = "_________________________________";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(375, 540);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(123, 44);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            btnUpdate.BackColor = SystemColors.GradientActiveCaption;
+            btnUpdate.Font = new Font("Segoe UI", 14.25F, FontStyle.Italic, GraphicsUnit.Point);
+            btnUpdate.Location = new Point(375, 540);
+            btnUpdate.Margin = new Padding(3, 4, 3, 4);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(123, 44);
+            btnUpdate.TabIndex = 15;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // pictureHome
             // 
-            this.pictureHome.Image = global::Tuition_Centre.Properties.Resources.home;
-            this.pictureHome.Location = new System.Drawing.Point(842, 36);
-            this.pictureHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureHome.Name = "pictureHome";
-            this.pictureHome.Size = new System.Drawing.Size(58, 57);
-            this.pictureHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureHome.TabIndex = 16;
-            this.pictureHome.TabStop = false;
-            this.pictureHome.Click += new System.EventHandler(this.pictureHome_Click);
+            pictureHome.Image = Properties.Resources.home;
+            pictureHome.Location = new Point(842, 36);
+            pictureHome.Margin = new Padding(3, 4, 3, 4);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(58, 57);
+            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureHome.TabIndex = 16;
+            pictureHome.TabStop = false;
+            pictureHome.Click += pictureHome_Click;
             // 
             // EditProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
-            this.Controls.Add(this.pictureHome);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.lblStudentName);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.picEdit);
-            this.Controls.Add(this.picProfile);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "EditProfile";
-            this.Text = "EditProfile";
-            this.Load += new System.EventHandler(this.EditProfile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.grpStudentNumber.ResumeLayout(false);
-            this.grpStudentNumber.PerformLayout();
-            this.grpmemo.ResumeLayout(false);
-            this.grpmemo.PerformLayout();
-            this.grpEmail.ResumeLayout(false);
-            this.grpEmail.PerformLayout();
-            this.grpPhoneNumber.ResumeLayout(false);
-            this.grpPhoneNumber.PerformLayout();
-            this.grpBirthday.ResumeLayout(false);
-            this.grpPassport.ResumeLayout(false);
-            this.grpPassport.PerformLayout();
-            this.grpStudyCourse.ResumeLayout(false);
-            this.grpStudyCourse.PerformLayout();
-            this.grpName.ResumeLayout(false);
-            this.grpName.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureHome)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(914, 600);
+            Controls.Add(pictureHome);
+            Controls.Add(btnUpdate);
+            Controls.Add(lblStudentName);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(picEdit);
+            Controls.Add(picProfile);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "EditProfile";
+            Text = "EditProfile";
+            Load += EditProfile_Load;
+            ((System.ComponentModel.ISupportInitialize)picEdit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picProfile).EndInit();
+            groupBox1.ResumeLayout(false);
+            grpStudentNumber.ResumeLayout(false);
+            grpStudentNumber.PerformLayout();
+            grpmemo.ResumeLayout(false);
+            grpmemo.PerformLayout();
+            grpEmail.ResumeLayout(false);
+            grpEmail.PerformLayout();
+            grpPhoneNumber.ResumeLayout(false);
+            grpPhoneNumber.PerformLayout();
+            grpBirthday.ResumeLayout(false);
+            grpPassport.ResumeLayout(false);
+            grpPassport.PerformLayout();
+            grpStudyCourse.ResumeLayout(false);
+            grpStudyCourse.PerformLayout();
+            grpName.ResumeLayout(false);
+            grpName.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private void txtPassport_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         #endregion

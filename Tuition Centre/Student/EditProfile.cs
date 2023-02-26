@@ -56,7 +56,7 @@ namespace Tuition_Centre.Student
             while (rd.Read())
             {
                 lblStudentName.Text = rd.GetString(4);
-                lblStudentNum.Text = rd.GetString(4);
+                lblStudentNum.Text = rd.GetString(3);
                 lblStudentCourse.Text = rd.GetString(11);
                 lblStudentNumber.Text = rd.GetString(3);
                 lblStudyCourse.Text = rd.GetString(11);
@@ -72,6 +72,11 @@ namespace Tuition_Centre.Student
         }
 
         private void lblStudentName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblStudentNum_Click(object sender, EventArgs e)
         {
 
         }

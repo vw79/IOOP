@@ -58,7 +58,7 @@ namespace Tuition_Centre.Student
                     this.Hide();
                     obj1.ShowDialog();
                 }
-                else if (label3.Text == "Successfully")
+                else if (label3.Text == "Completed")
                 {
                     pendingRequest obj1 = new pendingRequest(Name);
                     this.Hide();
