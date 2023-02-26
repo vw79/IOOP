@@ -62,12 +62,12 @@
             // dgvStuInfo
             // 
             dgvStuInfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStuInfo.Location = new Point(118, 181);
+            dgvStuInfo.Location = new Point(139, 179);
             dgvStuInfo.Margin = new Padding(3, 2, 3, 2);
             dgvStuInfo.Name = "dgvStuInfo";
             dgvStuInfo.RowHeadersWidth = 51;
             dgvStuInfo.RowTemplate.Height = 29;
-            dgvStuInfo.Size = new Size(569, 232);
+            dgvStuInfo.Size = new Size(536, 232);
             dgvStuInfo.TabIndex = 51;
             // 
             // txtSearch

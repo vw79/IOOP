@@ -20,6 +20,7 @@ namespace Tuition_Centre.Receptionist
             InitializeComponent();
         }
 
+        // Constructor with parameter
         public frmChangeSub(string un)
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace Tuition_Centre.Receptionist
             dgvChangeSub.RowHeaderMouseDoubleClick += dgvChangeSub_RowHeaderMouseDoubleClick;
         }
 
+        // Load data to the DataGridView
         private void LoadData()
         {
             // Create a new SqlConnection and SqlCommand to execute the query
@@ -46,6 +48,7 @@ namespace Tuition_Centre.Receptionist
             dgvChangeSub.DataSource = dt;
         }
 
+        // Method called when a row header in the DataGridView is double clicked
         private void dgvChangeSub_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             // Get the selected row.
@@ -71,11 +74,11 @@ namespace Tuition_Centre.Receptionist
             this.Hide();
         }
 
-        // This method is called when the pictureHome picture box is clicked.
+        // Method called when the pictureHome picture box is clicked
         private void pictureHome_Click(object sender, EventArgs e)
         {
             // Create a new instance of the frmMainReceptionist form and pass in the current user's username.
-            frmMainReceptionist back = new frmMainReceptionist(un);
+            frmUpdateStu back = new frmUpdateStu(un);
 
             // Show the frmMainReceptionist form and hide this form.
             back.Show();

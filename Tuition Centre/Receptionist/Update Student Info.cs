@@ -26,7 +26,7 @@ namespace Tuition_Centre.Receptionist
         public frmUpdateStu(string un)
         {
             InitializeComponent();
-            this.un = un;
+            this.un = un; // Constructor to set the username of the logged in user.
         }
 
         private void btnUpSub_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace Tuition_Centre.Receptionist
         private void btnDeleteStu_Click(object sender, EventArgs e)
         {
             frmSearchDelete deleteStu = new frmSearchDelete(un);
-            deleteStu.Show();   
+            deleteStu.Show();
             this.Hide();
         }
 
@@ -59,6 +59,6 @@ namespace Tuition_Centre.Receptionist
             // Show the frmMainReceptionist form and hide this form.
             back.Show();
             this.Hide();
-        }        
+        }
     }
 }

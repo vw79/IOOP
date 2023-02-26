@@ -59,6 +59,8 @@ namespace Tuition_Centre.Class
         private string acceptStatus;
         private DateTime date;
 
+        private string status;
+
 
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
@@ -119,17 +121,26 @@ namespace Tuition_Centre.Class
             this.stuUsername = stuUsername;
         }
 
-        public Recep(string subId1, string subId2, string subId3, string stuUsername)
+        public Recep(string stuName, string stuUsername, string subId1, string subId2, string subId3)
         {
             this.subId1 = subId1;
             this.subId2 = subId2;
             this.subId3 = subId3;
+            this.stuName = stuName;
             this.stuUsername = stuUsername;
         }
 
         public Recep(string studentName)
         {
             this.stuName = studentName;
+        }
+
+        public Recep (string stuName, string payMethod, string cardNum, string cvv)
+        {
+            this.stuName= stuName;
+            this.payMethod = payMethod;
+            this.cardNumber = cardNum;
+            this.CVV = cvv;
         }
 
         // Method getting receptionist name from database and return as string
@@ -263,78 +274,55 @@ namespace Tuition_Centre.Class
             }
         }
 
-
-
-        public void UpdateStuSubject()
+        public void UpdateStuSubject(string acceptanceStatus)
         {
-            con.Open();
+            // Create a new SqlConnection and SqlCommand to execute the update query
+              
+            con.Open(); 
 
-            SqlCommand cmdRecepInfo = new SqlCommand("UPDATE studentSubject SET subjectid1 = @subId1, subjectid2 = @subId2, subjectid3 = @subId3 WHERE username = @stuUsername", con);
-            cmdRecepInfo.Parameters.AddWithValue("@subId1", subId1);
-            cmdRecepInfo.Parameters.AddWithValue("@subId2", subId2);
-            cmdRecepInfo.Parameters.AddWithValue("@subId3", subId3);
-            cmdRecepInfo.Parameters.AddWithValue("@stuUsername", stuUsername);
-            cmdRecepInfo.ExecuteNonQuery();
+            SqlCommand cmd = new SqlCommand("UPDATE studentSubject SET subjectid1=@subId1, subjectid2=@subId2, subjectid3=@subId3 WHERE fullname=@studentName", con);
 
-            // Delete subject 1 if it is empty
-            if (string.IsNullOrEmpty(subId1))
-            {
-                SqlCommand cmdDeleteSub1 = new SqlCommand("UPDATE studentSubject SET subjectid1 = NULL WHERE username = @stuUsername", con);
-                cmdDeleteSub1.Parameters.AddWithValue("@stuUsername", stuUsername);
-                cmdDeleteSub1.ExecuteNonQuery();
-            }
-            // Otherwise, update subject 1
-            else
-            {
-                SqlCommand cmdUpdateSub1 = new SqlCommand("UPDATE studentSubject SET subjectid1 = @subId1 WHERE username = @stuUsername", con);
-                cmdUpdateSub1.Parameters.AddWithValue("@subId1", subId1);
-                cmdUpdateSub1.Parameters.AddWithValue("@stuUsername", stuUsername);
-                cmdUpdateSub1.ExecuteNonQuery();
-            }
+            // Set the parameters for the query
+            cmd.Parameters.AddWithValue("@subId1", subId1);
+            cmd.Parameters.AddWithValue("@subId2", subId2);
+            cmd.Parameters.AddWithValue("@subId3", subId3);
+            cmd.Parameters.AddWithValue("@studentName", stuName);
+            cmd.ExecuteNonQuery();
 
-            // Delete subject 2 if it is empty
-            if (string.IsNullOrEmpty(subId2))
-            {
-                SqlCommand cmdDeleteSub2 = new SqlCommand("UPDATE studentSubject SET subjectid2 = NULL WHERE username = @stuUsername", con);
-                cmdDeleteSub2.Parameters.AddWithValue("@stuUsername", stuUsername);
-                cmdDeleteSub2.ExecuteNonQuery();
-            }
-            // Otherwise, update subject 2
-            else
-            {
-                SqlCommand cmdUpdateSub2 = new SqlCommand("UPDATE studentSubject SET subjectid2 = @subId2 WHERE username = @stuUsername", con);
-                cmdUpdateSub2.Parameters.AddWithValue("@subId2", subId2);
-                cmdUpdateSub2.Parameters.AddWithValue("@stuUsername", stuUsername);
-                cmdUpdateSub2.ExecuteNonQuery();
-            }
-
-            // Delete subject 3 if it is empty
-            if (string.IsNullOrEmpty(subId3))
-            {
-                SqlCommand cmdDeleteSub3 = new SqlCommand("UPDATE studentSubject SET subjectid3 = NULL WHERE username = @stuUsername", con);
-                cmdDeleteSub3.Parameters.AddWithValue("@stuUsername", stuUsername);
-                cmdDeleteSub3.ExecuteNonQuery();
-            }
-            // Otherwise, update subject 3
-            else
-            {
-                SqlCommand cmdUpdateSub3 = new SqlCommand("UPDATE studentSubject SET subjectid3 = @subId3 WHERE username = @stuUsername", con);
-                cmdUpdateSub3.Parameters.AddWithValue("@subId3", subId3);
-                cmdUpdateSub3.Parameters.AddWithValue("@stuUsername", stuUsername);
-                cmdUpdateSub3.ExecuteNonQuery();
-            }
+            SqlCommand cmd1 = new SqlCommand("UPDATE changeSubject SET acceptanceStatus=@status WHERE username=@stuUsername", con);
+            // Set the parameters for the query
+            cmd1.Parameters.AddWithValue("@status", acceptanceStatus);
+            cmd1.Parameters.AddWithValue("@stuUsername", stuUsername);
+            cmd1.ExecuteNonQuery();
 
             con.Close();
         }
-
-
-
-        /*
-        public void UpdateStuPayment(Receptionist)
+        
+        
+        public void UpdateStuPayment()
         {
+            con.Open();
+            // Create a SqlCommand to retrieve the student's database ID based on their name.
+            SqlCommand cmdGetId = new SqlCommand("SELECT i.studentDatabaselD FROM studentInfo i INNER JOIN paymentInfo p ON i.studentDatabaselD = p.studentDatabaseID WHERE i.studentName = @stuName", con);
+            // Set the parameter for the query to the student's name.
+            cmdGetId.Parameters.AddWithValue("@stuName", stuName);
+            // Execute the query and retrieve the student's database ID.
+            int stuDbId = (int)cmdGetId.ExecuteScalar();
 
+            // Create a SqlCommand to update the paymentInfo table for the student with the retrieved database ID.
+            SqlCommand cmdUpdate = new SqlCommand("UPDATE paymentInfo SET paymentMethod = @paymentMethod, cardNumber = @cardNumber, CVV = @cvv WHERE studentDatabaseID = @stuDbId", con);
+            // Set the parameters for the query to the new payment information and the student's database ID.
+            cmdUpdate.Parameters.AddWithValue("@paymentMethod", payMethod);
+            cmdUpdate.Parameters.AddWithValue("@cardNumber", cardNumber);
+            cmdUpdate.Parameters.AddWithValue("@cvv", CVV);
+            cmdUpdate.Parameters.AddWithValue("@stuDbId", stuDbId);
+            // Execute the query to update the payment information in the database.
+            cmdUpdate.ExecuteNonQuery();
+
+            con.Close();
         }
-        */
+   
+        
 
         public string deleteStudent(string stuName)
         {

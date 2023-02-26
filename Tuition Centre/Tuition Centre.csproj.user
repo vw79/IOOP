@@ -53,6 +53,9 @@
     <Compile Update="Receptionist\Search Stu Pay.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Receptionist\Update Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Receptionist\Update Student Info.cs">
       <SubType>Form</SubType>
     </Compile>
