@@ -60,7 +60,7 @@ namespace Tuition_Centre.Receptionist
                 MessageBox.Show("Invalid amount. Please enter a numeric value.");
                 return; // Stop the method from continuing.
             }
-            if (!decimal.TryParse(txtCVV.Text, out decimal amount))
+            if (!decimal.TryParse(txtCVV.Text, out decimal amount1))
             {
                 MessageBox.Show("Invalid amount. Please enter a numeric value.");
                 return; // Stop the method from continuing.

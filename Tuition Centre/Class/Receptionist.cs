@@ -394,6 +394,8 @@ namespace Tuition_Centre.Class
             cmdPayment.Parameters.AddWithValue("@date", date);
             cmdPayment.Parameters.AddWithValue("@stuUsername", stuUsername);
             cmdPayment.ExecuteNonQuery();
+
+            con.Close();
         }
 
         
