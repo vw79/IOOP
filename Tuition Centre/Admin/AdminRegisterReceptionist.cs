@@ -22,9 +22,9 @@ namespace Tuition_Centre.Admin
         private void btnRegister_Click(object sender, EventArgs e)
         {
             //Checks if the textbox are empty or not
-            if (!string.IsNullOrEmpty(txtbName.Text) || !string.IsNullOrEmpty(txtbIcP.Text) || !string.IsNullOrEmpty(txtbPhone.Text) || 
-                !string.IsNullOrEmpty(txtbEmail.Text) || !string.IsNullOrEmpty(txtbAddress.Text) || !string.IsNullOrEmpty(txtbUsername.Text) ||
-                !string.IsNullOrEmpty(txtbPassword.Text))
+            if (string.IsNullOrEmpty(txtbName.Text) || string.IsNullOrEmpty(txtbIcP.Text) || string.IsNullOrEmpty(txtbPhone.Text) || 
+                string.IsNullOrEmpty(txtbEmail.Text) || string.IsNullOrEmpty(txtbAddress.Text) || string.IsNullOrEmpty(txtbUsername.Text) ||
+                string.IsNullOrEmpty(txtbPassword.Text))
             {
                 MessageBox.Show("Please make sure all fields are filled");
             }
