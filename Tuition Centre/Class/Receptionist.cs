@@ -119,6 +119,19 @@ namespace Tuition_Centre.Class
             this.stuUsername = stuUsername;
         }
 
+        public Recep(string subId1, string subId2, string subId3, string stuUsername)
+        {
+            this.subId1 = subId1;
+            this.subId2 = subId2;
+            this.subId3 = subId3;
+            this.stuUsername = stuUsername;
+        }
+
+        public Recep(string studentName)
+        {
+            this.stuName = studentName;
+        }
+
         // Method getting receptionist name from database and return as string
 
         public string[] getRecepData(string un)
@@ -249,10 +262,69 @@ namespace Tuition_Centre.Class
                 return null;
             }
         }
-  
+
+
+
         public void UpdateStuSubject()
         {
-            SqlCommand cdmUpSub = new SqlCommand()
+            con.Open();
+
+            SqlCommand cmdRecepInfo = new SqlCommand("UPDATE studentSubject SET subjectid1 = @subId1, subjectid2 = @subId2, subjectid3 = @subId3 WHERE username = @stuUsername", con);
+            cmdRecepInfo.Parameters.AddWithValue("@subId1", subId1);
+            cmdRecepInfo.Parameters.AddWithValue("@subId2", subId2);
+            cmdRecepInfo.Parameters.AddWithValue("@subId3", subId3);
+            cmdRecepInfo.Parameters.AddWithValue("@stuUsername", stuUsername);
+            cmdRecepInfo.ExecuteNonQuery();
+
+            // Delete subject 1 if it is empty
+            if (string.IsNullOrEmpty(subId1))
+            {
+                SqlCommand cmdDeleteSub1 = new SqlCommand("UPDATE studentSubject SET subjectid1 = NULL WHERE username = @stuUsername", con);
+                cmdDeleteSub1.Parameters.AddWithValue("@stuUsername", stuUsername);
+                cmdDeleteSub1.ExecuteNonQuery();
+            }
+            // Otherwise, update subject 1
+            else
+            {
+                SqlCommand cmdUpdateSub1 = new SqlCommand("UPDATE studentSubject SET subjectid1 = @subId1 WHERE username = @stuUsername", con);
+                cmdUpdateSub1.Parameters.AddWithValue("@subId1", subId1);
+                cmdUpdateSub1.Parameters.AddWithValue("@stuUsername", stuUsername);
+                cmdUpdateSub1.ExecuteNonQuery();
+            }
+
+            // Delete subject 2 if it is empty
+            if (string.IsNullOrEmpty(subId2))
+            {
+                SqlCommand cmdDeleteSub2 = new SqlCommand("UPDATE studentSubject SET subjectid2 = NULL WHERE username = @stuUsername", con);
+                cmdDeleteSub2.Parameters.AddWithValue("@stuUsername", stuUsername);
+                cmdDeleteSub2.ExecuteNonQuery();
+            }
+            // Otherwise, update subject 2
+            else
+            {
+                SqlCommand cmdUpdateSub2 = new SqlCommand("UPDATE studentSubject SET subjectid2 = @subId2 WHERE username = @stuUsername", con);
+                cmdUpdateSub2.Parameters.AddWithValue("@subId2", subId2);
+                cmdUpdateSub2.Parameters.AddWithValue("@stuUsername", stuUsername);
+                cmdUpdateSub2.ExecuteNonQuery();
+            }
+
+            // Delete subject 3 if it is empty
+            if (string.IsNullOrEmpty(subId3))
+            {
+                SqlCommand cmdDeleteSub3 = new SqlCommand("UPDATE studentSubject SET subjectid3 = NULL WHERE username = @stuUsername", con);
+                cmdDeleteSub3.Parameters.AddWithValue("@stuUsername", stuUsername);
+                cmdDeleteSub3.ExecuteNonQuery();
+            }
+            // Otherwise, update subject 3
+            else
+            {
+                SqlCommand cmdUpdateSub3 = new SqlCommand("UPDATE studentSubject SET subjectid3 = @subId3 WHERE username = @stuUsername", con);
+                cmdUpdateSub3.Parameters.AddWithValue("@subId3", subId3);
+                cmdUpdateSub3.Parameters.AddWithValue("@stuUsername", stuUsername);
+                cmdUpdateSub3.ExecuteNonQuery();
+            }
+
+            con.Close();
         }
 
 
@@ -264,31 +336,43 @@ namespace Tuition_Centre.Class
         }
         */
 
-        public string deleteStudent()
+        public string deleteStudent(string stuName)
         {
-            string status;
-            string searchName = null;
-            int stuDbId = 0;
-
-            con.Open();
+            string status = "";
             
-            // Delete the student's subjects first
-            SqlCommand cmdDeleteStudentSubjects = new SqlCommand("DELETE FROM studentSubject WHERE studentDatabaseId = (SELECT studentDatabaseId FROM studentInfo WHERE studentName = @studentName)", con);
-            cmdDeleteStudentSubjects.Parameters.AddWithValue("@studentName", searchName);
-            cmdDeleteStudentSubjects.Parameters.AddWithValue("@stuDbId", stuDbId);
+            con.Open();
+
+            // Get the student's database ID based on their name.
+            SqlCommand cmdGetStudentId = new SqlCommand("SELECT studentDatabaseld FROM studentInfo WHERE studentName = @studentName", con);
+            cmdGetStudentId.Parameters.AddWithValue("@studentName", stuName);
+            int studentId = (int)cmdGetStudentId.ExecuteScalar();
+
+            // Delete the student's subjects.
+            SqlCommand cmdDeleteStudentSubjects = new SqlCommand("DELETE FROM studentSubject WHERE studentDatabaseId = @studentId", con);
+            cmdDeleteStudentSubjects.Parameters.AddWithValue("@studentId", studentId);
             cmdDeleteStudentSubjects.ExecuteNonQuery();
 
-            // Delete the student's user account next
+            // Delete the student's payment info
+            SqlCommand cmdDeleteStudentPayInfo = new SqlCommand("DELETE FROM paymentInfo WHERE studentDatabaseId = @studentId", con);
+            cmdDeleteStudentPayInfo.Parameters.AddWithValue("@studentId", studentId);
+            cmdDeleteStudentPayInfo.ExecuteNonQuery();
+
+            // Delete the student's user account.
             SqlCommand cmdDeleteStudentUser = new SqlCommand("DELETE FROM users WHERE username = @studentName", con);
-            cmdDeleteStudentUser.Parameters.AddWithValue("@studentName", searchName);
+            cmdDeleteStudentUser.Parameters.AddWithValue("@studentName", stuName);
             cmdDeleteStudentUser.ExecuteNonQuery();
 
-            // Delete the student's information last
+            // Delete the student's information.
             SqlCommand cmdDeleteStudentInfo = new SqlCommand("DELETE FROM studentInfo WHERE studentName = @studentName", con);
-            cmdDeleteStudentInfo.Parameters.AddWithValue("@studentName", searchName);
+            cmdDeleteStudentInfo.Parameters.AddWithValue("@studentName", stuName);
             cmdDeleteStudentInfo.ExecuteNonQuery();
 
             status = "Student information has been deleted successfully.";
+           
+          
+            con.Close();
+            
+
             return status;
         }
 

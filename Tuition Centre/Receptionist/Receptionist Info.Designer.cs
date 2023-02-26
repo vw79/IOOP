@@ -206,7 +206,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Name = "frmUpdateRcp";
-            Text = "Form6";
+            Text = "Update Receptionist Info";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();

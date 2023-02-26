@@ -16,7 +16,17 @@ namespace Tuition_Centre.Receptionist
     {
         //Properties
         private string un;
-        private string stuName;
+
+        private string studentId;
+        private string studentName;
+        private string oldSubject; 
+        private string newSubject;
+        private string date;
+        private string acceptanceStatus;
+        private string reason;
+        private string paymentMethod;
+        private string cardNumber;
+        private string cvv;
 
         // Default constructor
         public frmMainReceptionist()

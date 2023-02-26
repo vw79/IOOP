@@ -280,7 +280,7 @@
             Controls.Add(grpPayMethod);
             Controls.Add(grpSubject);
             Name = "frmRegister2";
-            Text = "Register2";
+            Text = "Register";
             grpSubject.ResumeLayout(false);
             grpSubject.PerformLayout();
             grpPayMethod.ResumeLayout(false);

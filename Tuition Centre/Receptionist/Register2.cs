@@ -168,7 +168,7 @@ namespace Tuition_Centre.Receptionist
             string fullName = cmdName.ExecuteScalar().ToString();
 
             // Retrieve the database ID of the student based on their username
-            SqlCommand cmdDbId = new SqlCommand("SELECT studentDbId FROM studentInfo WHERE username = @stuUsername", con);
+            SqlCommand cmdDbId = new SqlCommand("SELECT studentDatabaseld FROM studentInfo WHERE username = @stuUsername", con);
             cmdDbId.Parameters.AddWithValue("@stuUsername", stuUsername);
             stuDbId = (int)cmdDbId.ExecuteScalar();
 

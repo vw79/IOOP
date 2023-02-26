@@ -16,14 +16,7 @@ namespace Tuition_Centre.Receptionist
 {
     public partial class frmUpdateStu : Form
     {
-        static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-
-        private string un;
-        private string searchName;
-        private string stuId;
-        private string stuName;
-
-        private Form activeForm;
+        private string un;  // The username of the currently logged in receptionist
 
         public frmUpdateStu()
         {
@@ -36,58 +29,36 @@ namespace Tuition_Centre.Receptionist
             this.un = un;
         }
 
-        private void openChildForm(Form childForm, Panel parentPanel)
-        {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            parentPanel.Controls.Add(childForm);
-            parentPanel.Tag = childForm;
-            childForm.Show();
-        }
-
-        private void btnStuSearch_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmStuSearch(), panel3);
-            btnStuSearch.Enabled = false;
-            btnUpSub.Enabled = true;
-            btnUpPay.Enabled = true;
-            btnDeleteStu.Enabled = true;
-        }
-
         private void btnUpSub_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmUpdateStu1(), panel3);
-            btnStuSearch.Enabled = true;
-            btnUpSub.Enabled = false;
-            btnUpPay.Enabled = true;
-            btnDeleteStu.Enabled = true;
+            frmChangeSub changeSub = new frmChangeSub(un);
+            changeSub.Show();
+            this.Hide();
         }
 
         private void btnUpPay_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmUpdateStu2(), panel3);
-            btnStuSearch.Enabled = true;
-            btnUpSub.Enabled = true;
-            btnUpPay.Enabled = false;
-            btnDeleteStu.Enabled = true;
+            frmSearchPay upPay = new frmSearchPay(un);
+            upPay.Show();
+            this.Hide();
         }
 
         private void btnDeleteStu_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmUpdateStu3(), panel3);
-            btnStuSearch.Enabled = true;
-            btnUpSub.Enabled = true;
-            btnUpPay.Enabled = true;
-            btnDeleteStu.Enabled = false;
+            frmSearchDelete deleteStu = new frmSearchDelete(un);
+            deleteStu.Show();   
+            this.Hide();
         }
 
+        // This method is called when the pictureHome picture box is clicked.
+        private void pictureHome_Click(object sender, EventArgs e)
+        {
+            // Create a new instance of the frmMainReceptionist form and pass in the current user's username.
+            frmMainReceptionist back = new frmMainReceptionist(un);
 
+            // Show the frmMainReceptionist form and hide this form.
+            back.Show();
+            this.Hide();
+        }        
     }
 }
