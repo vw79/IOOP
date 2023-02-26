@@ -28,135 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblStuName = new System.Windows.Forms.Label();
-            this.lblStuID = new System.Windows.Forms.Label();
-            this.lblSub = new System.Windows.Forms.Label();
-            this.lblPay = new System.Windows.Forms.Label();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.lblStuNameS = new System.Windows.Forms.Label();
-            this.lblStuIDS = new System.Windows.Forms.Label();
-            this.lblSubjectS = new System.Windows.Forms.Label();
-            this.lblPayS = new System.Windows.Forms.Label();
-            this.lblAmountS = new System.Windows.Forms.Label();
-            this.btnMainMenu = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            lblStuName = new Label();
+            lblStuID = new Label();
+            lblSub = new Label();
+            lblPay = new Label();
+            lblAmount = new Label();
+            lblStuNameS = new Label();
+            lblStuIDS = new Label();
+            lblPayS = new Label();
+            lblAmountS = new Label();
+            btnMainMenu = new Button();
+            lstSubject = new ListBox();
+            SuspendLayout();
             // 
             // lblStuName
             // 
-            this.lblStuName.AutoSize = true;
-            this.lblStuName.Location = new System.Drawing.Point(98, 79);
-            this.lblStuName.Name = "lblStuName";
-            this.lblStuName.Size = new System.Drawing.Size(45, 15);
-            this.lblStuName.TabIndex = 0;
-            this.lblStuName.Text = "Name :";
+            lblStuName.AutoSize = true;
+            lblStuName.Location = new Point(98, 79);
+            lblStuName.Name = "lblStuName";
+            lblStuName.Size = new Size(45, 15);
+            lblStuName.TabIndex = 0;
+            lblStuName.Text = "Name :";
             // 
             // lblStuID
             // 
-            this.lblStuID.AutoSize = true;
-            this.lblStuID.Location = new System.Drawing.Point(98, 118);
-            this.lblStuID.Name = "lblStuID";
-            this.lblStuID.Size = new System.Drawing.Size(68, 15);
-            this.lblStuID.TabIndex = 1;
-            this.lblStuID.Text = "Student ID :";
+            lblStuID.AutoSize = true;
+            lblStuID.Location = new Point(98, 119);
+            lblStuID.Name = "lblStuID";
+            lblStuID.Size = new Size(68, 15);
+            lblStuID.TabIndex = 1;
+            lblStuID.Text = "Student ID :";
             // 
             // lblSub
             // 
-            this.lblSub.AutoSize = true;
-            this.lblSub.Location = new System.Drawing.Point(98, 158);
-            this.lblSub.Name = "lblSub";
-            this.lblSub.Size = new System.Drawing.Size(52, 15);
-            this.lblSub.TabIndex = 2;
-            this.lblSub.Text = "Subject :";
+            lblSub.AutoSize = true;
+            lblSub.Location = new Point(98, 158);
+            lblSub.Name = "lblSub";
+            lblSub.Size = new Size(52, 15);
+            lblSub.TabIndex = 2;
+            lblSub.Text = "Subject :";
             // 
             // lblPay
             // 
-            this.lblPay.AutoSize = true;
-            this.lblPay.Location = new System.Drawing.Point(98, 195);
-            this.lblPay.Name = "lblPay";
-            this.lblPay.Size = new System.Drawing.Size(60, 15);
-            this.lblPay.TabIndex = 3;
-            this.lblPay.Text = "Payment :";
+            lblPay.AutoSize = true;
+            lblPay.Location = new Point(98, 249);
+            lblPay.Name = "lblPay";
+            lblPay.Size = new Size(60, 15);
+            lblPay.TabIndex = 3;
+            lblPay.Text = "Payment :";
             // 
             // lblAmount
             // 
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.Location = new System.Drawing.Point(98, 233);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(57, 15);
-            this.lblAmount.TabIndex = 4;
-            this.lblAmount.Text = "Amount :";
+            lblAmount.AutoSize = true;
+            lblAmount.Location = new Point(98, 287);
+            lblAmount.Name = "lblAmount";
+            lblAmount.Size = new Size(57, 15);
+            lblAmount.TabIndex = 4;
+            lblAmount.Text = "Amount :";
             // 
             // lblStuNameS
             // 
-            this.lblStuNameS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStuNameS.Location = new System.Drawing.Point(224, 79);
-            this.lblStuNameS.Name = "lblStuNameS";
-            this.lblStuNameS.Size = new System.Drawing.Size(200, 23);
-            this.lblStuNameS.TabIndex = 5;
+            lblStuNameS.BorderStyle = BorderStyle.Fixed3D;
+            lblStuNameS.Location = new Point(224, 78);
+            lblStuNameS.Name = "lblStuNameS";
+            lblStuNameS.Size = new Size(200, 23);
+            lblStuNameS.TabIndex = 5;
             // 
             // lblStuIDS
             // 
-            this.lblStuIDS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStuIDS.Location = new System.Drawing.Point(224, 118);
-            this.lblStuIDS.Name = "lblStuIDS";
-            this.lblStuIDS.Size = new System.Drawing.Size(200, 23);
-            this.lblStuIDS.TabIndex = 6;
-            // 
-            // lblSubjectS
-            // 
-            this.lblSubjectS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSubjectS.Location = new System.Drawing.Point(224, 158);
-            this.lblSubjectS.Name = "lblSubjectS";
-            this.lblSubjectS.Size = new System.Drawing.Size(200, 23);
-            this.lblSubjectS.TabIndex = 7;
+            lblStuIDS.BorderStyle = BorderStyle.Fixed3D;
+            lblStuIDS.Location = new Point(224, 118);
+            lblStuIDS.Name = "lblStuIDS";
+            lblStuIDS.Size = new Size(200, 23);
+            lblStuIDS.TabIndex = 6;
             // 
             // lblPayS
             // 
-            this.lblPayS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPayS.Location = new System.Drawing.Point(224, 195);
-            this.lblPayS.Name = "lblPayS";
-            this.lblPayS.Size = new System.Drawing.Size(200, 23);
-            this.lblPayS.TabIndex = 8;
+            lblPayS.BorderStyle = BorderStyle.Fixed3D;
+            lblPayS.Location = new Point(224, 248);
+            lblPayS.Name = "lblPayS";
+            lblPayS.Size = new Size(200, 23);
+            lblPayS.TabIndex = 8;
             // 
             // lblAmountS
             // 
-            this.lblAmountS.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAmountS.Location = new System.Drawing.Point(224, 233);
-            this.lblAmountS.Name = "lblAmountS";
-            this.lblAmountS.Size = new System.Drawing.Size(200, 23);
-            this.lblAmountS.TabIndex = 9;
+            lblAmountS.BorderStyle = BorderStyle.Fixed3D;
+            lblAmountS.Location = new Point(224, 286);
+            lblAmountS.Name = "lblAmountS";
+            lblAmountS.Size = new Size(200, 23);
+            lblAmountS.TabIndex = 9;
             // 
             // btnMainMenu
             // 
-            this.btnMainMenu.Location = new System.Drawing.Point(588, 360);
-            this.btnMainMenu.Name = "btnMainMenu";
-            this.btnMainMenu.Size = new System.Drawing.Size(100, 23);
-            this.btnMainMenu.TabIndex = 10;
-            this.btnMainMenu.Text = "Main Menu";
-            this.btnMainMenu.UseVisualStyleBackColor = true;
-            this.btnMainMenu.Click += new System.EventHandler(this.btnMainMenu_Click);
+            btnMainMenu.Location = new Point(588, 360);
+            btnMainMenu.Name = "btnMainMenu";
+            btnMainMenu.Size = new Size(100, 23);
+            btnMainMenu.TabIndex = 10;
+            btnMainMenu.Text = "Main Menu";
+            btnMainMenu.UseVisualStyleBackColor = true;
+            btnMainMenu.Click += btnMainMenu_Click;
+            // 
+            // lstSubject
+            // 
+            lstSubject.FormattingEnabled = true;
+            lstSubject.ItemHeight = 15;
+            lstSubject.Location = new Point(224, 158);
+            lstSubject.Name = "lstSubject";
+            lstSubject.Size = new Size(200, 79);
+            lstSubject.TabIndex = 11;
             // 
             // frmPayment3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnMainMenu);
-            this.Controls.Add(this.lblAmountS);
-            this.Controls.Add(this.lblPayS);
-            this.Controls.Add(this.lblSubjectS);
-            this.Controls.Add(this.lblStuIDS);
-            this.Controls.Add(this.lblStuNameS);
-            this.Controls.Add(this.lblAmount);
-            this.Controls.Add(this.lblPay);
-            this.Controls.Add(this.lblSub);
-            this.Controls.Add(this.lblStuID);
-            this.Controls.Add(this.lblStuName);
-            this.Name = "frmPayment3";
-            this.Text = "Rececipt";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lstSubject);
+            Controls.Add(btnMainMenu);
+            Controls.Add(lblAmountS);
+            Controls.Add(lblPayS);
+            Controls.Add(lblStuIDS);
+            Controls.Add(lblStuNameS);
+            Controls.Add(lblAmount);
+            Controls.Add(lblPay);
+            Controls.Add(lblSub);
+            Controls.Add(lblStuID);
+            Controls.Add(lblStuName);
+            Name = "frmPayment3";
+            Text = "Rececipt";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -168,9 +168,9 @@
         private Label lblAmount;
         private Label lblStuNameS;
         private Label lblStuIDS;
-        private Label lblSubjectS;
         private Label lblPayS;
         private Label lblAmountS;
         private Button btnMainMenu;
+        private ListBox lstSubject;
     }
 }

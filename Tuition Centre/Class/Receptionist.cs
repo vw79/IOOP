@@ -54,8 +54,11 @@ namespace Tuition_Centre.Class
         private string rcpAddress;
         private string rcpEmail;
 
+        private string paidBy;
+        private string payAmount;
+        private string acceptStatus;
+        private DateTime date;
 
-        public string SearchName { get => searchName; set => searchName = value; }
 
         // The connection string to the database
         static SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
@@ -107,10 +110,24 @@ namespace Tuition_Centre.Class
             this.recepId = recepId;
         }
 
+        public Recep(string payAmount, string paidBy, DateTime date, string acceptStatus, string stuUsername)
+        {
+            this.payAmount = payAmount;
+            this.paidBy = paidBy;
+            this.date = date;
+            this.acceptStatus = acceptStatus;
+            this.stuUsername = stuUsername;
+        }
+
         // Method getting receptionist name from database and return as string
 
         public string[] getRecepData(string un)
         {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT r.recepId, r.recepName, r.recepIcP FROM receptionist r " +
                                             "INNER JOIN users u ON u.usersId = r.usersId WHERE u.username = @un", con);
@@ -206,23 +223,18 @@ namespace Tuition_Centre.Class
         // Method to search for a student in the database and return the results as a DataTable
         public DataTable searchStu(string searchName)
         {
-
-            // Create a new SqlConnection object with the connection string
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
             con.Open();
 
-            // Create a new SqlCommand object with a SELECT statement to search for the student
-            // The search term is passed as a parameter to prevent SQL injection attacks
-            SqlCommand cmd = new SqlCommand("SELECT studentId, studentName, studentEnrollmentDate, studyCourse FROM studentInfo WHERE studentName LIKE @searchName", con);
+            SqlCommand cmd = new SqlCommand("SELECT i.studentId, i.studentName, i.studentEnrollmentDate, i.studyCourse, i.level, s.subjectid1, s.subjectid2, s.subjectid3 " +
+                                            "FROM studentInfo i " +
+                                            "LEFT JOIN studentSubject s ON i.studentDatabaseld = s.studentDatabaseId " +
+                                    "WHERE i.studentName LIKE @searchName", con);
             cmd.Parameters.AddWithValue("@searchName", "%" + searchName + "%");
 
-            // Create a new SqlDataAdapter object with the SqlCommand object as a parameter
             SqlDataAdapter adp = new SqlDataAdapter(cmd);
 
-            // Create a new DataTable object to hold the search results
             DataTable dt = new DataTable();
 
-            // Fill the DataTable with the search results using the SqlDataAdapter
             adp.Fill(dt);
 
             con.Close();
@@ -272,8 +284,7 @@ namespace Tuition_Centre.Class
             cmdDeleteStudentUser.ExecuteNonQuery();
 
             // Delete the student's information last
-            string deleteStudentInfoQuery = "DELETE FROM studentInfo WHERE studentName = @studentName";
-            SqlCommand cmdDeleteStudentInfo = new SqlCommand(deleteStudentInfoQuery, con);
+            SqlCommand cmdDeleteStudentInfo = new SqlCommand("DELETE FROM studentInfo WHERE studentName = @studentName", con);
             cmdDeleteStudentInfo.Parameters.AddWithValue("@studentName", searchName);
             cmdDeleteStudentInfo.ExecuteNonQuery();
 
@@ -294,12 +305,25 @@ namespace Tuition_Centre.Class
 
             con.Close();
         }
-        /*
-            public void GenerateReceipt(Receptionist)
-            {
+        
+        public void GenerateReceipt()
+        {
+            con.Open();
 
-            }
+            SqlCommand cmdPayment = new SqlCommand("INSERT INTO payment (studentDatabaseId, paidBy, paymentAmount, acceptanceStatus, date) " +
+                                                    "SELECT s.studentDatabaseld, @paidBy, @payAmount, @acceptStatus, @date " +
+                                                    "FROM studentInfo s " +
+                                                    "LEFT JOIN payment p ON s.studentDatabaseld = p.studentDatabaseId " +
+                                                    "WHERE s.username = @stuUsername", con);
 
-        }*/
+            cmdPayment.Parameters.AddWithValue("@paidBy", paidBy);
+            cmdPayment.Parameters.AddWithValue("@payAmount", payAmount);
+            cmdPayment.Parameters.AddWithValue("@acceptStatus", acceptStatus);
+            cmdPayment.Parameters.AddWithValue("@date", date);
+            cmdPayment.Parameters.AddWithValue("@stuUsername", stuUsername);
+            cmdPayment.ExecuteNonQuery();
+        }
+
+        
     }
 }

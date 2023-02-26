@@ -38,6 +38,8 @@
             panel2 = new Panel();
             pictureHome = new PictureBox();
             panel3 = new Panel();
+            lblStuNameS = new Label();
+            lblStuIdS = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
@@ -102,6 +104,8 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Controls.Add(lblStuIdS);
+            panel2.Controls.Add(lblStuNameS);
             panel2.Controls.Add(pictureHome);
             panel2.Controls.Add(lblStuID);
             panel2.Controls.Add(lblStuName);
@@ -127,6 +131,22 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(591, 315);
             panel3.TabIndex = 4;
+            // 
+            // lblStuNameS
+            // 
+            lblStuNameS.BorderStyle = BorderStyle.Fixed3D;
+            lblStuNameS.Location = new Point(135, 22);
+            lblStuNameS.Name = "lblStuNameS";
+            lblStuNameS.Size = new Size(200, 20);
+            lblStuNameS.TabIndex = 49;
+            // 
+            // lblStuIdS
+            // 
+            lblStuIdS.BorderStyle = BorderStyle.Fixed3D;
+            lblStuIdS.Location = new Point(135, 55);
+            lblStuIdS.Name = "lblStuIdS";
+            lblStuIdS.Size = new Size(200, 20);
+            lblStuIdS.TabIndex = 50;
             // 
             // frmUpdateStu
             // 
@@ -156,5 +176,7 @@
         private Panel panel2;
         private Panel panel3;
         private PictureBox pictureHome;
+        private Label lblStuIdS;
+        private Label lblStuNameS;
     }
 }

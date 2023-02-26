@@ -78,25 +78,25 @@
             // lblRcpICS
             // 
             lblRcpICS.BorderStyle = BorderStyle.Fixed3D;
-            lblRcpICS.Location = new Point(146, 72);
+            lblRcpICS.Location = new Point(146, 71);
             lblRcpICS.Name = "lblRcpICS";
-            lblRcpICS.Size = new Size(200, 15);
+            lblRcpICS.Size = new Size(200, 20);
             lblRcpICS.TabIndex = 6;
             // 
             // lblRcpNameS
             // 
             lblRcpNameS.BorderStyle = BorderStyle.Fixed3D;
-            lblRcpNameS.Location = new Point(146, 46);
+            lblRcpNameS.Location = new Point(146, 45);
             lblRcpNameS.Name = "lblRcpNameS";
-            lblRcpNameS.Size = new Size(200, 15);
+            lblRcpNameS.Size = new Size(200, 20);
             lblRcpNameS.TabIndex = 5;
             // 
             // lblRcpIDS
             // 
             lblRcpIDS.BorderStyle = BorderStyle.Fixed3D;
-            lblRcpIDS.Location = new Point(146, 18);
+            lblRcpIDS.Location = new Point(146, 21);
             lblRcpIDS.Name = "lblRcpIDS";
-            lblRcpIDS.Size = new Size(200, 23);
+            lblRcpIDS.Size = new Size(200, 20);
             lblRcpIDS.TabIndex = 4;
             // 
             // lblRcpIC

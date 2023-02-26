@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayment2));
             panel2 = new Panel();
+            pictureHome = new PictureBox();
             lblStuIDS = new Label();
             lblStuNameS = new Label();
             lblStuID = new Label();
@@ -39,10 +40,11 @@
             cmbPay = new ComboBox();
             lblAmount = new Label();
             txtAmount = new TextBox();
-            pictureHome = new PictureBox();
+            dtpDate = new DateTimePicker();
+            lblPayMethod = new Label();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -57,20 +59,31 @@
             panel2.Size = new Size(776, 105);
             panel2.TabIndex = 4;
             // 
+            // pictureHome
+            // 
+            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
+            pictureHome.Location = new Point(725, 0);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(51, 43);
+            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureHome.TabIndex = 48;
+            pictureHome.TabStop = false;
+            pictureHome.Click += pictureHome_Click;
+            // 
             // lblStuIDS
             // 
             lblStuIDS.BorderStyle = BorderStyle.Fixed3D;
-            lblStuIDS.Location = new Point(132, 55);
+            lblStuIDS.Location = new Point(132, 54);
             lblStuIDS.Name = "lblStuIDS";
-            lblStuIDS.Size = new Size(200, 17);
+            lblStuIDS.Size = new Size(200, 20);
             lblStuIDS.TabIndex = 4;
             // 
             // lblStuNameS
             // 
             lblStuNameS.BorderStyle = BorderStyle.Fixed3D;
-            lblStuNameS.Location = new Point(132, 22);
+            lblStuNameS.Location = new Point(132, 21);
             lblStuNameS.Name = "lblStuNameS";
-            lblStuNameS.Size = new Size(200, 17);
+            lblStuNameS.Size = new Size(200, 20);
             lblStuNameS.TabIndex = 3;
             // 
             // lblStuID
@@ -93,6 +106,8 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(lblPayMethod);
+            panel3.Controls.Add(dtpDate);
             panel3.Controls.Add(btnReceipt);
             panel3.Controls.Add(cmbPay);
             panel3.Controls.Add(lblAmount);
@@ -104,21 +119,23 @@
             // 
             // btnReceipt
             // 
-            btnReceipt.Location = new Point(513, 228);
+            btnReceipt.Location = new Point(469, 163);
             btnReceipt.Name = "btnReceipt";
             btnReceipt.Size = new Size(150, 23);
             btnReceipt.TabIndex = 3;
             btnReceipt.Text = "Generate Receipt";
             btnReceipt.UseVisualStyleBackColor = true;
+            btnReceipt.Click += btnReceipt_Click;
             // 
             // cmbPay
             // 
+            cmbPay.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPay.FormattingEnabled = true;
+            cmbPay.Items.AddRange(new object[] { "", "Cash", "Credit Card", "Online Payment" });
             cmbPay.Location = new Point(124, 163);
             cmbPay.Name = "cmbPay";
             cmbPay.Size = new Size(200, 23);
             cmbPay.TabIndex = 2;
-            cmbPay.Text = "Payment Method";
             // 
             // lblAmount
             // 
@@ -137,16 +154,22 @@
             txtAmount.Size = new Size(200, 23);
             txtAmount.TabIndex = 0;
             // 
-            // pictureHome
+            // dtpDate
             // 
-            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
-            pictureHome.Location = new Point(725, 0);
-            pictureHome.Name = "pictureHome";
-            pictureHome.Size = new Size(51, 43);
-            pictureHome.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureHome.TabIndex = 48;
-            pictureHome.TabStop = false;
-            pictureHome.Click += pictureHome_Click;
+            dtpDate.Format = DateTimePickerFormat.Custom;
+            dtpDate.Location = new Point(443, 86);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(200, 23);
+            dtpDate.TabIndex = 4;
+            // 
+            // lblPayMethod
+            // 
+            lblPayMethod.AutoSize = true;
+            lblPayMethod.Location = new Point(124, 145);
+            lblPayMethod.Name = "lblPayMethod";
+            lblPayMethod.Size = new Size(99, 15);
+            lblPayMethod.TabIndex = 5;
+            lblPayMethod.Text = "Payment Method";
             // 
             // frmPayment2
             // 
@@ -159,9 +182,9 @@
             Text = "Payment";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             ResumeLayout(false);
         }
 
@@ -178,5 +201,7 @@
         private Label lblStuIDS;
         private Label lblStuNameS;
         private PictureBox pictureHome;
+        private Label lblPayMethod;
+        private DateTimePicker dtpDate;
     }
 }
